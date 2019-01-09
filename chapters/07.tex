@@ -1,0 +1,1242 @@
+\chapter{Collocation}
+\label{ch:collocation}
+
+The (orthographic) word plays a central role in corpus-linguistics. As suggested in Chapter \ref{ch:retrievalannotation}, this is in no small part due to the fact that all corpora, whatever additional annotations may have been added, consist of orthographically represented language. This makes it easy to retrieve word forms. Every concordancing program offers the possibility to search for a string of characters -- in fact, some are limited to this type of query.
+
+However, the focus on words is also due to the fact that the results of corpus linguistic research quickly showed that words (individually and in groups) are more interesting and show a more complex behavior than traditional, grammar-focused theories of language assumed. An area in which this is very obvious, and which has therefore become one of the most heavily researched areas in corpus linguistics, is the way in which words combine to form so-called \textit{collocations}. 
+
+This chapter is dedicated entirely to the discussion of collocation. At first, this will seem like a somewhat abrupt shift from the topics and phenomena we have discussed so far -- it may not even be immediately obvious how they fit into the definition of corpus linguistics as ``the investigation of linguistic research questions that have been framed in terms of the conditional distribution of linguistic phenomena in a linguistic corpus'', which was presented at the end of Chapter \ref{ch:corpuslinguistics}. However, a closer look will show that studying the co-occurrence of words and/or word forms is simply a special case of precisely this type of research program.
+
+\section{Collocates}
+\label{sec:collocates}
+
+Trivially, texts are not random collections of words. Which words can occur together is restricted by several factors. 
+
+First, the co-occurrence of words is restricted by grammatical considerations. For example, a definite article cannot be followed by another definite article or a verb, but only by a noun, by an adjective modifying a noun, by an adverb modifying such an adjective or by a post-determiner. Likewise, a transitive verb requires a direct object in the form of a noun phrase, so -- barring cases where the direct object is pre- or post-posed, it will be followed by a word that can occur at the beginning of a noun phrase (such as a pronoun, a determiner, an adjective or a noun).
+
+Second, the co-occurrence of words is restricted by semantic considerations. For example, the transitive verb \textit{drink} requires a direct object referring to a liquid, so it is probable that it will be followed by words like \textit{water}, \textit{beer}, \textit{coffee}, \textit{poison}, etc., and improbable that it will be followed by words like \textit{bread}, \textit{guitar}, \textit{stone}, \textit{democracy}, etc. Such restrictions are treated as a grammatical property of words (called \textit{selection restrictions}) in some theories, but they may also be an expression of our world knowledge concerning the activity of drinking.
+
+Finally, and related to the issue of world knowledge, the co-occurrence of words is restricted by topical considerations. Words will occur in sequences that correspond to the contents we are attempting to express, so it is probable that co-occurring content words will come from the same discourse domain.
+
+However, it has long been noted that words are not distributed randomly even within the confines of grammar, lexical semantics, world knowledge, and communicative intent. Instead, a given word will have affinities to some words, and disaffinities to others, which we could not predict given a set of grammatical rules, a dictionary and a thought that needs to be expressed. One of the first principled discussions of this phenomenon is found in \citet{firth_papers_1957}. Using the example of the word \textit{ass} (in the sense of ``donkey''), he discusses the way in which what he calls \textit{habitual collocations} contribute to the meaning of words:
+
+\begin{quotation}
+One of the meanings of \textit{ass} is its habitual collocation with an immediately preceding \textit{you silly}, and with other phrases of address or of personal reference. ... There are only limited possibilities of collocation with preceding adjectives, among which the commonest are \textit{silly}, \textit{obstinate}, \textit{stupid}, \textit{awful}, occasionally \textit{egregious}. \textit{Young} is much more frequently found than \textit{old}. \citep[194f]{firth_papers_1957}.
+\end{quotation}
+
+Note that Firth, although writing well before the advent of corpus linguistics, refers explicitly to \textit{frequency} as a characteristic of collocations. The possibility of using frequency as part of the definition of collocates, and thus as a way of identifying them, was quickly taken up. \citet{halliday_categories_1961} provides what is probably the first strictly quantitative definition:
+
+\begin{quotation}
+Collocation is the syntagmatic association of lexical items, quantifiable, textually, as the probability that there will occur, at n removes (a distance of n lexical items) from an item x, the items a, b, c... Any given item thus enters into a range of collocation, the items with which it is collocated being ranged from more to less probable... (\citet[276]{halliday_categories_1961}, cf. \citet{church_word_1990} for a more recent comprehensive quantitative discussion).
+\end{quotation}
+
+\subsection{Collocation as a quantitative phenomenon}
+\label{sec:collocationasaquantitativephenomenon}
+
+Essentially, then, collocation is just a special case of the quantitative corpus linguistic research design adopted in this book: to ask whether two words form a collocation (or: are collocates of each other) is to ask whether one of these words occurs in a given position more frequently than expected by chance under the condition that the other word occurs in a structurally or sequentially related position. In other words, we can decide whether two words \textit{a} and \textit{b} can be regarded as collocates on the basis of a contingency table like that in Table \ref{tab:collocation}. The \textvv{First Position} in the sequence is treated as the dependent variable, with two values: the word we are interested in (here: \textvv{word a}), and all \textvv{other} words. The \textvv{Second Position} is treated as the independent variable, again, with two values: the word we are interested in (here: \textvv{word b}), and all \textvv{other} words (of course, it does not matter which word we treat as the dependent and which as the independent variable, unless our research design suggests a particular reason).\footnote{Note that we are using the corpus size as the table total -- strictly speaking, we should be using the total number of two-word sequences (bigrams) in the corpus, which will be lower: The last word in each file of our corpus will not have a word following it, so we would have to subtract the last word of each file -- i.e., the number of files in our corpus -- from the total. This is unlikely to make much of a difference in most cases, but the shorter the texts in our corpus are, the larger the difference will be. For example, in a corpus of Tweets, which, at the time of writing, are limited to 280 characters, it might be better to correct the total number of bigrams in the way described.}
+
+\begin{table}[!htbp]
+\caption{Collocation}
+\label{tab:collocation}
+\begin{tabular}[t]{llccc}
+\lsptoprule
+ & & \multicolumn{2}{c}{\textvv{Second Position}} & \\
+ & & \textvv{word b} & \textvv{other words} & Total \\
+\midrule
+\textvv{\makecell[lt]{First Position}}
+	& \textvv{word a} 
+		& \makecell[t]{a \& b}
+		& \makecell[t]{a \& other}
+		& \makecell[t]{a} \\
+	& \textvv{other}
+		& \makecell[t]{other \& b}
+		& \makecell[t]{other \& other}
+		& \makecell[t]{other} \\
+\midrule
+	& Total
+		& \makecell[t]{b}
+		& \makecell[t]{other}
+		& \makecell[t]{corpus size} \\
+\lspbottomrule
+\end{tabular}
+\end{table}
+
+On the basis of such a table, we can determine the collocation status of a given word pair. For example, we can ask whether Firth was right with respect to the claim that \textit{silly ass} is a collocation. The necessary data are shown in Table \ref{tab:sillyasscooccur}: As discussed above, the dependent variable is the \textvv{First Position} in the sequence, with the values \textvv{silly} and \textvv{$\neg$silly} (i.e., all words that are not \textit{ass}); the independent variable is the \textvv{Second Position} in the sequence, with the values \textvv{ass} and \textvv{$\neg$ass}. 
+
+\begin{table}[!htbp]
+\caption{Co-occurrence of \textit{silly} and \textit{ass} in the BNC}
+\label{tab:sillyasscooccur}
+\begin{tabular}[t]{llccc}
+\lsptoprule
+ & & \multicolumn{2}{c}{\textvv{Second Position}} & \\
+ & & \textvv{ass} & \textvv{$\neg$ass} & Total \\
+\midrule
+\textvv{\makecell[lt]{First Position}}
+	& \textvv{silly} 
+		& \makecell[t]{\num{7}\\\small{(\num{0.01})}}
+		& \makecell[t]{\num{2632}\\\small{(\num{2638.99})}}
+		& \makecell[t]{\num{2639}\\} \\
+	& \textvv{$\neg$silly}
+		& \makecell[t]{\num{295}\\\small{(\num{301.99})}}
+		& \makecell[t]{\num{98360849}\\\small{(\num{98360842.01})}}
+		& \makecell[t]{\num{98361144}\\} \\
+\midrule
+	& Total
+		& \makecell[t]{\num{302}}
+		& \makecell[t]{\num{98363481}}
+		& \makecell[t]{\num{98363783}} \\
+\lspbottomrule
+\end{tabular}
+\end{table}
+% chisq.test(matrix(c(7,295,2632,98360849),ncol=2),corr=FALSE)
+% Note: Data are based on the version of the BNC distributed by the Oxford Text Archive (see Study Notes). The queries are for case-insensitive word forms, i.e. [word="silly"%c], [word="ass"%c], and [word="silly"%c][word="ass"%c]. The total number of words in the BNC is based on a query for all tokens in the BNC that are not tagged as punctuation marks.
+
+The combination \textit{silly ass} is very rare in English, occurring just seven times in the \num{98363783} word BNC, but the expected frequencies in Table \ref{tab:sillyasscooccur} show that this is vastly more frequent than should be the case if the words co-occurred randomly -- in the latter case, the combination should have occurred just 0.01 times (i.e., not at all). The difference between the observed and the expected frequencies is highly significant ($\chi^2$ = 6033.8, df = 1, p < 0.001). Note that we are using the chi-square test here because we are already familiar with it. However, this is not the most useful test for the purpose of identifying collocations, so we will discuss better options below.
+
+Generally speaking, the goal of a quantitative collocation analysis is to identify, for a given word, those other words that are characteristic for its context of usage. Table \ref{tab:collocation} and Table \ref{tab:sillyasscooccur} present the most straightforward way of doing so: we simply compare the frequency with which two words co-occur with the frequencies with which they occur in the corpus in general. In other words, the two conditions across which we are investigating the distribution of a word are ``next to a given other word'' and ``everywhere else''. In other words, the corpus itself functions as a kind of neutral control condition, albeit a somewhat indiscriminate one (comparing the frequency of a word next so some other word with its frequency in the entire rest of the corpus is a bit like comparing an experimental group of subjects that have been given a particular treatment with a control group consisting of all other people who happen to live in the same city).
+
+Often, we will be interested in the distribution of a word across two specific conditions -- in the case of collocation, the distribution across the immediate contexts of two semantically related words. It may be more insightful to compare adjectives occurring next to \textit{ass} with those occurring next to the rough synonym \textit{donkey} or the superordinate term \textit{animal}, because it is more interesting that \textit{silly} occurs more frequently with \textit{ass} than with \textit{donkey} or \textit{animal} than that it occurs more frequently with \textit{ass} than with \textit{stone} or \textit{democracy}. Likewise, it is more interesting that \textit{silly} occurs with \textit{ass} more frequently than \textit{childish} than that \textit{silly} occurs with \textit{ass} more frequently than \textit{precious} or \textit{parliamentary}.
+
+In such cases, we can modify Table \ref{tab:collocation} as shown in Table \ref{tab:differentialcollocates} to identify the collocates that \textit{differ} significantly between two words. There is no established term for such collocates, so we we will call them \textit{differential collocates} here\footnote{\citet{gries_testing_2003} and \citet{gries_extending_2004} use the term \textit{distinctive collocate}, which has been taken up by some authors; however, many other authors use the term \textit{distinctive collocate} much more broadly to refer to \textit{characteristic} collocates of a word.} (the method is based on \citet{church_using_1991}).
+
+\begin{table}[!htbp]
+\caption{Identifying differential collocates}
+\label{tab:differentialcollocates}
+\begin{tabular}[t]{llccc}
+\lsptoprule
+ & & \multicolumn{2}{c}{\textvv{Second Position}} & \\
+ & & \textvv{word b} & \textvv{word c} & Total \\
+\midrule
+\textvv{\makecell[lt]{First Position}}
+	& \textvv{word a} 
+		& \makecell[t]{a \& b}
+		& \makecell[t]{a \& c}
+		& \makecell[t]{a} \\
+	& \textvv{other}
+		& \makecell[t]{other \& b}
+		& \makecell[t]{other \& c}
+		& \makecell[t]{other} \\
+\midrule
+	& Total
+		& \makecell[t]{b}
+		& \makecell[t]{c}
+		& \makecell[t]{sample size} \\
+\lspbottomrule
+\end{tabular}
+\end{table}
+
+Since the collocation \textit{silly ass} and the word \textit{ass} in general are so infrequent in the BNC, let us use a different noun to demonstrate the usefulness of this method, the word \textit{game}. We can speak of \textit{silly game(s)} or \textit{childish game(s)}, but we may feel that the latter is more typical than the former. The relevant lemma frequencies to put this feeling to the test are shown in Table \ref{tab:childishsillygame}.
+
+\begin{table}[!htbp]
+\caption{\textit{Childish game} vs. \textit{silly game} (lemmas) in the BNC}
+\label{tab:childishsillygame}
+\begin{tabular}[t]{llccr}
+\lsptoprule
+ & & \multicolumn{2}{c}{\textvv{First Position}} & \\
+ & & \textvv{childish} & \textvv{silly} & Total \\
+\midrule
+\textvv{\makecell[lt]{Second Position}}
+	& \textvv{game} 
+		& \makecell[t]{\num{12}\\\small{(\num{6.18})}}
+		& \makecell[t]{\num{31}\\\small{(\num{36.82})}}
+		& \makecell[t]{\num{43}\\} \\
+	& \textvv{$\neg$game}
+		& \makecell[t]{\num{431}\\\small{(\num{436.82})}}
+		& \makecell[t]{\num{2608}\\\small{(\num{2602.18})}}
+		& \makecell[t]{\num{3039}\\} \\
+\midrule
+	& Total
+		& \makecell[t]{\num{443}}
+		& \makecell[t]{\num{2639}}
+		& \makecell[t]{\num{3082}} \\
+\lspbottomrule
+\end{tabular}
+\end{table}
+% chisq.test(matrix(c(12,431,31,2608),ncol=2),corr=FALSE)
+% The query was for [word="(childish|silly)"%c][word="games?"%c]
+
+The sequences \textit{childish game(s)} and \textit{silly game(s)} both occur in the BNC. Both combinations taken individually are significantly more frequent than expected (you may check this yourself using the frequencies from Table \ref{tab:childishsillygame}, the total lemma frequency of \textit{game} in the BNC (\num{20627}), and the total number of words in the BNC given in Table \ref{tab:sillyasscooccur} above). The lemma sequence \textit{silly game} is more frequent, which might lead us to assume that it is the stronger collocation. However, the direct comparison shows that this is due to the fact that \textit{silly} is more frequent in general than \textit{childish}, making the combination \textit{silly game} more probable than the combination \textit{childish game} even if the three words were distributed randomly. The difference between the observed and the expected frequencies suggests that \textit{childish} is more strongly associated with \textit{game(s)} than \textit{silly}. The difference is significant ($\chi^2 = 6.49, df = 1, \textit{p} < 0.05$).
+
+Researchers differ with respect to what types of co-occurrence they focus on when identifying collocations. Some treat co-occurrence as a purely sequential phenomenon defining collocates as words that co-occur more frequently than expected within a given span. Some researchers require a span of 1 (i.e., the words must occur directly next to each other), but many allow spans larger spans (five words being a relatively typical span size).
+
+Other researchers treat co-occurrence as a structural phenomenon, i.e., they define collocates as words that co-occur more frequently than expected in two related positions in a particular grammatical structure, for example, the adjective and noun positions in noun phrases of the form [Det Adj N] or the verb and noun position in transitive verb phrases of the form [V [\textsubscript{NP} (Det) (Adj) N]].\footnote{Note that such word-class specific collocations are sometimes referred to as \textit{colligations}, although the term colligation usually refers to the co-occurrence of a word in the context of particular word classes, which is not the same.} However, instead of limiting the definition to one of these possibilities, it seems more plausible to define the term appropriately in the context of a specific research question. In the examples above, we used a purely sequential definition that simply required words to occur next to each other, paying no attention to their word-class or structural relationship; given that we were looking at adjective-noun combinations, it would certainly have been reasonable to restrict our search parameters to adjectives modifying the noun \textit{ass}, regardless of whether other adjectives intervened, for example in expressions like \textit{silly old ass}, which our query would have missed if they occurred in the BNC (they do not).
+
+It should have become clear that the designs in Table \ref{tab:collocation} and Table \ref{tab:differentialcollocates} are essentially variants of the general research design introduced in previous chapters and used as the foundation of defining corpus linguistics: it has two variables, \textvv{Position 1} and \textvv{Position 2}, both of which have two values, namely \textvv{word x} vs. \textvv{other words} (or, in the case of differential collocates, \textvv{word x} vs. \textvv{word y}). The aim is to determine whether the value \textvv{word a} is more frequent for \textvv{Position 1} under the condition that \textvv{word b} occurs in \textvv{Position 2} than under the condition that other words (or a particular other word) occur in \textvv{Position 2}.
+
+\subsection{Methodological issues in collocation research}
+\label{sec:methodologicalissuesincollocationresearch}
+
+While there are research projects involving individual collocations (or reasonably small sets of collocations, for example, all collocations involving a particular word), in many cases we are more likely to be interested in large sets of collocations, perhaps even in all collocations in a given corpus. This has a number of methodological consequences concerning the practicability, the statistical evaluation and the epistemological status of collocation research. 
+
+\textit{a. Practicability}. In practical terms, the analysis of large numbers of potential collocations requires creating a large number of contingency tables and subjecting them to the chi-square test or some other appropriate statistical test. This becomes implausibly time-consuming very quickly and thus needs to be automated in some way.
+
+There are concordancing programs that offer some built-in statistical tests, but they typically restrict our options quite severely, both in terms of the tests they allow us to perform and in terms of the data on which the tests are performed. Anyone who decides to become involved in collocation research (or some of the large-scale lexical research areas described in the next chapter), should get acquainted at least with the simple options of automatizing statistical testing offered by spreadsheet applications. Better yet, they should invest a few weeks (or, in the worst case, months) to learn a scripting language like Perl, Python or R (the latter being a combination of statistical software and programming environment that is ideal for almost any task that we are likely to come across as corpus linguists).
+
+\textit{b. Statistical evaluation}. In statistical terms, the analysis of large numbers of potential collocations requires us to keep in mind that we are now performing multiple significance tests on the same set of data. This means that we must adjust our significance levels. Think back to the example of coin-flipping: the probability of getting a series of one head and nine tails is 0.009765. If we flip a coin ten times and get this result, we could thus reject the null hypothesis with a probability of error of 0.010744, i.e., around 1 percent (because we would have to add the probability of getting ten tails, 0.000976). This is well below the level required to claim statistical significance. However, if we perform one hundred series of ten coin-flips and one of these series consists of one head and nine tails (or ten tails), we could not reject the null hypothesis with the same confidence, as a probability of 0.010744 means that we would expect one such series to occur by chance. This is not a problem as long as we do not accord this one result out of a hundred any special importance. However, if we were to identify a set of 100 collocations with p-values of 0.001 in a corpus, we \textit{are} potentially treating all of them as important, even though it is very probable that at least one of them reached this level of significance by chance. 
+
+To avoid this, we have to correct our levels of significance when performing multiple tests on the same set of data. As discussed in Section \ref{sec:morethantwovalues} above, the simplest way to do this is the Bonferroni correction, which consists in dividing the conventionally agreed-upon significance levels by the number of tests we are performing. As noted in Section \ref{sec:morethantwovalues}, this is an extremely conservative correction that might make it quite difficult for any given collocation to reach significance. 
+
+% [NOTE TO SELF] For example, if we were to calculate the significance of all token pairs in the LOB corpus, we would have to perform a statistical test on \num{422764} contingency tables. This means that the most generous level of significance is now 0.005/\num{422764} = 0.00000012. This still leaves more than \num{15000} statistically significant collocation in the LOB corpus, but it will remove many more that could also be significant.
+
+Of course, the question is how important the role of p-values is in a design where our main aim is to identify collocates and order them in terms of their collocation strength. I will turn to this point presently, but before I do so, let us discuss the third of the three consequences of large-scale testing for collocation, the methodological one.
+
+\textit{c. Epistemological considerations}. We have, up to this point, presented a very narrow view of the scientific process based (in a general way) on the Popperian research cycle where we formulate a research hypothesis and then test it (either directly, by looking for counterexamples, or, more commonly, by attempting to reject the corresponding null hypothesis). This is called the \textit{deductive} method. However, as briefly discussed in Chapter \ref{ch:scientificmethod}, there is an alternative approach to scientific research that does not start with a hypothesis, but rather with general questions like ``Do relationships exist between the constructs in my data?'' and ``If so, what are those relationships?''. The research then consists in applying statistical procedures to large amounts of data and examining the results for interesting patterns. As electronic storage and computing power have become cheaper and more widely accessible, this approach -- the \textit{exploratory} or \textit{inductive} approach -- has become increasingly popular in all branches of science, particularly the social sciences. It would be surprising if corpus linguistics was an exception, and indeed, it is not. Especially the area of collocational research is typically exploratory.
+
+In principle, there is nothing wrong with exploratory research -- on the contrary, it would be unreasonable not to make use of the large amounts of language data and the vast computing power that has become available and accessible over the last thirty years. In fact, it is sometimes difficult to imagine a plausible hypothesis for collocational research projects. What hypothesis would we formulate before identifying all collocations in the LOB or some specialized corpus (e.g., a corpus of business correspondence, a corpus of flight-control communication or a corpus of learner language)?\footnote{Of course we are making the implicit assumption that there \textit{will} be collocates -- in a sense, this is a hypothesis, since we could conceive of models of language that would not predict their existence (we might argue, for example, that at least some versions of generative grammar constitute such models). However, even if we accept this as a hypothesis, it is typically not the one we are interested in this type of study.} Despite this, it is clear that the results of such a collocation analysis yield interesting data, both for practical purposes (building dictionaries or teaching materials for business English or aviation English, extracting terminology for the purpose of standardization, training natural-language processing systems) and for theoretical purposes (insights into the nature of situational language variation or even the nature of language in general).
+
+But there is a danger, too: Most statistical procedures will produce \textit{some} statistically significant result if we apply them to a large enough data set, and collocational methods certainly will. Unless we are interested exclusively in description, the crucial question is whether these results are meaningful. If we start with a hypothesis, we are restricted in our interpretation of the data by the need to relate our data to this hypothesis. If we do not start with a hypothesis, we can interpret our results without any restrictions, which, given the human propensity to see patterns everywhere, may lead to somewhat arbitrary post-hoc interpretations that could easily be changed, even reversed, if the results had been different and that therefore tell us very little about the phenomenon under investigation or language in general. Thus, it is probably a good idea to formulate at least some general expectations before doing a large-scale collocation analysis. 
+
+Even if we do start out with general expectations or even with a specific hypothesis, we will often discover additional facts about our phenomenon that go beyond what is relevant in the context of our original research question. For example, checking in the BNC Firth's claim that the most frequent collocates of \textit{ass} are \textit{silly}, \textit{obstinate}, \textit{stupid}, \textit{awful} and \textit{egregious} and that \textit{young} is ``much more frequent'' than \textit{old}, we find that \textit{silly} is indeed the most frequent adjectival collocate, but that \textit{obstinate}, \textit{stupid} and \textit{egregious} do not occur at all, that \textit{awful} occurs only once, and that \textit{young} and \textit{old} both occur twice. Instead, frequent adjectival collocates (ignoring second-placed \textit{wild}, which exclusively refers to actual donkeys), are \textit{pompous} and \textit{bad}. \textit{Pompous} does not really fit with the semantics that Firth's adjectives suggest and could indicate that a semantic shift from ``stupidity'' to ``self-importance'' may have taken place between 1957 and 1991 (when the BNC was assembled).
+
+This is, of course, a new hypothesis that can (and must) be investigated by comparing data from the 1950s and the 1990s. It has some initial plausibility in that the adjectives \textit{blithering}, \textit{hypocritical}, \textit{monocled} and \textit{opinionated} also co-occur with \textit{ass} in the BNC but are not mentioned by Firth. However, it is crucial to treat this as a hypothesis rather than a result. The same goes for \textit{bad ass} which suggests that the American sense of \textit{ass} (``bottom'') and/or the American adjective \textit{badass} (which is often spelled as two separate words) may have begun to enter British English. In order to be tested, these ideas -- and any ideas derived from an exploratory data analysis -- have to be turned into testable hypotheses and the constructs involved have to be operationalized. Crucially, they must be tested on a new data set -- if we were to circularly test them on the same data that they were derived from, we would obviously find them confirmed.
+
+\subsection{Effect sizes for collocations}
+\label{sec:effectsizesforcollocations}
+
+As mentioned above, significance testing (while not without its uses) may not the primary concern when investigating collocations. Instead, researchers frequently need a way of assessing the \textit{strength} of the association between two (or more) words, or, put differently, the effect size of their co-occurrence (recall from Chapter \ref{ch:significancetesting} that significance and effect size are not the same). A wide range of such association measures has been proposed and investigated. They are typically calculated on the basis of (some or all) the information contained in contingency tables like those in Table \ref{tab:collocation} and Table \ref{tab:differentialcollocates} above.
+
+Let us look at some of the most popular and/or most useful of these measures. I will represent the formulas with reference to the table in Table \ref{tab:twobytwocollocation}, i.e, O\textsubscript{11} means the observed frequency of the top left cell, E\textsubscript{11} its expected frequency, R\textsubscript{1} the first row total, C\textsubscript{2} the second column total, and so on. Note that second column would be labeled \textvv{other words} in the case of normal collocations, and \textvv{word c} in the case of differential collocations. The association measures can be applied to both types of design.
+
+\begin{table}[!htbp]
+\caption{A generic 2-by-2 table for collocation research}
+\label{tab:twobytwocollocation}
+\begin{tabular}[t]{llccc}
+\lsptoprule
+ & & \multicolumn{2}{c}{\textvv{Second Position}} & \\
+ & & \textvv{word b} & \textvv{other/word c} & Total \\
+\midrule
+\textvv{\makecell[lt]{First Position}}
+	& \textvv{word a} 
+		& \makecell[t]{O\textsubscript{11}}
+		& \makecell[t]{O\textsubscript{12}}
+		& \makecell[t]{R\textsubscript{1}} \\
+	& \textvv{other}
+		& \makecell[t]{O\textsubscript{21}}
+		& \makecell[t]{O\textsubscript{22}}
+		& \makecell[t]{R\textsubscript{2}} \\
+\midrule
+	& Total
+		& \makecell[t]{C\textsubscript{1}}
+		& \makecell[t]{C\textsubscript{2}}
+		& \makecell[t]{N} \\
+\lspbottomrule
+\end{tabular}
+\end{table}
+
+Now all we need is a good example to demonstrate the calculations. Let us use the adjective-noun sequence \textit{good example} from the LOB corpus (but horse lovers need not fear, we will return to equine animals and their properties below).
+
+\begin{table}[!htbp]
+\caption{Co-occurrence of \textit{good} and \textit{example} in the LOB}
+\label{tab:goodexample}
+\begin{tabular}[t]{llccc}
+\lsptoprule
+ & & \multicolumn{2}{c}{\textvv{Second Position}} & \\
+ & & \textvv{example} & \textvv{$\neg$example} & Total \\
+\midrule
+\textvv{\makecell[lt]{First Position}}
+	& \textvv{good} 
+		& \makecell[t]{\num{9}\\\small{(\num[round-mode=places,round-precision=4]{0.2044})}}
+		& \makecell[t]{\num{836}\\\small{(\num[round-mode=places,round-precision=4]{844.7956})}}
+		& \makecell[t]{\num{845}\\} \\
+	& \textvv{$\neg$good}
+		& \makecell[t]{\num{236}\\\small{(\num[round-mode=places,round-precision=4]{244.7956})}}
+		& \makecell[t]{\num{1011904}\\\small{(\num[round-mode=places,round-precision=4]{1011895.2044})}}
+		& \makecell[t]{\num{1012140}\\} \\
+\midrule
+	& Total
+		& \makecell[t]{\num{245}}
+		& \makecell[t]{\num{1012740}}
+		& \makecell[t]{\num{1012985}} \\
+\lspbottomrule
+\end{tabular}
+\end{table}
+% chisq.test(matrix(c(9,236,836,1011904),ncol=2),corr=FALSE)
+% query: LOB (OTA), [word="good"%c & pos="JJ"][word="example"%c & pos="NN"]
+
+Measures of collocation strength differ with respect to the data needed to calcuate them, their computational intensiveness and, crucially, the quality of their results. In particular, many measures, notably the ones easy to calculate, have a problem with rare collocations, especially if the individual words of which they consist are also rare. After we have introduced the measures, we will therefore compare their performance with a particular focus on the way in which they deal (or fail to deal) with such rare events.
+
+\subsubsection{Chi-square}
+\label{sec:amchisquare}
+
+The first association measure is an old acquaintance: the chi-square statistic, which we used extensively in Chapter \ref{ch:significancetesting} and in Section \ref{sec:collocationasaquantitativephenomenon} above. I will not demonstrate it again, but the chi-square value for Table \ref{tab:goodexample}b would be 378.95 (at 1 degree of freedom this means that p < 0.001, but we are not concerned with p-values here).
+
+Recall that the chi-square test statistic is not an effect size, but that it needs to be divided by the table total to turn it into one; but as long as we are deriving all our collocation data from the same corpus, this will not make a difference, since the table total will always be the same. However, this is not always the case. Where table sizes differ, we might consider using the phi value instead. I am not aware of any research using phi as an association measure, and in fact the chi-square statistic itself is not used widely either. This is because it has a serious problem: recall that it cannot be applied if more than 20 percent of the cells of the contingency table contain expected frequencies smaller than 5 (in the case of collocates, this means not even one out of the four cells of the 2-by-2 table). One reason for this is that it dramatically overestimates the effect size and significance of such events, and of rare events in general. Since collocations are often relatively rare events, this makes the chi-square statistic a bad choice as an association measure.
+
+\subsubsection{Mutual Information}
+\label{sec:ammutualinformation}
+
+This is one of the oldest collocation measures, frequently used in computational linguistics and often implemented in collocation software. It is given in (\ref{ex:mutualinf}) in a version based on \citet{church_word_1990}: \footnote{A logarithm with a base \textit{b} of a given number x is the power to which \textit{b} must be raised to produce x, so, for example, log\textsubscript{10}(2) = 0.30103, because 10\textsuperscript{0.30103}=2. Most calculators offer at the very least a choice between the natural logarithm, where the base is the number \textit{e} (approx. 2.7183) and the common logarithm, where the base is the number 10; many calculators and all major spreadsheet programs offer logarithms with any base. In the formula in (\ref{ex:mutualinf}), we need the logarithm with base 2; if this is not available, we can use the natural logarithm and divide the result by the natural logarithm of 2:
+
+$$MI  =  {{\log_e \left( {O_{11}} \over {E_{11}} \right)} \over {\log_e \left( 2 \right)}}$$}
+
+\begin{exe}
+\ex $\displaystyle{MI =  {\log_2 \left( {O_{11}} \over {E_{11}} \right)}}$ 
+\label{ex:mutualinf}
+\end{exe}
+
+Applying the formula to our table, we get the following:
+
+$$MI  =  {\log_2 \left( {9} \over {0.2044} \right) = log_2 \left( 44.03 \right)} =  5.46$$ 
+
+In our case, we are looking at cases where \textvv{word a} and \textvv{word b} occur directly next to each other, i.e., the span size is 1. When looking at a larger span (which is often done in collocation research), the probability of encountering a particular collocate increases, because there are more slots that it could potentially occur in. The MI statistic can be adjusted for larger span sizes as follows (where \textit{S} is the span size):
+
+\begin{exe}
+\ex $\displaystyle{MI =  {\log_2 \left( {O_{11}} \over {E_{11} \times S} \right)}}$ 
+\label{ex:mutualinfspan}
+\end{exe}
+
+The mutual information measure suffers from the same problem as the chi-square statistic: it overestimates the importance of rare events. Since it is still fairly wide-spread in collocational research, we may nevertheless need it in situations where we want to compare our own data to the results of published studies. However, note that there are versions of the MI measure that will give different results, so we need to make sure we are using the same version as the study we are comparing our results to. Or better yet, we should not use mutual information at all (one of the case studies presented below uses it, see Section \ref{sec:degreeadverbs}).
+
+\subsubsection{Log-likelihood}
+\label{sec:amloglikelihood}
+
+The log-likelihood test statistic G\textsuperscript{2} is one of the most popular -- perhaps \textit{the} most popular -- association measure in collocational research, found in many of the central studies in the field and often implemented in collocation software. The following is a frequently found form \citep[134]{read_goodness--fit_1988}:
+
+\begin{exe}
+\ex $\displaystyle{G^2 = 2 \sum_{i=1}^{n} O_i \log_e \left(\frac{O_i}{E_i} \right )}$ 
+\label{ex:loglik}
+\end{exe}
+
+In order to calculate the log-likelihood measure, we calculate for each cell the natural logarithm of the observed frequency divided by the expected frequency and multiply it by the observed frequency. We then add up the results for all four cells and multiply the result by two. Note that if the observed frequency of a given cell is zero, the expression $\frac{O_i}{E_i}$ will, of course, also be zero. Since the logarithm of zero is undefined, this would result in an error in the calculation. Thus, log(0) is simply defined as zero when applying the formula in (\ref{ex:loglik}).
+
+% [NOTE TO SELF:] If you plan to automatize the calculation of log-likelihood, for example in a spreadsheet, you can also use the following version of the formula, which will give the same result. It is much longer and unwieldier, but which has the advantage that you do not need to calculate expected frequencies (again, make sure you define log(0) as 0):
+%
+%$2 ~ \times ~  \left(\left(O_{11} ~ \times ~ \log ~ O_{11} \right) ~ + ~  \left(O_{12} ~ \times ~ \log ~ O_{12} \right) ~ + ~  \left(O_{21} ~ \times ~ \log ~O_{21} \right) ~ + ~  \left(O_{22} ~ \times ~ \log ~ O_{22} \right)  \right. ~ + ~$
+%
+%$- ~  \left(O_{11} ~ + ~ O_{12} \right) ~ \times ~ \log \left(O_{11} ~ + ~ O_{12} \right) ~ - ~  \left(O_{11} ~ + ~ O_{21} \right) ~ \times ~ \log \left(O_{11} ~ + ~ O_{21} \right) $
+%
+%$- ~  \left(O_{12} ~ + ~ O_{22} \right) ~ \times ~ \log \left(O_{12} ~ + ~ O_{22} \right) ~ - ~  \left(O_{21} ~ + ~ O_{22} \right) ~ \times ~ \log \left(O_{21} ~ + ~ O_{22} \right)$
+%
+%$\left. + ~  \left(O_{11} ~ + ~ O_{12} ~ + ~ O_{21} ~ + ~ O_{22} \right) ~ \times ~ \log \left(O_{11} ~ + ~ O_{12} ~ + ~ O_{21} ~ + ~ O_{22} \right)  \right)$
+
+Applying the formula in \ref{ex:loglik} to the data in Table \ref{tab:goodexample}, we get the following:
+
+$$G^2 = 2 \times \left( 9 \times \log_e \left( \frac{9}{0.2044} \right) \right) +\ \left( 836 \times \log_e \left( \frac{836}{844.7956} \right) \right)$$
+
+$$+\ \left( 236 \times \log_e \left( \frac{236}{244.7956} \right) \right) +\ \left( 1011904 \times \log_e \left( \frac{1011904}{1011895.2044} \right) \right)$$
+
+$$= 2 \times \left( \left( 34.0641 \right) + \left( -8.7497 \right) + \left( -8.6357 \right) + \left( 8.7956 \right) \right) = 50.9489$$
+
+The log-likelihood test statistic has long been known to be more reliable than the chi-square test when dealing with small samples and small expected frequencies \citep[134ff]{read_goodness--fit_1988}. This led \citet{dunning_accurate_1993} to propose it as an association measure specifically to avoid the overestimation of rare events that plagues the chi-square test, mutual information and other measures.
+
+\subsubsection{Minimum Sensitivity}
+\label{sec:amminimumsensitivity}
+
+This measure was proposed by \citet{pedersen_dependent_1998} as potentially useful measure especially for the identification of associations between content words:
+
+\begin{exe}
+\ex $\displaystyle{MS = {min} \left ( \frac{O_{11}}{R_1},\frac{O_{11}}{C_1} \right )}$ 
+\label{ex:minsens}
+\end{exe}
+
+We simply divide the observed frequency of a collocation by the frequency of the first word (R\textsubscript{1}) and of the second word (C\textsubscript{1}) and use the smaller of the two as the association measure. For the data in Table \ref{tab:goodexample}, this gives us the following:
+
+$$MS = min \left( \frac{9}{836}, \frac{9}{236} \right) = min \left( 0.0108,0.0381 \right) = 0.0108$$
+
+In addition to being extremely simple to calculate, it has the advantage of ranging from zero (words never occur together) to 1 (words always occur together); it was also argued by \citet{wiechmann_computation_2008} to correlate best with reading time data when applied to combinations of words and grammatical constructions (see Chapter \ref{ch:grammar}). However, it also tends to overestimate the importance of rare collocations.
+
+\subsubsection{Fisher's exact test}
+\label{sec:amfishersexacttest}
+
+This test (sometimes also referred to as Fisher-Yates test) was already mentioned in passing in Chapter \ref{ch:significancetesting} as an alternative to the chi-square test that calculates the probability of error directly by adding up the probability of the observed distribution and all distributions that deviate from the null hypothesis further in the same direction. \citet{pedersen_fishing_1996} suggests using this p-value as a measure of association because it does not make any assumptions about normality and is even better at dealing with rare events than log-likelihood. \citet[238--239]{stefanowitsch_collostructions:_2003} add that it has the advantage of taking into account both the magnitude of the deviation from the expected frequencies and the sample size.
+
+There are some practical disadvantages to Fisher's exact test. First, it is computationally expensive -- it cannot be calculated manually, except for very small tables, because it involves computing factorials, which become very large very quickly. For completeness' sake, here is (one version of) the formula:
+
+\begin{exe}
+\ex $\displaystyle{p_{exact} = \frac{R_1! \times R_2! \times C_1! \times C_2!}{O_{11}! \times O_{12}! \times O_{21}! \times  O_{22}! \times N!}}$ 
+\label{ex:fisherexaxt}
+\end{exe}
+
+Obviously, it is not feasible to apply this formula directly to the data in Table \ref{tab:goodexample}, because we cannot realistically calculate the factorials for 236 or 836, let alone \num{1011904}. But if we could, we would find that the p-value for Table \ref{tab:goodexample} is 0.000000000001188.
+
+Spreadsheet applications do not usually offer Fisher's exact test, but all major statistics applications do. However, typically, the exact p-value is not reported beyond the limit of a certain number of decimal places. This means that there is often no way of ranking the most strongly associated collocates, because their p-values are smaller than this limit. For example, there are more than 100 collocates in the LOB corpus with a Fisher's exact p-value that is smaller than the smallest value that a standard-issue computer chip is capable of calculating, and more than 5000 collocates that have p-values that are smaller than what the standard implementation of Fisher's exact test in the statistical software package R will deliver. Since in research on collocations, we often need to rank collocations in terms of their strength, this may become a problem.
+
+\subsubsection{A comparison of association measures}
+\label{sec:amcomparison}
+
+Let us see how the association measures compare using a data set of 20 potential collocations. Inspired by Firth's \textit{silly ass}, they are all combinations of adjectives with equine animals. Table \ref{tab:equinecollocates} shows the combinations and their frequencies in the BNC (sorted by their raw frequency of occurrence (I am showing the adjectives and nouns in small caps here to stress that they are values of the variables \textvv{Word A} and \textvv{Word B}, but I will generally show them in italics in the remainder of the book in line with linguistic tradition).
+
+\begin{table}[!htbp]
+\caption{Some collocates of the form [ADJ N\textsubscript{equine}] (BNC)}
+\label{tab:equinecollocates}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}[t]{llrrrr}
+\lsptoprule
+\textvv{Word a} & \textvv{Word b} & \textvv{a with b} & \textvv{a without b} & \textvv{b without a} & \textvv{neither} \\
+\midrule
+\textvv{Trojan} & \textvv{horse(s)} & \num{37} & \num{73} & \num{12198} & \num{98351475} \\
+\textvv{rocking} & \textvv{horse(s)} & \num{34} & \num{168} & \num{12201} & \num{98351380} \\
+\textvv{new} & \textvv{horse(s)} & \num{21} & \num{113540} & \num{12214} & \num{98238008} \\
+\textvv{galloping} & \textvv{horse(s)} & \num{17} & \num{110} & \num{12218} & \num{98351438} \\
+\textvv{silly} & \textvv{ass(es)} & \num{9} & \num{2630} & \num{340} & \num{98360804} \\
+\textvv{prancing} & \textvv{horse(s)} & \num{6} & \num{17} & \num{12229} & \num{98351531} \\
+\textvv{pompous} & \textvv{ass(es)} & \num{5} & \num{250} & \num{344} & \num{98363184} \\
+\textvv{common} & \textvv{zebra(s)} & \num{4} & \num{18965} & \num{253} & \num{98344561} \\
+\textvv{old} & \textvv{donkey(s)} & \num{3} & \num{52433} & \num{643} & \num{98310704} \\
+\textvv{old} & \textvv{mule(s)} & \num{3} & \num{52433} & \num{316} & \num{98311031} \\
+\textvv{young} & \textvv{zebra(s)} & \num{2} & \num{30210} & \num{255} & \num{98333316} \\
+\textvv{old} & \textvv{ass(es)} & \num{2} & \num{52434} & \num{347} & \num{98311000} \\
+\textvv{female} & \textvv{hinny(/-ies)} & \num{2} & \num{6620} & \num{17} & \num{98357144} \\
+\textvv{braying} & \textvv{donkey(s)} & \num{2} & \num{9} & \num{644} & \num{98363128} \\
+\textvv{monocled} & \textvv{ass(es)} & \num{1} & \num{5} & \num{348} & \num{98363429} \\
+\textvv{large} & \textvv{mule(s)} & \num{1} & \num{34228} & \num{318} & \num{98329236} \\
+\textvv{jumped-up} & \textvv{jackass(es)} & \num{1} & \num{21} & \num{7} & \num{98363754} \\
+\textvv{extinct} & \textvv{quagga(s)} & \num{1} & \num{428} & \num{4} & \num{98363350} \\
+\textvv{dumb-fuck} & \textvv{donkey(s)} & \num{1} & \num{0} & \num{645} & \num{98363137} \\
+\textvv{caparisoned} & \textvv{mule(s)} & \num{1} & \num{8} & \num{318} & \num{98363456} \\
+\lspbottomrule
+\end{tabular}}
+\end{table}
+% query word 1: [word="(rocking|trojan|new|silly|galloping|prancing|pompous|old|common|old|old|braying|young|large|female|extinct|monocled|caparisoned|dumb-fuck|jumped-up)"%c & pos=".*AJ.*"]
+% query word 2: [word="(horses?|asse?s?|donkeys?|zebras?|mules?|hinny|hinnies|quaggas?|jackasse?s?)"%c & pos=".*NN.*"]
+
+All combinations are perfectly normal, grammatical adjective-noun pairs, meaningful not only in the specific context of their actual occurrence. However, I have selected them in such a way that they differ with respect to their status as potential collocations (in the sense of typical combinations of words). Some are compounds or compound like combinations (\textit{rocking horse}, \textit{Trojan horse}, and, in specialist discourse, \textit{common zebra}). Some are the kind of semi-idiomatic combinations that Firth had in mind (\textit{silly ass}, \textit{pompous ass}). Some are very conventional combinations of nouns with an adjective denoting a property specific to that noun (\textit{prancing horse}, \textit{braying donkey}, \textit{galloping horse} -- the first of these being a conventional way of referring to the Ferrari brand mark logo). Some only give the appearance of semi-idiomatic combinations (\textit{jumped-up jackass}, actually an unconventional variant of \textit{jumped-up jack-in-office}; \textit{dumb-fuck donkey}, actually an extremely rare phrase that occurs only once in the documented history of English, namely in the book \textit{Trail of the Octopus: From Beirut to Lockerbie -- Inside the DIA} and that probably sounds like an idiom because of the alliteration and the semantic relationship to \textit{silly ass}; and \textit{monocled ass}, which brings to mind \textit{pompous ass} but is actually not a very conventional combination). Finally, there are a number of fully compositional combinations that make sense but do not have any special status (\textit{caparisoned mule}, \textit{new horse}, \textit{old donkey}, \textit{young zebra}, \textit{large mule}, \textit{female hinny}, \textit{extinct quagga}).
+
+In addition, I have selected them to represent different types of frequency relations: some of them are (relatively) frequent, some of them very rare, for some of them the either the adjective or the noun is generally quite frequent, and for some of them neither of the two is frequent.
+
+Table \ref{tab:equineadjectives} shows the ranking of these twenty collocations by the five association measures discussed above. Simplifying somewhat, a good association measure should rank the conventionalized combinations highest (\textit{rocking horse}, \textit{Trojan horse}, \textit{silly ass}, \textit{pompous ass}, \textit{prancing horse}, \textit{braying donkey}, \textit{galloping horse}), the distinctive sounding but non-conventionalized combinations somewhere in the middle (\textit{jumped-up jackass}, \textit{dumb-fuck donkey}, \textit{old ass}, \textit{monocled ass}) and the compositional combinations lowest (\textit{common zebra}, \textit{jumped-up jackass}, \textit{dumb-fuck donkey}, \textit{old ass}, \textit{monocled ass}). \textit{Common zebra} is difficult to predict -- it is a conventionalized expression, but not in the general language.
+
+\begin{sidewaystable}[!htbp]
+\caption{Comparison of selected association measures for collocates of the form [ADJ N\textsubscript{equine}] (BNC)}
+\label{tab:equineadjectives}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}[t]{lr|lr|lr|lr|lr}
+\lsptoprule
+Collocation & $\chi^2$ & Collocation & MI & Collocation & MS & Collocation & $G^2$ & Collocation & Exact Test \\
+\midrule
+\textit{jumped-up jackass} & \num{558883.3} & \textit{jumped-up jackass} & \num{19.09219} & \textit{jumped-up jackass} & \num[round-mode=places,round-precision=6]{0.04545455} & \textit{Trojan horse} & \num{525.0568} & \textit{Trojan horse} & 7.78E-116 \\
+\textit{dumb-fuck donkey} & \num{152264.9} & \textit{dumb-fuck donkey} & \num{17.21623} & \textit{pompous ass} & \num[round-mode=places,round-precision=6]{0.01432665} & \textit{rocking horse} & \num{428.5052} & \textit{rocking horse} & 6.70E-95 \\
+\textit{Trojan horse} & \num{99994.3} & \textit{monocled ass} & \num{15.51958} & \textit{silly ass} & \num[round-mode=places,round-precision=6]{0.003410383} & \textit{galloping horse} & \num{205.7947} & \textit{galloping horse} & 2.13E-46 \\
+\textit{braying donkey} & \num{55365.79} & \textit{extinct quagga} & \num{15.48486} & \textit{caparisoned mule} & \num[round-mode=places,round-precision=6]{0.003134796} & \textit{silly ass} & \num{105.9103} & \textit{silly ass} & 1.34E-24 \\
+\textit{monocled ass} & \num{46972.28} & \textit{caparisoned mule} & \num{15.06429} & \textit{braying donkey} & \num[round-mode=places,round-precision=6]{0.003095975} & \textit{prancing horse} & \num{81.51033} & \textit{prancing horse} & 3.73E-19 \\
+\textit{rocking horse} & \num{45946.3} & \textit{braying donkey} & \num{14.7568} & \textit{Trojan horse} & \num[round-mode=places,round-precision=6]{0.003024111} & \textit{pompous ass} & \num{76.34527} & \textit{pompous ass} & 4.72E-18 \\
+\textit{extinct quagga} & \num{45855.44} & \textit{pompous ass} & \num{12.43212} & \textit{monocled ass} & \num[round-mode=places,round-precision=6]{0.00286533} & \textit{braying donkey} & \num{37.30879} & \textit{braying donkey} & 2.37E-09 \\
+\textit{caparisoned mule} & \num{34259.27} & \textit{Trojan horse} & \num{11.40099} & \textit{rocking horse} & \num[round-mode=places,round-precision=6]{0.002778913} & \textit{common zebra} & \num{27.28772} & \textit{common zebra} & 2.36E-07 \\
+\textit{pompous ass} & \num{27622} & \textit{prancing horse} & \num{11.0343} & \textit{extinct quagga} & \num[round-mode=places,round-precision=6]{0.002331002} & \textit{female hinny} & \num{25.64018} & \textit{female hinny} & 7.74E-07 \\
+\textit{galloping horse} & \num{18263.01} & \textit{female hinny} & \num{10.61065} & \textit{dumb-fuck donkey} & \num[round-mode=places,round-precision=6]{0.001547988} & \textit{jumped-up jackass} & \num{24.64412} & \textit{jumped-up jackass} & 1.79E-06 \\
+\textit{prancing horse} & \num{12573.2} & \textit{rocking horse} & \num{10.40215} & \textit{galloping horse} & \num[round-mode=places,round-precision=6]{0.001389456} & \textit{dumb-fuck donkey} & \num{23.8683} & \textit{dumb-fuck donkey} & 6.57E-06 \\
+\textit{silly ass} & \num{8633.055} & \textit{galloping horse} & \num{10.07168} & \textit{prancing horse} & \num[round-mode=places,round-precision=6]{0.0004903964} & \textit{monocled ass} & \num{19.69439} & \textit{monocled ass} & 2.13E-05 \\
+\textit{female hinny} & \num{3123.389} & \textit{silly ass} & \num{9.90869} & \textit{female hinny} & \num[round-mode=places,round-precision=6]{0.0003020236} & \textit{extinct quagga} & \num{19.6838} & \textit{extinct quagga} & 2.18E-05 \\
+\textit{common zebra} & \num{314.9439} & \textit{common zebra} & \num{6.334643} & \textit{common zebra} & \num[round-mode=places,round-precision=6]{0.0002108704} & \textit{caparisoned mule} & \num{19.0022} & \textit{caparisoned mule} & 2.92E-05 \\
+\textit{old mule} & \num{47.11991} & \textit{young zebra} & \num{4.663165} & \textit{new horse} & \num[round-mode=places,round-precision=6]{0.0001849226} & \textit{old mule} & \num{11.58699} & \textit{old mule} & 7.16E-04 \\
+\textit{young zebra} & \num{46.76712} & \textit{old mule} & \num{4.140904} & \textit{young zebra} & \num[round-mode=places,round-precision=6]{0.00006619886} & \textit{young zebra} & \num{9.101435} & \textit{young zebra} & 2.95E-03 \\
+\textit{old donkey} & \num{20.49002} & \textit{old ass} & \num{3.426271} & \textit{old donkey} & \num[round-mode=places,round-precision=6]{0.0000572126} & \textit{old donkey} & \num{7.687699} & \textit{old donkey} & 5.25E-03 \\
+\textit{old ass} & \num{17.69563} & \textit{large mule} & \num{3.17128} & \textit{old mule} & \num[round-mode=places,round-precision=6]{0.0000572126} & \textit{old ass} & \num{5.881243} & \textit{old ass} & 1.53E-02 \\
+\textit{large mule} & \num{7.121964} & \textit{old donkey} & \num{3.122926} & \textit{old ass} & \num[round-mode=places,round-precision=6]{0.00003814173} & \textit{new horse} & \num{2.910183} & \textit{new horse} & 5.15E-02 \\
+\textit{new horse} & \num{3.350149} & \textit{new horse} & \num{0.5721069} & \textit{large mule} & \num[round-mode=places,round-precision=6]{0.00002921499} & \textit{large mule} & \num{2.620845} & \textit{large mule} & 1.05E-01 \\
+\lspbottomrule
+\end{tabular}}
+\end{sidewaystable}
+
+All association measures fare quite well, generally speaking, with respect to the compositional expressions -- these tend to occur in the lower third of all lists. Where there are exceptions, the $\chi^2$ statistic, mutual information and minimum sensitivity rank rare cases higher than they should (e.g. \textit{caparisoned mule}, \textit{extinct quagga}), while the log-likelihood test statistic and the p-value of Fisher's exact test rank frequent cases higher (e.g.\textit{galloping horse}).
+
+With respect to the non-compositional cases, chi-square and mutual information are quite bad, overestimating rare combinations like \textit{jumped-up jackass}, \textit{dumb-fuck donkey} and \textit{monocled ass}, while listing some of the clear cases of collocations much further down the list (\textit{silly ass}, and, in the case of MI, \textit{rocking horse}). Minimum sensitivity is much better, ranking most of the conventionalized cases in the top half of the list and the non-conventionalized ones further down (with the exception of \textit{jumped-up jackass}, where both the individual words and their combination are very rare). The log-likelihood test statistic and the Fisher p-value fare best (with no differences in their ranking of the expressions), listing the conventionalized cases at the top and the distinctive but non-conventionalized cases in the middle.
+
+To demonstrate the problems that very rare events can cause (especially those where both the combination and each of the two words in isolation are very rare), imagine someone had used the phrase \textit{tomfool onager} once in the BNC. Since neither the adjective \textit{tomfool} (a synonym of \textit{silly}) nor the noun \textit{onager} (the name of the donkey sub-genus Equus hemionus, also known as \textit{Asiatic} or \textit{Asian wild ass}) occur in the BNC anywhere else, this would give us the distribution in Table \ref{tab:tomfoolonager}.
+
+\begin{table}[!htbp]
+\caption{Fictive occurrence of \textit{tomfool onager} in the BNC}
+\label{tab:tomfoolonager}
+\begin{tabular}[t]{llccc}
+\lsptoprule
+ & & \multicolumn{2}{c}{\textvv{Second Position}} & \\
+ & & \textvv{onager} & \textvv{$\neg$onager} & Total \\
+\midrule
+\textvv{\makecell[lt]{First Position}}
+	& \textvv{tomfool} 
+		& \makecell[t]{\num{1}\\\small{(\num{0.00})}}
+		& \makecell[t]{\num{0}\\\small{(\num{1.00})}}
+		& \makecell[t]{\num{1}\\} \\
+	& \textvv{$\neg$tomfool}
+		& \makecell[t]{\num{0}\\\small{(\num{1.00})}}
+		& \makecell[t]{\num{98363782}\\\small{(\num{98363781.00})}}
+		& \makecell[t]{\num{98363782}\\} \\
+\midrule
+	& Total
+		& \makecell[t]{\num{1}}
+		& \makecell[t]{\num{98363782}}
+		& \makecell[t]{\num{98363783}} \\
+\lspbottomrule
+\end{tabular}
+\end{table}
+% chisq.test(matrix(c(1,0,0,98363782),ncol=2),corr=FALSE)
+
+Applying the formulas discussed above to this table gives us a chi-square value of \num{98364000}, an MI value of 26.55 and a minimum sensitivity value of 1, placing this (hypothetical) one-off combination at the top of the respective rankings by a wide margin. Again, log-likelihood and Fisher's exact test are much better, putting in eighth place on both lists (G\textsuperscript{2} = 36.81, p\textsubscript{exact} = 1,02E-08).
+
+Although the example is hypothetical, the problem is not. It uncovers a mathematical weakness of many commonly used association measures. From an empirical perspective, this would not necessarily be a problem, if cases like that in Table \ref{tab:tomfoolonager} were rare in linguistic corpora. However, they are not. The LOB corpus, for example, contains almost one thousand such cases, including some legitimate collocation candidates (like \textit{herbal brews}, \textit{casus belli} or \textit{sub-tropical climates}), but mostly compositional combinations (\textit{ungraceful typography}, \textit{turbaned headdress}, \textit{songs-of-Britain medley}), snippets of foreign languages (\textit{freie Blicke}, \textit{l'arbre rouge}, \textit{palomita blanca}) and other things that are quite clearly not what we are looking for in collocation research. All of these will occur at the top of any collocate list created using statistics like chi-square, mutual information and minimum sensitivity. In large corpora, which are impossible to check for orthographical errors and/or errors introduced by tokenization, this list will also include hundreds of such errors (whose frequency of occurrence is low precisely because they are errors).
+
+To sum up, when doing collocational research, we should use the best association measures available. For the time being, this is the p value of Fisher's exact test (if we have the means to calculate it), or the log-likelihood test-statistic G\textsuperscript{2} (if we don't, or if we prefer using a widely-accepted association measure). We will use G\textsuperscript{2} through much of the remainder of this book whenever dealing with collocations or collocation-like phenomena.
+
+\section{Case studies}
+\label{sec:collocatescasestudies}
+
+In the following, we will at some typical examples of collocation research, i.e. cases, where both variables consist of (some part of) the lexicon and the values are individual words. 
+
+\subsection{Collocation for its own sake}
+\label{sec:collocationforitsownsake}
+
+Research that is concerned exclusively with the collocates of individual words or the extraction of all collocations from a corpus falls into three broad types. First, there is a large body of research on the explorative extraction of collocations from corpora. This research is not usually interested in any particular collocation (or set of collocations), or in genuinely linguistic research questions; instead, the focus is on methods (ways of preprocessing corpora, which association measures to use, etc.. Second, there is an equally large body of applied research that results in lexical resources (dictionaries, teaching materials, etc.) rather than scientific studies on specific research questions. Third, there is a much smaller body of research that simply investigates the collocates of individual words or small sets of words. The perspective of these studies tends to be descriptive, often with the aim of showing the usefulness of collocation research for some application area.
+
+The (relative) absence of theoretically more ambitious studies of the collocates of individual words may partly be due to the fact that words tend to be too idiosyncratic in their behavior to make their study theoretically attractive. However, this idiosyncrasy itself is, of course, theoretically interesting and so such studies hold an unrealized potential at least for areas like lexical semantics.
+
+\subsubsection{Case study: Degree adverbs}
+\label{sec:degreeadverbs}
+
+A typical example of a thorough descriptive study of the collocates of individual words is \citet{kennedy_amplifier_2003}, which investigates the adjectival collocates of degree adverbs like \textit{very}, \textit{considerably}, \textit{absolutely}, \textit{heavily} and \textit{terribly}. Noting that some of these adverbs appear to be relatively interchangeable with respect to the adjectives and verbs they modify, others are highly idiosyncratic, Kennedy identifies the adjectival and verbal collocates of 24 frequent degree adverbs in the BNC, extracting all words occurring in a span of two words to their left or right, and using Mutual Information to determine which of them are associated with each degree adverb.
+
+Thus, as is typical for this type of study, Kennedy adopts an exploratory perspective. The study involves two nominal variables: \textvv{Degree Adverb} (with 24 values corresponding to the 24 specific adverbs he selects) and \textvv{Adjective} (with as many different potential values as there are different adjectives in the BNC (in exploratory studies, it is often the case that we do not know the values of at least one of the two variables in advance, but have to extract them from the data). As pointed out above, which of the two variables is the dependent one and which the independent one in studies like this depends on your research question: if you are interested in degree adverbs and want to explore which adjectives they co-occur with, it makes sense to treat \textvv{Degree Adverb} as the independent and \textvv{Adjective} as the dependent variable; if you are interested in adjectives and want to expore which degree adverbs they co-occur with, it makes sense to do it the other way around. Statistically, it does not make a difference, since our statistical tests for nominal data do not distinguish between dependent and independent variables.
+
+Kennedy finds, first, that there are some degree adverbs that do not appear to have restrictions concerning the adjectives they occur with (for example, \textit{very}, \textit{really} and \textit{particularly}). However, most degree adverbs are clearly associated with semantically restricted sets of adjectives. The restrictions are of three broad types. First, there are connotational restrictions (some adverbs are associated primarily with positive words (e.g. \textit{perfectly}) or negative words (e.g. \textit{utterly}, \textit{totally}; on connotation cf. also Section \ref{sec:semanticprosody}). Second, there are specific semantic restrictions (for example, \textit{incredibly}, which is associated with subjective judgments), sometimes relating transparently to the meaning of the adverb (for example, \textit{badly}, which is associated with words denoting damage or \textit{clearly}, which is associated with words denoting sensory perception). Finally, there are morphological restrictions (some adverbs are used frequently with words derived by particular suffixes, for example, \textit{perfectly}, which is frequently found with words derived by \textit{-able}/\textit{-ible}, or \textit{totally}, whose collocates often contain the prefix \textit{un-}). Table \ref{tab:degreeadverbs} illustrates these findings for 5 of the 24 degree adverbs and their top 15 collocates. 
+
+\begin{sidewaystable}[!htbp]
+\caption{Selected degree adverbs and their collocates}
+\label{tab:degreeadverbs}
+\begin{tabular}[c]{lS|lS|lS|lS|lS}
+\lsptoprule
+Collocation & O\textsubscript{11} & O\textsubscript{12} & O\textsubscript{21} & O\textsubscript{22}  & G\textsuperscript{2} \\
+\midrule
+\multicolumn{2}{l}{\textvv{incredibly}} & \multicolumn{2}{l}{\textvv{perfectly}} & \multicolumn{2}{l}{\textvv{totally}} & \multicolumn{2}{l}{\textvv{completely}} & \multicolumn{2}{l}{\textvv{badly}} \\
+\midrule
+\textit{difficult} & \num{113.872861800138} &  \textit{normal} & \num{989.485547963119} &   \textit{different} & \num{3190.96570791974} &  \textit{different} & \num{3965.1188966892} &    \textit{bruised} & \num{573.271450001506} \\
+\textit{lucky} & \num{95.5763247955939} &  \textit{acceptable} & \num{928.210393768077} &   \textit{dependent} & \num{718.125672772732} &  \textit{new} & \num{1242.61302084742} &    \textit{wrong} & \num{410.491163236641} \\
+\textit{fast} & \num{87.9737668712714} &  \textit{clear} & \num{880.931147360751} &   \textit{unacceptable} & \num{706.934271824606} &  \textit{free} & \num{404.433647888444} &    \textit{damaged} & \num{217.62278293683} \\
+\textit{beautiful} & \num{80.5562844766918} &  \textit{happy} & \num{822.97854693618} &   \textit{inadequate} & \num{604.422886401554} &  \textit{wrong} & \num{362.329522133357} &    \textit{beaten} & \num{188.402979315352} \\
+\textit{dangerous} & \num{77.7511164152758} &  \textit{possible} & \num{743.653818146009} &   \textit{wrong} & \num{478.485800742744} &  \textit{unaware} & \num{240.243896218361} &    \textit{hurt} & \num{170.653100422616} \\
+\textit{strong} & \num{68.1258892209614} &  \textit{reasonable} & \num{674.848652051085} &   \textit{unexpected} & \num{459.523334869732} &  \textit{mad} & \num{218.549144134622} &    \textit{injured} & \num{141.800222260764} \\
+\textit{stupid} & \num{65.3227061806229} &  \textit{capable} & \num{663.375289224065} &   \textit{unsuitable} & \num{420.129793688147} &  \textit{refurbished} & \num{184.584775476699} &    \textit{wounded} & \num{138.48405828383} \\
+\textit{efficient} & \num{61.8432958507056} &  \textit{good} & \num{545.893093065182} &   \textit{unaware} & \num{345.902968972569} &  \textit{irrelevant} & \num{178.245168428584} &    \textit{swollen} & \num{113.920319799245} \\
+\textit{simple} & \num{61.8392263025402} &  \textit{adequate} & \num{537.981619439492} &   \textit{opposed} & \num{333.209590898584} &  \textit{separate} & \num{172.599035870993} &    \textit{fitting} & \num{106.127435223074} \\
+\textit{low} & \num{59.1441483498438} &  \textit{safe} & \num{512.693407325478} &   \textit{new} & \num{316.114527716569} &  \textit{independent} & \num{149.808402576058} &    \textit{affected} & \num{93.2369977859243} \\
+\textit{sexy} & \num{59.1201826544823} &  \textit{natural} & \num{469.620771634736} &   \textit{unnecessary} & \num{303.032405768825} &  \textit{satisfied} & \num{142.597441817173} &    \textit{broken} & \num{71.4932864323402} \\
+\textit{naive} & \num{57.3399543912635} &  \textit{competitive} & \num{418.442965303102} &   \textit{irrelevant} & \num{251.561403373731} &  \textit{innocent} & \num{141.112463259029} &  \textit{mutilated} & \num{70.7789896011335} \\
+\textit{expensive} & \num{56.6574234246096} &  \textit{honest} & \num{405.995469433133} &   \textit{alien} & \num{251.058311518604} &  \textit{empty} & \num{138.698200500187} &    \textit{burned} & \num{62.0680805030095} \\
+\textit{hard} & \num{55.0041421970401} &  \textit{balanced} & \num{388.130323250728} &   \textit{confused} & \num{249.154529517015} &  \textit{unknown} & \num{137.749731202469} &    \textit{unstuck} & \num{61.2988692595488} \\
+\textit{complicated} & \num{54.9780444183673} &  \textit{well} & \num{370.558152061571} &   \textit{blind} & \num{247.583829054925} &  \textit{dry} & \num{136.609332557596} &    \textit{lacerated} & \num{58.5625461063544} \\
+\lspbottomrule
+\end{tabular}
+\end{sidewaystable}
+% query: [word="(incredibly|perfectly|totally|completely|badly)"%c][pos=".*AJ.*"]
+
+Unlike Kennedy, I have used the $G^2$ statistic of the Log-Likelihood test,\footnote{Note that I will usually provide the frequencies for the cells $O_{11}$, $O_{12}$, $O_{21}$ and $O_{22}$ in tables like this, to allow you to check the calculations or to try out different association measures, but in this case lack of space prevents this. The complete dataset is part of the Online Supplementary Materials, however).} and so the specific collocates differ from the ones he finds (generally, his lists include more low-frequency combinations, as expected given that he uses Mutual Information), but his observations concerning the semantic and morphological sets are generally confirmed.
+
+This case study illustrates the exploratory design typical of collocational research as well as the type of result that such studies yield and the observations possible on the basis of these results. By comparing the results reported here to Kennedy's results, you may also gain a better understanding as to how different association measures may lead to different results.
+
+\subsection{Lexical relations}
+\label{sec:lexicalrelations}
+
+One area of lexical semantics where collocation data is used quite intensively is the study of lexical relations -- most notably, (near) synonymy (\citet{taylor_near_2003}, cf. below), but also polysemy (e.g. \citet{yarowsky_one_1993}, investigating the idea that associations exist not between words but between particular senses of words) and antonymy (\citet{justeson_co-occurrences_1991}, see below).
+
+\subsubsection{Case study: Near synonyms}
+\label{sec:nearsynonyms}
+
+Natural languages typically contain pairs (or larger sets) of words with very similar meanings, such as \textit{big} and \textit{large}, \textit{begin} and \textit{start} or \textit{high} and \textit{tall}. In isolation, it is often difficult to tell what the difference in meaning is, especially since they are often interchangeable at least in some contexts. Obviously, the distribution of such pairs or sets with respect to other words in a corpus can provide insights into their similarities and differences.
+
+One example of such a study is \citet{taylor_near_2003}, which investigates the synonym pair \textit{high} and \textit{tall} by identifying all instances of the two words in their subsense ``large vertical extent'' in the LOB corpus and categorizing the words they modify into eleven semantic categories. These categories are based on semantic distinctions such as human vs. inanimate, buildings vs. other artifacts vs. natural entities etc., which are expected \textit{a priori} to play a role.
+
+The study, while not strictly hypothesis-testing, is thus somewhat deductive. It involves two nominal variables; the independent variable \textvv{Type of Entity} with eleven values shown in Table \ref{tab:tallhighobjects} above and the dependent variable \textvv{Vertical Extent Adjective} with the values \textvv{high} and \textvv{tall} (assuming that people first choose something to talk about and then choose the appropriate adjective to describe it). Table \ref{tab:tallhighobjects} shows Taylor's results (he reports absolute and relative frequencies, which I have used to calculate expected frequencies and chi-square components).
+
+\begin{table}[!htbp]
+\caption{Objects described as \textit{tall} or \textit{high} in the LOB corpus \citep{taylor_near_2003}}
+\label{tab:tallhighobjects}
+\resizebox*{!}{\textheight}{%
+\begin{tabular}[t]{lccr}
+\lsptoprule
+ & \multicolumn{2}{c}{\textvv{Adjective}} & \\
+\textvv{Noun Category} & \textvv{tall} & \textvv{high} & Total \\
+\midrule
+\textvv{\makecell[tl]{humans}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 45 \\ \small{\textit{Exp.:}} & 22.91 \\ \small{\textit{$\chi^2$:}} & 21.31 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 2 \\ \small{\textit{Exp.:}} & 24.09 \\ \small{\textit{$\chi^2$:}} & 20.26 \end{tabular}}
+	& 47 \\[1.1cm]
+\textvv{\makecell[tl]{animals}}	
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 0 \\ \small{\textit{Exp.:}} & 0.49 \\ \small{\textit{$\chi^2$:}} & 0.49 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 1 \\ \small{\textit{Exp.:}} & 0.51 \\ \small{\textit{$\chi^2$:}} & 0.46 \end{tabular}}
+	& 1 \\[1.1cm]
+\textvv{\makecell[tl]{plants, trees}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 7 \\ \small{\textit{Exp.:}} & 4.87 \\ \small{\textit{$\chi^2$:}} & 0.93 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 3 \\ \small{\textit{Exp.:}} & 5.13 \\ \small{\textit{$\chi^2$:}} & 0.88 \end{tabular}}
+	& 10 \\[1.1cm]
+\textvv{\makecell[tl]{buildings}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 3 \\ \small{\textit{Exp.:}} & 6.34 \\ \small{\textit{$\chi^2$:}} & 1.76 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 10 \\ \small{\textit{Exp.:}} & 6.66 \\ \small{\textit{$\chi^2$:}} & 1.67 \end{tabular}}
+	& 13 \\[1.1cm]
+\textvv{\makecell[tl]{walls, fences, \\ etc}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 0 \\ \small{\textit{Exp.:}} & 2.44 \\ \small{\textit{$\chi^2$:}} & 2.44 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 5 \\ \small{\textit{Exp.:}} & 2.56 \\ \small{\textit{$\chi^2$:}} & 2.32 \end{tabular}}
+	& 5 \\[1.1cm]
+\textvv{\makecell[tl]{towers, statues, \\ pillars, sticks}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 0 \\ \small{\textit{Exp.:}} & 3.41 \\ \small{\textit{$\chi^2$:}} & 3.41 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 7 \\ \small{\textit{Exp.:}} & 3.59 \\ \small{\textit{$\chi^2$:}} & 3.24 \end{tabular}}
+	& 7 \\[1.1cm]
+\textvv{\makecell[tl]{articles of  \\ clothing}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 0 \\ \small{\textit{Exp.:}} & 3.41 \\ \small{\textit{$\chi^2$:}} & 3.41 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 7 \\ \small{\textit{Exp.:}} & 3.59 \\ \small{\textit{$\chi^2$:}} & 3.24 \end{tabular}}
+	& 7 \\[1.1cm]
+\textvv{\makecell[tl]{miscellaneous \\ artifacts}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 2 \\ \small{\textit{Exp.:}} & 7.31 \\ \small{\textit{$\chi^2$:}} & 3.86 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 13 \\ \small{\textit{Exp.:}} & 7.69 \\ \small{\textit{$\chi^2$:}} & 3.67 \end{tabular}}
+	& 15 \\[1.1cm]
+\textvv{\makecell[tl]{topographical \\ features}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 0 \\ \small{\textit{Exp.:}} & 2.44 \\ \small{\textit{$\chi^2$:}} & 2.44 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 5 \\ \small{\textit{Exp.:}} & 2.56 \\ \small{\textit{$\chi^2$:}} & 2.32 \end{tabular}}
+	& 5 \\[1.1cm]
+\textvv{\makecell[tl]{other natural \\ phenomena}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 0 \\ \small{\textit{Exp.:}} & 2.44 \\ \small{\textit{$\chi^2$:}} & 2.44 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 5 \\ \small{\textit{Exp.:}} & 2.56 \\ \small{\textit{$\chi^2$:}} & 2.32 \end{tabular}}
+	& 5 \\[1.1cm]
+\textvv{\makecell[tl]{uncertain \\ reference}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 1 \\ \small{\textit{Exp.:}} & 1.95 \\ \small{\textit{$\chi^2$:}} & 0.46 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 3 \\ \small{\textit{Exp.:}} & 2.05 \\ \small{\textit{$\chi^2$:}} & 0.44 \end{tabular}}
+	& 4 \\
+\midrule
+Total
+	& \makecell[t]{58}
+	& \makecell[t]{61}
+	& \makecell[t]{119} \\
+\lspbottomrule
+\end{tabular}}
+\end{table}
+% calculated from Taylor's frequencies
+
+As we can see, there is little we can learn from this table, since the frequencies in the individual cells are simply too small to apply the chi-square test to the table as a whole. The only chi-square components that reach significance individually are those for the category \textvv{human}, which show that \textit{tall} is preferred and \textit{high} avoided with human referents. The sparsity of the data in the table is due to the fact that the analyzed sample is very small, and this problem is exacerbated by the fact that the little data available is spread across too many categories. The category labels are not well chosen either: they overlap substantially in several places (e.g., towers and walls are buildings, pieces of clothing are artifacts, etc.) and not all of them seem relevant to any expectation we might have about the words \textit{high} and \textit{tall}. 
+
+Taylor later cites earlier psycholinguistic research indicating that \textit{tall} is used when the vertical dimension is prominent, is an acquired property and is a property of an individuated entity. It would thus have been better to categorize the corpus data according to these properties -- in other words, a more strictly deductive approach would have been more promising given the small data set.
+
+Alternatively, we can take a truly exploratory approach and look for differential collocates as described in Section \ref{sec:collocationasaquantitativephenomenon} above -- in this case, for differential noun collocates of the adjectives \textit{high} and \textit{tall}. This allows us to base our analysis on a much larger data set, as the nouns do not have to be categorized in advance.
+
+Table \ref{tab:tallhighdifferential} shows the top 15 differential collocates of the two words in the BNC.
+
+\begin{table}[!htbp]
+\caption{Differential collocates for \textit{tall} and \textit{high} in the BNC}
+\label{tab:tallhighdifferential}
+\resizebox*{!}{\textheight}{%
+\begin{tabular}[t]{l *{4}{S[table-format=5]} S}
+\lsptoprule
+\multicolumn{1}{c}{\makecell[tc]{\textvv{Collocate}}} & \multicolumn{1}{c}{\makecell[tc]{Collocate \\ with \textvv{tall}}} & \multicolumn{1}{c}{\makecell[tc]{Collocate \\ with \textvv{high}}} & \multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textvv{tall}}} & \multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textvv{high}}} & \multicolumn{1}{c}{\makecell[tc]{G\textsuperscript{2}}} \\
+\midrule
+\multicolumn{6}{l}{Most strongly associated with \textit{high}} \\
+\midrule
+\textit{level} & 0 & 2741 & 1720 & 36933 & 240.898068777805 \\
+\textit{education} & 0 & 2499 & 1720 & 37175 & 218.937166532595 \\
+\textit{court} & 0 & 1863 & 1720 & 37811 & 161.881473791796 \\
+\textit{quality} & 0 & 1079 & 1720 & 38595 & 92.8267037555495 \\
+\textit{standard} & 1 & 1163 & 1719 & 38511 & 90.346269392962 \\
+\textit{rate} & 0 & 922 & 1720 & 38752 & 79.1632050127164 \\
+\textit{proportion} & 0 & 875 & 1720 & 38799 & 75.0833927577266 \\
+\textit{street} & 1 & 810 & 1719 & 38864 & 60.3764152465197 \\
+\textit{school} & 0 & 676 & 1720 & 38998 & 57.8627173034569 \\
+\textit{price} & 0 & 642 & 1720 & 39032 & 54.9290960643995 \\
+\textit{degree} & 0 & 638 & 1720 & 39036 & 54.5841285987495 \\
+\textit{speed} & 0 & 547 & 1720 & 39127 & 46.7454514173974 \\
+\textit{interest} & 0 & 493 & 1720 & 39181 & 42.1023605331173 \\
+\textit{risk} & 0 & 431 & 1720 & 39243 & 36.7791224480728 \\
+\textit{cost} & 0 & 387 & 1720 & 39287 & 33.0063324532521 \\
+\textit{priority} & 0 & 374 & 1720 & 39300 & 31.8924360233426 \\
+\textit{point} & 0 & 352 & 1720 & 39322 & 30.0082019481661 \\
+\textit{unemployment} & 0 & 318 & 1720 & 39356 & 27.0982326583422 \\
+\textit{temperature} & 0 & 305 & 1720 & 39369 & 25.9862476538453 \\
+\midrule
+\multicolumn{6}{l}{Most strongly associated with \textit{tall}} \\
+\midrule
+\textit{man} & 182 & 3 & 1538 & 39671 & 1146.53650773315 \\
+\textit{building} & 82 & 26 & 1638 & 39648 & 408.350584997293 \\
+\textit{tree} & 73 & 26 & 1647 & 39648 & 355.522865500568 \\
+\textit{boy} & 40 & 0 & 1680 & 39674 & 255.363795457773 \\
+\textit{glass} & 39 & 2 & 1681 & 39672 & 233.141096515712 \\
+\textit{woman} & 38 & 3 & 1682 & 39671 & 221.337027650028 \\
+\textit{ship} & 33 & 0 & 1687 & 39674 & 210.544481854899 \\
+\textit{girl} & 32 & 0 & 1688 & 39674 & 204.146277120271 \\
+\textit{figure} & 62 & 93 & 1658 & 39581 & 195.580126045562 \\
+\textit{chimney} & 28 & 8 & 1692 & 39666 & 141.094247265441 \\
+\textit{order} & 62 & 176 & 1658 & 39498 & 138.006783395678 \\
+\textit{dark} & 23 & 3 & 1697 & 39671 & 128.268193810387 \\
+\textit{grass} & 24 & 5 & 1696 & 39669 & 126.757923691218 \\
+\textit{tale} & 20 & 1 & 1700 & 39673 & 119.499528890202 \\
+\textit{window} & 34 & 41 & 1686 & 39633 & 117.040450085056 \\
+\textit{story} & 18 & 0 & 1702 & 39674 & 114.690423779762 \\
+\textit{tower} & 24 & 24 & 1696 & 39650 & 88.4692360357471 \\
+\textit{plant} & 24 & 28 & 1696 & 39646 & 83.5671494855209 \\
+\textit{person} & 13 & 0 & 1707 & 39674 & 82.7955241037745 \\
+\textit{nave} & 9 & 0 & 1711 & 39674 & 57.2998281660671 \\
+\lspbottomrule
+\end{tabular}}
+\end{table}
+% query: BNC; [hw="(tall|high)" & pos=".*AJ.*"][pos=".*NN.*"]; count Last by hw
+
+The results for \textit{tall} clearly support Taylor's ideas about the salience of the vertical dimension. The results for \textit{high} show something Taylor could not have found, since he restricted his analysis to the subsense ``vertical dimension'': when compared with tall, \textit{high} is most strongly associated with quantities or positions in hierarchies and rankings. There are no spatial uses at all among its top differential collocates. This does not answer the question why we can use it spatially and in competition with \textit{tall}, but it shows what general sense we would have to assume: one concerned not with the vertical extent as such, but with the magnitude of that extent (which, incidentally, Taylor notes in his conclusion).
+
+This case study shows how the same question can be approached by a deductive or an inductive (exploratory) approach. The deductive approach can be more precise, but this depends on the appropriateness of the categories chosen \textit{a priori} for annotating the data; it is also time consuming and therefore limited to relatively small data sets. In contrast, the inductive approach can be applied to a large data set because it requires no \textit{a priori} annotation. It also does not require any choices concerning annotation categories; however, there may be a danger to project patterns into the data \textit{post hoc}.
+
+\subsubsection{Case study: Antonymy}
+\label{sec:antonymy}
+
+At first glance, we expect the relationship between antonyms to be a paradigmatic one, where only one or the other will occur in a given utterance. However, \citet{charles_contexts_1989} suggest, based on the results of sorting tasks and on theoretical considerations, that, on the contrary, antonym pairs are frequently found in syntagmatic relationships, occurring together in the same clause or sentence. A number of corpus-linguistic studies have shown this to be the case (e.g. \citealt{justeson_co-occurrences_1991}, \citealt{justeson_redefining_1992}, \citealt{fellbaum_co-occurrence_1995}; cf. also \citep{gries_behavioral_2010} for a study identifying antonym pairs based on their similarity in lexico-syntactic behavior).
+
+There are differences in detail in these studies, but broadly speaking, they take a deductive approach: They choose a set of test words for which there is agreement as to what their antonyms are, search for these words in a corpus, and check whether their antonyms occur in the same sentence significantly more frequently than expected. The studies thus involve two nominal variables: \textvv{Sentence} (with the values \textvv{contains test word} and \textvv{does not contain test word}) and \textvv{Antonym of Test Word} (with the values \textvv{occurs in sentence} and \textvv{does not occur in sentence}). This seems like an unnecessarily complicated way of representing the type of co-occurrence design used in the examples above, but I have chosen it to show that in this case sentences containing a particular word are used as the condition under which the occurrence of another word is investigated -- a straightforward application of the general research design that defines quantitative corpus linguistics. Table \ref{tab:goodbadbrown} demonstrates the design using the adjectives \textit{good} and \textit{bad} (the numbers are, as always in this book, based on the tagged version of BROWN included with the ICAME collection and differ slightly from the ones reported by Justeson and Katz).
+
+\begin{table}[!htbp]
+\caption{Sentential co-occurrence of \textit{good} and \textit{bad} in the BROWN corpus}
+\label{tab:goodbadbrown}
+\begin{tabular}[t]{llccr}
+\lsptoprule
+ & & \multicolumn{2}{c}{\textvv{Bad}} & \\
+ & & \textvv{occurs} & \textvv{$\neg$occurs} & Total \\
+\midrule
+\textvv{\makecell[lt]{Good}}
+	& \textvv{occurs} 
+		& \makecell[t]{\num{16}\\\small{(\num{1.57})}}
+		& \makecell[t]{\num{687}\\\small{(\num{701.43})}}
+		& \makecell[t]{\num{703}\\} \\
+	& \textvv{$\neg$occurs}
+		& \makecell[t]{\num{110}\\\small{(\num{124.43})}}
+		& \makecell[t]{\num{55769}\\\small{(\num{55754.57})}}
+		& \makecell[t]{\num{55879}\\} \\
+\midrule
+	& Total
+		& \makecell[t]{\num{126}}
+		& \makecell[t]{\num{56456}}
+		& \makecell[t]{\num{56582}} \\
+\lspbottomrule
+\end{tabular}
+\end{table}
+% chisq.test(matrix(c(16,110,687,55769),ncol=2),corr=FALSE)
+% query: <s> []* ([word="good"%c & pos="JJ"] []* [word="bad"%c & pos="JJ"]|[word="bad"%c & pos="JJ"] []* [word="good"%c & pos="JJ"]) []* </s>
+
+\textit{Good} occurs significantly more frequently in sentences also containing \textit{bad} than in sentences not containing \textit{bad}, and vice versa ($\chi^2 = 135.07, df = 1, \textit{p} < 0.001$). \citet{justeson_co-occurrences_1991} apply this procedure to 36 adjectives and get significant results for 25 of them (19 of which remain significant after a Bonferroni correction for multiple tests). They also report that in a larger corpus, the frequency of co-occurrence for all adjective pairs is significantly higher than expected (but do not give any figures). \citet{fellbaum_co-occurrence_1995} uses a very similar procedure with words from other word classes, with very similar results.
+
+These studies only look at the co-occurrence of antonyms; they do not apply the same method to word pairs related by other lexical relations (synonymy, taxonomy, etc.). Thus, there is no way of telling whether co-occurrence within the same sentence is something that is typical specifically of antonyms, or whether it is something that characterizes word pairs in other lexical relations, too.
+
+An obvious approach to testing this would be to repeat the study with other types of lexical relations. Alternatively, we can take an exploratory approach that does not start out from specific word pairs at all. \citet{justeson_co-occurrences_1991} investigate the specific grammatical contexts which antonyms tend to co-occur, identifying, among others, coordination of the type [ADJ \textit{and} ADJ] or [ADJ \textit{or} ADJ]. We can use these specific contexts to determine the role of co-occurrence for different types of lexical relations by simply extracting \textit{all} word pairs occurring in the adjective slots of these patterns, calculating their association strength within this pattern as shown in Table \ref{tab:goodbadsequence} for the adjectives \textit{good} and \textit{bad} in the BNC, and then categorizing the most strongly associated collocates in terms of the lexical relationships between them.
+
+\begin{table}[!htbp]
+\caption{Co-occurrence of \textit{good} and \textit{bad} in the first and second slot of [ADJ\textsubscript{1} \textit{and} ADJ\textsubscript{2}]}
+\label{tab:goodbadsequence}
+\begin{tabular}[t]{llccr}
+\lsptoprule
+ & & \multicolumn{2}{c}{\textvv{Second Slot}} & \\
+ & & \textvv{bad} & \textvv{$\neg$bad} & Total \\
+\midrule
+\textvv{\makecell[lt]{First Slot}}
+	& \textvv{good} 
+		& \makecell[t]{\num{158}\\\small{(\num{0.89})}}
+		& \makecell[t]{\num{476}\\\small{(\num{633.11})}}
+		& \makecell[t]{\num{634}\\} \\
+	& \textvv{$\neg$good}
+		& \makecell[t]{\num{35}\\\small{(\num{192.11})}}
+		& \makecell[t]{\num{136893}\\\small{(\num{136735.89})}}
+		& \makecell[t]{\num{136928}\\} \\
+\midrule
+	& Total
+		& \makecell[t]{\num{193}}
+		& \makecell[t]{\num{137369}}
+		& \makecell[t]{\num{137562}} \\
+\lspbottomrule
+\end{tabular}
+\end{table}
+% chisq.test(matrix(c(158,35,476,136893),ncol=2),corr=FALSE)
+% Query: [pos=".*AJ.*"] [word="(and|or)"%c] [pos=".*AJ.*"] 
+
+Note that this is a slightly different procedure from what we have seen before: instead of comparing the frequency of co-occurrence of two words with their individual occurrence in the rest of the corpus, we are comparing it to their individual occurrence \textit{in a given position of a given structure} -- in this case [ADJ \textit{and} ADJ] (\citet{stefanowitsch_covarying_2005} call this type of design \textit{covarying collexeme analysis}).
+
+Table \ref{tab:adjandadj} shows the thirty most strongly associated adjective pairs coordinated with \textit{and} or \textit{or} in the BNC.
+
+\begin{table}[!htbp]
+\caption{Co-occurrence of adjectives in the first and second slot of [ADJ\textsubscript{1} \textit{and} ADJ\textsubscript{2}] (BNC)}
+\label{tab:adjandadj}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}[t]{l *{4}{S[table-format=5]} S}
+\lsptoprule
+\multicolumn{1}{c}{\makecell[tc]{\textvv{ADJ\textsubscript{1} and ADJ\textsubscript{2}}}} & \multicolumn{1}{c}{\makecell[tc]{ADJ\textsubscript{1} \\ with ADJ\textsubscript{2}}} & \multicolumn{1}{c}{\makecell[tc]{ADJ\textsubscript{1} \\ with ADJ\textsubscript{other}}} & \multicolumn{1}{c}{\makecell[tc]{ADJ\textsubscript{other} \\ with ADJ\textsubscript{2}}} & \multicolumn{1}{c}{\makecell[tc]{ADJ\textsubscript{other} \\ with ADJ\textsubscript{other}}} & \multicolumn{1}{c}{\makecell[tc]{G\textsuperscript{2}}} \\
+\midrule
+\textit{black and white} & 959 & 507 & 667 & 135429 & 7348.90151599047 \\
+\textit{economic and social} & 1049 & 1285 & 1286 & 133942 & 5920.15921986386 \\
+\textit{male and female} & 414 & 25 & 26 & 137097 & 5244.74711034171 \\
+\textit{social and economic} & 755 & 1705 & 862 & 134240 & 4119.00197451205 \\
+\textit{public and private} & 369 & 135 & 158 & 136900 & 3877.59700969961 \\
+\textit{deaf and dumb} & 276 & 43 & 8 & 137235 & 3655.00730766959 \\
+\textit{primary and secondary} & 262 & 58 & 25 & 137217 & 3332.90019997429 \\
+\textit{lesbian and gay} & 183 & 6 & 22 & 137351 & 2596.57259894941 \\
+\textit{internal and external} & 191 & 28 & 20 & 137323 & 2595.40553931585 \\
+\textit{hon. and learned} & 232 & 91 & 118 & 137121 & 2594.96166526879 \\
+\textit{political and economic} & 466 & 1166 & 1151 & 134779 & 2356.73586876498 \\
+\textit{social and political} & 502 & 1958 & 1139 & 133963 & 2160.28891486432 \\
+\textit{national and international} & 251 & 443 & 243 & 136625 & 2075.94416858483 \\
+\textit{left and right} & 149 & 37 & 33 & 137343 & 1974.65889652984 \\
+\textit{upper and lower} & 156 & 30 & 105 & 137271 & 1911.70103238921 \\
+\textit{old and new} & 214 & 462 & 164 & 136722 & 1834.77880932457 \\
+\textit{economic and monetary} & 266 & 2068 & 89 & 135139 & 1802.61215794657 \\
+\textit{physical and mental} & 186 & 467 & 54 & 136855 & 1793.37014253228 \\
+\textit{top and bottom} & 123 & 26 & 6 & 137407 & 1786.23432447428 \\
+\textit{economic and political} & 420 & 1914 & 1221 & 134007 & 1671.3154675825 \\
+\textit{local and national} & 186 & 309 & 180 & 136887 & 1667.40769973095 \\
+\textit{positive and negative} & 147 & 179 & 43 & 137193 & 1653.32126460578 \\
+\textit{good and bad} & 158 & 476 & 35 & 136893 & 1560.45539047568 \\
+\textit{private and public} & 161 & 236 & 160 & 137005 & 1514.897012127 \\
+\textit{industrial and commercial} & 174 & 277 & 236 & 136875 & 1510.40322305424 \\
+\textit{past and present} & 114 & 60 & 23 & 137365 & 1497.56413715302 \\
+\textit{formal and informal} & 131 & 116 & 65 & 137250 & 1494.0706537832 \\
+\textit{alive and well} & 111 & 78 & 20 & 137353 & 1434.90887912111 \\
+\textit{central and eastern} & 155 & 380 & 97 & 136930 & 1434.85821734585 \\
+\textit{present and future} & 130 & 95 & 124 & 137213 & 1412.33888161531 \\
+\lspbottomrule
+\end{tabular}}
+\end{table}
+% Query: [pos=".*AJ.*"] [word="(and|or)"%c] [pos=".*AJ.*"] 
+% The corpus was queried for a word tagged as an adjective (including comparative and superlative forms), followed by the string \textit{and} or \textit{or} (case insensitive), followed by another word tagged as an adjective (again including comparative and superlative forms). 
+
+Clearly, antonymy is the dominant relation among these word pairs, which are mostly opposites (\textit{black}/\textit{white}, \textit{male}/\textit{female}, \textit{public}/\textit{private}, etc.), and sometimes relational antonyms (\textit{primary}/\textit{secondary}, \textit{economic}/\textit{social}, \textit{economic}/\textit{political}, \textit{social}/\textit{political}, \textit{lesbian}/\textit{gay}, etc.). The only cases of non-antonymic pairs are \textit{economic}/\textit{monetary}, which is more like a synonym than an antonym and the fixed expressions \textit{deaf}/\textit{dumb} and \textit{hon(ourable)/learned} (as in \textit{honourable and learned gentleman/member/friend}). The pattern does not just hold for the top 30 collocates but continues as we go down the list. There are additional cases of relational antonyms, like \textit{British}/\textit{American} and \textit{Czech}/\textit{Slovak} and additional examples of fixed expressions (\textit{alive and well}, \textit{far and wide}, \textit{true and fair}, \textit{null and void}, \textit{noble and learned}), but most cases are clear antonyms (for example, \textit{syntactic}/\textit{semantic}, \textit{spoken}/\textit{written}, \textit{mental}/\textit{physical}, \textit{right}/\textit{left}, \textit{rich}/\textit{poor}, \textit{young}/\textit{old}, \textit{good}/\textit{evil}, etc.). The one systematic exceptions are cases like \textit{worse and worse} (a special construction with comparatives indicating incremental change; cf. \citet{stefanowitsch_wortwiederholungen_2007}).
+
+This case study shows how deductive and inductive domains may complement each other: while the deductive studies cited show that antonyms tend to co-occur syntagmatically, the inductive study presented here shows that words that co-occur syntagmatically (at least in certain syntactic contexts) tend to be antonyms. These two findings are not equivalent; the second finding shows that the first finding may indeed be typical for antonymy as opposed to other lexical relations.
+
+The exploratory study was limited to a particular syntactic/semantic context, chosen because it seems semantically and pragmatically neutral enough to allow all kinds of lexical relations to occur in it. There are contexts which might be expected to be particularly suitable to particular kinds of lexical relations and which could be used, given a large enough corpus, to identify word pairs in such relations. For example, the pattern [ADJ \textit{rather than} ADJ] seems semantically predisposed for identifying antonyms, and indeed, it yields pairs like \textit{implicit}/\textit{explicit}, \textit{worse}/\textit{better}, \textit{negative}/\textit{positive}, \textit{qualitative}/\textit{quantitative}, \textit{active}/\textit{passive}, \textit{real}/\textit{ap\-parent }, \textit{local}/\textit{national}, \textit{political}/\textit{economical}, etc. Other patterns are semantically more complex, identifying pairs in more context-dependent oppositions; for example, [ADJ \textit{but not} ADJ] identifies pairs like \textit{desirable}/\textit{essential}, \textit{necessary}/\textit{sufficient}, \textit{similar}/\textit{identical}, \textit{small}/\textit{insignificant}, \textit{useful}/\textit{essential}, \textit{difficult}/\textit{impossible}. The relation between the adjectives in these pairs is best described as pragmatic -- the first one conventionally implies the second.
+
+\subsection{Semantic prosody}
+\label{sec:semanticprosody}
+
+Sometimes, the collocates of a node word (or larger expressions) fall into a more or less clearly recognizable semantic class that is difficult to characterize in terms of denotational properties of the node word. \citet[157]{louw_irony_1993} refers to this phenomenon as ``semantic prosody'', defined, somewhat impressionistically, as the ``consistent aura of meaning with which a form is imbued by its collocates''.
+
+This definition has been understood by collocation researchers in two different (but related) ways. Much of the subsequent research on semantic prosody is based on the understanding that this ``aura'' consists of connotational meaning \citep[cf. e.g.][68]{partington_patterns_1998}, so that words can have a ``positive'', ``neutral'' or ``negative'' semantic prosody. However, Sinclair, who according to Louw invented the term,\footnote{Louw attributes the term to John Sinclair, but \citet{louw_irony_1993} is the earliest appearance of the term in writing. However, Sinclair is clearly the first to discuss the phenomenon itself systematically, without giving it a label \citep[e.g.][74--75]{sinclair_corpus_1991}.} seems to have in mind ``attitudinal or pragmatic'' meanings that are much more specific than ``positive'', ``neutral'' or ``negative''. There are insightful terminological discussions concerning this issue \citep[cf. e.g.][]{hunston_semantic_2007}, but since the term is widely-used in (at least) these two different ways, and since ``positive'' and ``negative'' connotations are very general types of attitudinal meaning, it seems more realistic to accept a certain vagueness of the term. If necessary, we could differentiate between the general semantic prosody of a word (its ``positive'' or ``negative'' connotation as reflected in its collocates) and its specific semantic prosody (the word-specific attitudinal meaning reflected in its collocates).
+
+\subsubsection{Case study: True feelings}
+\label{sec:truefeelings}
+
+A typical example of Sinclair's approach to semantic prosody, both methodologically and theoretically, is his short case study of the expression \textit{true feelings}. \citet{sinclair_search_1996} presents a selection of concordance lines from the COBUILD corpus -- Figure \ref{fig:truefeelings} shows a random sample from the BNC instead, as the COBUILD corpus is not accessible, but Sinclair's findings are well replicated by this sample).
+
+\begin{figure}[!htbp]
+\caption{Concordance of \textit{true feelings} (BNC, Sample)}
+\label{fig:truefeelings}
+\begin{fitverb}
+ 1 f unless you 're absolutely sure of your [true feelings] . I had a similar experience several ye
+ 2 nces may well not reflect my employer 's [true feelings] on the matter , but once having sustain
+ 3  and realize it is all right to show our [true feelings] and that it is all right to be rejected
+ 4 wing right action : acting only from our [true feelings] , not governed by the distortions of em
+ 5     , but the problem of ` reading ' the [true feelings] of the individual can be made easier by
+ 6  other . Having declared to Roderigo his [true feelings] about Othello , Iago later explains why
+ 7 ell studied in the art of disguising his [true feelings] . Let him not be frightened of me ; let
+ 8 rised that the TV presenter revealed her [true feelings] towards Nicola so quickly : most people
+ 9 embers are helpful to show each side the [true feelings] of the other , the need to accept and w
+10 good husband , but you like to hide your [true feelings] . ' ` Oh , do n't be so serious , B
+11  er , he has n't actually dealt with the [true feelings] that he had towards his father , and wh
+12  ad  ` friends ' , without revealing her [true feelings] for him . It was still light when he pi
+13 t the parents will often not admit their [true feelings] about the child and the incident , acti
+14 t a matter of time before she showed her [true feelings] , I was sure of that . Females -- hone
+15 m for so long at last gave vent to their [true feelings] . The match had been billed in the Amer
+16 eople . And got him plenty sex . Rory 's [true feelings] about the matter were complex but red-b
+17 t had finally forced her to confront her [true feelings] for Arnie . Or rather , her lack of fee
+18 rage in both hands , and told him of her [true feelings] , they might have had a chance to work 
+19 andmother finds it difficult to show her [true feelings] . ' said David . ` I think it 's a 
+20 er heart did more to convince her of her [true feelings] than any rational thinking . She wanted
+\end{fitverb}
+\end{figure}
+% "true"%c "feelings"%c; randomize 51; reduce Last to 20;
+
+On the basis of his concordance, Sinclair then makes a number of observations concerning the use of the phrase \textit{true feelings}, quantifying them informally. He notes three things: first, the phrase is almost always part of a possessive (realized by pronoun, possessive noun phrase or \textit{of}-construction). This is also true of the sample in \ref{fig:truefeelings}, with the exception of line 11 (where there is a possessive relation, but it is realized by the verb \textit{have}).
+
+Second, the expression collocates with verbs of expression (perhaps unsurprising for an expression relating to emotions); this, too, is true for our sample, where such verbs are found in 14 lines: \textit{reflect} (line 2), \textit{show} (lines 3, 9, 14, and 19), \textit{read} (line 5), \textit{declare} (line 6), \textit{disguise} (line 7), \textit{reveal} (line 8), \textit{hide} (line 10), \textit{reveal} (line 12), \textit{admit} (line 13), \textit{give vent to} (line 15), and \textit{tell} (line 18).
+
+Third, and most interesting, Sinclair finds that a majority of his examples express a \textit{reluctance} to express emotions. In our sample, such cases are also noticeably frequent: I would argue that lines 2, 3, 5, 7, 8, 10, 12, 13, 14, 15, and 19 can be interpreted in this way, which would give us a slight majority of $\nicefrac{11}{20}$. (Your analysis may differ, as I have made my assessment rather intuitively, instead of coming up with an annotation scheme). In many cases, the reluctance or inability is communicated as part of the verb (like \textit{disguise}, \textit{conceal} and \textit{hide}), in other cases it is communicated by negation of a verb of expression (like \textit{not admit} in line 13) or by adjectives (like \textit{difficult to show} in line 19).
+
+Sinclair assumes that the denotational meaning of the phrase \textit{true feelings} is ``genuine emotions''. Based on his observations, he posits that, in addition, it has the semantic prosody ``reluctance/inability to express emotions'' -- an attitudinal meaning much more specific than a general ``positive'' or ``negative'' connotation.
+
+The methodological approach taken by Sinclair (and many others in his tradition) can yield interesting observations (at least, if applied very carefully): descriptively, there is little to criticize. However, under the definition of corpus linguistics adopted in this book, Sinclair's observations would be just the first step towards a full analysis. First, note that Sinclair's approach is quantitative only in a very informal sense -- he rarely reports exact frequencies for a given semantic feature in his sample, relying instead on general statements about the frequency or rarity of particular phenomena. As we saw above, this is easy to remedy by simply determining the exact number of times that the phenomenon in question occurs in a given sample. However, such exact frequencies do not advance the analysis meaningfully: as long as we do not know how frequent a particular phenomenon is in the corpus as a whole, we cannot determine whether it is a characteristic property of the expression under investigation, or just an accidental one.
+
+Specifically, as long as we do not know how frequent the semantic prosody ``reluctance or inability to express'' is in general, we do not know whether it is particularly characteristic of the phrase \textit{true emotions}. It may be characteristic, among other things, (a) of utterances concerning emotions in general, (b) of utterances containing the plural noun \textit{feelings}, (c) of utterances containing the adjective \textit{true}, etc.
+
+In order to determine this, we have to compare our sample of the expression \textit{true feelings} to related expressions that differ with respect to each property potentially responsible for the semantic prosody. For example, we might compare it to the noun \textit{feelings} in order to investigate possibility (b). Figure \ref{fig:possfeelings} shows a sample of the expression [POSS \textit{feelings}] (the possessive pronoun was included as it, too, may have an influence on the prosody and almost all examples of \textit{true feelings} are preceded by a possessive pronoun).
+
+\begin{figure}[!htbp]
+\caption{Concordance of [POSS \textit{feelings}] (BNC, Sample)}
+\label{fig:possfeelings}
+\begin{fitverb}
+ 1  by the rest of the board ? Re-programme [your feelings] , in that case . The annual BW accounts
+ 2 the Asian women I spoke to told me about [their feelings] and situations . Here I shall try to d
+ 3 ractive , but I think you might consider [my feelings] as well as your own. , Another pause . 
+ 4 o trust her more , dared to feel more of [my feelings] , instead of eating them away . It woul
+ 5 all was in order . It is hard to explain [my feelings] once I did finally set off . For the fi
+ 6 e family and the old person work through [their feelings] about any restrictions . This contract 
+ 7   ay . ` Nothing is ever going to change [their feelings] towards me . ` I 've tried everything
+ 8 han rights . It is about men reconciling [their feelings] towards their fathers and learning how 
+ 9 l family . It is as if to let people see [your feelings] takes away some of your power . But at 
+10  eyelids defensively lowered to disguise [her feelings] . Crossing her legs discreetly , she du
+11 nxiety ? Should n't she just accept that [her feelings] about her mother 's lifestyle were irra
+12 o stop things before they went too far . [His feelings] had gone no deeper than the surface . N
+13 resentment , because you do n't care for [my feelings] at all . You always think the worst of 
+14 etence , could n't face having to stifle [her feelings] , her crazy and immature hopes -- hope
+15 Remember ? ' ` I thought I could control [my feelings] , have an exciting affair with you and 
+16  her and kissing her softly , she voiced [her feelings] by saying , ` I love you , Gran . '
+17 our lack of understanding with regard to [his feelings] as a father . ' ` Oh , Great-gran ,
+18  right , then , the doubts you had about [your feelings] . ' ` You mean my feelings towards 
+19 y North-West 's Billy Anderson who vents [his feelings] about the lack of North-West representa
+20  that is by giving them a copy . That 's [my feelings] erm . I move . Thanks very much indeed 
+\end{fitverb}
+\end{figure}
+% "(my|your|his|her|its|our|their)"%c "feelings"%c; randomize 95; reduce Last to 20
+
+The concordance shows that contexts concerning a reluctance or inability to express emotions are not untypical of the expression [POSS \textit{feelings}] --  it is found in four out of twenty lines in our sample, i.e. in 20 percent of all cases (lines 5, 10, 14, 15). However, it is nowhere near as frequent as with the expression \textit{true feelings}. We can compare the two samples using the chi-square test. As Table \ref{tab:truepossstat} shows, the difference is, indeed, significant ($\chi^2 = 5.23, df = 1, p < = 0.05$).
+
+\begin{table}[!htbp]
+\caption{Semantic prosody of \textit{true feelings} and [POSS \textit{feelings}]}
+\label{tab:truepossstat}
+\begin{tabular}[t]{llccr}
+\lsptoprule
+ & & \multicolumn{2}{c}{\textvv{Prosody}} & \\
+ & & \textvv{reluctance} & \textvv{$\neg$reluctance} & Total \\
+\midrule
+\textvv{\makecell[lt]{Expression}}
+	& \textvv{true feelings} 
+		& \makecell[t]{\num{11}\\\small{(\num{7.50})}}
+		& \makecell[t]{\num{9}\\\small{(\num{12.50})}}
+		& \makecell[t]{\num{20}\\} \\
+	& \textvv{[poss \textit{feelings}]}
+		& \makecell[t]{\num{4}\\\small{(\num{7.50})}}
+		& \makecell[t]{\num{16}\\\small{(\num{12.50})}}
+		& \makecell[t]{\num{20}\\} \\
+\midrule
+	& Total
+		& \makecell[t]{\num{15}}
+		& \makecell[t]{\num{25}}
+		& \makecell[t]{\num{40}} \\
+\lspbottomrule
+\end{tabular}
+\end{table}
+% chisq.test(matrix(c(11,4,9,16),ncol=2),corr=FALSE)
+
+The semantic prosody is not characteristic of the noun \textit{feelings}, even in possessive contexts. We can thus assume that it is not characteristic of utterances concerned with emotions generally. But is it characteristic of the specific expression \textit{true feelings}, or would we find it in other contexts where a distinction between genuine and non-genuine emotions is made?
+
+In order to answer this question, we have to compare the phrase to denotationally synonymous expressions, such as \textit{genuine emotions} (which Sinclair uses to paraphrase the denotational meaning), \textit{genuine feelings}, \textit{real emotions} and \textit{real feelings}. The only one of these expressions that occurs in the BNC more than a handful of times is \textit{real feelings}. A sample concordance is shown in Figure \ref{fig:realfeelings}.
+
+\begin{figure}[!htbp]
+\caption{Concordance of \textit{real feelings} (BNC, Sample)}
+\label{fig:realfeelings}
+\begin{fitverb}
+ 1 r-head wolf-whistles . Real situations , [real feelings] , real people , real love . The album s
+ 2 onal Checklist : I do my best to hide my [real feelings] from others I always try to please othe
+ 3  , how to manipulate , how to hide their [real feelings] and how to convince those that love the
+ 4 f the death of a cousin . Disguising his [real feelins] he wrote cheerfully , telling them that
+ 5 her words , the counsellor must seek the [real feelings] of the counsellee through careful liste
+ 6 tant issues are fully discussed and that [real feelings] are expressed rather than avoided . An 
+ 7 at prevented him from ever revealing his [real feelings] to any woman . How she regretted those 
+ 8 ing process of mystification that denies [real feelings] and experiences is a necessary prop to 
+ 9  the play to whom he reveals some of his [real feelings] is Roderigo , but only while using him 
+10 sked her much sooner if he had known her [real feelings] towards him , but she had been so forma
+11  of situation neither can say what their [real feelings] are . A true conversation might be , 
+12  clerks are not allowed to express their [real feelings] at work , it is not surprising that the
+13 k foolish in public in order to hide his [real feelings] . Men were strange creatures at times .
+14 t she could smother the awakening of her [real feelings] for him ? He 'd been important enough t
+15 but she hoped she managed to conceal her [real feelings] . Guessing what might greet her in the 
+16 ight of their honeymoon ? If Ace had any [real feelings] for her he would have taken her prohibi
+17  used deliberately as a mask to hide his [real feelings] , she could only guess . ` Let me tak
+18  had left him -- but his control over his [real feelings] had remained even then . But what had c
+19   Relieved that she had not betrayed her [real feelings] , Sophie concentrated on the morning su
+20 der has an insight into the Mr. Darcy 's [real feelings] during particular parts of the book . E
+\end{fitverb}
+\end{figure}
+% "Real"%c "feelings"%c; randomize 35; reduce Last to 20
+
+Here, the semantic prosody in question is quite dominant -- by my count, it is present in lines 2, 3, 4, 6, 7, 12, 13, 15, 17, 18 and 19, i.e., in 11 of 20 lines. This is the exact proportion also observed with \textit{true feelings}, so even if you disagree with one or two of my categorization decisions, there is no significant difference between the two expressions.
+
+It seems, then, that the semantic prosody Sinclair observes is not attached to the expression \textit{true feelings} in particular, but that it is an epiphenomenon the fact that we typically distinguish between ``genuine'' (\textit{true}, \textit{real}, etc.) emotions and other emotions in a particular context, namely one where someone is reluctant on unable to express their genuine emotions. Of course, studies of additional expressions with adjectives meaning ``genuine'' modifying nouns meaning ``emotion'' might give us a more detailed and differentiated picture, as might studies of other nouns modified by adjectives like \textit{true} (such as \textit{true nature}, \textit{true beliefs}, \textit{true intentions}, etc.). Such studies are left as an exercise to the reader -- this case study was mainly meant to demonstrate how informal analyses based on the inspection of concordances can be integrated into a more rigorous research design involving quantification and comparison to a set of control data.
+
+\subsubsection{Case study: The verb \textit{cause}}
+\label{sec:theverbcause}
+
+A second way in which semantic prosody can be studied quantitatively is implicit in Kennedy's study of collocates of degree adverbs discussed in Section \ref{sec:collocationforitsownsake} above. Recall that Kennedy discusses for each degree adverb whether a majority of its collocates has a positive or a negative connotation. This, of course, is a statement about the (broad) semantic prosody of the respective adverb, based not on an inspection and categorization of usage contexts, but on inductively discovered strongly associated collocates.
+
+One of the earliest applications of this procedure is found in \citet{stubbs_collocations_1995}. Stubbs studies, among other things, the noun and verb \textit{cause}. He first presents the result of a manual extraction of all nouns (sometimes with adjectives qualifying them, as in the case of \textit{wholesale slaughter}) that occur as subject or object of the verb \textit{cause} or as a prepositional object of the noun \textit{cause} in the LOB. He annotates them in their context of occurrence for their connotation, finding that approximately 80 percent are negative, 18 percent are neutral and 2 percent are positive. This procedure is still very close to Sinclairs approach of inspecting concordances, although is is stricter in terms of categorizing and quantifying the data.
+
+Stubbs then notes that manual inspection and extraction becomes unfeasible as the number of corpus hits grows and suggests that, instead, we should first identify significant collocates of the word or expression we are interested in, and then categorize these significant collocates according to our criteria -- note that this is the strategy we also used in Case Study \ref{sec:nearsynonyms} above in order to determine semantic differences between \textit{high} and \textit{tall}.
+
+We will not follow Stubbs' discussion in detail here -- his focus is on methodological issues regarding the best way to identify collocates. Since we decided in Section \ref{sec:effectsizesforcollocations} above to stick with the $G^2$ statistic, this discussion is not central for us. Stubbs does not present the results of his procedure in detail and the corpus he uses is not accessible anyway, so let us use the BNC again and extract our own data.
+
+Table \ref{tab:causecollocates} shows the result of an attempt to extract direct objects of the verb \textit{cause} from the BNC. I searched for the lemma \textit{cause} where it is tagged as a verb, followed by zero to three words that are not nouns (to take into account the occurrence of determiners, adjectives etc.) and that are not the word \textit{by} (in order to exclude passives like \textit{caused by negligence, fire, exposure}, etc.), followed by a noun or sequence of nouns, not followed by \textit{to} (in order to exclude causative constructions of the form \textit{caused the glass to break}). This noun, or the last noun in this sequence, is assumed to be the direct object of \textit{cause}. The twenty most frequent nouns are shown in Table \ref{tab:causecollocates}a.
+
+\begin{table}[!htbp]
+\caption{Noun collocates of three expressions of causation}
+\label{tab:causecollocates}
+\begin{tabular}[t]{lr|lr|lr}
+\lsptoprule
+\textvv{[\textit{cause} NP]} & Freq. & \textvv{[\textit{bring about} NP]} & Freq. & \textvv{[\textit{lead to} NP]} & Freq.\\
+\midrule
+\textit{problem} & 836 & \textit{change} & 247 & \textit{increase} & 219 \\
+\textit{death} & 358 & \textit{improvement} & 43 & \textit{change} & 154 \\
+\textit{damage} & 334 & \textit{end} & 30 & \textit{conclusion} & 152 \\
+\textit{concern} & 284 & \textit{death} & 22 & \textit{development} & 133 \\
+\textit{trouble} & 269 & \textit{downfall} & 21 & \textit{loss} & 123 \\
+\textit{harm} & 203 & \textit{result} & 21 & \textit{problem} & 122 \\
+\textit{difficulty} & 185 & \textit{reduction} & 19 & \textit{death} & 114 \\
+\textit{injury} & 139 & \textit{revolution} & 19 & \textit{formation} & 110 \\
+\textit{change} & 128 & \textit{increase} & 18 & \textit{reduction} & 105 \\
+\textit{pain} & 122 & \textit{peace} & 17 & \textit{improvement} & 89 \\
+\textit{confusion} & 113 & \textit{collapse} & 14 & \textit{confusion} & 80 \\
+\textit{loss} & 113 & \textit{transformation} & 13 & \textit{creation} & 76 \\
+\textit{lot} & 95 & \textit{development} & 12 & \textit{number} & 66 \\
+\textit{increase} & 93 & \textit{shift} & 11 & \textit{award} & 64 \\
+\textit{delay} & 90 & \textit{decline} & 10 & \textit{rise} & 63 \\
+\textit{distress} & 84 & \textit{destruction} & 10 & \textit{discovery} & 62 \\
+\textit{disease} & 81 & \textit{state} & 10 & \textit{fall} & 61 \\
+\textit{controversy} & 78 & \textit{unity} & 10 & \textit{result} & 61 \\
+\textit{accident} & 76 & \textit{effect} & 9 & \textit{decline} & 60 \\
+\textit{cancer} & 72 & \textit{event} & 9 & \textit{growth} & 60 \\
+ &  & \textit{situation} & 9 &  &  \\
+\lspbottomrule
+\multicolumn{2}{c}{(a)} & \multicolumn{2}{c}{(b)} & \multicolumn{2}{c}{(c)} \\
+\end{tabular}
+\end{table}
+
+These collocates clearly corroborate Stubbs' observation about the negative semantic prosody of \textit{cause}. We could now calculate the association strength between the verb and each of these nouns to get a better idea of which of them are significant collocates and which just happen to be frequent in the corpus overall. It should be obvious, however, that the nouns in Figure \ref{tab:causecollocates}a are not generally frequent in the English language, so we can assume here that they are, for the most part, significant collocates.
+
+But even so, what does this tell us about the semantic prosody of the verb \textit{cause}? It has variously been pointed out (for example, by \citet{louw_semantic_2010}), that other verbs of causation also tend to have a negative semantic prosody -- the direct object nouns of \textit{bring about} in Table \ref{tab:causecollocates}b and \textit{bring about} in Table \ref{tab:causecollocates}c corroborate this. The real question is, again, whether it is the specific expression [\textit{cause} NP] that has the semantic prosody in question, or whether this prosody is found in an entire semantic domain -- perhaps speakers of English have a generally negative view of causation.
+
+In order to determine this, it might be useful to compare different expressions of causation to each other rather than to the corpus as a whole -- to perform a \textit{differentiating collocate analysis}: just by inspecting the frequencies in Table \ref{tab:causecollocates}, it seems that the negative prosody is much weaker for \textit{bring about} and \textit{lead to} than for \textit{cause}, so, individually or taken together, they could serve as a baseline against which to compare \textit{cause}.
+
+Table \ref{tab:causdiff} shows the results of a differential collocate analysis between \textit{cause} on the one hand and the combined collocates of \textit{bring about} and \textit{lead to} on the other. 
+
+\begin{table}[!htbp]
+\caption{Differential collocates for \textit{cause} compared to \textit{bring about/lead to} in the BNC}
+\label{tab:causdiff}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}[t]{l *{4}{S[table-format=5]} S}
+\lsptoprule
+\multicolumn{1}{c}{\makecell[tc]{\textvv{Collocate}}} &
+	\multicolumn{1}{c}{\makecell[tc]{Collocate \\ with \textvv{cause}}} & 
+	\multicolumn{1}{c}{\makecell[tc]{Collocate \\ with \textvv{other}}} & 
+	\multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textvv{cause}}} & 
+	\multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textvv{other}}} & 
+	\multicolumn{1}{c}{\makecell[tc]{G\textsuperscript{2}}} \\
+\midrule
+\textit{problem} & 836 & 126 & 11566 & 15311 & 778.632404216066 \\
+\textit{damage} & 334 & 15 & 12068 & 15422 & 438.763001904046 \\
+\textit{concern} & 284 & 10 & 12118 & 15427 & 387.235437809834 \\
+\textit{trouble} & 269 & 9 & 12133 & 15428 & 369.274753743811 \\
+\textit{harm} & 203 & 1 & 12199 & 15436 & 318.674126922991 \\
+\textit{pain} & 122 & 4 & 12280 & 15433 & 167.173354010918 \\
+\textit{death} & 358 & 136 & 12044 & 15301 & 160.750921872465 \\
+\textit{injury} & 139 & 14 & 12263 & 15423 & 148.393452129089 \\
+\textit{difficulty} & 185 & 51 & 12217 & 15386 & 113.906143119959 \\
+\textit{stir} & 70 & 0 & 12332 & 15437 & 113.420906382413 \\
+\textit{distress} & 84 & 5 & 12318 & 15432 & 103.51951862427 \\
+\textit{havoc} & 62 & 0 & 12340 & 15437 & 100.43622601477 \\
+\textit{alarm} & 57 & 0 & 12345 & 15437 & 92.3237284853595 \\
+\textit{delay} & 90 & 14 & 12312 & 15423 & 80.1596502434219 \\
+\textit{controversy} & 78 & 9 & 12324 & 15428 & 79.1058623713959 \\
+\textit{sensation} & 48 & 0 & 12354 & 15437 & 77.7269032990537 \\
+\textit{lot} & 95 & 18 & 12307 & 15419 & 76.0499941214398 \\
+\textit{cancer} & 72 & 9 & 12330 & 15428 & 70.7269677331307 \\
+\textit{disease} & 81 & 14 & 12321 & 15423 & 68.2768537959199 \\
+\textit{offence} & 55 & 4 & 12347 & 15433 & 64.5289519536097 \\
+\lspbottomrule
+\end{tabular}}
+\end{table}
+
+The negative prosody of the verb \textit{cause} is even more pronounced than in the frequency list in Table \ref{tab:causecollocates}: Even the two neutral words \textit{change} and \textit{increase} have disappeared. In contrast, the combined differential collocates of \textit{bring about} and \textit{lead to} as compared to \textit{cause}, shown in Table \ref{tab:bringleaddiff} are neutral or even positive.
+
+\begin{table}[!htbp]
+\caption{Differential collocates for \textit{bring about/lead to} compared to \textit{cause} in the BNC}
+\label{tab:bringleaddiff}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}[t]{l *{4}{S[table-format=5]} S}
+\lsptoprule
+\multicolumn{1}{c}{\makecell[tc]{\textvv{Collocate}}} &
+	\multicolumn{1}{c}{\makecell[tc]{Collocate \\ with \textvv{cause}}} & 
+	\multicolumn{1}{c}{\makecell[tc]{Collocate \\ with \textvv{other}}} & 
+	\multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textvv{cause}}} & 
+	\multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textvv{other}}} & 
+	\multicolumn{1}{c}{\makecell[tc]{G\textsuperscript{2}}} \\
+\midrule
+\textit{conclusion} & 0 & 155 & 12402 & 15282 & 183.494870797369 \\
+\textit{improvement} & 4 & 132 & 12398 & 15305 & 126.517398775864 \\
+\textit{development} & 11 & 145 & 12391 & 15292 & 109.744895376684 \\
+\textit{change} & 128 & 401 & 12274 & 15036 & 96.2006916071762 \\
+\textit{formation} & 9 & 111 & 12393 & 15326 & 81.8176602403303 \\
+\textit{award} & 0 & 64 & 12402 & 15373 & 75.5963077061474 \\
+\textit{creation} & 2 & 77 & 12400 & 15360 & 75.5501156251708 \\
+\textit{discovery} & 0 & 62 & 12402 & 15375 & 73.2303294339902 \\
+\textit{situation} & 1 & 60 & 12401 & 15377 & 62.27220933121 \\
+\textit{understanding} & 0 & 52 & 12402 & 15385 & 61.4039218917068 \\
+\textit{decision} & 0 & 49 & 12402 & 15388 & 57.8571312983402 \\
+\textit{qualification} & 0 & 49 & 12402 & 15388 & 57.8571312983402 \\
+\textit{establishment} & 1 & 55 & 12401 & 15382 & 56.5317454571176 \\
+\textit{arrest} & 1 & 45 & 12401 & 15392 & 45.1074742870489 \\
+\textit{speculation} & 4 & 55 & 12398 & 15382 & 42.1523564332429 \\
+\textit{suggestion} & 0 & 34 & 12402 & 15403 & 40.13100558565 \\
+\textit{result} & 14 & 82 & 12388 & 15355 & 39.7076792811739 \\
+\textit{introduction} & 0 & 33 & 12402 & 15404 & 38.9497274123435 \\
+\textit{increase} & 93 & 237 & 12309 & 15200 & 37.8518491592518 \\
+\textit{conviction} & 0 & 32 & 12402 & 15405 & 37.7685071485269 \\
+\lspbottomrule
+\end{tabular}}
+\end{table}
+
+We can thus conclude, first, that all three verbal expressions of causation are likely to be used to some extent with direct object nouns with a negative connotation. However, it is only the verb \textit{cause} that has a negative semantic prosody. Even the raw frequencies of nouns occurring in the object position of the three expressions suggest this: while \textit{cause} occurs almost exclusively with negatively connoted nouns, \textit{bring about} and \textit{lead to} are much more varied. The differential collocate analysis then confirms that within the domain of causation, the verb \textit{cause} specializes in encoding negative caused events, while the other two expressions encode neutral or positive events. Previous research \citep{louw_semantic_2010} misses this difference as it is based exclusively on the qualitative inspection of concordances.
+
+Thus, the case study shows, once again, the need for strict quantification and for research designs comparing the occurrence of a linguistic feature under different conditions. There is one caveat of the procedure presented here, however: while it is a very effective strategy to identify collocates first and categorize them according to their connotation afterwards, this categorization is then limited to an assessment of the lexically encoded meaning of the collocates. For example, \textit{problem} and \textit{damage} will be categorized as negative, but a problem does not have to be negative -- it can be interesting if it is the right problem and you are in the right mood (e.g. \textit{[O]ne of these excercises caused an interesting problem for several members of the class} [Aiden Thompson, \textit{Who's afraid of the Old Testament God?}]). Even \textit{damage} can be a good thing in particular contexts from particular perspectives (e.g. \textit{[A] high yield of intact PTX [...] caused damage to cancer cells in addition to the immediate effects of PDT} [10.1021/acs.jmedchem.5b01971]). Even more likely, neutral words like \textit{change} will have positive or negative connotations in particular contexts, which are lost in the proces of identifying collocates quantitatively.
+
+Keeping this caveat in mind, however, the method presented in this Case Study can be applied fruitfully in more complex designs than the one presented here. For example, we have treated the direct object position as a simple category here, but \citet{stefanowitsch_collostructions:_2003} present data for nominal collocates of the verb \textit{cause} in the object position of different subcategorization patterns. While their results corroborate the negative connotation of \textit{cause} also found by Stubbs, their results add an interesting dimension: while objects of \textit{cause} in the transitive construction (\textit{cause a problem}) and the prepositional dative (\textit{cause a problem to someone}) refer to negatively perceived external and objective states, the objects of \textit{cause} in the ditransitive refer to negatively experienced internal and/or subjective states. Studies on semantic prosody can also take into account dimensions beyond the immediate structural context -- for example, \citet{louw_semantic_2010} observe that the semantic prosody of \textit{cause} is to some extent text-type specific, and present interesting data suggesting that in scientific writing it is generally used with a neutral connotation.
+
+\subsection{Cultural analysis}
+\label{sec:culturalanalysis}
+
+In collocation research, a word (or other element of linguistic structure) typically stands for itself -- the aim of the researcher is to uncover the linguistic properties of a word (or set of words). However, texts are not just manifestations of a language system, but also of the cultural conditions under which they were produced. This allows corpus linguistic methods to be used in uncovering at least some properties of that culture. Specifically, we can take lexical items to represent culturally defined concepts and investigate their distribution in linguistic corpora in order to uncover these cultural definitions. Of course, this adds complexity to the question of operationalization: we must ensure that the words we choose are indeed valid representatives of the cultural concept in question.
+
+\subsubsection{Case study: Small boys, little girls}
+\label{sec:smallboyslittlegirls}
+
+Obviously, lexical items used conventionally to refer to some culturally relevant group of people are plausible representatives of the cultural concept of that group. For example, some very general lexical items referring to people (or higher animals) exist in male and female versions -- \textit{man}/\textit{woman}, \textit{boy}/\textit{girl}, \textit{lad}/\textit{lass}, \textit{husband}/\textit{wife}, \textit{father}/\textit{mother}, \textit{king}/\textit{queen}, etc. If such word pairs differ in their collocates, this could tell us something about the cultural concepts behind them. For example, \citet{stubbs_collocations_1995-1} cites a finding by \citet{baker_childrens_1989}, that in children's literature, the word \textit{girl} collocates with \textit{little} much more strongly than the word \textit{boy}, and vice versa for \textit{small}. Stubbs shows that this is also true for balanced corpora (see Table \ref{tab:smalllittleboygirl}; again, since Stubbs' corpora are not available, I show frequencies from the BNC instead but the proportions are within a few percent points of his). The difference in associations is highly significant ($\chi^2$ = 217.66, df = 1, \textit{p} < 0.001).
+
+\begin{table}[!htbp]
+\caption{\textit{Small} and \textit{little} \textit{girls} and \textit{boys} (BNC)}
+\label{tab:smalllittleboygirl}
+\begin{tabular}[t]{llccr}
+\lsptoprule
+ & & \multicolumn{2}{c}{\textvv{Second Position}} & \\
+ & & \textvv{boy} & \textvv{girl} & Total \\
+\midrule
+\textvv{\makecell[lt]{First Position}}
+	& \textvv{little} 
+		& \makecell[t]{\num{791}\\\small{(\num{927.53})}}
+		& \makecell[t]{\num{1148}\\\small{(\num{1011.47})}}
+		& \makecell[t]{\num{1939}\\} \\
+	& \textvv{small}
+		& \makecell[t]{\num{336}\\\small{(\num{199.47})}}
+		& \makecell[t]{\num{81}\\\small{(\num{217.53})}}
+		& \makecell[t]{\num{417}\\} \\
+\midrule
+	& Total
+		& \makecell[t]{\num{1127}}
+		& \makecell[t]{\num{1229}}
+		& \makecell[t]{\num{2356}} \\
+\lspbottomrule
+\end{tabular}
+\end{table}
+% chisq.test(matrix(c(791,336,1148,81),ncol=2),corr=FALSE)
+% query: see subsequent tables
+
+This part of Stubbs' study is clearly deductive: He starts with a hypothesis taken from the literature and tests it against a larger, more representative corpus. The variables involved are, as is typical for collocation studies, nominal variables whose values are words.
+
+Stubbs argues that this difference is due to different connotations of \textit{small} and \textit{little} which he investigates on the basis of the noun collocates to their right and the adjectival and adverbial collocates to the left. Again, instead of Stubbs' original data (which he identifies on the basis of raw frequency of occurrence and only cites selectively), I use data from the BNC and the $G^2$ test statistic. Table \ref{tab:smalllittlenouncollocates} shows the ten most strongly associated noun collocates to the right of the node word and Table \ref{tab:smalllittleadjcollocates} shows the ten most strongly associated adjectival collocates to the left.
+
+\begin{table}[!htbp]
+\caption{Nominal collocates of \textit{little} and \textit{small} at R1 (BNC)}
+\label{tab:smalllittlenouncollocates}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}[t]{l *{4}{S[table-format=5]} S}
+\lsptoprule
+\multicolumn{1}{c}{\makecell[tc]{\textvv{Collocate}}} & \multicolumn{1}{c}{\makecell[tc]{Collocate \\ with \textvv{little}}} & \multicolumn{1}{c}{\makecell[tc]{Collocate \\ with \textvv{small}}} & \multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textvv{little}}} & \multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textvv{small}}} & \multicolumn{1}{c}{\makecell[tc]{G\textsuperscript{2}}} \\
+\midrule
+\multicolumn{6}{l}{Most strongly associated with \textit{little}} \\
+\midrule
+\textit{bit} & 2838 & 30 & 33606 & 31214 & 3331.01301269017 \\
+\textit{girl} & 1148 & 70 & 35296 & 31174 & 1008.61063355538 \\
+\textit{doubt} & 546 & 3 & 35898 & 31241 & 647.24689682842 \\
+\textit{time} & 595 & 23 & 35849 & 31221 & 579.934782235089 \\
+\textit{while} & 435 & 0 & 36009 & 31244 & 541.056345999301 \\
+\textit{evidence} & 324 & 0 & 36120 & 31244 & 402.533272576284 \\
+\textit{attention} & 253 & 1 & 36191 & 31243 & 302.562411136681 \\
+\textit{chance} & 273 & 21 & 36171 & 31223 & 219.997619890871 \\
+\textit{money} & 194 & 4 & 36250 & 31240 & 207.72877903045 \\
+\textit{interest} & 213 & 12 & 36231 & 31232 & 189.110453929469 \\
+\midrule
+\multicolumn{6}{l}{Most strongly associated with \textit{small}} \\
+\midrule
+\textit{number} & 23 & 1118 & 36421 & 30126 & 1553.12867434465 \\
+\textit{group} & 123 & 1089 & 36321 & 30155 & 1057.18535981462 \\
+\textit{amount} & 7 & 670 & 36437 & 30574 & 974.343934538626 \\
+\textit{business} & 36 & 784 & 36408 & 30460 & 971.217789369486 \\
+\textit{firm} & 15 & 456 & 36429 & 30788 & 594.111949732124 \\
+\textit{proportion} & 0 & 332 & 36444 & 30912 & 515.23547796708 \\
+\textit{scale} & 1 & 265 & 36443 & 30979 & 399.015602188227 \\
+\textit{company} & 15 & 316 & 36429 & 30928 & 386.621472098963 \\
+\textit{area} & 15 & 302 & 36429 & 30942 & 366.158720674227 \\
+\textit{mammal} & 0 & 203 & 36444 & 31041 & 314.583500330526 \\
+\lspbottomrule
+\end{tabular}}
+\end{table}
+% BNC; "(little|small)"%c [pos=".*NN.*"]; count Last by hw    
+
+\begin{table}[!htbp]
+\caption{Adjectival collocates of \textit{little} and \textit{small} at L1 (BNC)}
+\label{tab:smalllittleadjcollocates}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}[t]{l *{4}{S[table-format=5]} S}
+\lsptoprule
+\multicolumn{1}{c}{\makecell[tc]{\textvv{Collocate}}} & \multicolumn{1}{c}{\makecell[tc]{Collocate \\ with \textvv{little}}} & \multicolumn{1}{c}{\makecell[tc]{Collocate \\ with \textvv{small}}} & \multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textvv{little}}} & \multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textvv{small}}} & \multicolumn{1}{c}{\makecell[tc]{G\textsuperscript{2}}} \\
+\midrule
+\multicolumn{6}{l}{Most strongly associated with \textit{little}} \\
+\midrule
+\textit{nice} & 356 & 4 & 4719 & 1083 & 112.245822605119 \\
+\textit{poor} & 248 & 0 & 4827 & 1087 & 98.4646896279873 \\
+\textit{pretty} & 119 & 0 & 4956 & 1087 & 46.689178382342 \\
+\textit{tiny} & 95 & 0 & 4980 & 1087 & 37.1915455741194 \\
+\textit{nasty} & 60 & 0 & 5015 & 1087 & 23.4150253761548 \\
+\textit{funny} & 67 & 1 & 5008 & 1086 & 19.187945266749 \\
+\textit{dear} & 47 & 0 & 5028 & 1087 & 18.3202567217057 \\
+\textit{sweet} & 42 & 0 & 5033 & 1087 & 16.3639152525722 \\
+\textit{silly} & 59 & 1 & 5016 & 1086 & 16.3022395509113 \\
+\textit{lovely} & 92 & 5 & 4983 & 1082 & 13.8350952209413 \\
+\midrule
+\multicolumn{6}{l}{Most strongly associated with \textit{small}} \\
+\midrule
+\textit{other} & 59 & 141 & 5016 & 946 & 282.799960880133 \\
+\textit{only} & 36 & 119 & 5039 & 968 & 268.73638804331 \\
+\textit{proximal} & 0 & 28 & 5075 & 1059 & 97.7589688453235 \\
+\textit{numerous} & 4 & 30 & 5071 & 1057 & 81.6719655070129 \\
+\textit{far} & 3 & 19 & 5072 & 1068 & 49.8253613234838 \\
+\textit{wee} & 2 & 15 & 5073 & 1072 & 40.6723295219043 \\
+\textit{existing} & 0 & 11 & 5075 & 1076 & 38.2616001964086 \\
+\textit{various} & 6 & 18 & 5069 & 1069 & 38.0093098349638 \\
+\textit{occasional} & 1 & 12 & 5074 & 1075 & 35.0824575469837 \\
+\textit{new} & 25 & 28 & 5050 & 1059 & 33.952622484832 \\
+\lspbottomrule
+\end{tabular}}
+\end{table}
+% query: BNC; [pos=".*AJ.*"][word="(little|small)"%c];  
+
+This part of the study is more inductive. Stubbs may have expectations about what he will find, but he essentially identifies collocates exploratively and then interprets the findings. The nominal collocates show, according to Stubbs, that \textit{small} tends to mean ``small in physical size'' or ``low in quantity'', while \textit{little} is more clearly restricted to quantities, including informal quantifying phrases like \textit{little bit}. This is generally true for the BNC data, too (note, however, the one exception among the top ten collocates -- \textit{girl}).
+
+The connotational difference between the two adjectives becomes clear when we look at the adjectives they combine with. The word \textit{little} has strong associations to evaluative adjectives that may be positive or negative, and that are often patronizing. \textit{Small}, in contrast, does not collocate with evaluative adjectives. 
+
+Stubbs sums up his analysis by pointing out that \textit{small} is a neutral word for describing size, while \textit{little} is sometimes used neutrally, but is more often ``nonliteral and convey[s] connotative and attitudinal meanings, which are often patronizing, critical, or both.'' \citep[386]{stubbs_collocations_1995-1}. There differences in distribution relative to the words \textit{boy} and \textit{girl} are evidence for him that ``[c]ulture is encoded not just in words which are obviously ideologically loaded, but also in combinations of very common words'' \citep[387]{stubbs_collocations_1995-1}.
+
+Stubbs remains unspecific as to what that ideology is -- presumably, one that treats boys as neutral human beings and girls as targets for patronizing evaluation. In order to be more specific, it would be necessary to turn around the perspective and study all adjectival collocates of \textit{boy} and \textit{girl}. Stubbs does not do this, but \citet{caldas-coulthard_curvy_2010} look at adjectives collocating with \textit{man}, \textit{woman}, \textit{boy} and \textit{girl} in broadsheet and yellow-press newspapers. In order to keep the results comparable with those reported above, let us stick with the BNC instead. Table \ref{tab:boygirlcollocates} shows the top ten adjectival collocates of \textit{boy} and \textit{girl}.
+
+\begin{table}[!htbp]
+\caption{Adjectival collocates of \textit{boy} and \textit{girl} at L1 (BNC)}
+\label{tab:boygirlcollocates}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}[t]{l *{4}{S[table-format=5]} S}
+\lsptoprule
+\multicolumn{1}{c}{\makecell[tc]{\textvv{Collocate}}} & \multicolumn{1}{c}{\makecell[tc]{Collocate \\ with \textvv{boy}}} & \multicolumn{1}{c}{\makecell[tc]{Collocate \\ with \textvv{girl}}} & \multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textvv{boy}}} & \multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textvv{girl}}} & \multicolumn{1}{c}{\makecell[tc]{G\textsuperscript{2}}} \\
+\midrule
+\multicolumn{6}{l}{Most strongly associated with \textit{boy}} \\
+\midrule
+\textit{old} & 634 & 257 & 5385 & 7296 & 279.98319469086 \\
+\textit{small} & 336 & 81 & 5683 & 7472 & 237.784745909544 \\
+\textit{dear} & 126 & 45 & 5893 & 7508 & 61.2988653144162 \\
+\textit{lost} & 41 & 1 & 5978 & 7552 & 58.5439253593461 \\
+\textit{big} & 167 & 89 & 5852 & 7464 & 46.0174481859069 \\
+\textit{naughty} & 71 & 22 & 5948 & 7531 & 39.754418210081 \\
+\textit{new} & 124 & 69 & 5895 & 7484 & 31.3076259352673 \\
+\textit{rude} & 19 & 0 & 6000 & 7553 & 30.9307617935645 \\
+\textit{toy} & 16 & 0 & 6003 & 7553 & 26.0425067981658 \\
+\textit{whipping} & 14 & 0 & 6005 & 7553 & 22.7845983619957 \\
+\midrule
+\multicolumn{6}{l}{Most strongly associated with \textit{girl}} \\
+\midrule
+\textit{young} & 351 & 820 & 5668 & 6733 & 111.036185344864 \\
+\textit{pretty} & 23 & 132 & 5996 & 7421 & 62.5850788931065 \\
+\textit{other} & 194 & 444 & 5825 & 7109 & 54.5601547140913 \\
+\textit{beautiful} & 13 & 87 & 6006 & 7466 & 46.1335362543016 \\
+\textit{attractive} & 1 & 35 & 6018 & 7518 & 33.5786861798714 \\
+\textit{blonde} & 1 & 29 & 6018 & 7524 & 26.894496843897 \\
+\textit{single} & 1 & 27 & 6018 & 7526 & 24.6843637985421 \\
+\textit{dead} & 12 & 57 & 6007 & 7496 & 22.6681037565287 \\
+\textit{unmarried} & 0 & 17 & 6019 & 7536 & 19.9431653386551 \\
+\textit{lovely} & 18 & 66 & 6001 & 7487 & 19.453519456541 \\
+\lspbottomrule
+\end{tabular}}
+\end{table}
+%query: BNC; [pos=".*AJ.*"][word="(boys?|girls?)"%c];
+
+The results are broadly similar in kind to those in \citet{caldas-coulthard_curvy_2010}: \textit{boy} collocates mainly with neutral descriptive terms (\textit{small}, \textit{lost}, \textit{big}, \textit{new}), or with terms with which it forms a fixed expression (\textit{old}, \textit{dear}, \textit{toy}, \textit{whipping}). There are the evaluative adjectives \textit{rude} (which in Caldas-Coulthard and Moon's data is often applied to young men of Jamaican descent) and its positively connoted equivalent \textit{naughty}. The collocates of \textit{girl} are overwhelmingly evaluative, related to physical appearance. There are just two neutral adjective (\textit{other} and \textit{dead}, the latter tying in with a general observation that women are more often spoken of as victims of crimes and other activities than men). Finally, there is one adjective signaling marital status. These results also generally reflect Caldas-Coulthard and Moon's findings (in the yellow-press, the evaluations are often heavily sexualized in addition).
+
+This case study shows how collocation research may uncover facts that go well beyond lexical semantics or semantic prosody. In this case, the collocates of \textit{boy} and \textit{girl} have uncovered a general attitude that sees the latter as up for constant evaluation while the former are mainly seen as a neutral default. That the adjectives \textit{dead} and \textit{unmarried} are among the top ten collocates in a representative, relatively balanced corpus, hints at something darker -- a patriarchal world view that sees girls as victims and sexual partners and not much else (other studies investigating gender stereotypes on the basis of collocates of \textit{man} and \textit{woman} are \citet{gesuato_company_2003} and \citet{pearce_investigating_2008}).

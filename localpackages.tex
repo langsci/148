@@ -1,0 +1,86 @@
+% add all extra packages you need to load to this file  
+\usepackage{tabularx} 
+\usepackage{url} 
+\urlstyle{same}
+
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,tabsize=2,breaklines=true}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%           Examples                           %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% to add additional information to the right of examples, uncomment the following line
+% \usepackage{jambox}
+%% if you want the source line of examples to be in italics, uncomment the following line
+% \renewcommand{\exfont}{\itshape}
+\usepackage{langsci-optional}
+\usepackage{langsci-gb4e}
+\usepackage{./langsci/styles/langsci-lgr}
+\usepackage{pgfplots,pgfplotstable}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%              Anatol's Packages               %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+% this package was part of the previous version of the skeleton
+\usepackage[english]{babel}
+
+% to create complex cell contents
+\usepackage{makecell}
+
+% to use \multirow
+
+% for number formatting
+% with prefix \num, numbers are rounded to two decimal places, with a thin
+% space as group separator and four-digit numbers are not separated as per SI
+% standard. These settings can be overridden by adding options.
+\usepackage{siunitx}
+\sisetup{
+	round-mode=places,
+	round-precision=2,
+	detect-family=true,
+	detect-inline-family=math
+	}
+
+% added this to get straight quotes, but even in listings environments,
+% quotes are curly
+%\usepackage{listings}
+
+% added this to have the \nicefrac command
+\usepackage{units}
+
+% added this because KOMA kept asking
+\usepackage{csquotes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Anatol's Adjustments             %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+% adjust fontsize for math environemnt
+%\DeclareMathSizes{10.95}{10}{7}{5}
+
+% make verbatim font smaller by default
+% https://tex.stackexchange.com/questions/161678/decreasing-font-size-in-verbatim
+\makeatletter
+\patchcmd{\@verbatim}
+  {\verbatim@font}
+  {\verbatim@font\small}
+  {}{}
+\makeatother
+
+% semantic text styles
+\newcommand{\textvv}{\textsc}     %for variables and values
+
+
+
+ 
+
+\usepackage{multirow}
