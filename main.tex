@@ -6,11 +6,13 @@
 % Everything following a % is ignored
 % Some lines start with %. Remove the % to include them
 
-\documentclass[output=book,nonflat,modfonts,
+\documentclass[output=book,nonflat,
   colorlinks,citecolor=brown, 
 %  draft,draftmode,  
 %  showindex,
-%  nobabel, 
+%  nobabel,
+%  booklanguage=german,
+%  multiauthors,
 		  ]{langsci/langscibook}    
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -20,7 +22,7 @@
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localhyphenation.tex}
-\bibliography{localbibliography.bib}
+\addbibresource{localbibliography.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%             Frontmatter                      %%% 
@@ -43,27 +45,15 @@
 %%%             Chapters                         %%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{chapters/01}
-\include{chapters/02}
-\include{chapters/03}
-\include{chapters/04}
-\include{chapters/05}
-\include{chapters/06}
-\include{chapters/07}
-\include{chapters/08}
-\include{chapters/09}
-\include{chapters/10}
-\include{chapters/11}
-\include{chapters/12}
+\include{chapters/all-chapters}
 \include{chapters/studynotes}
 \include{chapters/tables}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%             Backmatter                       %%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \input{localseealso.tex} 
+\input{localseealso.tex} 
 % There is normally no need to change the backmatter section
 \input{backmatter.tex} 
 \end{document} 
