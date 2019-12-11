@@ -1422,7 +1422,7 @@ This definition corresponds quite closely to our experiential understanding of w
 There are a number of hardness tests that differ mainly along the answers they provide to these questions (cf. \citet{herrmann_hardness_2011} and \citet{czichos_mechanical_2011} for a discussion of hardness tests). One commonly used group of tests is based on the size of the indentation that an object (the `indenter') leaves when pressed into some material. One such test is the \emph{Vickers Hardness Test}, which specifies the indenter as a diamond with the shape of a square\hyp{}based pyramid with an angle of 136°, and the test force as ranging between or 49.3 to 980.7 newtons (the exact force must be specified every time a measurement \is{measurement} is reported). \textit{Hardness} is then defined as follows \citep[cf.][43]{herrmann_hardness_2011}:
 
 \begin{exe}
-\ex $HV = \frac{0.102 \times F}{A}$
+\ex $\text{HV} = \frac{0.102 \times F}{A}$
 \label{ex:vickershardness}
 \end{exe}
 
@@ -1761,7 +1761,7 @@ Let us conclude this chapter with a brief discussion of the role that hypothesis
 Popper's actual discussions are closer to actual scientific practice. It is true that in terms of scientific logic, the only requirement of a hypothesis \is{hypothesis} is that it is testable (i.e., falsifiable), \is{falsification} but in scientific practice, it must typically meet two additional criteria: first, it must be a potentially insightful explanation \is{explanation} of a particular research problem, and second, it must take into account previous research (if such research exists). It is also true that falsification is central to Popperian research logic, but not as a mindless slashing of ideas, but as a process of error elimination. Popper describes the entire process using the following schematic representation \citep[3]{yourgrau_realist_1970}:
 
 \begin{exe}
-\ex $P_{1} \rightarrow TT \rightarrow EE \rightarrow P_{2}$
+\ex $\text{P}_{1} \rightarrow \text{TT} \rightarrow \text{EE} \rightarrow \text{P}_{2}$
 \label{ex:popperscience}
 \end{exe}
 
@@ -1770,9 +1770,9 @@ In this schema, \textit{P}\textsubscript{1} stands for a research question (a `p
 \begin{exe}
 \ex
 $\begin{matrix}
- & \nearrow & TT_{a} \rightarrow EE_{a} \rightarrow P_{2a}\\
-P_{1} & \rightarrow & TT_{b} \rightarrow EE_{b} \rightarrow P_{2b}\\
- & \searrow & TT_{n} \rightarrow EE_{n} \rightarrow P_{2n}
+ & \nearrow & \text{TT}_{a} \rightarrow \text{EE}_{a} \rightarrow \text{P}_{2a}\\
+\text{P}_{1} & \rightarrow & \text{TT}_{b} \rightarrow \text{EE}_{b} \rightarrow \text{P}_{2b}\\
+ & \searrow & \text{TT}_{n} \rightarrow \text{EE}_{n} \rightarrow \text{P}_{2n}
 \end{matrix}$
 \label{ex:poppersciences}
 \end{exe}
@@ -2014,8 +2014,8 @@ We can now calculate precision \is{precision} and recall \is{recall} rate of our
 \ex
 \begin{xlist}
 \label{ex:precisionrecallrate}
-\ex $\displaystyle{Precision = \frac{13}{27} = 0.48}$\\
-\ex $\displaystyle{Recall = \frac{13}{36} = 0.36}$
+\ex $\displaystyle{\text{Precision} = \frac{13}{27} = 0.48}$\\
+\ex $\displaystyle{\text{Recall} = \frac{13}{36} = 0.36}$
 \end{xlist}
 \end{exe}
 
@@ -3430,10 +3430,10 @@ The degree of deviance from the expected \is{frequency, expected} frequencies fo
 
 Before we can do so, there is a final technical point to make. Note that the degree of variation \is{variation} in a given table that is expected \is{frequency, expected} to occur by chance \is{chance} depends quite heavily on the size of the table. The bigger the table, the higher the number of cells that can vary independently of other cells without changing the marginal sums (i.e., without changing the overall distribution). \is{distribution, conditional} The number of such cells that a table contains is referred to as the number of \textit{degrees of freedom} of the table. In the case of a two\hyp{}by\hyp{}two table, there is just one such cell: if we change any single cell, we must automatically adjust the other three cells in order to keep the marginal sums constant. Thus, a two\hyp{}by\hyp{}two table has one degree of freedom.
 
-The general formula for determining the degrees of freedom of a table is the following, where $N_rows$ is the number of rows and $N_column$ is the number of columns:
+The general formula for determining the degrees of freedom of a table is the following, where $N_{rows}$ is the number of rows and $N_{column}$ is the number of columns:
 
 \begin{exe}
-\ex $\displaystyle{df = (N_{Rows} - 1) \times (N_{Columns} - 1)}$
+\ex $\displaystyle{df = (\text{N}_\text{Rows} - 1) \times (\text{N}_\text{Columns} - 1)}$
 \label{ex:formuladf}
 \end{exe}
 
@@ -3701,11 +3701,11 @@ The rank sum and the number of data points for each sample allow us to calculate
 
 Applying these formulas to the measures for the \textit{s}-possessive \is{possessive} (\ref{ex:formulamannwhitneyu}a) and \textit{of}-possessive (\ref{ex:formulamannwhitneyu}b) respectively, we get the U values
 
-$$U_1 = (23 \times 18) + \frac{23 \times (23 + 1)} 2 - 324.5 = 365.5$$
+$$\text{U}_1 = (23 \times 18) + \frac{23 \times (23 + 1)} 2 - 324.5 = 365.5$$
 
 and
 
-$$U_2 = (23 \times 18) + \frac{18 \times (18 + 1)} 2 - 536.5 = 48.5$$
+$$\text{U}_2 = (23 \times 18) + \frac{18 \times (18 + 1)} 2 - 536.5 = 48.5$$
 
 The U value for the entire data set is always the smaller of the two U values. In our case this is U\textsubscript{2}, so our U value is 48.5. This value can now be compared against its known distribution \is{distribution, conditional} in the same way as the $\chi^2$ \is{chi-square test} value for nominal \is{nominal data} data. In our case, this means looking it up in the table in Section \ref{sec:mannwhitneycriticalvalues} in the Statistical Tables at the end of this book, which tells us that the p\hyp{}value for this U value is smaller than 0.001 -- the difference between the s- and the \textit{of}-possessive \is{possessive} is, again, highly significant. \is{significance} The Mann\hyp{}Whitney \is{Mann-Whitney U test} U test may be reported as follows:
 
@@ -3811,7 +3811,7 @@ The first step in assessing the variation \is{variation} consists in determining
 The sample variances \is{variance} themselves cannot be very easily interpreted (see further below), but we can use them to calculate our test statistic, the \textit{t}-value, using the following formula ($\overline{x}$ stands for the group mean, \is{mean} \textit{s}\textsuperscript{2} stands for the sample variance, and N stands for the number of cases; the subscripts 1 and 2 indicate the two sub\hyp{}samples:
 
 \begin{exe}
-\ex $\displaystyle{t_{Welch} = \frac{\overline{x}_1 - \overline{x}_2}{\sqrt{\frac{s_1^2}{N_1} + \frac{s_2^2}{N_2}}}}$
+\ex $\displaystyle{t_\text{Welch} = \frac{\overline{x}_1 - \overline{x}_2}{\sqrt{\frac{s_1^2}{N_1} + \frac{s_2^2}{N_2}}}}$
 \label{ex:formulawelchst}
 \end{exe}
 
@@ -3851,7 +3851,7 @@ Finally, note that, again, the significance \is{significance} level does not tel
 
 For our case study, this gives us
 
-$$d =\frac{3.8333 - 1.9}{2.1562} = 0.8966$$
+$$\text{d} =\frac{3.8333 - 1.9}{2.1562} = 0.8966$$
 
 This standardized mean \is{mean} difference can be converted to a correlation \is{correlation} coefficient by the formula in (\ref{ex:formulastmeandiffcorr}):
 
@@ -3862,7 +3862,7 @@ This standardized mean \is{mean} difference can be converted to a correlation \i
 
 For our case study, this gives us
 
-$$r = \frac{0.8966}{\sqrt{0.8966^2 + \frac{(24 + 20)^2}{24 \times 20}}} = 0.4077$$
+$$\text{r} = \frac{0.8966}{\sqrt{0.8966^2 + \frac{(24 + 20)^2}{24 \times 20}}} = 0.4077$$
 
 Since this is a correlation \is{correlation} coefficient, it can be interpreted as described in Table \ref{tab:correlationlevels} above. It falls into the \textit{moderate} range, so a more comprehensive way of summarizing the results of this case study would be the following: ``This study has shown that length \is{length} has a moderate, statistically significant \is{significance} influence on the choice of possessive \is{possessive} constructions with lexical NPs in modifier position: \textit{s}-possessives are preferred when the modifier is short, while \textit{of}-possessives are preferred when the modifier is long. ($t(25.50) = 3.5714, p < 0.01, r = 0.41$)''.
 
@@ -4322,7 +4322,7 @@ Once we have calculated the expected \is{frequency, expected} frequencies, we pr
 
 \begin{exe}
 \ex
-$df = (k_1 \times k_2 \times k_3) - (k_1 + k_2 + k_3) + 2$
+$\text{df} = (k_1 \times k_2 \times k_3) - (k_1 + k_2 + k_3) + 2$
 \label{ex:degreesoffreedom3D}
 \end{exe}
 
@@ -4844,7 +4844,7 @@ Recall that the chi-square \is{chi-square test} test statistic is not an effect 
 
 Mutual information \is{mutual information} is one of the oldest collocation \is{collocation} measures, frequently used in computational linguistics and often implemented in collocation software. It is given in (\ref{ex:mutualinf}) in a version based on \citet{church_word_1990}: \footnote{A logarithm \is{logarithm} with a base \textit{b} of a given number x is the power to which \textit{b} must be raised to produce x, so, for example, log\textsubscript{10}(2) = 0.30103, because 10\textsuperscript{0.30103}=2. Most calculators offer at the very least a choice between the natural logarithm, where the base is the number \textit{e} (approx. 2.7183) and the common logarithm, \is{logarithm} where the base is the number 10; many calculators and all major spreadsheet programs offer logarithms with any base. In the formula in (\ref{ex:mutualinf}), we need the logarithm with base 2; if this is not available, we can use the natural logarithm and divide the result by the natural logarithm of 2:
 
-$$MI = {{\log_e \left( {O_{11}} \over {E_{11}} \right)} \over {\log_e \left( 2 \right)}}$$}
+$$\text{MI} = {{\log_e \left( {O_{11}} \over {E_{11}} \right)} \over {\log_e \left( 2 \right)}}$$}
 
 \begin{exe}
 \ex $\displaystyle{MI = {\log_2 \left( {O_{11}} \over {E_{11}} \right)}}$
@@ -4853,12 +4853,12 @@ $$MI = {{\log_e \left( {O_{11}} \over {E_{11}} \right)} \over {\log_e \left( 2 \
 
 Applying the formula to our table, we get the following:
 
-$$MI = {\log_2 \left( {9} \over {0.2044} \right) = log_2 \left( 44.03 \right)} = 5.46$$
+$$\text{MI} = {\log_2 \left( {9} \over {0.2044} \right) = log_2 \left( 44.03 \right)} = 5.46$$
 
 In our case, we are looking at cases where \textvv{word a} and \textvv{word b} occur directly next to each other, i.e., the span \is{span} size is 1. When looking at a larger span (which is often done in collocation \is{collocation} research), the probability \is{probability} of encountering a particular collocate increases, because there are more slots that it could potentially occur in. The MI statistic can be adjusted for larger span sizes as follows (where \textit{S} is the span size):
 
 \begin{exe}
-\ex $\displaystyle{MI = {\log_2 \left( {O_{11}} \over {E_{11} \times S} \right)}}$
+\ex $\displaystyle{\text{MI} = {\log_2 \left( {O_{11}} \over {E_{11} \times S} \right)}}$
 \label{ex:mutualinfspan}
 \end{exe}
 
@@ -4870,7 +4870,7 @@ The mutual information \is{mutual information} measure suffers from the same pro
 The \emph{G} \is{log-likelihood ratio test} value of the log\hyp{}likelihood ratio test is one of the most popular -- perhaps \textit{the} most popular -- association \is{association} measure \is{association measure} in collocational \is{collocation} research, found in many of the central studies in the field and often implemented in collocation software. The following is a frequently found form \citep[134]{read_goodness--fit_1988}:
 
 \begin{exe}
-\ex $\displaystyle{G = 2 \sum_{i=1}^{n} O_i \log_e \left(\frac{O_i}{E_i} \right )}$
+\ex $\displaystyle{\text{G} = 2 \sum_{i=1}^{n} O_i \log_e \left(\frac{O_i}{E_i} \right )}$
 \label{ex:loglik}
 \end{exe}
 
@@ -4888,7 +4888,7 @@ In order to calculate the \emph{G} \is{log-likelihood ratio test} measure, we ca
 
 Applying the formula in \ref{ex:loglik} to the data in Table \ref{tab:goodexample}, we get the following:
 
-$$G = 2 \times \left( 9 \times \log_e \left( \frac{9}{0.2044} \right) \right) +\ \left( 836 \times \log_e \left( \frac{836}{844.7956} \right) \right)$$
+$$\text{G} = 2 \times \left( 9 \times \log_e \left( \frac{9}{0.2044} \right) \right) +\ \left( 836 \times \log_e \left( \frac{836}{844.7956} \right) \right)$$
 
 $$+\ \left( 236 \times \log_e \left( \frac{236}{244.7956} \right) \right) +\ \left( 1011904 \times \log_e \left( \frac{1011904}{1011895.2044} \right) \right)$$
 
@@ -4902,13 +4902,13 @@ The \emph{G} \is{log-likelihood ratio test} value has long been known to be more
 Minimum sensitivity \is{minimum sensitivity} was proposed by \citet{pedersen_dependent_1998} as potentially useful measure especially for the identification of associations \is{association} between content words:
 
 \begin{exe}
-\ex $\displaystyle{MS = {min} \left ( \frac{O_{11}}{R_1},\frac{O_{11}}{C_1} \right )}$
+\ex $\displaystyle{\text{MS} = \text{min} \left ( \frac{O_{11}}{R_1},\frac{O_{11}}{C_1} \right )}$
 \label{ex:minsens}
 \end{exe}
 
 We simply divide the observed frequency \is{frequency, observed} of a collocation \is{collocation} by the frequency of the first word (R\textsubscript{1}) and of the second word (C\textsubscript{1}) and use the smaller of the two as the association \is{association} measure. \is{association measure} For the data in Table \ref{tab:goodexample}, this gives us the following:
 
-$$MS = min \left( \frac{9}{836}, \frac{9}{236} \right) = min \left( 0.0108,0.0381 \right) = 0.0108$$
+$$\text{MS} = \text{min} \left( \frac{9}{836}, \frac{9}{236} \right) = \text{min} \left( 0.0108,0.0381 \right) = 0.0108$$
 
 In addition to being extremely simple to calculate, it has the advantage of ranging from zero (words never occur together) to 1 (words always occur together); it was also argued by \citet{wiechmann_computation_2008} to correlate \is{correlation} best with reading time data when applied to combinations of words and grammatical constructions (see Chapter \ref{ch:grammar}). However, it also tends to overestimate the importance of rare \is{collocation} collocations.
 
@@ -4920,7 +4920,7 @@ Fisher's exact test \is{Fisher's exact test} was already mentioned in passing in
 There are some practical disadvantages to Fisher's exact test. \is{Fisher's exact test} First, it is computationally expensive -- it cannot be calculated manually, except for very small tables, because it involves computing factorials, which become very large very quickly. For completeness' sake, here is (one version of) the formula:
 
 \begin{exe}
-\ex $\displaystyle{p_{exact} = \frac{R_1! \times R_2! \times C_1! \times C_2!}{O_{11}! \times O_{12}! \times O_{21}! \times O_{22}! \times N!}}$
+\ex $\displaystyle{p_\text{exact} = \frac{R_1! \times R_2! \times C_1! \times C_2!}{O_{11}! \times O_{12}! \times O_{21}! \times O_{22}! \times N!}}$
 \label{ex:fisherexaxt}
 \end{exe}
 
@@ -7467,7 +7467,7 @@ This is not to say that the token \is{token (instance)} frequencies \is{frequenc
 \textit{b. Type frequency}. In contrast, the type \is{type (category)} frequency \is{frequency, type} of an affix \is{affix} is a fairly direct reflection of the importance of the affix \is{affix} for the lexicon \is{lexicon} of a language: obviously an affix \is{affix} that occurs in many different words is more important than one that occurs only in a few words. Note that in order to compare type frequencies, we have to correct for the size \is{corpus size} of the sample: all else being equal, a larger sample will contain more types than a smaller one simply because it offers more opportunities for different types \is{type (category)} to occur (a point we will return to in more detail in the next subsection). A simple way of doing this is to divide the number of types by the number of tokens; \is{token (instance)} the resulting measure is referred to very transparently as the ``type\slash token ratio'' (or \is{type-token ratio} TTR):
 
 \begin{exe}
-\ex $\displaystyle{TTR = \frac{n \left( types \right) }{n \left( tokens \right)}}$
+\ex $\displaystyle{\text{TTR} = \frac{n \left( types \right) }{n \left( tokens \right)}}$
 \label{ex:ttrformula}
 \end{exe}
 
@@ -8207,19 +8207,22 @@ We must keep in mind, however, that this kind of study does not primarily uncove
 
 In an interesting but rarely\hyp{}cited paper, \citet{or_corpus-based_1994} collects a number of hypotheses about semantic \is{semantics} and, in particular, phonological factors influencing the distribution \is{distribution, conditional} of \textit{-ic} and \textit{-ical} that she provides impressionistic corpus evidence for but does not investigate systematically. A simple example is the factor \textsc{Length}: \is{length} Or hypothesizes that speakers will tend to avoid long words and choose the shorter variant \textit{-ic} for long stems \is{stem} (in terms of number of syllables). \is{syllable} She reports that ``a survey of a general vocabulary list'' corroborates this hypothesis but does not present any systematic data.
 
-Let us test this hypothesis using the LOB \is{LOB} corpus. Since this is a written \is{medium} corpus, let us define \textvv{Length} \is{length} in terms of letters and assume that this is a sufficiently close approximation to phonological length. Table \ref{tab:icicallength} lists all types \is{type (category)} with the two suffixes \is{affix} from LOB, \is{LOB} in decreasing order of length (since the point here is to show the influence of length on suffix \is{affix} choice, prefixed \is{affix} stems, \is{statistics} compound stems, etc. are included in their full form).
+Let us test this hypothesis using the LOB \is{LOB} corpus. Since this is a written \is{medium} corpus, let us define \textvv{Length} \is{length} in terms of letters and assume that this is a sufficiently close approximation to phonological length. Tables \ref{tab:iclength} and \ref{tab:icallength} lists all types \is{type (category)} with the two suffixes \is{affix} from LOB \is{LOB} in decreasing order of length; note that since the point here is to show the influence of length on suffix choice, prefixed stems, \is{stem} compound stems, etc. are included in their full form (the lists are included in a more readable format in the Supplementary Online Materials, file U7BR).
 
 {\footnotesize\begin{longtable}{>{\raggedright\arraybackslash}p{\textwidth - 2\tabcolsep}}
-\caption{Adjectives with \textit{-ic} and \textit{-ical} by length (LOB) (Supplementary Online Material: U7BR)\label{tab:icicallength}}\\%OSM
+\caption{Adjectives with \textit{-ic} by length (LOB) \label{tab:iclength}}\\
 \lsptoprule\endfirsthead\midrule\endhead\endfoot\lspbottomrule\endlastfoot
 % \resizebox*{!}{\textheight}{%
-Types with \textit{-ic}\\\midrule
 \textit{function\hyp{}theoretic}, \textit{non-stoichiometric} (15), \textit{crystallographic}, \textit{politico-economic}, \textit{pseudo-scientific}, \textit{uncharacteristic} (14), \textit{antihaemophilic}, \textit{electro(-)magnetic}, \textit{non-pornographic}, \textit{semi-logarithmic} (13), \textit{characteristic}, \textit{claustrophobic}, \textit{electrographic}, \textit{metallographic}, \textit{non-diastematic}, \textit{part-apologetic}, \textit{potentiometric}, \textit{quasi-acrobatic}, \textit{spectrographic}, \textit{thermoelectric} (12), \textit{architectonic}, \textit{choreographic}, \textit{deterministic}, \textit{electrostatic}, \textit{ferromagnetic}, \textit{hypereutectic}, \textit{idiosyncratic}, \textit{materialistic}, \textit{nationalistic}, \textit{non-parametric}, \textit{philanthropic}, \textit{probabilistic}, \textit{pseudomorphic}, \textit{thermodynamic}, \textit{trans-economic}, \textit{unsympathetic} (11), \textit{aristocratic}, \textit{bureaucratic}, \textit{catastrophic}, \textit{electrolytic}, \textit{enthusiastic}, \textit{evangelistic}, \textit{haemorrhagic}, \textit{hieroglyphic}, \textit{homoeopathic}, \textit{hydrochloric}, \textit{hydrofluoric}, \textit{journalistic}, \textit{kinaesthetic}, \textit{melodramatic}, \textit{meritocratic}, \textit{monosyllabic}, \textit{naturalistic}, \textit{neurasthenic}, \textit{non-alcoholic}, \textit{orthographic}, \textit{paramagnetic}, \textit{philharmonic}, \textit{photographic}, \textit{phylogenetic}, \textit{polysyllabic}, \textit{pornographic}, \textit{positivistic}, \textit{programmatic}, \textit{prophylactic}, \textit{thermometric}, \textit{unscientific} (10), \textit{aerodynamic}, \textit{anaesthetic}, \textit{apocalyptic}, \textit{atmospheric}, \textit{demographic}, \textit{endocentric}, \textit{gastronomic}, \textit{geostrophic}, \textit{gravimetric}, \textit{haemophilic}, \textit{logarithmic}, \textit{macroscopic}, \textit{mechanistic}, \textit{meromorphic}, \textit{microscopic}, \textit{modernistic}, \textit{monotechnic}, \textit{non-catholic}, \textit{non-dogmatic}, \textit{non-dramatic}, \textit{ontogenetic}, \textit{orthopaedic}, \textit{over-drastic}, \textit{pessimistic}, \textit{philosophic}, \textit{phototactic}, \textit{plutocratic}, \textit{prehistoric}, \textit{psychiatric}, \textit{ritualistic}, \textit{socialistic}, \textit{sycophantic}, \textit{syllogistic}, \textit{sympathetic}, \textit{symptomatic}, \textit{syntagmatic}, \textit{telegraphic}, \textit{tetra-acetic}, \textit{therapeutic}, \textit{unaesthetic}, \textit{unpatriotic}, \textit{unrealistic} (9), \textit{aldermanic}, \textit{altruistic}, \textit{antiseptic}, \textit{apologetic}, \textit{asymmetric}, \textit{asymptotic}, \textit{autocratic}, \textit{barometric}, \textit{bimetallic}, \textit{cabalistic}, \textit{concentric}, \textit{corybantic}, \textit{democratic}, \textit{dielectric}, \textit{diplomatic}, \textit{egocentric}, \textit{electronic}, \textit{eulogistic}, \textit{exocentric}, \textit{fatalistic}, \textit{geocentric}, \textit{haemolytic}, \textit{histrionic}, \textit{humanistic}, \textit{hyperbolic}, \textit{hypodermic}, \textit{idealistic}, \textit{legalistic}, \textit{linguistic}, \textit{megalithic}, \textit{monolithic}, \textit{nihilistic}, \textit{novelistic}, \textit{optimistic}, \textit{pentatonic}, \textit{philatelic}, \textit{phosphoric}, \textit{polyphonic}, \textit{scholastic}, \textit{scientific}, \textit{stochastic}, \textit{supersonic}, \textit{systematic}, \textit{telepathic}, \textit{telephonic}, \textit{telescopic}, \textit{theocratic}, \textit{ultrasonic}, \textit{undogmatic}, \textit{undramatic}, \textit{uneconomic}, \textit{volumetric} (8), \textit{acrobatic}, \textit{aesthetic}, \textit{alcoholic}, \textit{algebraic}, \textit{analgesic}, \textit{antigenic}, \textit{apathetic}, \textit{apostolic}, \textit{authentic}, \textit{automatic}, \textit{axiomatic}, \textit{ballistic}, \textit{catalytic}, \textit{chromatic}, \textit{cinematic}, \textit{dualistic}, \textit{eccentric}, \textit{energetic}, \textit{enigmatic}, \textit{fantastic}, \textit{geometric}, \textit{geotactic}, \textit{heuristic}, \textit{homonymic}, \textit{hydraulic}, \textit{inorganic}, \textit{intrinsic}, \textit{kinematic}, \textit{lethargic}, \textit{messianic}, \textit{morphemic}, \textit{neolithic}, \textit{nicotinic}, \textit{nostalgic}, \textit{nucleonic}, \textit{panoramic}, \textit{parabolic}, \textit{paralytic}, \textit{parasitic}, \textit{patriotic}, \textit{pneumatic}, \textit{pragmatic}, \textit{prophetic}, \textit{quadratic}, \textit{realistic}, \textit{sarcastic}, \textit{schematic}, \textit{spasmodic}, \textit{strategic}, \textit{stylistic}, \textit{sub-atomic}, \textit{sulphuric}, \textit{symphonic}, \textit{syntactic}, \textit{synthetic}, \textit{telegenic}, \textit{traumatic} (7), \textit{academic}, \textit{acoustic}, \textit{allergic}, \textit{anarchic}, \textit{aromatic}, \textit{artistic}, \textit{asthenic}, \textit{athletic}, \textit{barbaric}, \textit{carbolic}, \textit{cathodic}, \textit{catholic}, \textit{cherubic}, \textit{climatic}, \textit{cyclonic}, \textit{diabetic}, \textit{dietetic}, \textit{dogmatic}, \textit{domestic}, \textit{dramatic}, \textit{dynastic}, \textit{eclectic}, \textit{economic}, \textit{egoistic}, \textit{electric}, \textit{elliptic}, \textit{emphatic}, \textit{epigonic}, \textit{esoteric}, \textit{forensic}, \textit{galvanic}, \textit{gigantic}, \textit{heraldic}, \textit{historic}, \textit{horrific}, \textit{hygienic}, \textit{hypnotic}, \textit{isotopic}, \textit{magnetic}, \textit{majestic}, \textit{metallic}, \textit{monastic}, \textit{narcotic}, \textit{neurotic}, \textit{operatic}, \textit{pathetic}, \textit{pedantic}, \textit{periodic}, \textit{phonetic}, \textit{platonic}, \textit{podzolic}, \textit{potassic}, \textit{prolific}, \textit{quixotic}, \textit{rhythmic}, \textit{romantic}, \textit{sadistic}, \textit{sardonic}, \textit{semantic}, \textit{specific}, \textit{sporadic}, \textit{syllabic}, \textit{symbolic}, \textit{synaptic}, \textit{synoptic}, \textit{tectonic}, \textit{terrific}, \textit{theistic}, \textit{thematic}, \textit{volcanic} (6), \textit{amoebic}, \textit{angelic}, \textit{anionic}, \textit{aquatic}, \textit{archaic}, \textit{botanic}, \textit{bucolic}, \textit{caustic}, \textit{ceramic}, \textit{chaotic}, \textit{chronic}, \textit{classic}, \textit{cryptic}, \textit{delphic}, \textit{demonic}, \textit{drastic}, \textit{dynamic}, \textit{elastic}, \textit{endemic}, \textit{enteric}, \textit{erratic}, \textit{frantic}, \textit{gastric}, \textit{generic}, \textit{genetic}, \textit{glottic}, \textit{graphic}, \textit{idyllic}, \textit{kinetic}, \textit{laconic}, \textit{lunatic}, \textit{melodic}, \textit{motivic}, \textit{nomadic}, \textit{numeric}, \textit{oceanic}, \textit{oolitic}, \textit{organic}, \textit{pacific}, \textit{phallic}, \textit{politic}, \textit{prosaic}, \textit{psychic}, \textit{spastic} (5), \textit{acetic}, \textit{arctic}, \textit{atomic}, \textit{bardic}, \textit{cosmic}, \textit{cyclic}, \textit{cystic}, \textit{erotic}, \textit{exotic}, \textit{ferric}, \textit{gnomic}, \textit{gothic}, \textit{hectic}, \textit{heroic}, \textit{ironic}, \textit{italic}, \textit{mosaic}, \textit{myopic}, \textit{mystic}, \textit{mythic}, \textit{niobic}, \textit{nitric}, \textit{oxalic}, \textit{photic}, \textit{poetic}, \textit{public}, \textit{rustic}, \textit{scenic}, \textit{static}, \textit{tannic}, \textit{tragic} (4), \textit{basic}, \textit{civic}, \textit{comic}, \textit{cubic}, \textit{ionic}, \textit{lyric}, \textit{magic}, \textit{tonic}, \textit{toxic} (3), \textit{epic} (2)\\
-\midrule
-Types with \textit{-ical} \\\midrule
+\end{longtable}}
+
+{\footnotesize\begin{longtable}{>{\raggedright\arraybackslash}p{\textwidth - 2\tabcolsep}}
+\caption{Adjectives with \textit{-ical} by length (LOB) \label{tab:icallength}}\\
+\lsptoprule\endfirsthead\midrule\endhead\endfoot\lspbottomrule\endlastfoot
+% \resizebox*{!}{\textheight}{%
 \textit{autobiographical}, \textit{palaeontological} (12), \textit{anthropological}, \textit{pharmacological}, \textit{physiographical}, \textit{trigonometrical} (11), \textit{archaeological}, \textit{ecclesiastical}, \textit{eschatological}, \textit{haematological}, \textit{iconographical}, \textit{meteorological}, \textit{methodological}, \textit{pharmaceutical}, \textit{quasi-classical} (10), \textit{chronological}, \textit{entomological}, \textit{metallurgical}, \textit{morphological}, \textit{philosophical}, \textit{photochemical}, \textit{physiological}, \textit{psychological}, \textit{radiochemical}, \textit{technological}, \textit{theorematical}, \textit{toxicological}, \textit{unsymmetrical}, \textit{untheological} (9), \textit{aeronautical}, \textit{aetiological}, \textit{alphabetical}, \textit{anti-clerical}, \textit{arithmetical}, \textit{astronomical}, \textit{biographical}, \textit{cosmological}, \textit{etymological}, \textit{genealogical}, \textit{geographical}, \textit{hypocritical}, \textit{hypothetical}, \textit{mathematical}, \textit{metaphorical}, \textit{metaphysical}, \textit{non-technical}, \textit{pathological}, \textit{pre-classical}, \textit{radiological}, \textit{schismatical}, \textit{self-critical}, \textit{sociological}, \textit{systematical}, \textit{uneconomical}, \textit{unrhythmical} (8), \textit{allegorical}, \textit{biochemical}, \textit{categorical}, \textit{cylindrical}, \textit{dialectical}, \textit{egotistical}, \textit{evangelical}, \textit{geometrical}, \textit{grammatical}, \textit{ideological}, \textit{monarchical}, \textit{mycological}, \textit{nonsensical}, \textit{obstetrical}, \textit{paradisical}, \textit{paradoxical}, \textit{pedagogical}, \textit{pedological}, \textit{puranitical}, \textit{purinatical}, \textit{puritanical}, \textit{serological}, \textit{statistical}, \textit{sub(-)tropical}, \textit{subtropical}, \textit{symmetrical}, \textit{synagogical}, \textit{theological}, \textit{theoretical}, \textit{unpractical} (7), \textit{a-political}, \textit{acoustical}, \textit{analytical}, \textit{anatomical}, \textit{biological}, \textit{diabolical}, \textit{economical}, \textit{ecumenical}, \textit{electrical}, \textit{elliptical}, \textit{geological}, \textit{historical}, \textit{hysterical}, \textit{liturgical}, \textit{mechanical}, \textit{methodical}, \textit{oratorical}, \textit{rhetorical}, \textit{symbolical}, \textit{theatrical}, \textit{unbiblical}, \textit{uncritical} (6), \textit{classical}, \textit{empirical}, \textit{fanatical}, \textit{graphical}, \textit{identical}, \textit{juridical}, \textit{numerical}, \textit{political}, \textit{satirical}, \textit{sceptical}, \textit{spherical}, \textit{technical}, \textit{unethical}, \textit{unmusical}, \textit{untypical}, \textit{whimsical} (5), \textit{atypical}, \textit{biblical}, \textit{cervical}, \textit{chemical}, \textit{clerical}, \textit{clinical}, \textit{critical}, \textit{cyclical}, \textit{inimical}, \textit{ironical}, \textit{metrical}, \textit{mystical}, \textit{mythical}, \textit{physical}, \textit{poetical}, \textit{surgical}, \textit{tactical}, \textit{tropical}, \textit{vertical} (4), \textit{comical}, \textit{conical}, \textit{cynical}, \textit{ethical}, \textit{lexical}, \textit{lyrical}, \textit{magical}, \textit{medical}, \textit{optical}, \textit{topical}, \textit{typical} (3)\\
 \end{longtable}}
-% layout: why is this table so narrow?
+% layout: split the table in two
 
 We can test the hypothesis based on the mean \is{mean} length \is{length} of the two samples using a \textit{t}-test, \is{t-test} or by ranking them by length using the U test. As mentioned in Chapter \ref{ch:significancetesting}, word length (however we measure \is{measurement} it) rarely follows a normal distribution, \is{distribution, normal} so the U test would probably be the better choice in this case, but let us use the t\hyp{}test for the sake of practice (the data are there in full, if you want to calculate a U test).
 
@@ -8931,7 +8934,7 @@ Many of the examples in the early chapters of this book demonstrate how, in prin
 
 This was actually done fairly early, long before the invention of keyword \is{keyword analysis} analysis, by \citet{johansson_frequency_1989}. They compare all word forms in the LOB \is{LOB} and BROWN \is{BROWN} corpora using a ``coefficient of difference'', essentially the percentage of the word in the two corpora.\footnote{More precisely, in its generalized form, this coefficient is calculated by the following formula, given two corpora A and B:
 
-$$\frac{ \frac{f ( word_A )}{size_A} - \frac{f ( word_B )}{size_B}}{ \frac{f ( word_A )}{ size_A} + \frac{f ( word_B )}{size_B}}$$
+$$\frac{ \frac{f ( \text{word}_A )}{\text{size}_A} - \frac{f ( \text{word}_B )}{\text{size}_B}}{ \frac{f ( \text{word}_A )}{ \text{size}_A} + \frac{f ( \text{word}_B )}{\text{size}_B}}$$
 
 This formula will give us the percentage of uses of the word in Corpus A or Corpus B (whichever is larger), with a negative sign if it occurs in Corpus B.} In addition, they test each difference for significance using the $\chi^2$ \is{chi-square test} test. As discussed in Chapter \ref{ch:collocation}, it is more recommendable -- and, in fact, simpler -- to use an association \is{association} measure \is{association measure} like \emph{G} right away, as percentages will massively overestimate infrequent events (a word that occurs only a single time will be seen as 100 percent typical of whichever corpus it happens to occur in); also, the $\chi^2$ \is{chi-square test} test cannot be applied to infrequent words. Still, Johansson and Hofland's basic idea is highly innovative and their work constitutes the first example of a keyword \is{keyword analysis} analysis that I am aware of.
 
