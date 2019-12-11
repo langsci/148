@@ -406,7 +406,7 @@ The first linguistic corpus in our sense was the Brown University Standard Corpu
 
 The BROWN \is{BROWN} corpus consists of 500 samples \is{sampling} of approximately 2000 words each, drawn from a number of different language varieties, \is{language variety} as shown in Table \ref{tab:browncomposition}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Composition of the BROWN corpus}
 \label{tab:browncomposition}
 \resizebox{\textwidth}{!}{%
@@ -605,7 +605,7 @@ In this section, we will illustrate these types of annotation \is{annotation} an
 
 For example, Figure \ref{fig:sbcsaeparalinguistic} shows a passage of transcribed \is{transcription} speech \is{medium} from the Santa Barbara Corpus of Spoken American \is{American English} English \is{SBCSAE} (SBCSAE).
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Paralinguistic features of spoken language in the SBCSAE}
 \label{fig:sbcsaeparalinguistic}
 \hrulefill
@@ -635,7 +635,7 @@ The speech is transcribed \is{transcription} more or less in standard orthograph
 
 In contrast, consider the London\hyp{}Lund Corpus of Spoken English (LLC), \is{LLC} an excerpt from which is shown in Figure \ref{fig:llcparalinguistic}.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Paralinguistic features of spoken language in the LLC}
 \label{fig:llcparalinguistic}
 \hrulefill
@@ -686,7 +686,7 @@ Such differences are important to understand for anyone working with the these c
 
  Written \is{medium} language, too, has paralinguistic \is{paralinguistic} features that are potentially relevant to linguistic research. Consider the excerpt from the LOB \is{LOB} corpus in Figure \ref{fig:lobparalinguistic}.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Paralinguistic features of written language in the LOB corpus}
 \label{fig:lobparalinguistic}
 \hrulefill
@@ -711,7 +711,7 @@ Additionally, the corpus contains markup \is{annotation} pertaining not to the a
 
 Other corpora (and other versions of the LOB \is{LOB} corpus) contain more detailed linguistic markup. \is{annotation} Most commonly, they contain information about the word class of each word, represented in the form of a so\hyp{}called `part\hyp{}of\hyp{}speech (or POS) tags'. Figure \ref{fig:brownstructfeatures} shows a passage from the BROWN \is{BROWN} corpus, where these POS tags take the form of sequences of uppercase letters and symbols, attached to the end of each word by an underscore (for example, \texttt{\_AT} for articles, \texttt{\_NN} for singular \is{number} nouns, \is{noun} \texttt{\_*} for the negative \is{negation} particle \textit{not}, etc.). Note that sentence boundaries are also marked, \is{annotation} in this case by a pipe symbol (used for paragraph boundaries in the LOB) \is{LOB} followed by the sequence SN and an id number.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Structural features in the BROWN corpus}
 \label{fig:brownstructfeatures}
 \hrulefill
@@ -729,7 +729,7 @@ needed_VBN ._.
 
 Other linguistic features that are sometimes recorded in (written \is{medium} and spoken) corpora are the lemmas \is{lemma} of each word and (less often) the syntactic \is{syntax} structure of the sentences (corpora with syntactic annotation \is{annotation} are sometimes referred to as ``treebanks''). When more than one variable is annotated \is{annotation} in a corpus, the corpus is typically structured as shown in Figure \ref{fig:susanneannotation}, with one word per line and different columns for the different types of annotation \is{annotation} (more recently, the markup \is{annotation} language XML is used in addition to or instead of this format).
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Example of a corpus with complex annotation (SUSANNE corpus)}
 \label{fig:susanneannotation}
 \hrulefill
@@ -881,7 +881,7 @@ Let us briefly look at why the three functions listed above might be useful in c
 
 A concordance \is{concordance} provides a quick overview of the typical usage of a particular (set of) word forms or more complex \is{complexity} linguistic expressions. The occurrences are presented in random order in Figure \ref{fig:sampleconcordance}, \is{KWIC concordance} but corpus\hyp{}linguistic software packages typically allow the researcher to sort concordances in various ways, for example, by the first word to the left or to the right; this will give us an even better idea as to what the typical usage contexts for the expression under investigation are.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{KWIC concordance (random sample) of the noun \textit{time} (BNC Baby)}
 \label{fig:sampleconcordance}
 \hrulefill
@@ -917,7 +917,7 @@ inversion , i.e. of one descriptor at a [time] , but they are generally provided
 
 Collocate \is{collocation} lists are a useful way of summarizing the contexts of a linguistic expression. For example, the collocate list in the column marked L1 in Table \ref{tab:collocatesoftime} will show us at a glance what words typically directly precede the string \textit{time}. The determiners \textit{the} and \textit{this} are presumably due to the fact that we are dealing with a noun, \is{noun} but the adjectives \is{adjective} \textit{first}, \textit{same}, \textit{long}, \textit{some}, \textit{last}, \textit{every} and \textit{next} are related specifically to the meaning \is{semantics} of the noun \textit{time}; the high frequency \is{frequency} of the prepositions \is{adposition} \textit{at}, \textit{by}, \textit{for} and \textit{in} in the column marked L2 (two words to the left of the node word \textit{time}) not only gives us additional information about the meaning and phraseology associated \is{association} with the word \textit{time}, it also tells us that \textit{time} frequently occurs in prepositional \is{adposition} phrases in general.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Collocates of \textit{time} in a span of three words to the left and to the right}
 \label{tab:collocatesoftime}
 \resizebox{\textwidth}{!}{%
@@ -952,7 +952,7 @@ had & 55 & & & one & 65 & & as & 78 & she & 58 & ? & 58 \\
 
 Finally, frequency \is{frequency} lists provide useful information about the distribution \is{distribution, conditional} of word forms (and, in the case of written \is{medium} language, punctuation marks) in a particular corpus. This can be useful, for example, in comparing the structural properties or typical contents of different language varieties \is{language variety} (see further Chapter \ref{ch:text}). It is also useful in assessing which collocates \is{collocation} of a particular word are frequent only because they are frequent in the corpus in general, and which collocates actually tell us something interesting about a particular word.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{The forty most frequent strings in the BNC Baby}
 \label{tab:bncbabyfrequencies}
  \begin{tabular}{lS[table-format=6.0]|lS[table-format=6.0]|lS[table-format=6.0]|lS[table-format=6.0]}
@@ -1109,7 +1109,7 @@ Nevertheless, existential statements play a crucial role in scientific enquiry -
 
 But if scientific hypotheses \is{hypothesis} are not (or only rarely) existential statements, what are they instead? As indicated at the end of the previous and the beginning of the current chapter, they are statements postulating \emph{relationships} between constructs, rather than their existence. The minimal model within which such a hypothesis can be stated is visualized schematically in the \emph{cross table} (or \emph{contingency table}) \is{contingency table} in Table \ref{tab:schematictable}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{A contingency table}
 \label{tab:schematictable}
 \begin{tabular}[t]{llccr}
@@ -1149,7 +1149,7 @@ If we treat the statements in (\ref{ex:windscreenisbritish}) and (\ref{ex:windsh
 
 If we were dealing with existential statements, this would be a plausible strategy and the results would tell us, that the respective words exist in the respective variety. \is{language variety} However, with respect to the universal statements in (\ref{ex:windscreenisbritish}) and (\ref{ex:windshieldisamerican}), the results tell us nothing. Consider Table \ref{tab:schematicbinaryintersections}, which is a visual representation of the hypotheses in (\ref{ex:windscreenisbritish}) and (\ref{ex:windshieldisamerican}).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{A contingency table with binary values for the intersections}
 \label{tab:schematicbinaryintersections}
 \begin{tabular}[t]{llccr}
@@ -1157,12 +1157,11 @@ If we were dealing with existential statements, this would be a plausible strate
  & & \multicolumn{2}{c}{\textvv{Forward\hyp{}Facing Car Window}} \\
  & & \textit{\textvv{windscreen}} & \textit{\textvv{windshield}} \\
 \midrule
-\textvv{Variety} & \textvv{british} & ✓ & ✗ \\
- & \textvv{american} & ✗ & ✓ \\
+\textvv{Variety} & \textvv{british} & \ding{51} & \ding{55} \\
+ & \textvv{american} & \ding{55} & \ding{51} \\
 \lspbottomrule
 \end{tabular}
 \end{table}
-% layout: checkmark ✓ and ballot ✗ do not render
 
 What we would have looked for in our naive attempt to verify our hypotheses \is{hypothesis} are only those cases that \emph{should} exist (i.e., the intersections indicated by checkmarks in Table \ref{tab:schematicbinaryintersections}). But if we find such examples, this does not tell us anything with respect to (\ref{ex:windscreenisbritish}) and (\ref{ex:windshieldisamerican}): we would get the same result if both words occur in both varieties. \is{language variety} As Popper puts it, ``[i]t is easy to obtain confirmations, or verifications, for nearly every theory [i.e., hypothesis, A.S.] -- if we look for confirmations'' \citep[36]{popper_conjectures_1963}.
 
@@ -1198,7 +1197,7 @@ In the case of \textit{windscreen} and \textit{windshield}, we actually find cou
 
 Take another well\hyp{}known lexical difference between British \is{British English} and American \is{American English} English: the distilled petroleum used to fuel cars is referred to as \textit{petrol} in British English and \textit{gasoline} in American English. A search in the four corpora used above yields the frequencies \is{frequency} of occurrence shown in Table \ref{tab:petrolgasoline}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{\emph{Petrol} vs. \emph{gasoline}}
 \label{tab:petrolgasoline}
 \begin{tabular}[t]{llccr}
@@ -1240,7 +1239,7 @@ Let us look at a more complex example, the words for the (typically elevated) pa
 
 A query \is{query} for the two words (in all their potential morphological \is{morphology} and orthographic variants) against the LOB \is{LOB} and FLOB \is{FLOB} corpora (British \is{British English} English) and BROWN \is{BROWN} and FROWN \is{FROWN} corpora (American English) yields the results shown in Table \ref{tab:pavementsidewalk}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{\emph{Pavement} vs. \emph{sidewalk}}
 \label{tab:pavementsidewalk}
 \begin{tabular}[t]{llccr}
@@ -1314,7 +1313,7 @@ Since this reading exists, then, we have found a counterexample \is{counterexamp
 
 But what does this mean for our data from the BROWN \is{BROWN} corpus -- is there really nothing to be learned from this sample concerning our hypothesis? \is{hypothesis} Let us say we truly wanted to err on the side of caution, i.e. on the side that goes \textit{against} our hypothesis, and assign the meaning \is{semantics} of \textit{sidewalk} to Coxe's novel \is{literary language} too. Let us further assume that we can assign all other uses of \textit{pavement} in the sample to the reading `paved surface', and that two of the four examples of \textit{sidewalk} in the British \is{British English} English corpus are genuine counterexamples. \is{counterexample} This would give us the distribution \is{distribution, conditional} shown in Table \ref{tab:pavementsidewalkcorrected}:
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Pavement vs. sidewalk (corrected)}
 \label{tab:pavementsidewalkcorrected}
 \begin{tabular}[t]{llccr}
@@ -1381,7 +1380,7 @@ Clearly, counterexamples \is{counterexample} are irrelevant to these statements.
 
 Instead, we have to state our prediction in relative terms. Generally speaking, we should expect to find more cases of \textit{-wards} than of \textit{-ward} in British \is{British English} English and more of \textit{-ward} than of \textit{-wards} in American English, as visualized in Table \ref{tab:schematicgradedintersections} (where the circles of different sizes represent different frequencies \is{frequency} of occurrence).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{A contingency table with graded values for the intersections}
 \label{tab:schematicgradedintersections}
 \begin{tabular}[t]{llccr}
@@ -1784,7 +1783,7 @@ Crucially, (\ref{ex:popperscience}) and (\ref{ex:poppersciences}) suggest a \emp
 
 Fleshing out Popper's basic schema in (\ref{ex:popperscience}) above, drawing together the points discussed in this and the previous chapter, we can represent this cycle as shown in Figure \ref{fig:researchcycle}.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{The scientific research cycle}
 \label{fig:researchcycle}
 \includegraphics[scale=0.9]{figures/researchcycle}
@@ -1948,7 +1947,7 @@ In arriving at the definition of corpus linguistics adopted in this book, we str
 
 Table \ref{tab:queryoutcomes} summarizes these outcomes ($\lnot$ stands for ``not'').
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Four possible outcomes of a corpus query for a given phenomenon X}
 \label{tab:queryoutcomes}
 \begin{tabular}[t]{lrcc}
@@ -1993,7 +1992,7 @@ Let us apply this query \is{query} (which is actually used in \citealt{colleman_
 
 There are 36 ditransitive \is{ditransitivity} clauses in the sample, thirteen of which are returned by our query. \is{query} There are also 2838 clauses that are not ditransitive, 14 of which are also returned by our query. Table \ref{tab:queryoutcomesexample} shows the results of the query in terms of true and false positives and negatives:
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Comparison of the search results}
 \label{tab:queryoutcomesexample}
 \begin{tabular}[t]{lrccr}
@@ -2299,7 +2298,7 @@ In this formula, $p_o$ is the relative observed agreement between the raters (i.
 
 Table \ref{tab:intterraterschematic} shows a situation where the two raters assign one of the two categories \is{categorization} \textvv{x} or \textvv{y}. Here, $p_o$ would be the sum of \textit{n}(\textvv{x}, \textvv{x}) and \textit{n}(\textvv{y}, \textvv{y}), divided by the sum of all annotation; \is{annotation} $p_e$ can be calculated in various ways, a straightforward one will be introduced below.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{A contingency table for two raters and two categories}
 \label{tab:intterraterschematic}
 \begin{tabular}[t]{llccr}
@@ -2377,7 +2376,7 @@ Obviously, it is no simple task to invent a meaningful \is{semantics} context of
 
 Table \ref{tab:interraterdata} \is{interrater reliability} shows a random sample of \textit{of}-constructions from the BROWN \is{BROWN} corpus (with cases that have a quantifying noun \is{noun} like \textit{lot} or \textit{bit} instead of a regular noun as N\textsubscript{i} already removed. The introspective \is{introspection} judgments were derived by two different raters (both trained linguists who wish to remain anonymous) based on the instructions above. The tabulated data for both annotators \is{annotation} are shown in Table \ref{tab:interratertable}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Paraphraseablility ratings for a sample of \textit{of}-constructions by two raters}
 \label{tab:interraterdata}
 \begin{tabular}[t]{lcc}
@@ -2418,7 +2417,7 @@ the novelty of such a gathering & \textvv{poss} & \textvv{poss}\\
 \end{tabular}
 \end{table}
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Count of judgments from Table \ref{tab:interraterdata}}
 \label{tab:interratertable}
 \begin{tabular}[t]{llccr}
@@ -2448,7 +2447,7 @@ $$\kappa = \frac{0.7667 - 0.5444}{1 - 0.5444} = 0.7805$$
 
 There are various suggestions as to what value of $\kappa$ is to be taken as satisfactory. One reasonable suggestion (following \citealt{mchugh_interrater_2012}) is shown in Table \ref{tab:kappalevels}; according to this table, our annotation \is{annotation} scheme is good enough to achieve ``strong'' agreement between raters, and hence presumably good enough to use in a corpus linguistic research study (what is ``good enough'' obviously depends on the risk posed by cases where there is no agreement in classification).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Interpretation of $\kappa$ values}
 \label{tab:kappalevels}
 \begin{tabular}[t]{cc}
@@ -2504,7 +2503,7 @@ Here, the annotation \is{annotation} (i.e., the part\hyp{}of\hyp{}speech tags) a
 
 The second option is more typically chosen in the case of annotations added in the context of a specific research project (especially if they are added manually): the data are extracted, \is{retrieval} stored \is{data storage} in a separate file, and then annotated. \is{annotation} Frequently, spreadsheet applications are used to store the corpus data and annotation decisions, as in the example in Figure \ref{fig:storingdataright}, where possessive \is{possessive} pronouns \is{pronoun} and nouns \is{noun} are annotated for \textvv{Nominal Type}, \textvv{Animacy} \is{animacy} and \textvv{Concreteness}:
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Example of a raw data table}
 \label{fig:storingdataright}
 \includegraphics[width=\textwidth,keepaspectratio]{figures/storingdataright}
@@ -2514,7 +2513,7 @@ The first line contains labels that tell us what information is found in each co
 
 In particular, we should never store \is{data storage} our data in summarized form, for example, as shown in Figure \ref{fig:storingdatawrong}.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Data stored in summarized form}
 \label{fig:storingdatawrong}
 \includegraphics[width=\textwidth,keepaspectratio]{figures/storingdatawrong}
@@ -2744,7 +2743,7 @@ We can now state the following quantitative \is{quantitative research} predictio
 
 Table \ref{tab:posmodpossesives} shows the absolute frequencies \is{frequency} of the parts of speech of the modifier in both constructions (examples with proper names were discarded, as the givenness \is{givenness} of proper names in discourse is less predictable than that of pronouns \is{pronoun} and common \is{noun} nouns):
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Part of speech of the modifier in the \textit{s}-possessive and the \textit{of}-possessive}
 \label{tab:posmodpossesives}
 \begin{tabular}[t]{llccr}
@@ -2787,7 +2786,7 @@ The column proportions can be related to our prediction most straightforwardly: 
 
 The relevance of the row proportions is less clear in this case. We might predict, based on our hypothesis, \is{hypothesis} that the majority of modifiers referring to old information should occur in \textit{s}-possessives \is{possessive} and the majority of modifiers referring to new information should occur in \textit{of}-possessives.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Absolute and relative frequencies of the modifier's givenness (as reflected in its part of speech) in the English possessive constructions}
 \label{tab:absrelfreqposs}
 \begin{tabular}[t]{lllccr}
@@ -2829,7 +2828,7 @@ For example, 56.18 percent of all possessive \is{possessive} constructions in ou
 
 To avoid rounding errors, we should not actually convert the row and column totals to percentages at all, but use the following much simpler way of calculating the expected \is{frequency, expected} frequencies: for each cell, we simply multiply its marginal frequencies and divide the result by the table total as shown in Table \ref{tab:formulaexpected}; note that we are using the standard convention of using \textit{O} to refer to observed frequencies, \is{frequency, observed} \textit{E} to refer to expected frequencies, and subscripts to refer to rows and columns. The convention for these subscripts is as follows: use \textit{1} for the first row or column, \textit{2} for the second row or column, and \textit{T} for the row or column total, and give the index for the row before that of the column. For example, \textit{E}\textit{\textsubscript{21}} refers to the expected \is{frequency, expected} frequency of the cell in the second row and the first column, \textit{O}\textit{\textsubscript{1T}} refers to the total of the first row, and so on.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Calculating expected frequencies from observed frequencies}
 \label{tab:formulaexpected}
 \begin{tabular}[t]{llccr}
@@ -2847,7 +2846,7 @@ To avoid rounding errors, we should not actually convert the row and column tota
 
 Applying this procedure to our observed frequencies \is{frequency, observed} yields the results shown in Table \ref{tab:obsexpfreqposs}. One should always report nominal \is{nominal data} data in this way, i.e., giving both the observed and the expected \is{frequency, expected} frequencies in the form of a contingency \is{contingency table} table.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Observed and expected frequencies of old and new modifiers in the \textit{s}- and the \textit{of}-possessive}
 \label{tab:obsexpfreqposs}
 \begin{tabular}[t]{lllccr}
@@ -2884,7 +2883,7 @@ The constructions are operationalized \is{operationalization} as before. The dat
 
 \textvv{Animacy} \is{animacy} was operationally defined in terms of the annotation \is{annotation} scheme shown in Table \ref{tab:animacyannotationscheme} (based on \citealt{zaenen_animacy_2004}).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{A simple annotation scheme for \textvv{Animacy}}
 \label{tab:animacyannotationscheme}
 \resizebox{\textwidth}{!}{
@@ -2917,7 +2916,7 @@ We can now formulate the following prediction:
 
 Note that phrased like this, it is not yet a quantitative \is{quantitative research} prediction, since ``tend to'' is not a mathematical concept. While \textit{frequency} \is{frequency} for nominal \is{nominal data} data and \textit{mean} \is{mean} (or ``average'') for cardinal \is{cardinal data} data are used in everyday language with something close to their mathematical meaning, we do not have an everyday word for dealing with differences in ordinal \is{ordinal data} data. We will return to this point presently, but first, let us look at the data impressionistically. Table \ref{tab:sampleanimacysgenofc} shows the annotated \is{annotation} sample (cases are listed in the order in which they occurred in the corpus).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{A sample of \textit{s}- and \textit{of}-possessives annotated for \textvv{Animacy} (BROWN)}
 \label{tab:sampleanimacysgenofc}
 \resizebox*{!}{\textheight}{
@@ -2977,7 +2976,7 @@ No. & Example & \textvv{Animacy} & Rank \\
 
 A simple way of finding out whether the data conform to our prediction would be to sort the entire data set by the rank assigned to the examples and check whether the \textit{s}-possessives \is{possessive} cluster near the top of the list and the \textit{of}-possessives near the bottom. Table \ref{tab:sampleanimranksgenofc} shows this ranking.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{The annotated sample from Table \ref{tab:sampleanimacysgenofc} ordered by animacy rank}
 \label{tab:sampleanimranksgenofc}
 \begin{tabular}[t]{rcrcrcr}
@@ -3024,7 +3023,7 @@ As explained above, we cannot calculate a mean \is{mean} for a set of ordinal \i
 
 For example, the rank values for the Animacy \is{animacy} of our sample of \textit{s}-possessives \is{possessive} are shown in Figure \ref{fig:possmedians}a. There are 23 values, thus the median \is{median} is the twelfth value in the series (marked by a dot labeled M) -- there are 11 values above it and eleven below it. The twelfth values in the series is a 1, so the median value of \textit{s}-possessive modifiers in our sample is 1 (or \textvv{human}).
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Medians for (a) the \textit{s}-possessives and (b) the \textit{of}-possessives in Table \ref{tab:sampleanimranksgenofc}}
 \label{fig:possmedians}
 \includegraphics{figures/medians}
@@ -3048,7 +3047,7 @@ Our data conform to this prediction, as 1 is higher on the scale than 5.5. As be
 
 Recall that I mentioned above the possibility of treating ordinal \is{ordinal data} data like nominal \is{nominal data} data. Table \ref{tab:relfreqpossmod} shows the relative frequencies \is{frequency} for each animacy \is{animacy} category, (alternatively, we could also calculate expected \is{frequency, expected} frequencies in the way described in Section \ref{sec:descriptiveordinal} above).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Relative frequencies for the Animacy values of possessive modifiers}
 \label{tab:relfreqpossmod}
 \begin{tabular}[t]{rlcccc}
@@ -3100,7 +3099,7 @@ The variable \textvv{Length} \is{length} was defined operationally \is{operation
 
 Table \ref{tab:samplelengthsgenofc} shows the length of head and modifier for all cases in our sample.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{A sample of \textit{s}- and \textit{of}-possessives annotated for length of head and modifier (BROWN)}
 \label{tab:samplelengthsgenofc}
 \resizebox*{!}{\textheight}{
@@ -3254,7 +3253,7 @@ Crucially, however, there are differences in the probability \is{probability} of
 
 This kind of coin\hyp{}flip logic (also known as probability \is{probability} theory), can be utilized in evaluating quantitative \is{quantitative research} hypotheses that have been stated in quantitative terms. Take the larger set of ten coin flips mentioned at the beginning of this section: now, there are eleven potential outcomes, shown in Table \ref{tab:tencoinflips}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Possible sets of ten coin flips}
 \label{tab:tencoinflips}
 \begin{tabular}[t]{rccc}
@@ -3293,7 +3292,7 @@ It also tells us how likely we are wrong if we reject this null hypothesis: \is{
 
 By convention, probability \is{probability of error} of error of 0.05 (five percent) is considered to be the limit as far as acceptable risks are concerned in statistics \is{statistics} -- if $p < 0.05$ (i.e., if \textit{p} is smaller than five percent), the result is said to be \textit{statistically significant} \is{significance} (i.e., not due to chance), \is{chance} if it is larger, the result is said to be non\hyp{}significant (i.e., likely due to chance). \is{chance} Table \ref{tab:plevels} \is{p-value} shows additional levels of significance that are conventionally recognized.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Interpretation of p\hyp{}values}
 \label{tab:plevels}
 \begin{tabular}[t]{lc}
@@ -3361,7 +3360,7 @@ Prediction: Discourse\hyp{}old and discourse\hyp{}new modifiers will be distribu
 We already reported the observed and expected \is{frequency, expected} frequencies in Table \ref{tab:obsexpfreqposs}, but let us repeat them here as Table \ref{tab:obsexpfreqpossrepeat} for convenience in a slightly simplified form that we will be using from now on, with the expected frequencies shown in parentheses below the observed ones.
 
 % layout: In contingency tables like the following one, please do NOT align the numbers at the decimal point, they are intentionally formatted in this way.
-\begin{table}[!htbp]
+\begin{table}
 \caption{Observed and expected frequencies of old and new modifiers in the \textit{s}- and the \textit{of}-possessive (= Table \ref{tab:obsexpfreqposs})}
 \label{tab:obsexpfreqpossrepeat}
 \begin{tabular}[t]{llccr}
@@ -3387,7 +3386,7 @@ However, we want to derive a single measure from the table, so we need a measure
 
 The first problem is solved by squaring the differences. This converts all deviations into positive numbers, and thus their sum will no longer be zero, and it has the additional effect of weighing larger deviations more strongly than smaller ones. The second problem is solved by dividing the squared difference by the expected \is{frequency, expected} frequencies. This will ensure that a deviation of a particular size will be weighed more heavily for a small expected frequency than for a large expected frequency. The values arrived at in this way are referred to as the \textit{cell components of $\chi^2$} \is{chi-square test} (or simply \textit{$\chi^2$ components}); the formulas for calculating the cell components in this way are shown in Table \ref{tab:formulachisquarecomp}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Calculating $\chi^2$ components for individual cells}
 \label{tab:formulachisquarecomp}
 \begin{tabular}[t]{llcc}
@@ -3408,7 +3407,7 @@ The first problem is solved by squaring the differences. This converts all devia
 
 If we apply this procedure to Table \ref{tab:obsexpfreqpossrepeat}, we get the components shown in Table \ref{tab:posschisquarecomp}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{$\chi^2$ components for Table \ref{tab:obsexpfreqpossrepeat}}
 \label{tab:posschisquarecomp}
 \begin{tabular}[t]{llcc}
@@ -3471,7 +3470,7 @@ The $\phi$-value is a so\hyp{}called correlation \is{correlation} coefficient, w
 
 First, there are generally agreed\hyp{}upon verbal descriptions for different ranges that the value of a correlation \is{correlation} coefficient may have (similarly to the verbal descriptions of \textit{p}-values discussed above. These descriptions are shown in Table \ref{tab:correlationlevels}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Conventional interpretation of correlation coefficients}
 \label{tab:correlationlevels}
 \begin{tabular}[t]{cc}
@@ -3504,7 +3503,7 @@ Consider the following example: the spoken \is{medium} part of the BNC \is{BNC} 
 
 First, we could simply take the total number of elements and divide it by the number of categories \is{categorization} (values), on the assumption that `random' \is{chance} distribution means that every category should occur with the same frequency. \is{frequency} In this case, the expected \is{frequency, expected} number of \textvv{male} and \textvv{female} speakers would be [Total Number of Speakers / Sex Categories], i.e. $\nicefrac{3628}{2} = 1814$. We can now calculate the $\chi^2$ \is{chi-square test} components just as we did in the preceding sections, using the formula $((O-E)^2)/E$. Table \ref{tab:speakersexobsexpeq} shows the results.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Observed and expected frequencies of Speaker Sex in the BNC (based on the assumption of equal proportions)}
 \label{tab:speakersexobsexpeq}
 \begin{tabular}[c]{llccc}
@@ -3526,7 +3525,7 @@ Adding up the components gives us a $\chi^2$ \is{chi-square test} value of 272.3
 The second way of deriving expected \is{frequency, expected} frequencies for a univariate distribution \is{distribution, conditional} is from prior knowledge concerning the distribution of the values in general. In our case, we could find out the proportion of men and women in the relevant population and then derive the expected frequencies for our table by assuming that they follow this proportion. The relevant population in this case is that of the United Kingdom between 1991 and 1994, when the BNC \is{BNC} was assembled. According to the World Bank, the women made up 51.4 percent and men 48.6 percent of the total population at that time, so the expected \is{frequency, expected} frequencies of male and female speakers in the corpus are as shown in Table \ref{tab:speakersexobsexpemp}.
 % me: https://data.worldbank.org/indicator/SP.POP.TOTL.FE.ZS?locations=GB
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Observed and expected frequencies of Speaker Sex in the BNC (based on the proportions in the general population)}
 \label{tab:speakersexobsexpemp}
 \resizebox{\textwidth}{!}{
@@ -3550,7 +3549,7 @@ Incidentally, the BNC \is{BNC} not only contains speech by more male speakers th
 In the case of speaker sex it does not make much of a difference how we derive the expected \is{frequency, expected} frequencies, as men and women make up roughly half of the population each. For variables where such an even distribution \is{distribution, conditional} of values does not exist, the differences between these two procedures can be quite drastic. As an example, consider Table \ref{tab:speakerageobsex}, which lists the observed distribution of the speakers in the spoken \is{medium} part of the BNC \is{BNC} across age \is{age} groups (excluding speakers whose age \is{age} is not recorded), together with the expected \is{frequency, expected} frequencies on the assumption of equal proportions, and the expected frequencies based on the distribution \is{distribution, conditional} of speakers across age \is{age} groups in the real world. The distribution of age \is{age} groups in the population of the UK between 1991 and 1994 is taken from the website of the Office for National Statistics, averaged across the four years and cumulated to correspond to the age \is{age} groups recorded in the \is{BNC} BNC.
 % me: https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2015/ukandregionalpopulationestimates18382015.zip
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Observed and expected frequencies of Speaker Age in the BNC}
 \label{tab:speakerageobsex}
 \resizebox{\textwidth}{!}{
@@ -3603,7 +3602,7 @@ In a first step, we have to determine the rank order of the data points in our s
 
 Table \ref{tab:speakerageobsex} shows all data points in our sample together with their rank position.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Annotated sample from Table \ref{tab:sampleanimacysgenofc} with animacy rank and position (cf. Table \ref{tab:sampleanimranksgenofc})}
 \label{tab:animrankpossgenofc}
 \begin{tabular}[t]{rrcccrrcc}
@@ -3651,7 +3650,7 @@ Repeating this process for all examples yields the rank positions shown in the t
 
 Once we have determined the rank position of each data point, we separate them into two subsamples corresponding to the values of the nominal \is{nominal data} variable \textvv{Type of Possessive} \is{possessive} again, as in Table \ref{tab:possranksums}. We then calculate rank sum \emph{R} for each group, which is simply the sum of their rank positions, and we count the number of data points \emph{N} in each group.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Animacy ranks and positions and rank sums for the sample of possessives}
 \label{tab:possranksums}
 \begin{tabular}[t]{rrcccrrcc}
@@ -3746,7 +3745,7 @@ Prediction: There will be no difference between the mean \is{mean} length of the
 
 Table 7.13 shows the length \is{length} in number of words for the modifiers of the \textit{s}- and \textit{of}-possessives \is{possessive} (as already reported in Table \ref{tab:samplelengthsgenofc}), together with a number of additional pieces of information that we will turn to next.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Length of the modifier in the sample of \textit{s}- and \textit{of}-possessives from Table \ref{tab:samplelengthsgenofc}}
 \label{tab:posslengthwelch}
 \begin{tabular}[t]{rrcccrrcc}
@@ -3872,7 +3871,7 @@ Since this is a correlation \is{correlation} coefficient, it can be interpreted 
 
 In the context of corpus linguistics, there is one fundamental problem with the \textit{t}-test \is{t-test} in any of its variants: it requires data that follow what is called the \textit{normal distribution}. Briefly, the normal distribution \is{distribution, normal} is a probability \is{probability} distribution where most measurements \is{measurement} fall in the middle, decreasing on either side until they reach zero. Figure \ref{fig:normdist}a shows some examples. As you can see, the curve may be narrower or wider (depending on the standard deviation) and it may be positioned at different points on the x axis (depending on the mean), \is{mean} but it is always a symmetrical bell curve.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{The normal distribution and linguistic data}
 \label{fig:normdist}
 \includegraphics[width=\textwidth,keepaspectratio]{figures/normdist}
@@ -3890,7 +3889,7 @@ Thus, third, and most recommendably, we could try to find a way around having to
 
 Another way of avoiding the \textit{t}-test \is{t-test} is to find an operationalization \is{operationalization} of the phenomenon under investigation that yields rank data, \is{ordinal data} or, even better, nominal \is{nominal data} data in the first place. We could, for example, code \is{coding} the data in Table \ref{tab:posslengthwelch} in terms of a very simple nominal variable: \textvv{Longer Constituent} (with the variables \textvv{head} and \textvv{modifier}). For each case, we simply determine whether the head is longer than the modifier (in which case we assign the value head) or whether the modifier is longer than the head (in which case we assign the value \textvv{modifier}; we discard all cases where the two have the same length. \is{length} This gives us Table \ref{tab:posslengthnominal}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{The influence of length on the choice between the two possessives}
 \label{tab:posslengthnominal}
 \begin{tabular}[t]{llccr}
@@ -3936,7 +3935,7 @@ In the preceding chapters we treated as \textvv{\textit{s}-possessive} \is{posse
 
 Searching the BNC Baby \is{BNC Baby} for words tagged \is{POS tagging} as possessive \is{possessive} pronouns \is{pronoun} and for words tagged unambiguously as proper names or common nouns \is{noun} yields the observed frequencies \is{frequency, observed} shown in the first line of each row in Table \ref{tab:texttypesposs}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Types of modifiers in the {\textit{s}}-possessive in different text categories}
 \label{tab:texttypesposs}
 \resizebox{\textwidth}{!}{%
@@ -4002,7 +4001,7 @@ To avoid this situation, we have to correct the levels of significance when perf
 
 There is no standard way of representing the way in, and degree to, which each cell of a complex table contributes to the overall result, but the representation in Table \ref{tab:texttypesposscont} seems reasonable: in each cell, the first line contains either a plus (for ``more frequent than expected'') \is{frequency, expected} or a minus (for ``less frequent than expected''); the second line contains the $\chi^2$-component, \is{chi-square test} and the third line contains the (corrected) level of significance \is{significance} (using the standard convention of representing them by asterisks -- one for each level of significance).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Types of modifiers in the \textit{s}-possessive in different text categories: Contributions of the individual intersections}
 \label{tab:texttypesposscont}
 \begin{tabular}[t]{llccc}
@@ -4056,7 +4055,7 @@ So, let us query all tokens tagged \is{POS tagging} as possessives \is{possessiv
 
 Table \ref{tab:posssexindiv} shows the intersections of \textvv{Construction} and \textvv{Sex} in the results of this query.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{The influence of \textvv{Sex} on the choice between the two possessives}
 \label{tab:posssexindiv}
 \begin{tabular}[t]{llccr}
@@ -4087,7 +4086,7 @@ Unlike the studies mentioned above, we find a clear influence of \textvv{Sex} on
 
 Next, let us look at the intersections of \textvv{Construction} and \textvv{Sex} in the results of our query, which are shown in Table \ref{tab:possageindiv}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{The influence of \textvv{Age} on the choice between the two possessives}
 \label{tab:possageindiv}
 \begin{tabular}[t]{llccr}
@@ -4118,7 +4117,7 @@ Like previous studies, we find a significant \is{significance} effect of age, \i
 
 We might now be satisfied that both speaker age \is{age} and speaker sex have an influence on the choice between the two constructions. However, there is a potential problem that we need to take into account: the values of the variables \textvv{Sex} and \textvv{Age} and their intersections are not necessarily distributed \is{distribution, conditional} evenly in the subpart of the BNC \is{BNC} used here; although the makers of the corpus were careful to include a broad range of speakers of all ages, sexes (and class memberships, ignored in our study), they did not attempt to balance all these demographic \is{demography} variables, let alone their intersections. So let us look at the intersection of \textvv{Sex} and \textvv{Age} in the results of our query. These are shown in Table \ref{tab:sexagebnc}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{\textvv{Sex} and \textvv{Age} in the BNC}
 \label{tab:sexagebnc}
 \begin{tabular}[t]{llccr}
@@ -4166,7 +4165,7 @@ As hinted at above, in its simplest variant, configural \is{configural frequency
 
 A three\hyp{}dimensional contingency \is{contingency table} table would have the form of a cube, as shown in Figure \ref{fig:cfaschematic}. The smaller cube represents the cells on the far side of the big cube seen from the same perspective and the smallest cube represents the cell in the middle of the whole cube). As before, cells are labeled by subscripts: the first subscript stands for the values and totals of the dependent variable, the second for those of the first independent variable, and the third for those of the second independent variable.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{A three\hyp{}dimensional contingency table}
 \label{fig:cfaschematic}
 \includegraphics[width=\textwidth,keepaspectratio]{figures/cfaschematic}
@@ -4174,7 +4173,7 @@ A three\hyp{}dimensional contingency \is{contingency table} table would have the
 
 While this kind of visualization is quite useful in grasping the notion of a three\hyp{}dimensional contingency \is{contingency table} table, it would be awkward to use it as a basis for recording observed frequencies \is{frequency, observed} or calculating the expected \is{frequency, expected} frequencies. Thus, a possible two\hyp{}dimensional representation is shown in Table \ref{tab:cfaschematictable}. \is{configural frequency analysis} In this table, the first independent variable is shown in the rows, and the second independent variable is shown in the three blocks of three columns (these may be thought of as three ``slices'' of the cube in Figure \ref{fig:cfaschematic}), and the dependent variable is shown in the columns themselves.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{A two\hyp{}dimensional representation of a three\hyp{}dimensional contingency table}
 \label{tab:cfaschematictable}
 \resizebox{\textwidth}{!}{
@@ -4249,7 +4248,7 @@ While this kind of visualization is quite useful in grasping the notion of a thr
 
 Given this representation, the expected \is{frequency, expected} frequencies for each intersection of the three variables can now be calculated in a way that is similar (but not identical) to that used for two\hyp{}dimensional tables. Table \ref{tab:cfaschematicformula} shows the formulas for each cell as well as those marginal sums needed for the calculation.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Calculating expected frequencies in a three\hyp{}dimensional contingency table}
 \label{tab:cfaschematicformula}
 \resizebox{\textwidth}{!}{
@@ -4331,7 +4330,7 @@ In our case, each variable has two values, thus we get $(2 \times 2 \times 2) - 
 
 Let us apply this method to the question described in the previous sub\hyp{}section. Table \ref{tab:possexagemulti} shows the observed and expected \is{frequency, expected} frequencies of the two possessive \is{possessive} constructions by \textvv{Speaker Age} and \textvv{Speaker Sex}, as well as the corresponding $\chi^2$ \is{chi-square test} components.\footnote{Note one important fact about multi\hyp{}dimensional contingency \is{contingency table} tables that may be confusing: if we add up the expected \is{frequency, expected} frequencies of a given column, their sum will not usually correspond to the sum of the observed frequencies \is{frequency, observed} in that column (in contrast to two\hyp{}dimensional tables, where this is necessarily the case). Instead, the sum of the observed and expected frequencies in each \textit{slice} is identical.} For expository purposes, the table also shows for each cell the significance \is{significance} level of these components (which is ``highly significant'' for almost all of them), and the direction of deviation from the expected \is{frequency, expected} frequencies (i.e., whether the intersection is a ``type'', \is{type (CFA)} marked \is{annotation} by a plus sign, or an ``antitype'', \is{antitype (CFA)} marked by a minus sign).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Sex, Age and Possessives Multivariate (BNC Spoken)}
 \label{tab:possexagemulti}
 \resizebox{\textwidth}{!}{%
@@ -4441,7 +4440,7 @@ In other words, young women and old men use more of both constructions than youn
 
 Armed with this new insight from our multivariate \is{multivariate analysis} analysis, let us return to bivariate \is{bivariate analysis} analyses, looking at each of the two variables while keeping the other constant. Table \ref{tab:possagesexindiv} shows the results of the four bivariate analyses this yields. Since we are performing four tests on the same set of data within the same research question, we have to correct for multiple testing by dividing the usual critical p\hyp{}values \is{p-value} by four, giving us p < 0.0125 for ``significant'', \is{significance} p < 0.0025 for ``very significant'' and p < 0.00025 for ``highly significant''. The exact p\hyp{}values for each table are shown below, as is the effect \is{effect size} size.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Possessives, age and sex (BNC Spoken)}
 \label{tab:possagesexindiv}
 \begin{minipage}{.45\textwidth}
@@ -4613,7 +4612,7 @@ Collocation \is{collocation} is the syntagmatic \is{syntagmatic relation} associ
 
 Essentially, then, collocation \is{collocation} is just a special case of the quantitative \is{quantitative research} corpus linguistic research design \is{research design} adopted in this book: to ask whether two words form a collocation (or: are collocates of each other) is to ask whether one of these words occurs in a given position more frequently than expected \is{frequency, expected} by chance \is{chance} under the condition that the other word occurs in a structurally or sequentially related position. In other words, we can decide whether two words \textit{a} and \textit{b} can be regarded as collocates \is{collocation} on the basis of a contingency \is{contingency table} table like that in Table \ref{tab:collocation}. The \textvv{First Position} in the sequence is treated as the dependent variable, with two values: the word we are interested in (here: \textvv{word a}), and all \textvv{other} words. The \textvv{Second Position} is treated as the independent variable, again, with two values: the word we are interested in (here: \textvv{word b}), and all \textvv{other} words (of course, it does not matter which word we treat as the dependent and which as the independent variable, unless our research design \is{research design} suggests a particular reason).\footnote{Note that we are using the corpus size \is{corpus size} as the table total -- strictly speaking, we should be using the total number of two\hyp{}word sequences (bigrams) \is{bigram} in the corpus, which will be lower: The last word in each file of our corpus will not have a word following it, so we would have to subtract the last word of each file -- i.e., the number of files in our corpus -- from the total. This is unlikely to make much of a difference in most cases, but the shorter the texts in our corpus are, the larger the difference will be. For example, in a corpus of tweets, which, at the time of writing, are limited to 280 characters, it might be better to correct the total number of bigrams in the way described.}
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Collocation}
 \label{tab:collocation}
 \begin{tabular}[t]{llccc}
@@ -4641,7 +4640,7 @@ Essentially, then, collocation \is{collocation} is just a special case of the qu
 
 On the basis of such a table, we can determine the collocation \is{collocation} status of a given word pair. For example, we can ask whether Firth was right with respect to the claim that \textit{silly ass} is a collocation. The necessary data are shown in Table \ref{tab:sillyasscooccur}: As discussed above, the dependent variable is the \textvv{First Position} in the sequence, with the values \textvv{silly} and \textvv{$\neg$silly} (i.e., all words that are not \textit{ass}); the independent variable is the \textvv{Second Position} in the sequence, with the values \textvv{ass} and \textvv{$\neg$ass}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Co\hyp{}occurrence of \textit{silly} and \textit{ass} in the BNC}
 \label{tab:sillyasscooccur}
 \begin{tabular}[t]{llccc}
@@ -4677,7 +4676,7 @@ Often, we will be interested in the distribution \is{distribution, conditional} 
 
 In such cases, we can modify Table \ref{tab:collocation} as shown in Table \ref{tab:differentialcollocates} to identify the collocates \is{collocation} that \textit{differ} significantly \is{significance} between two words. There is no established term for such collocates, so we we will call them \textit{differential collocates} here\footnote{\citet{gries_testing_2003} and \citet{gries_extending_2004} use the term \textit{distinctive collocate}, which has been taken up by some authors; however, many other authors use the term \textit{distinctive collocate} \is{collocation} much more broadly to refer to \textit{characteristic} collocates of a word.} (the method is based on \citet{church_using_1991}).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Identifying differential collocates}
 \label{tab:differentialcollocates}
 \begin{tabular}[t]{llccc}
@@ -4705,7 +4704,7 @@ In such cases, we can modify Table \ref{tab:collocation} as shown in Table \ref{
 
 Since the collocation \is{collocation} \textit{silly ass} and the word \textit{ass} in general are so infrequent in the BNC, \is{BNC} let us use a different noun to demonstrate the usefulness of this method, the word \textit{game}. We can speak of \textit{silly game(s)} or \textit{childish game(s)}, but we may feel that the latter is more typical than the former. The relevant lemma \is{lemma} frequencies \is{frequency} to put this feeling to the test are shown in Table \ref{tab:childishsillygame}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{\textit{Childish game} vs. \textit{silly game} (lemmas) in the BNC}
 \label{tab:childishsillygame}
 \begin{tabular}[t]{llccr}
@@ -4775,7 +4774,7 @@ As mentioned above, significance \is{significance} testing (while not without it
 
 Let us look at some of the most popular and\slash or most useful of these measures. I will represent the formulas with reference to the table in Table \ref{tab:twobytwocollocation}, i.e, O\textsubscript{11} means the observed frequency \is{frequency, observed} of the top left cell, E\textsubscript{11} its expected \is{frequency, expected} frequency, R\textsubscript{1} the first row total, C\textsubscript{2} the second column total, and so on. Note that second column would be labeled \textvv{other words} in the case of normal collocations, \is{collocation} and \textvv{word c} in the case of differential collocations. The association \is{association} measures \is{association measure} can be applied to both kinds of \is{research design} design.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{A generic 2\hyp{}by\hyp{}2 table for collocation research}
 \label{tab:twobytwocollocation}
 \begin{tabular}[t]{llccc}
@@ -4803,7 +4802,7 @@ Let us look at some of the most popular and\slash or most useful of these measur
 
 Now all we need is a good example to demonstrate the calculations. Let us use the adjective\hyp{}noun \is{noun}\is{adjective} sequence \textit{good example} from the LOB \is{LOB} corpus (but horse lovers need not fear, we will return to equine animals and their properties below).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Co\hyp{}occurrence of \textit{good} and \textit{example} in the LOB}
 \label{tab:goodexample}
 \begin{tabular}[t]{llccc}
@@ -4934,7 +4933,7 @@ Spreadsheet applications do not usually offer Fisher's exact test, \is{Fisher's 
 
 Let us see how the association measures compare using a data set of 20 potential collocations. \is{collocation} Inspired by Firth's \textit{silly ass}, they are all combinations of adjectives \is{adjective} with equine animals. Table \ref{tab:equinecollocates} shows the combinations and their frequencies \is{frequency} in the BNC \is{BNC} sorted by their raw frequency of occurrence (adjectives \is{adjective} and nouns \is{noun} are shown in small caps here to stress that they are values of the variables \textvv{Word A} and \textvv{Word B}, but I will generally show them in italics in the remainder of the book in line with linguistic tradition).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Some collocates of the form [ADJ N\textsubscript{equine}] (BNC)}
 \label{tab:equinecollocates}
 \resizebox{\textwidth}{!}{%
@@ -5013,7 +5012,7 @@ With respect to the non\hyp{}compositional \is{compositionality} cases, $\chi^2$
 
 To demonstrate the problems that very rare events can cause (especially those where both the combination and each of the two words in isolation are very rare), imagine someone had used the phrase \textit{tomfool onager} once in the BNC. \is{BNC} Since neither the adjective \is{adjective} \textit{tomfool} (a synonym \is{synonymy} of \textit{silly}) nor the noun \is{noun} \textit{onager} (the name of the donkey sub\hyp{}genus Equus hemionus, also known as \textit{Asiatic} or \textit{Asian wild ass}) occur in the BNC \is{BNC} anywhere else, this would give us the distribution \is{distribution, conditional} in Table \ref{tab:tomfoolonager}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Fictive occurrence of \textit{tomfool onager} in the BNC}
 \label{tab:tomfoolonager}
 \begin{tabular}[t]{llccc}
@@ -5115,7 +5114,7 @@ One example of such a study is \citet{taylor_near_2003}, which investigates the 
 
 The study, while not strictly hypothesis\hyp{}testing, is thus somewhat deductive. \is{deduction} It involves two nominal \is{nominal data} variables; the independent variable \textvv{Type of Entity} with eleven values shown in Table \ref{tab:tallhighobjects} and the dependent variable \textvv{Vertical Extent Adjective} with the values \textvv{high} and \textvv{tall} (assuming that people first choose something to talk about and then choose the appropriate adjective \is{adjective} to describe it). Table \ref{tab:tallhighobjects} shows Taylor's results (he reports absolute and relative frequencies, \is{frequency} which I have used to calculate expected \is{frequency, expected} frequencies and $\chi^2$ \is{chi-square test} components).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Objects described as \textit{tall} or \textit{high} in the LOB corpus (adapted from \citealt{taylor_near_2003})}
 \label{tab:tallhighobjects}
 \resizebox*{!}{\textheight}{%
@@ -5186,7 +5185,7 @@ Alternatively, we can take a truly exploratory approach and look for differentia
 
 Table \ref{tab:tallhighdifferential} shows the top 15 differential collocates \is{collocation} of the two words in the \is{BNC} BNC.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Differential collocates for \textit{tall} and \textit{high} in the BNC}
 \label{tab:tallhighdifferential}
 \resizebox*{!}{\textheight}{%
@@ -5255,7 +5254,7 @@ At first glance, we expect the relationship between antonyms \is{antonymy} to be
 
 There are differences in detail in these studies, but broadly speaking, they take a deductive \is{deduction} approach: they choose a set of test words for which there is agreement as to what their antonyms are, search for these words in a corpus, and check whether their antonyms \is{antonymy} occur in the same sentence significantly more frequently than expected. \is{frequency, expected} The studies thus involve two nominal \is{nominal data} variables: \textvv{Sentence} (with the values \textvv{contains test word} and \textvv{does not contain test word}) and \textvv{Antonym of Test Word} (with the values \textvv{occurs in sentence} and \textvv{does not occur in sentence}). This seems like an unnecessarily complicated way of representing the kind of co\hyp{}occurrence design \is{research design} used in the examples above, but I have chosen it to show that in this case sentences containing a particular word are used as the condition under which the occurrence of another word is investigated -- a straightforward application of the general research design that defines quantitative \is{quantitative research} corpus linguistics. Table \ref{tab:goodbadbrown} demonstrates the design using the adjectives \is{adjective} \textit{good} and \textit{bad} (the numbers are, as always in this book, based on the tagged \is{POS tagging} version of BROWN \is{BROWN} included with the ICAME collection and differ slightly from the ones reported in the studies discussed below).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Sentential co-occurrence of \textit{good} and \textit{bad} in the BROWN corpus}
 \label{tab:goodbadbrown}
 \begin{tabular}[t]{llccr}
@@ -5289,7 +5288,7 @@ These studies only look at the co\hyp{}occurrence of antonyms; \is{antonymy} the
 
 An obvious approach to testing this would be to repeat the study with other types of lexical relations. Alternatively, we can take an exploratory approach that does not start out from specific word pairs at all. \citet{justeson_co-occurrences_1991} investigate the specific grammatical contexts which antonyms \is{antonymy} tend to co\hyp{}occur, identifying, among others, coordination \is{coordination} of the type [ADJ \textit{and} ADJ] or [ADJ \textit{or} ADJ]. We can use such specific contexts to determine the role of co\hyp{}occurrence for different types of lexical relations by simply extracting \is{retrieval} \textit{all} word pairs occurring in the adjective \is{adjective} slots of these patterns, calculating their association \is{association} strength within this pattern as shown in Table \ref{tab:goodbadsequence} for the adjectives \is{adjective} \textit{good} and \textit{bad} in the BNC, \is{BNC} and then categorizing \is{categorization} the most strongly associated \is{association} collocates \is{collocation} in terms of the lexical relationships between them.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Co\hyp{}occurrence of \textit{good} and \textit{bad} in the first and second slot of [ADJ\textsubscript{1} \textit{and} ADJ\textsubscript{2}]}
 \label{tab:goodbadsequence}
 \begin{tabular}[t]{llccr}
@@ -5321,7 +5320,7 @@ Note that this is a slightly different procedure from what we have seen before: 
 
 Table \ref{tab:adjandadj} shows the thirty most strongly associated \is{association} adjective \is{adjective} pairs coordinated with \textit{and} in the \is{BNC} BNC.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Co\hyp{}occurrence of adjectives in the first and second slot of [ADJ\textsubscript{1} \textit{and} ADJ\textsubscript{2}] (BNC)}
 \label{tab:adjandadj}
 \resizebox{\textwidth}{!}{%
@@ -5384,7 +5383,7 @@ This definition has been understood by collocation \is{collocation} researchers 
 
 A typical example of Sinclair's approach to semantic \is{semantics} prosody, both methodologically and theoretically, is his short case study of the expression \textit{true feelings}. \is{emotions} \citet{sinclair_search_1996} presents a selection of concordance \is{concordance} lines from the COBUILD corpus -- Figure \ref{fig:truefeelings} shows a random sample from the BNC \is{BNC} instead, as the COBUILD corpus is not accessible, but Sinclair's findings are well replicated \is{replicability} by this sample.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Concordance of \textit{true feelings} (BNC, Sample)}
 \label{fig:truefeelings}
 \hrulefill
@@ -5428,7 +5427,7 @@ Specifically, as long as we do not know how frequent the semantic \is{semantics}
 
 In order to determine this, we have to compare our sample of the expression \textit{true feelings} to related expressions that differ with respect to each property potentially responsible for the semantic \is{semantics} prosody. For example, we might compare it to the noun \is{noun} \textit{feelings} \is{emotions} in order to investigate possibility (b). Figure \ref{fig:possfeelings} shows a sample of the expression [POSS \textit{feelings}] (the possessive \is{possessive} pronoun \is{pronoun} was included as it, too, may have an influence on the prosody and almost all examples of \textit{true feelings} are preceded by a possessive pronoun).
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Concordance of [POSS \textit{feelings}] (BNC, Sample)}
 \label{fig:possfeelings}
 \hrulefill
@@ -5460,7 +5459,7 @@ In order to determine this, we have to compare our sample of the expression \tex
 
 The concordance \is{concordance} shows that contexts concerning a reluctance or inability to express emotions \is{emotions} are not untypical of the expression [POSS \textit{feelings}] -- it is found in four out of twenty lines in our sample, i.e. in 20 percent of all cases (lines 5, 10, 14, 15). However, it is nowhere near as frequent as with the expression \textit{true feelings}. We can compare the two samples using the $\chi^2$ \is{chi-square test} test. As Table \ref{tab:truepossstat} shows, the difference is, indeed, significant ($\chi^2 = 5.23, df = 1, p < 0.05$).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Semantic prosody of \textit{true feelings} and [POSS \textit{feelings}]}
 \label{tab:truepossstat}
 \begin{tabular}[t]{llccr}
@@ -5491,7 +5490,7 @@ The semantic \is{semantics} prosody is not characteristic of the noun \is{noun} 
 
 In order to answer this question, we have to compare the phrase to denotationally synonymous \is{synonymy} expressions, such as \textit{genuine emotions} \is{emotions} (which Sinclair uses to paraphrase the denotational meaning), \is{semantics} \textit{genuine feelings}, \textit{real emotions} and \textit{real feelings}. The only one of these expressions that occurs in the BNC more than a handful of times is \textit{real feelings}. A sample concordance \is{concordance} is shown in Figure \ref{fig:realfeelings}.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Concordance of \textit{real feelings} (BNC, Sample)}
 \label{fig:realfeelings}
 \hrulefill
@@ -5538,7 +5537,7 @@ We will not follow Stubbs' discussion in detail here -- his focus is on methodol
 
 Table \ref{tab:causecollocates} shows the result of an attempt to extract \is{retrieval} direct objects of the verb \is{verb} \textit{cause} from the BNC. \is{BNC} I searched for the lemma \is{lemma} \textit{cause} where it is tagged \is{POS tagging} as a verb, followed by zero to three words that are not nouns \is{noun} (to take into account the occurrence of determiners, adjectives, \is{adjective} etc.) and that are not the word \textit{by} (in order to exclude passives \is{passive voice} like \textit{caused by negligence, fire, exposure}, etc.), followed by a noun or sequence of nouns, not followed by \textit{to} (in order to exclude causative constructions of the form \textit{caused the glass to break}). This noun, or the last noun in this sequence, is assumed to be the direct object of \textit{cause}. The twenty most frequent nouns are shown in Table \ref{tab:causecollocates}, Column (a).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Noun collocates of three expressions of causation}
 \label{tab:causecollocates}
 \begin{tabular}[t]{lr|lr|lr}
@@ -5580,7 +5579,7 @@ In order to determine this, it might be useful to compare different expressions 
 
 Table \ref{tab:causdiff} shows the results of a differential collocate \is{collocation} analysis between \textit{cause} on the one hand and the combined collocates of \textit{bring about} and \textit{lead to} on the other.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Differential collocates for \textit{cause} compared to \textit{bring about/lead to} in the BNC}
 \label{tab:causdiff}
 \resizebox{\textwidth}{!}{%
@@ -5619,7 +5618,7 @@ Table \ref{tab:causdiff} shows the results of a differential collocate \is{collo
 
 The negative prosody of the verb \is{verb} \textit{cause} is even more pronounced than in the frequency list in Table \ref{tab:causecollocates}: Even the two neutral words \textit{change} and \textit{increase} have disappeared. In contrast, the combined differential collocates of \textit{bring about} and \textit{lead to} as compared to \textit{cause}, shown in Table \ref{tab:bringleaddiff} are neutral or even positive.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Differential collocates for \textit{bring about/lead to} compared to \textit{cause} in the BNC}
 \label{tab:bringleaddiff}
 \resizebox{\textwidth}{!}{%
@@ -5672,7 +5671,7 @@ In collocation \is{collocation} research, a word (or other element of linguistic
 
 Obviously, lexical items used conventionally \is{conventionality} to refer to some culturally \is{culture} relevant group of people are plausible representatives \is{representativeness} of the cultural concept of that group. For example, some very general lexical items referring to people (or higher animals) \is{animacy} exist in male and female versions -- \textit{man}\slash \textit{woman}, \textit{boy}\slash \textit{girl}, \textit{lad}\slash \textit{lass}, \textit{husband}\slash \textit{wife}, \textit{father}\slash \textit{mother}, \textit{king}\slash \textit{queen}, etc. If such word pairs differ in their collocates, \is{collocation} this could tell us something about the cultural \is{culture} concepts behind them. For example, \citet{stubbs_collocations_1995-1} cites a finding by \citet{baker_childrens_1989}, that in children's literature, \is{literary language} the word \textit{girl} collocates \is{collocation} with \textit{little} much more strongly than the word \textit{boy}, and vice versa for \textit{small}. \is{gender stereotypes} Stubbs shows that this is also true for balanced corpora (see Table \ref{tab:smalllittleboygirl}; again, since Stubbs' corpora are not available, I show frequencies \is{frequency} from the BNC \is{BNC} instead but the proportions are within a few percent points of his). The difference in associations \is{association} is highly significant ($\chi^2$ = 217.66, df = 1, \textit{p} < \is{chi-square test} 0.001).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{\textit{Small} and \textit{little} \textit{girls} and \textit{boys} (BNC)}
 \label{tab:smalllittleboygirl}
 \begin{tabular}[t]{llccr}
@@ -5704,7 +5703,7 @@ This part of Stubbs' study is clearly deductive: \is{deduction} He starts with a
 
 Stubbs argues that this difference is due to different connotations \is{connotation} of \textit{small} and \textit{little} which he investigates on the basis of the noun \is{noun} collocates \is{collocation} to their right and the adjectival \is{adjective} and adverbial \is{adverb} collocates to the left. Again, instead of Stubbs' original data (which he identifies on the basis of raw frequency \is{frequency} of occurrence and only cites selectively), I use data from the BNC \is{BNC} and the \emph{G} test statistic. \is{statistics} Table \ref{tab:smalllittlenouncollocates} shows the ten most strongly associated \is{association} noun \is{noun} collocates to the right of the node word and Table \ref{tab:smalllittleadjcollocates} shows the ten most strongly associated \is{association} adjectival \is{adjective} collocates \is{collocation} to the left.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Nominal collocates of \textit{little} and \textit{small} at R1 (BNC)}
 \label{tab:smalllittlenouncollocates}
 \resizebox{\textwidth}{!}{%
@@ -5742,7 +5741,7 @@ Stubbs argues that this difference is due to different connotations \is{connotat
 \end{table}
 % me: BNC; "(little|small)"%c [pos=".*NN.*"]; count Last by hw
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Adjectival collocates of \textit{little} and \textit{small} at L1 (BNC)}
 \label{tab:smalllittleadjcollocates}
 \resizebox{\textwidth}{!}{%
@@ -5788,7 +5787,7 @@ Stubbs sums up his analysis by pointing out that \textit{small} is a neutral wor
 
 Stubbs remains unspecific as to what that ideology \is{ideology} is -- presumably, one that treats boys as neutral human beings and girls as targets for patronizing evaluation. \is{gender stereotypes} In order to be more specific, it would be necessary to turn around the perspective and study all adjectival \is{adjective} collocates \is{collocation} of \textit{boy} and \textit{girl}. Stubbs does not do this, but \citet{caldas-coulthard_curvy_2010} look at adjectives \is{adjective} collocating with \textit{man}, \textit{woman}, \textit{boy} and \textit{girl} in broadsheet and yellow\hyp{}press newspapers. \is{newspaper language} In order to keep the results comparable with those reported above, let us stick with the BNC \is{BNC} instead. Table \ref{tab:boygirlcollocates} shows the top ten adjectival \is{adjective} collocates \is{collocation} of \textit{boy} and \textit{girl}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Adjectival collocates of \textit{boy} and \textit{girl} at L1 (BNC)}
 \label{tab:boygirlcollocates}
 \resizebox{\textwidth}{!}{%
@@ -5877,7 +5876,7 @@ As an example of a collocational \is{collocation} framework, \is{collocational f
 
 Table \ref{tab:axoftwocorpora} shows the data from \citet{renouf_collocational_1991} and from the BNC. \is{BNC} As you can see, the results are roughly comparable, but differ noticeably in some details -- two different corpora will never give you quite the same result even with general patterns like the one under investigation.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{The collocational framework [\textit{a} \_\_ \textit{of}] in two corpora}
 \label{tab:axoftwocorpora}
 \resizebox{\textwidth}{!}{%
@@ -5921,7 +5920,7 @@ Keeping this in mind, let us discuss the difference between frequency \is{freque
 
 If we were to omit the pre\hyp{}selection stage and calculate the percentages for \emph{all} words occurring in the framework \is{collocational framework} -- as we should, if these percentages are relevant -- we would find 477 words in the BNC \is{BNC} that occur exclusively in the framework, and thus all have an association \is{association} strength of 100 percent -- among them words that fit the proposed semantic \is{semantics} preferences of the pattern, like \textit{barrelful}, words that do not fit, like \textit{bomb\hyp{}burst}, \textit{hyserisation} or \textit{Jesuitism}, and many misspellings, like \textit{fct} (for \textit{fact}) and \textit{numbe} and \textit{numbr} (for \textit{number}). The problem here is that percentages, like some other association \is{association} measures, \is{association measure} massively overestimate the importance of rare events. In order to increase the quality of the results, let us remove all words that occur five times or less in the BNC. \is{BNC} The twenty words in Table \ref{tab:axofpercent} are then the words with the highest percentages of occurrence in the framework \is{collocational framework} [\textit{a} \_\_ \textit{of}].
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{The collocational framework [\textit{a} \_\_ \textit{of}] in the BNC by percentage of occurrences}
 \label{tab:axofpercent}
 \resizebox{.6\textwidth}{!}{%
@@ -5953,7 +5952,7 @@ This list is obviously completely different from the one in \citet{renouf_colloc
 
 There are words that are typical for a particular framework, and there are frameworks \is{collocational framework} that are typical for particular words; this difference in perspective may be of interest in particular research designs \is{research design} (\citealt[cf.][]{stefanowitsch_corpus-based_2016} for further discussion). Generally, however, it is best to use an established association \is{association} measure \is{association measure} that will not overestimate rare events. Table \ref{tab:axofcollframe} shows the fifteen most strongly associated words in the framework \is{collocational framework} based on the \emph{G} statistic.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Top collocates of the collocational framework [\textit{a} \_\_ \textit{of}] (BNC)}
 \label{tab:axofcollframe}
 \resizebox{\textwidth}{!}{%
@@ -6018,7 +6017,7 @@ The adjective \is{adjective} \textit{cyclical} is neutral, but the adverb \is{ad
 
 Instead of listing frequencies, \is{frequency} of course, we could calculate the association \is{association} strength between the pattern [\textit{there} V\textsubscript{link} \textit{something} ADJ \textit{about} NP] and the adjectives \is{adjective} occurring in it. I will discuss in more detail how this is done in the next subsection; for now, suffice it to say that it would give us the ranking in Table \ref{tab:sthadjaboutcollex}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Most strongly associated adjectives in the pattern [\textit{there} V\textsubscript{link} \textit{something} ADJ \textit{about} NP]}
 \label{tab:sthadjaboutcollex}
 \resizebox{\textwidth}{!}{%
@@ -6071,7 +6070,7 @@ Under the definition of corpus linguistics used throughout this book, there shou
 
 Their design is broadly deductive, \is{deduction} as their hypothesis is that constructions have meaning \is{semantics} and specifically, that the ditransitive has a ``transfer'' meaning. The design has two nominal \is{nominal data} variables: \textvv{Argument Structure} (with the values \textvv{ditransitive} \is{ditransitivity} and \textvv{other}) and \textvv{Verb} \is{verb} (with values corresponding to all verbs occurring in the construction). The prediction is that the most strongly associated \is{association} verbs will be verbs of literal \is{literalness} or metaphorical transfer. Table \ref{tab:giveditransitive} gives the information needed to calculate the association strength for \textit{give} (although the procedure should be familiar by now), and Table \ref{tab:verbsditransitive} shows the ten most strongly associated \is{association} verbs.\footnote{Unlike in the rest of the book, I have to use data from a corpus that is not generally accessible -- the British Component of the International Corpus of English. The reason is that analyses like the ones presented here require a treebank (see Section \ref{sec:annotations} in Chapter \ref{ch:retrievalannotation}), and there is no sufficiently large and generally accessible treebank.}
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{\textit{Give} and the ditransitive (ICE\hyp{}GB)}
 \label{tab:giveditransitive}
 \begin{tabular}[t]{llccr}
@@ -6098,7 +6097,7 @@ Their design is broadly deductive, \is{deduction} as their hypothesis is that co
 \end{table}
 % me: chisq.test(matrix(c(461,687,574,135907),ncol=2),corr=FALSE)
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{The verbs in the ditransitive construction (ICE\hyp{}GB, \citet[229]{stefanowitsch_collostructions:_2003})}
 \label{tab:verbsditransitive}
 \resizebox{\textwidth}{!}{%
@@ -6134,7 +6133,7 @@ However, note that on the basis of lists like that in Table \ref{tab:verbsditran
 
 Collostructional \is{collostructional analysis} analysis can also be applied in the direct comparison of two grammatical \is{grammar} constructions (or other grammatical features), analogous to the ``differential collocate'' \is{collocation} design \is{research design} discussed in Chapter \ref{ch:collocation}. For example, \citet{gries_extending_2004} compare verbs \is{verb} in the ditransitive \is{ditransitivity} and the so\hyp{}called \textit{to}-dative \is{dative} -- both constructions express transfer meanings, \is{semantics} but it has been claimed that the ditransitive encodes a spatially and temporally more direct transfer than the \textit{to}-dative \is{dative alternation}\is{alternation} \citep{thompson_iconicity_1987}. If this is the case, it should be reflected in the verbs \is{verb} most strongly associated \is{association} to one or the other construction in a direct comparison. Table \ref{tab:giveprepdative} shows the data needed to determine for the verb \textit{give} which of the two constructions it is more strongly attracted to.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{\textit{Give} in the ditransitive and the prepositional dative (ICE\hyp{}GB)}
 \label{tab:giveprepdative}
 \begin{tabular}[t]{llccr}
@@ -6163,7 +6162,7 @@ Collostructional \is{collostructional analysis} analysis can also be applied in 
 
 \textit{Give} is significantly more frequent than expected \is{frequency, expected} in the ditransitive \is{ditransitivity} and less frequent than expected in the \textit{to-}dative \is{dative alternation} ($p_{exact} = 1.84E-120$). It is therefore said to be a \textit{significant distinctive collexeme} \is{collostructional analysis}\is{collexeme, differential} of the ditransitive (again, I will use the term \textit{differential} instead of \textit{distinctive} in the following). Table \ref{tab:verbsditransitivedative} shows the top ten differential collexemes for each construction.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Verbs in the ditransitive and the prepositional dative (ICE\hyp{}GB, \citet[106]{gries_extending_2004}).}
 \label{tab:verbsditransitivedative}
 \resizebox{\textwidth}{!}{%
@@ -6225,7 +6224,7 @@ It is only by asking a native or expert speaker of a language for their opinion 
 
 However, as \citet{stefanowitsch_negative_2008, stefanowitsch_negative_2006} points out, zero is just a number, no different in quality from 1, or 461 or any other frequency \is{frequency} of occurrence. This means that any statistical test that can be applied to combinations of verbs \is{verb} and grammatical constructions (or any other elements of linguistic structure) that \emph{do} occur together can also be applied to combinations that do \textit{not} occur together. Table \ref{tab:sayditransitive} shows this for the verb \textit{say} and the ditransitive \is{ditransitivity} construction in the \is{ICE} ICE\hyp{}GB.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{The non\hyp{}occurrence of \textit{say} in the ditransitive (ICE\hyp{}GB)}
 \label{tab:sayditransitive}
 \begin{tabular}[t]{llccr}
@@ -6256,7 +6255,7 @@ Fisher's exact test \is{Fisher's exact test} shows that the observed frequency \
 
 Table \ref{tab:nonoccurringditransitive} shows the twenty verbs \is{verb} whose non\hyp{}occurrence in the ditransitive \is{ditransitivity} is statistically most significant in the ICE\hyp{}GB \is{ICE} \citep[see][67]{stefanowitsch_negative_2006}. Since the frequency \is{frequency} of co\hyp{}occurrence is always zero and the frequency of other words in the construction is therefore constant, the order of association \is{association} strength corresponds to the order of the corpus frequency of the words. The point of statistical testing in this case is to determine whether the absence of a particular word is significant or not.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Non\hyp{}occurring verbs in the ditransitive (ICE\hyp{}GB)}
 \label{tab:nonoccurringditransitive}
 \resizebox{\textwidth}{!}{%
@@ -6369,7 +6368,7 @@ Querying (\ref{ex:beginstartquery}a, b) yields 348 hits (Schmid reports 372, whi
 Annotating \is{annotation} all 348 hits according to the annotation scheme sketched out above yields the data in Table \ref{tab:beginstartcomplementation} (the complete annotated \is{annotation} concordance \is{concordance} is part of the Supplementary Online Material). The total frequencies \is{frequency} as well as the proportions among the categories \is{categorization} differ slightly from the data Schmid reports, but the results are overall very similar.
 % me: clmfin08-lob-beginstart-toing-conc.txt
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Aktionsart, matrix verb and complementation type (LOB)}
 \label{tab:beginstartcomplementation}
 \resizebox{\textwidth}{!}{%
@@ -6436,7 +6435,7 @@ As always in a configural \is{configural frequency analysis} frequency analysis,
 
 Faced with these results, we might ask, first, how they relate to two simpler tests of Schmid's hypothesis -- namely two bivariate \is{bivariate analysis} designs \is{research design} separately testing (a) the relationship between \textvv{Aktionsart} \is{aktionsart} and \textvv{Complementation}, \is{complementation} (b) the relationship between \textvv{Aktionsart} and \textvv{Matrix Verb} \is{verb} and (c) the relationship between \textvv{Matrix Verb} and \textvv{Complementation Type}. We have all the data we need to test this in Table \ref{tab:beginstartcomplementation}, we just have to sum up appropriately. Table \ref{tab:verbtypcomp} shows that \textvv{Aktionsart} \is{aktionsart} and \textvv{Complementation Type} are related: \textvv{activity} verbs \is{verb} prefer \textvv{ing}, the other two verb types prefer \textvv{to} ($\chi^2$ = 49.702, df = 2, p < 0.001).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Aktionsart and complementation type (LOB)}
 \label{tab:verbtypcomp}
 \begin{tabular}[t]{llccr}
@@ -6469,7 +6468,7 @@ Faced with these results, we might ask, first, how they relate to two simpler te
 
 Table \ref{tab:verbtypmatrix} shows that \textvv{Aktionsart} \is{aktionsart} and \textvv{Matrix Verb} are also related: \textvv{activity} \is{aktionsart} verbs prefer \textvv{to} and \textvv{state} \is{aktionsart} verbs prefer \textvv{ing} ($\chi^2$ = 32.236, df = 2, p < \is{chi-square test} 0.001).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Aktionsart and matrix verb (LOB)}
 \label{tab:verbtypmatrix}
 \begin{tabular}[t]{llccr}
@@ -6502,7 +6501,7 @@ Table \ref{tab:verbtypmatrix} shows that \textvv{Aktionsart} \is{aktionsart} and
 
 Finally, Table \ref{tab:matrixcomp} shows that \textvv{Matrix Verb} and \textvv{Complementation Type} are also related: \textvv{begin} prefers \textvv{to} and \textvv{start} prefers \textvv{ing} ($\chi^2$ = 95.755, df = 1, p < 0.001).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Matrix verb and complementation type}
 \label{tab:matrixcomp}
 \begin{tabular}[t]{llccr}
@@ -6537,7 +6536,7 @@ There is an alternative, however: speakers sometimes use adverbs \is{adverb} tha
 
 By extracting \is{retrieval} just these cases, we can directly test the hypothesis that \textit{begin} signals gradual and \textit{start} sudden onsets. The BNC \is{BNC} contains 307 cases of [\textit{begin\slash start} \textit{to} V\textsubscript{inf}] and [\textit{begin\slash start} V\textit{ing}] directly preceded by one of the six adverbs \is{adverb} mentioned above. Table \ref{tab:complementationadverbs} shows the result of a configural \is{configural frequency analysis} frequency analysis of the variables \textvv{Onset} (\textvv{sudden} vs. \textvv{gradual}, \textvv{Matrix Verb} \is{verb} (\textvv{begin} vs. \textvv{start} and \textvv{Complementation Type} (\textvv{ing} vs. \textvv{to}).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Adverbs of suddenness and gradualness, matrix verb and complementation type}
 \label{tab:complementationadverbs}
 \resizebox{\textwidth}{!}{%
@@ -6607,7 +6606,7 @@ In a comprehensive study on adjective \is{adjective} order already mentioned in 
 
 Let us replicate \is{replicability} part of Wulff's study using the spoken \is{medium} part of the BNC \is{BNC} (Wulff uses the entire BNC). If we extract \is{retrieval} all sequences of exactly two adjectives \is{adjective} occurring before a noun \is{noun} (excluding comparatives and superlatives), and include only those adjective \is{adjective} pairs that (a) occur at least five times, and (b) do not occur more than once in the opposite order, we get the sample in Table \ref{tab:adjadjseqsample} (the adjective \is{adjective} pairs are listed in decreasing order of their frequency \is{frequency} of occurrence). The table also lists the frequency of each adjective \is{adjective} in the spoken part of the BNC \is{BNC} (case insensitive), and, in the final column, states \is{aktionsart} whether the first or the second adjective \is{adjective} is more frequent.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Sample of [ADJ\textsubscript{1} ADJ\textsubscript{2}] sequences (BNC Spoken)}
 \label{tab:adjadjseqsample}
 \resizebox*{!}{\textheight}{%
@@ -6688,7 +6687,7 @@ Let us now apply both perspectives to the entire sample in Table \ref{tab:adjadj
 
 Next, let us look at the number of cases that match the prediction. There are 34 cases where the first adjective \is{adjective} is more frequent, \is{frequency} and 25 cases where the second adjective is more frequent, which seems to corroborate Wulff's hypothesis, but as Table \ref{tab:adjadjfreqcases} shows, the difference is not statistically significant.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Adjective order and frequency (cf. Table \ref{tab:adjadjseqsample})}
 \label{tab:adjadjfreqcases}
 \begin{tabular}[t]{llccr}
@@ -6778,7 +6777,7 @@ The result of all these steps is shown in Table \ref{tab:binomialsample}. The fi
 
 Let us first simply look at the number of cases for which the claim is true or false. There are 42 cases where the second word's final consonant \is{consonant} is more sonorant \is{sonority} than that of the second word (as predicted), and 36 cases where the second word's final consonant is less sonorant than that of the first (counter to the prediction). As Table \ref{tab:binomialsonoritycounts} shows, this difference is nowhere near significant.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Sonority of the final consonant and word order in binomials (counts)}
 \label{tab:binomialsonoritycounts}
 \begin{tabular}[t]{llccr}
@@ -6807,7 +6806,7 @@ However, note that we are including both cases with a very high degree of frozen
 
 We could, of course, limit our analysis to cases with a high degree of frozenness, \is{frozenness} say, above 90 percent (the data is available, so you might want to try). However, it would be even better to keep all our data and make use of the rank order that the frozenness measure \is{measurement} provides: the prediction is that cases with a high frozenness rank will adhere to the sonority \is{sonority} constraint with a higher probability \is{probability} than those with a low frozenness rank. Table \ref{tab:binomialsample} contains all the data we need to determine the median \is{median} of words adhering or not adhering to the constraint, as well as the rank sums and number of cases, which we need to calculate a U\hyp{}test. We will not go through the test step by step (but you can try for yourself if you want to). Table \ref{tab:binomialsonorityranks} provides the necessary values derived from Table \ref{tab:binomialsample}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Sonority of the final consonant and word order in binomials (ranks)}
 \label{tab:binomialsonorityranks}
 \begin{tabular}[t]{lcc}
@@ -6861,7 +6860,7 @@ Let us attempt a more comprehensive analysis and look at all cases of the verb \
 
 Table \ref{tab:startcomplements} shows the observed and expected \is{frequency, expected} frequencies of \textit{to}- and \textit{ing}\hyp{}complements \is{complementation} for each of these forms, together with the expected frequencies and the $\chi^2$ components.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Complementation of \textit{start} and the horror aequi principle}
 \label{tab:startcomplements}
 \begin{tabular}[t]{lccr}
@@ -6924,7 +6923,7 @@ Let us extract \is{retrieval} all synthetic and analytic forms of these adjectiv
 
 This leaves 69 targets that are preceded by a comparative prime \is{structural priming} in the preceding span \is{span} of 20 tokens. Table \ref{tab:analytsynthetcomptwenty} shows the distribution \is{distribution, conditional} of analytic and synthetic primes and targets (if there was more than one comparative \is{comparative} in the preceding context, only the one closer to the comparative in question was counted).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Comparatives preceding comparatives in a context of 20 tokens (BNC)}
 \label{tab:analytsynthetcomptwenty}
 \begin{tabular}[t]{llccr}
@@ -6965,7 +6964,7 @@ There is a significant influence of \textvv{Prime} \is{structural priming} on \t
 
 Obviously, we would expect a much stronger priming \is{structural priming} effect in a situation like that in (\ref{ex:primeclosefar}b), where one word intervenes between the two comparatives, \is{comparative} than in a situation like (\ref{ex:primeclosefar}a), where 17 words (and a sentence boundary) intervene. Let us therefore restrict the context in which we count analytic comparatives to a size more likely to lead to a priming effect -- say, seven words (based on the factoid that short term memory can hold up to seven units). Table \ref{tab:analytsynthetcompseven} shows the distribution \is{distribution, conditional} of primes \is{structural priming} and targets in this smaller window.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Comparatives preceding comparatives in a context of 7 tokens (BNC)}
 \label{tab:analytsynthetcompseven}
 \begin{tabular}[t]{llccr}
@@ -7037,7 +7036,7 @@ In the part of the spoken \is{medium} BNC \is{BNC} annotated \is{annotation} for
 
 These numbers can now be used to compare the number of tag questions \is{tag question} against, as shown in Table \ref{tab:tagpolarity}. Since the tag questions that we found using our queries have negative \is{negation} polarity, they are not included in the sample, but must occur as tags to a subset of the sentences. This means that by subtracting the number of tag questions from the total for each group of speakers, we get the number of sentences without tag questions.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Negative polarity tag questions in male and female speech in the spoken BNC}
 \label{tab:tagpolarity}
 \begin{tabular}[t]{llccr}
@@ -7077,7 +7076,7 @@ The basic design \is{research design} with which to test the convergence or dive
 
 \textit{Notwithstanding} is a relatively infrequent adposition: \is{adposition} there are only 36 hits in the four corpora combined. Table \ref{tab:notwithstandingprepost} shows their distribution \is{distribution, conditional} across the eight conditions.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{\textit{Notwithstanding} as a preposition and postposition in British and American English}
 \label{tab:notwithstandingprepost}
 \resizebox{\textwidth}{!}{%
@@ -7156,13 +7155,13 @@ Mair also notes that the \textit{going\hyp{}to} \is{going to (future)} future is
 
 Figure \ref{fig:mairgoingto} shows Mair's results based on the OED \is{OED} citations, redrawn as closely as possible from the plot he presents (he does not report the actual frequencies). It also shows frequency data for the query $\langle$ \texttt{[word="going"\%c] [word="to"\%c] [pos="V.*"]} $\rangle$ from the periods covered by the CLMET, \is{CLMET} LOB \is{LOB} and FLOB. \is{FLOB} Note that Mair categorizes his data in quarter centuries, so the same has to be done for the CLMET. \is{CLMET} Most texts in the CLMET \is{CLMET} are annotated \is{annotation} for a precise year of publication, but sometimes a time span is given instead. In these cases, let us put the texts into the quarter century that the larger part of this time span falls into. LOB \is{LOB} and FLOB \is{FLOB} represent the quarter\hyp{}centuries in which they were published. One quarter century is missing: there is no accessible corpus of British \is{British English} English covering the period 1926--1950. Let us extrapolate a value by taking the mean \is{mean} of the period preceding and following it. To make the corpus data comparable to Mair's, there is one additional step that is necessary: Mair plots frequencies \is{frequency} per 10 000 citations; citations in the relevant period have a mean length \is{length} of 12 words \citep[see][25]{hoffmann_using_2004} -- in other words, Mair's frequencies are per \num{120000} words, so we have to convert our raw frequencies into frequencies per \num{120000} words too. Table \ref{tab:corpusgoingto} shows the raw frequencies, normalized frequencies and data sources.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Grammaticalization and discourse frequency of \textit{going to}}
 \label{fig:mairgoingto}
 \includegraphics[width=.8\textwidth,keepaspectratio]{figures/goingtogrammaticalization}
 \end{figure}
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Discourse frequency of \textit{going to}}
 \label{tab:corpusgoingto}
 \begin{tabular}[t]{c S[table-format=2] S[table-format=7] S l}
@@ -7201,7 +7200,7 @@ In a paper on the medial representation of men and women, \is{gender stereotypes
 
 The construction [QUOTE + Subj + V] is a perfect example of a diagnostic for a cultural \is{culture} frame: it is routinely used (in written \is{medium} language) to describe a speech event. Crucially, the verb \is{verb} slot offers an opportunity to introduce additional information (such as the manner of speaking, as in the examples of manner verbs verbs just mentioned (that often contain evaluations), but also the type of speech act being performed (\textit{ask}, \textit{order}, etc.). It is also easy to find even in an untagged \is{POS tagging} corpus, since it includes (by definition) a passage of direct speech surrounded by quotation marks, a subject that is, in an overwhelming number of cases, a pronoun, \is{pronoun} and a verb (or verb \is{verb} group) -- typically in that order. In a written \is{medium} corpus, we can thus query the sequence $\langle$ \texttt{[word="{''}"] [pos="pronoun"] [pos="verb"]} $\rangle$ to find the majority of examples of the construction. In order to study differences in the representation of men and women, \is{gender stereotypes} we can query the pronouns \textit{he} and \textit{she} separately to obtain representative \is{representativeness} samples of male and female speech act events without any \is{annotation} annotation.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Verbal collexemes of [QUOTE + Pron + V] (BNC)}
 \label{tab:quotecollexemes}
 \resizebox{\textwidth}{!}{%
@@ -7392,7 +7391,7 @@ In other words, the high token \is{token (instance)} frequency \is{frequency, to
 
 For example, the token frequency \is{frequency, token} of the suffix \is{affix} \textit{-icle} is higher in the BROWN \is{BROWN} corpus (269 tokens) than in the LOB \is{LOB} corpus (225 tokens). However, as Table \ref{tab:iclewords} shows, this is simply due to differences in the frequency of individual words -- the words \textit{particle} and \textit{vehicle} are substantially more frequent in the BROWN \is{BROWN} corpus, and while, conversely, \textit{article} is more frequent in the LOB \is{LOB} corpus, it cannot make up for the difference. As the $\chi^2$ \is{chi-square test} components show, the difference in frequency of some of the individual words is even statistically significant, but nothing follows from this with respect to the suffix \is{affix} \textit{-icle}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Words containing \textit{-icle} in two corpora}
 \label{tab:iclewords}
 \resizebox*{!}{\textheight}{%
@@ -7489,7 +7488,7 @@ Baayen's idea is quite straightforwardly to use the phenomenon of ``hapax \is{ha
 Like the number of types, \is{type (category)} the number of hapax \is{hapax legomenon} legomena is dependent on sample size \is{corpus size} (although the relationship is not as straightforward as in the case of types, see next subsection); it is useful, therefore, to divide the number of hapax legomena by the number of tokens \is{token (instance)} to correct for sample size:
 
 \begin{exe}
-\ex $\displaystyle{HTR = \frac{n \left( {hapax\ legomena} \right)}{n \left( {tokens} \right)}}$
+\ex $\displaystyle{\text{HTR} = \frac{n \left( \text{hapax\ legomena} \right)}{n \left( \text{tokens} \right)}}$
 \label{ex:htrformula}
 \end{exe}
 % me-layout: make sure text renders nicely in formula
@@ -7503,7 +7502,7 @@ Let us apply this measure to our two diminutive affixes. \is{affix} The suffix \
 
 As pointed out in connection with the comparison of the TTRs \is{type-token ratio} for \textit{mini-} in the FLOB \is{FLOB} and the FROWN \is{FROWN} corpus, we would like to be able to test differences between two (or more) TTRs (and, of course, also two or more HTRs) \is{hapax-token ratio} for statistical significance. Theoretically, this could be done very easily. Take the TTR: if we interpret it as the probability \is{probability} of encountering a new type \is{type (category)} as we move through our samples, we are treating it like a nominal \is{nominal data} variable \textsc{Type}, with the values \textsc{new} and \textsc{seen before}. One appropriate statistical test for distributions \is{distribution, conditional} of nominal values under different conditions is the $\chi^2$ \is{chi-square test} test, which we are already more than familiar with. For example, if we wanted to test whether the TTRs \is{type-token ratio} of \textit{-icle} and \textit{mini-} in the BNC \is{BNC} differ significantly, we might construct a table like Table \ref{tab:iclemini}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Type/token ratios of \textit{-icle} and \textit{mini-} in the BNC}
 \label{tab:iclemini}
 \begin{tabular}[t]{llccr}
@@ -7562,7 +7561,7 @@ As we can see by looking at the first 100 words, type \is{type (category)} and h
 
 Now imagine we wanted to use the TTR \is{type-token ratio} and the HTR \is{hapax-token ratio} as measures of Jane Austen's overall lexical productivity \is{productivity} (referred to as ``lexical richness'' in computational stylistics \is{style} and in second\hyp{}language teaching): if we chose a small sample of her writing, the TTR and the HTR would be larger than if we chose a large \is{corpus size} sample, to the extent that the scores derived from the two samples would differ significantly. Table \ref{tab:austenttr} shows what would happen if we compared the TTR of the first chapter with the TTR of the entire rest of the \is{literary language} novel.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Type/token ratios in the novel \textit{Pride and Prejudice}}
 \label{tab:austenttr}
 \begin{tabular}[t]{llccr}
@@ -7612,7 +7611,7 @@ As we can see, the TTR \is{type-token ratio} and HTR \is{hapax-token ratio} of b
 
 Taking into account the entire sample, the TTR \is{type-token ratio} for \textit{-ise/-ize} is $\nicefrac{105}{834} = 0.1259$ and that for \textit{-ify} is $\nicefrac{49}{356} = 0.1376$; it seems that \textit{-ise/-ize} is slightly more important to the lexicon \is{lexicon} of English than \textit{-ify}. A $\chi^2$ \is{chi-square test} test suggests that the difference is not significant (cf. Table \ref{tab:izeifyttr}; $\chi^2$ = 0.3053, df = 1, p > 0.05).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Type/token ratios of \textit{-ise/-ize} and \textit{-ify} (LOB)}
 \label{tab:izeifyttr}
 \begin{tabular}[t]{llccr}
@@ -7642,7 +7641,7 @@ Taking into account the entire sample, the TTR \is{type-token ratio} for \textit
 
 Likewise, taking into account the entire sample, the HTR \is{hapax-token ratio} for \textit{-ise/-ize} is $\nicefrac{47}{834} = 0.0563$ and that for \textit{-ify} is $\nicefrac{17}{365} = 0.0477$; it seems that \textit{-ise/-ize} is slightly more productive \is{productivity} than \textit{-ify}. However, again, the difference is not significant (cf. Table \ref{tab:izeifyhtr}; $\chi^2$ = 0.3628, df = 1, p > 0.05).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Hapax/token ratios of \textit{-ise/-ize} and \textit{-ify} (LOB)}
 \label{tab:izeifyhtr}
 \begin{tabular}[t]{llccr}
@@ -7691,7 +7690,7 @@ Figures \ref{fig:izesamplettrhtr}a and \ref{fig:izesamplettrhtr}b show the growt
 
 The TTR \is{type-token ratio} of \textit{-ise/-ize} based on the random sub\hyp{}sample is $\nicefrac{78}{356} = 0.2191$, that of \textit{-ify} is still $\nicefrac{49}{356} = 0.1376$; the difference between the two suffixes \is{affix} is much clearer now, and a $\chi^2$ test shows that it is very significant, although the effect size \is{effect size} is weak (cf. Table \ref{tab:izeifyttrsample}; $\chi^2$ = 8.06, df = 1, p < 0.01, $\phi$ = 0.1064).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Type/token ratios of \textit{-ise/-ize}/\textit{-ise/-ize} (sample) and \textit{-ify} (LOB)}
 \label{tab:izeifyttrsample}
 \begin{tabular}[t]{llccr}
@@ -7720,7 +7719,7 @@ The TTR \is{type-token ratio} of \textit{-ise/-ize} based on the random sub\hyp{
 
 Likewise, the HTR \is{hapax-token ratio} of \textit{-ise/-ize} based on our sub\hyp{}sample is $\nicefrac{41}{356} = 0.1152$, the HTR of \textit{-ify} remains $\nicefrac{17}{365} = 0.0477$. Again, the difference is much clearer, and it, too, is now very significant, again with a weak effect size \is{effect size} (cf. Table \ref{tab:izeifyhtrsample}; $\chi^2$ = 10.81, df = 1, p < 0.01, $\phi$ = \is{chi-square test} 0.1232).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Hapax/token ratios of \textit{-ise/-ize} (sample) and \textit{-ify} (LOB)}
 \label{tab:izeifyhtrsample}
 \begin{tabular}[t]{llccr}
@@ -7774,7 +7773,7 @@ Our design \is{research design} compares two predefined groups of types \is{type
 
 Excluding cases with prefixed \is{affix} stems, \is{statistics} the OED \is{OED} contains 456 entries or sub\hyp{}entries for verbs \is{verb} with \textit{-ify}, 31 of which are first documented in the 20th century. Of the latter, 21 do not occur in the BNC \is{BNC} at all, and 10 do occur in the BNC, but are not hapaxes \is{hapax legomenon} (see Table \ref{tab:ifyneologisms} below). The BNC contains 30 hapaxes, of which 13 are spelling errors and 7 are first documented in the OED \is{OED} before the 20th century (\textit{carbonify}, \textit{churchify}, \textit{hornify}, \textit{preachify}, \textit{saponify}, \textit{solemnify}, \textit{townify}). This leaves 10 hapaxes that are plausibly regarded as neologisms, \is{neologism} none of which are listed in the OED \is{OED} (again, see Table \ref{tab:ifyneologisms}). In addition, there are four types \is{type (category)} in the BNC \is{BNC} that are not hapax \is{hapax legomenon} legomena, but that are not listed in the OED; \is{OED} careful cross\hyp{}checks show that these are also neologisms. Combining all sources, this gives us 45 neologisms.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Twentieth century neologisms with \textit{-ify}}
 \label{tab:ifyneologisms}
 \begin{tabular}[t]{ll}
@@ -7797,7 +7796,7 @@ Before we turn to the definition and sampling of established types, \is{type (ca
 
 Let us now turn to the definition of \textsc{established types}. \is{type (category)} Given our definition of \textsc{neologisms}, \is{neologism} established types would first have to be documented before the 20th century, so we could use the 420 types in the OED \is{OED} that meet this criterion (again, excluding prefixed \is{affix} forms). However, these 420 types contain many very rare or even obsolete forms, like \textit{duplify} ``to make double'', \textit{eaglify} ``to make into an eagle'' or \textit{naucify} ``to hold in low esteem''. Clearly, these are not ``established'' in any meaningful sense, so let us add the requirement that a type must occur in the BNC \is{BNC} at least twice to count as established. Let us further limit the category to verbs \is{verb} first documented before the 19th century, in order to leave a clear diachronic \is{diachrony} gap between the established types \is{type (category)} and the productive \is{productivity} types. This leaves the words in Table \ref{tab:ifycontrol}.\footnote{Interestingly, leaving out words coined in the 19th century does not make much of a difference: although the 19th century saw a large number of coinages (with 138 new types \is{type (category)} it was the most productive \is{productivity} century in the history of the suffix), \is{affix} few of these are frequent enough today to occur in the BNC; \is{BNC} if anything, we should actually extend our definition of neologisms \is{neologism} to include the 19th century.}
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Control sample of established types with the suffix \textit{-ify}.}
 \label{tab:ifycontrol}
 \begin{tabular}[t]{l}
@@ -7810,7 +7809,7 @@ Let us now turn to the definition of \textsc{established types}. \is{type (categ
 
 Let us now evaluate the hypotheses. Table \ref{tab:ifysyllabicity} shows the type \is{type (category)} frequencies \is{frequency, type} for monosyllabic \is{syllable} and polysyllabic stems \is{stem} in the two samples. In both cases, there is a preference for monosyllabic stems (as expected), \is{frequency, expected} but interestingly, this preference is less strong among the neologisms \is{neologism} than among the established types and this difference is very significant ($\chi^2 = 7.37, df = 1, p < 0.01 , \phi = 0.2577$).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Monosyllabic and bisyllabic stems with \textit{-ify}}
 \label{tab:ifysyllabicity}
 \begin{tabular}[t]{llccr}
@@ -7841,7 +7840,7 @@ Given the fact that there is a significantly higher number of neologisms \is{neo
 
 Table \ref{tab:ifystressshift} shows the relevant data: it seems that there might indeed be such a greater willingness, as the number of neologisms \is{neologism} with polysyllabic \is{syllable} stems \is{stem} requiring stress shift is higher than expected; \is{frequency, expected} however, the difference is not statistically significant ($\chi^2$ = 1.96, df = 1, p > 0.05, $\phi$ = 0.28) (strictly speaking, we cannot use the $\chi^2$ \is{chi-square test} test here, since half of the expected frequencies are below 5, but Fisher's exact test \is{Fisher's exact test} confirms that the difference is not significant).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Stress shift with polysyllabic stems with \textit{-ify}}
 \label{tab:ifystressshift}
 \begin{tabular}[t]{llccr}
@@ -7926,7 +7925,7 @@ The definitions are too heterogeneous to base a specific hypothesis on them, but
 
 Table \ref{tab:electricalentitieslob} shows the token \is{token (instance)} frequency \is{frequency, token} with which nouns \is{noun} from these categories are referred to as \textit{electric} or \textit{electrical} in the LOB \is{LOB} corpus; in order to understand how these nouns were categorized, \is{categorization} it also lists all types \is{type (category)} found for each category (one example was discarded because it was  \is{figurative language}\is{metaphor} metaphorical).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Entities described as \textit{electric} or \textit{electrical} in the LOB corpus}
 \label{tab:electricalentitieslob}
 \resizebox{0.9\textwidth}{!}{%
@@ -8030,7 +8029,7 @@ The difference between \textit{electric} and \textit{electrical} is significant 
 
 Let us repeat the study with the BROWN \is{BROWN} corpus. Table \ref{tab:electricalentitiesbrown} lists the token frequencies \is{frequency, token} for the individual categories and, again, all types \is{type (category)} found for each category.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Entities described as \textit{electric} or \textit{electrical} in the BROWN corpus}
 \label{tab:electricalentitiesbrown}
 \resizebox{0.9\textwidth}{!}{%
@@ -8136,7 +8135,7 @@ Broadly speaking, then, one of our expectations is borne out by the British \is{
 
 Of course, this kind of investigation can also be designed \is{research design} as an inductive \is{induction} study of differential collocates (again, like the study of synonyms \is{synonymy} such as \textit{high} and \textit{tall}). Let us look at the nominal \is{noun} collocates \is{collocation} of \textit{electric} and \textit{electrical} in the BNC. \is{BNC} Table \ref{tab:electricalcollocates} shows the results of a differential\hyp{}collocate analysis, calculated on the basis of all occurrences of \textit{electric}\slash \textit{al} in the BNC \is{BNC} that are directly followed by a noun.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Differential nominal collocates of \textit{electric} and \textit{electrical} in the BNC}
 \label{tab:electricalcollocates}
 \resizebox{.9\textwidth}{!}{%
@@ -8203,36 +8202,23 @@ The case study demonstrates, then, that a differential\hyp{}collocate \is{colloc
 
 We must keep in mind, however, that this kind of study does not primarily uncover differences between affixes, \is{affix} but differences between specific word pairs containing these affixes. \is{affix} They are, as pointed out above, essentially lexical studies of near\hyp{}synonymy. \is{synonymy} Of course, it is possible that by performing such analyses for a large number of word pairs containing a particular affix \is{affix} pair, general semantic \is{semantics} differences may emerge, but since we are frequently dealing with highly lexicalized \is{lexicalization} forms, there is no guarantee for this. \citet{gries_corpus-linguistic_2001, gries_testing_2003} has shown that \textit{-ic}\slash \textit{-ical} pairs differ substantially in the extent to which they are synonymous; \is{synonymy} for example, he finds substantial difference in meaning for \textit{politic}\slash \textit{political} or \textit{poetic}\slash \textit{poetical}, but much smaller differences, for example, for \textit{bibliographic}\slash \textit{bibliographical}, with \textit{electric}\slash \textit{electrical} somewhere in the middle. Obviously, the two variants have lexicalized \is{lexicalization} independently in many cases, and the specific differences in meaning \is{semantics} resulting from this lexicalization process are unlikely to fall into clear general categories.
 
-\subsubsection{Case study: Phonological differences between \textit{-ic} and \textit{-ical}}
+\subsubsection{Case study: Phonological differences between \textit{-ic} and \textit{-ical}}\largerpage[2]
 \label{sec:phonologicaldifferencesbetweenicandical}
 
 In an interesting but rarely\hyp{}cited paper, \citet{or_corpus-based_1994} collects a number of hypotheses about semantic \is{semantics} and, in particular, phonological factors influencing the distribution \is{distribution, conditional} of \textit{-ic} and \textit{-ical} that she provides impressionistic corpus evidence for but does not investigate systematically. A simple example is the factor \textsc{Length}: \is{length} Or hypothesizes that speakers will tend to avoid long words and choose the shorter variant \textit{-ic} for long stems \is{stem} (in terms of number of syllables). \is{syllable} She reports that ``a survey of a general vocabulary list'' corroborates this hypothesis but does not present any systematic data.
 
 Let us test this hypothesis using the LOB \is{LOB} corpus. Since this is a written \is{medium} corpus, let us define \textvv{Length} \is{length} in terms of letters and assume that this is a sufficiently close approximation to phonological length. Table \ref{tab:icicallength} lists all types \is{type (category)} with the two suffixes \is{affix} from LOB, \is{LOB} in decreasing order of length (since the point here is to show the influence of length on suffix \is{affix} choice, prefixed \is{affix} stems, \is{statistics} compound stems, etc. are included in their full form).
 
-\begin{table}[!htbp]
-\caption{Adjectives with \textit{-ic} and \textit{-ical} by length (LOB)}
-\label{tab:icicallength}
-\resizebox*{!}{\textheight}{%
-\begin{tabular}[t]{l}
-\lsptoprule
-Types with \textit{-ic} \\
+{\footnotesize\begin{longtable}{>{\raggedright\arraybackslash}p{\textwidth - 2\tabcolsep}}
+\caption{Adjectives with \textit{-ic} and \textit{-ical} by length (LOB) (Supplementary Online Material: U7BR)\label{tab:icicallength}}\\%OSM
+\lsptoprule\endfirsthead\midrule\endhead\endfoot\lspbottomrule\endlastfoot
+% \resizebox*{!}{\textheight}{%
+Types with \textit{-ic}\\\midrule
+\textit{function\hyp{}theoretic}, \textit{non-stoichiometric} (15), \textit{crystallographic}, \textit{politico-economic}, \textit{pseudo-scientific}, \textit{uncharacteristic} (14), \textit{antihaemophilic}, \textit{electro(-)magnetic}, \textit{non-pornographic}, \textit{semi-logarithmic} (13), \textit{characteristic}, \textit{claustrophobic}, \textit{electrographic}, \textit{metallographic}, \textit{non-diastematic}, \textit{part-apologetic}, \textit{potentiometric}, \textit{quasi-acrobatic}, \textit{spectrographic}, \textit{thermoelectric} (12), \textit{architectonic}, \textit{choreographic}, \textit{deterministic}, \textit{electrostatic}, \textit{ferromagnetic}, \textit{hypereutectic}, \textit{idiosyncratic}, \textit{materialistic}, \textit{nationalistic}, \textit{non-parametric}, \textit{philanthropic}, \textit{probabilistic}, \textit{pseudomorphic}, \textit{thermodynamic}, \textit{trans-economic}, \textit{unsympathetic} (11), \textit{aristocratic}, \textit{bureaucratic}, \textit{catastrophic}, \textit{electrolytic}, \textit{enthusiastic}, \textit{evangelistic}, \textit{haemorrhagic}, \textit{hieroglyphic}, \textit{homoeopathic}, \textit{hydrochloric}, \textit{hydrofluoric}, \textit{journalistic}, \textit{kinaesthetic}, \textit{melodramatic}, \textit{meritocratic}, \textit{monosyllabic}, \textit{naturalistic}, \textit{neurasthenic}, \textit{non-alcoholic}, \textit{orthographic}, \textit{paramagnetic}, \textit{philharmonic}, \textit{photographic}, \textit{phylogenetic}, \textit{polysyllabic}, \textit{pornographic}, \textit{positivistic}, \textit{programmatic}, \textit{prophylactic}, \textit{thermometric}, \textit{unscientific} (10), \textit{aerodynamic}, \textit{anaesthetic}, \textit{apocalyptic}, \textit{atmospheric}, \textit{demographic}, \textit{endocentric}, \textit{gastronomic}, \textit{geostrophic}, \textit{gravimetric}, \textit{haemophilic}, \textit{logarithmic}, \textit{macroscopic}, \textit{mechanistic}, \textit{meromorphic}, \textit{microscopic}, \textit{modernistic}, \textit{monotechnic}, \textit{non-catholic}, \textit{non-dogmatic}, \textit{non-dramatic}, \textit{ontogenetic}, \textit{orthopaedic}, \textit{over-drastic}, \textit{pessimistic}, \textit{philosophic}, \textit{phototactic}, \textit{plutocratic}, \textit{prehistoric}, \textit{psychiatric}, \textit{ritualistic}, \textit{socialistic}, \textit{sycophantic}, \textit{syllogistic}, \textit{sympathetic}, \textit{symptomatic}, \textit{syntagmatic}, \textit{telegraphic}, \textit{tetra-acetic}, \textit{therapeutic}, \textit{unaesthetic}, \textit{unpatriotic}, \textit{unrealistic} (9), \textit{aldermanic}, \textit{altruistic}, \textit{antiseptic}, \textit{apologetic}, \textit{asymmetric}, \textit{asymptotic}, \textit{autocratic}, \textit{barometric}, \textit{bimetallic}, \textit{cabalistic}, \textit{concentric}, \textit{corybantic}, \textit{democratic}, \textit{dielectric}, \textit{diplomatic}, \textit{egocentric}, \textit{electronic}, \textit{eulogistic}, \textit{exocentric}, \textit{fatalistic}, \textit{geocentric}, \textit{haemolytic}, \textit{histrionic}, \textit{humanistic}, \textit{hyperbolic}, \textit{hypodermic}, \textit{idealistic}, \textit{legalistic}, \textit{linguistic}, \textit{megalithic}, \textit{monolithic}, \textit{nihilistic}, \textit{novelistic}, \textit{optimistic}, \textit{pentatonic}, \textit{philatelic}, \textit{phosphoric}, \textit{polyphonic}, \textit{scholastic}, \textit{scientific}, \textit{stochastic}, \textit{supersonic}, \textit{systematic}, \textit{telepathic}, \textit{telephonic}, \textit{telescopic}, \textit{theocratic}, \textit{ultrasonic}, \textit{undogmatic}, \textit{undramatic}, \textit{uneconomic}, \textit{volumetric} (8), \textit{acrobatic}, \textit{aesthetic}, \textit{alcoholic}, \textit{algebraic}, \textit{analgesic}, \textit{antigenic}, \textit{apathetic}, \textit{apostolic}, \textit{authentic}, \textit{automatic}, \textit{axiomatic}, \textit{ballistic}, \textit{catalytic}, \textit{chromatic}, \textit{cinematic}, \textit{dualistic}, \textit{eccentric}, \textit{energetic}, \textit{enigmatic}, \textit{fantastic}, \textit{geometric}, \textit{geotactic}, \textit{heuristic}, \textit{homonymic}, \textit{hydraulic}, \textit{inorganic}, \textit{intrinsic}, \textit{kinematic}, \textit{lethargic}, \textit{messianic}, \textit{morphemic}, \textit{neolithic}, \textit{nicotinic}, \textit{nostalgic}, \textit{nucleonic}, \textit{panoramic}, \textit{parabolic}, \textit{paralytic}, \textit{parasitic}, \textit{patriotic}, \textit{pneumatic}, \textit{pragmatic}, \textit{prophetic}, \textit{quadratic}, \textit{realistic}, \textit{sarcastic}, \textit{schematic}, \textit{spasmodic}, \textit{strategic}, \textit{stylistic}, \textit{sub-atomic}, \textit{sulphuric}, \textit{symphonic}, \textit{syntactic}, \textit{synthetic}, \textit{telegenic}, \textit{traumatic} (7), \textit{academic}, \textit{acoustic}, \textit{allergic}, \textit{anarchic}, \textit{aromatic}, \textit{artistic}, \textit{asthenic}, \textit{athletic}, \textit{barbaric}, \textit{carbolic}, \textit{cathodic}, \textit{catholic}, \textit{cherubic}, \textit{climatic}, \textit{cyclonic}, \textit{diabetic}, \textit{dietetic}, \textit{dogmatic}, \textit{domestic}, \textit{dramatic}, \textit{dynastic}, \textit{eclectic}, \textit{economic}, \textit{egoistic}, \textit{electric}, \textit{elliptic}, \textit{emphatic}, \textit{epigonic}, \textit{esoteric}, \textit{forensic}, \textit{galvanic}, \textit{gigantic}, \textit{heraldic}, \textit{historic}, \textit{horrific}, \textit{hygienic}, \textit{hypnotic}, \textit{isotopic}, \textit{magnetic}, \textit{majestic}, \textit{metallic}, \textit{monastic}, \textit{narcotic}, \textit{neurotic}, \textit{operatic}, \textit{pathetic}, \textit{pedantic}, \textit{periodic}, \textit{phonetic}, \textit{platonic}, \textit{podzolic}, \textit{potassic}, \textit{prolific}, \textit{quixotic}, \textit{rhythmic}, \textit{romantic}, \textit{sadistic}, \textit{sardonic}, \textit{semantic}, \textit{specific}, \textit{sporadic}, \textit{syllabic}, \textit{symbolic}, \textit{synaptic}, \textit{synoptic}, \textit{tectonic}, \textit{terrific}, \textit{theistic}, \textit{thematic}, \textit{volcanic} (6), \textit{amoebic}, \textit{angelic}, \textit{anionic}, \textit{aquatic}, \textit{archaic}, \textit{botanic}, \textit{bucolic}, \textit{caustic}, \textit{ceramic}, \textit{chaotic}, \textit{chronic}, \textit{classic}, \textit{cryptic}, \textit{delphic}, \textit{demonic}, \textit{drastic}, \textit{dynamic}, \textit{elastic}, \textit{endemic}, \textit{enteric}, \textit{erratic}, \textit{frantic}, \textit{gastric}, \textit{generic}, \textit{genetic}, \textit{glottic}, \textit{graphic}, \textit{idyllic}, \textit{kinetic}, \textit{laconic}, \textit{lunatic}, \textit{melodic}, \textit{motivic}, \textit{nomadic}, \textit{numeric}, \textit{oceanic}, \textit{oolitic}, \textit{organic}, \textit{pacific}, \textit{phallic}, \textit{politic}, \textit{prosaic}, \textit{psychic}, \textit{spastic} (5), \textit{acetic}, \textit{arctic}, \textit{atomic}, \textit{bardic}, \textit{cosmic}, \textit{cyclic}, \textit{cystic}, \textit{erotic}, \textit{exotic}, \textit{ferric}, \textit{gnomic}, \textit{gothic}, \textit{hectic}, \textit{heroic}, \textit{ironic}, \textit{italic}, \textit{mosaic}, \textit{myopic}, \textit{mystic}, \textit{mythic}, \textit{niobic}, \textit{nitric}, \textit{oxalic}, \textit{photic}, \textit{poetic}, \textit{public}, \textit{rustic}, \textit{scenic}, \textit{static}, \textit{tannic}, \textit{tragic} (4), \textit{basic}, \textit{civic}, \textit{comic}, \textit{cubic}, \textit{ionic}, \textit{lyric}, \textit{magic}, \textit{tonic}, \textit{toxic} (3), \textit{epic} (2)\\
 \midrule
-\makecell[tl]{
-\begin{minipage}[t]{\textwidth} \raggedright
-\textit{function\hyp{}theoretic}, \textit{non-stoichiometric} (15), \textit{crystallographic}, \textit{politico-economic}, \textit{pseudo-scientific}, \textit{uncharacteristic} (14), \textit{antihaemophilic}, \textit{electro(-)magnetic}, \textit{non-pornographic}, \textit{semi-logarithmic} (13), \textit{characteristic}, \textit{claustrophobic}, \textit{electrographic}, \textit{metallographic}, \textit{non-diastematic}, \textit{part-apologetic}, \textit{potentiometric}, \textit{quasi-acrobatic}, \textit{spectrographic}, \textit{thermoelectric} (12), \textit{architectonic}, \textit{choreographic}, \textit{deterministic}, \textit{electrostatic}, \textit{ferromagnetic}, \textit{hypereutectic}, \textit{idiosyncratic}, \textit{materialistic}, \textit{nationalistic}, \textit{non-parametric}, \textit{philanthropic}, \textit{probabilistic}, \textit{pseudomorphic}, \textit{thermodynamic}, \textit{trans-economic}, \textit{unsympathetic} (11), \textit{aristocratic}, \textit{bureaucratic}, \textit{catastrophic}, \textit{electrolytic}, \textit{enthusiastic}, \textit{evangelistic}, \textit{haemorrhagic}, \textit{hieroglyphic}, \textit{homoeopathic}, \textit{hydrochloric}, \textit{hydrofluoric}, \textit{journalistic}, \textit{kinaesthetic}, \textit{melodramatic}, \textit{meritocratic}, \textit{monosyllabic}, \textit{naturalistic}, \textit{neurasthenic}, \textit{non-alcoholic}, \textit{orthographic}, \textit{paramagnetic}, \textit{philharmonic}, \textit{photographic}, \textit{phylogenetic}, \textit{polysyllabic}, \textit{pornographic}, \textit{positivistic}, \textit{programmatic}, \textit{prophylactic}, \textit{thermometric}, \textit{unscientific} (10), \textit{aerodynamic}, \textit{anaesthetic}, \textit{apocalyptic}, \textit{atmospheric}, \textit{demographic}, \textit{endocentric}, \textit{gastronomic}, \textit{geostrophic}, \textit{gravimetric}, \textit{haemophilic}, \textit{logarithmic}, \textit{macroscopic}, \textit{mechanistic}, \textit{meromorphic}, \textit{microscopic}, \textit{modernistic}, \textit{monotechnic}, \textit{non-catholic}, \textit{non-dogmatic}, \textit{non-dramatic}, \textit{ontogenetic}, \textit{orthopaedic}, \textit{over-drastic}, \textit{pessimistic}, \textit{philosophic}, \textit{phototactic}, \textit{plutocratic}, \textit{prehistoric}, \textit{psychiatric}, \textit{ritualistic}, \textit{socialistic}, \textit{sycophantic}, \textit{syllogistic}, \textit{sympathetic}, \textit{symptomatic}, \textit{syntagmatic}, \textit{telegraphic}, \textit{tetra-acetic}, \textit{therapeutic}, \textit{unaesthetic}, \textit{unpatriotic}, \textit{unrealistic} (9), \textit{aldermanic}, \textit{altruistic}, \textit{antiseptic}, \textit{apologetic}, \textit{asymmetric}, \textit{asymptotic}, \textit{autocratic}, \textit{barometric}, \textit{bimetallic}, \textit{cabalistic}, \textit{concentric}, \textit{corybantic}, \textit{democratic}, \textit{dielectric}, \textit{diplomatic}, \textit{egocentric}, \textit{electronic}, \textit{eulogistic}, \textit{exocentric}, \textit{fatalistic}, \textit{geocentric}, \textit{haemolytic}, \textit{histrionic}, \textit{humanistic}, \textit{hyperbolic}, \textit{hypodermic}, \textit{idealistic}, \textit{legalistic}, \textit{linguistic}, \textit{megalithic}, \textit{monolithic}, \textit{nihilistic}, \textit{novelistic}, \textit{optimistic}, \textit{pentatonic}, \textit{philatelic}, \textit{phosphoric}, \textit{polyphonic}, \textit{scholastic}, \textit{scientific}, \textit{stochastic}, \textit{supersonic}, \textit{systematic}, \textit{telepathic}, \textit{telephonic}, \textit{telescopic}, \textit{theocratic}, \textit{ultrasonic}, \textit{undogmatic}, \textit{undramatic}, \textit{uneconomic}, \textit{volumetric} (8), \textit{acrobatic}, \textit{aesthetic}, \textit{alcoholic}, \textit{algebraic}, \textit{analgesic}, \textit{antigenic}, \textit{apathetic}, \textit{apostolic}, \textit{authentic}, \textit{automatic}, \textit{axiomatic}, \textit{ballistic}, \textit{catalytic}, \textit{chromatic}, \textit{cinematic}, \textit{dualistic}, \textit{eccentric}, \textit{energetic}, \textit{enigmatic}, \textit{fantastic}, \textit{geometric}, \textit{geotactic}, \textit{heuristic}, \textit{homonymic}, \textit{hydraulic}, \textit{inorganic}, \textit{intrinsic}, \textit{kinematic}, \textit{lethargic}, \textit{messianic}, \textit{morphemic}, \textit{neolithic}, \textit{nicotinic}, \textit{nostalgic}, \textit{nucleonic}, \textit{panoramic}, \textit{parabolic}, \textit{paralytic}, \textit{parasitic}, \textit{patriotic}, \textit{pneumatic}, \textit{pragmatic}, \textit{prophetic}, \textit{quadratic}, \textit{realistic}, \textit{sarcastic}, \textit{schematic}, \textit{spasmodic}, \textit{strategic}, \textit{stylistic}, \textit{sub-atomic}, \textit{sulphuric}, \textit{symphonic}, \textit{syntactic}, \textit{synthetic}, \textit{telegenic}, \textit{traumatic} (7), \textit{academic}, \textit{acoustic}, \textit{allergic}, \textit{anarchic}, \textit{aromatic}, \textit{artistic}, \textit{asthenic}, \textit{athletic}, \textit{barbaric}, \textit{carbolic}, \textit{cathodic}, \textit{catholic}, \textit{cherubic}, \textit{climatic}, \textit{cyclonic}, \textit{diabetic}, \textit{dietetic}, \textit{dogmatic}, \textit{domestic}, \textit{dramatic}, \textit{dynastic}, \textit{eclectic}, \textit{economic}, \textit{egoistic}, \textit{electric}, \textit{elliptic}, \textit{emphatic}, \textit{epigonic}, \textit{esoteric}, \textit{forensic}, \textit{galvanic}, \textit{gigantic}, \textit{heraldic}, \textit{historic}, \textit{horrific}, \textit{hygienic}, \textit{hypnotic}, \textit{isotopic}, \textit{magnetic}, \textit{majestic}, \textit{metallic}, \textit{monastic}, \textit{narcotic}, \textit{neurotic}, \textit{operatic}, \textit{pathetic}, \textit{pedantic}, \textit{periodic}, \textit{phonetic}, \textit{platonic}, \textit{podzolic}, \textit{potassic}, \textit{prolific}, \textit{quixotic}, \textit{rhythmic}, \textit{romantic}, \textit{sadistic}, \textit{sardonic}, \textit{semantic}, \textit{specific}, \textit{sporadic}, \textit{syllabic}, \textit{symbolic}, \textit{synaptic}, \textit{synoptic}, \textit{tectonic}, \textit{terrific}, \textit{theistic}, \textit{thematic}, \textit{volcanic} (6), \textit{amoebic}, \textit{angelic}, \textit{anionic}, \textit{aquatic}, \textit{archaic}, \textit{botanic}, \textit{bucolic}, \textit{caustic}, \textit{ceramic}, \textit{chaotic}, \textit{chronic}, \textit{classic}, \textit{cryptic}, \textit{delphic}, \textit{demonic}, \textit{drastic}, \textit{dynamic}, \textit{elastic}, \textit{endemic}, \textit{enteric}, \textit{erratic}, \textit{frantic}, \textit{gastric}, \textit{generic}, \textit{genetic}, \textit{glottic}, \textit{graphic}, \textit{idyllic}, \textit{kinetic}, \textit{laconic}, \textit{lunatic}, \textit{melodic}, \textit{motivic}, \textit{nomadic}, \textit{numeric}, \textit{oceanic}, \textit{oolitic}, \textit{organic}, \textit{pacific}, \textit{phallic}, \textit{politic}, \textit{prosaic}, \textit{psychic}, \textit{spastic} (5), \textit{acetic}, \textit{arctic}, \textit{atomic}, \textit{bardic}, \textit{cosmic}, \textit{cyclic}, \textit{cystic}, \textit{erotic}, \textit{exotic}, \textit{ferric}, \textit{gnomic}, \textit{gothic}, \textit{hectic}, \textit{heroic}, \textit{ironic}, \textit{italic}, \textit{mosaic}, \textit{myopic}, \textit{mystic}, \textit{mythic}, \textit{niobic}, \textit{nitric}, \textit{oxalic}, \textit{photic}, \textit{poetic}, \textit{public}, \textit{rustic}, \textit{scenic}, \textit{static}, \textit{tannic}, \textit{tragic} (4), \textit{basic}, \textit{civic}, \textit{comic}, \textit{cubic}, \textit{ionic}, \textit{lyric}, \textit{magic}, \textit{tonic}, \textit{toxic} (3), \textit{epic} (2)
-\end{minipage}} \\
-\midrule
-Types with \textit{-ical} \\
-\midrule
-\makecell[tl]{
-\begin{minipage}[t]{\textwidth} \raggedright
-\textit{autobiographical}, \textit{palaeontological} (12), \textit{anthropological}, \textit{pharmacological}, \textit{physiographical}, \textit{trigonometrical} (11), \textit{archaeological}, \textit{ecclesiastical}, \textit{eschatological}, \textit{haematological}, \textit{iconographical}, \textit{meteorological}, \textit{methodological}, \textit{pharmaceutical}, \textit{quasi-classical} (10), \textit{chronological}, \textit{entomological}, \textit{metallurgical}, \textit{morphological}, \textit{philosophical}, \textit{photochemical}, \textit{physiological}, \textit{psychological}, \textit{radiochemical}, \textit{technological}, \textit{theorematical}, \textit{toxicological}, \textit{unsymmetrical}, \textit{untheological} (9), \textit{aeronautical}, \textit{aetiological}, \textit{alphabetical}, \textit{anti-clerical}, \textit{arithmetical}, \textit{astronomical}, \textit{biographical}, \textit{cosmological}, \textit{etymological}, \textit{genealogical}, \textit{geographical}, \textit{hypocritical}, \textit{hypothetical}, \textit{mathematical}, \textit{metaphorical}, \textit{metaphysical}, \textit{non-technical}, \textit{pathological}, \textit{pre-classical}, \textit{radiological}, \textit{schismatical}, \textit{self-critical}, \textit{sociological}, \textit{systematical}, \textit{uneconomical}, \textit{unrhythmical} (8), \textit{allegorical}, \textit{biochemical}, \textit{categorical}, \textit{cylindrical}, \textit{dialectical}, \textit{egotistical}, \textit{evangelical}, \textit{geometrical}, \textit{grammatical}, \textit{ideological}, \textit{monarchical}, \textit{mycological}, \textit{nonsensical}, \textit{obstetrical}, \textit{paradisical}, \textit{paradoxical}, \textit{pedagogical}, \textit{pedological}, \textit{puranitical}, \textit{purinatical}, \textit{puritanical}, \textit{serological}, \textit{statistical}, \textit{sub(-)tropical}, \textit{subtropical}, \textit{symmetrical}, \textit{synagogical}, \textit{theological}, \textit{theoretical}, \textit{unpractical} (7), \textit{a-political}, \textit{acoustical}, \textit{analytical}, \textit{anatomical}, \textit{biological}, \textit{diabolical}, \textit{economical}, \textit{ecumenical}, \textit{electrical}, \textit{elliptical}, \textit{geological}, \textit{historical}, \textit{hysterical}, \textit{liturgical}, \textit{mechanical}, \textit{methodical}, \textit{oratorical}, \textit{rhetorical}, \textit{symbolical}, \textit{theatrical}, \textit{unbiblical}, \textit{uncritical} (6), \textit{classical}, \textit{empirical}, \textit{fanatical}, \textit{graphical}, \textit{identical}, \textit{juridical}, \textit{numerical}, \textit{political}, \textit{satirical}, \textit{sceptical}, \textit{spherical}, \textit{technical}, \textit{unethical}, \textit{unmusical}, \textit{untypical}, \textit{whimsical} (5), \textit{atypical}, \textit{biblical}, \textit{cervical}, \textit{chemical}, \textit{clerical}, \textit{clinical}, \textit{critical}, \textit{cyclical}, \textit{inimical}, \textit{ironical}, \textit{metrical}, \textit{mystical}, \textit{mythical}, \textit{physical}, \textit{poetical}, \textit{surgical}, \textit{tactical}, \textit{tropical}, \textit{vertical} (4), \textit{comical}, \textit{conical}, \textit{cynical}, \textit{ethical}, \textit{lexical}, \textit{lyrical}, \textit{magical}, \textit{medical}, \textit{optical}, \textit{topical}, \textit{typical} (3)
-\end{minipage}} \\
-\lspbottomrule
-\scriptsize{Supplementary Online Material: U7BR} \\ %OSM
-\end{tabular}}
-\end{table}
+Types with \textit{-ical} \\\midrule
+\textit{autobiographical}, \textit{palaeontological} (12), \textit{anthropological}, \textit{pharmacological}, \textit{physiographical}, \textit{trigonometrical} (11), \textit{archaeological}, \textit{ecclesiastical}, \textit{eschatological}, \textit{haematological}, \textit{iconographical}, \textit{meteorological}, \textit{methodological}, \textit{pharmaceutical}, \textit{quasi-classical} (10), \textit{chronological}, \textit{entomological}, \textit{metallurgical}, \textit{morphological}, \textit{philosophical}, \textit{photochemical}, \textit{physiological}, \textit{psychological}, \textit{radiochemical}, \textit{technological}, \textit{theorematical}, \textit{toxicological}, \textit{unsymmetrical}, \textit{untheological} (9), \textit{aeronautical}, \textit{aetiological}, \textit{alphabetical}, \textit{anti-clerical}, \textit{arithmetical}, \textit{astronomical}, \textit{biographical}, \textit{cosmological}, \textit{etymological}, \textit{genealogical}, \textit{geographical}, \textit{hypocritical}, \textit{hypothetical}, \textit{mathematical}, \textit{metaphorical}, \textit{metaphysical}, \textit{non-technical}, \textit{pathological}, \textit{pre-classical}, \textit{radiological}, \textit{schismatical}, \textit{self-critical}, \textit{sociological}, \textit{systematical}, \textit{uneconomical}, \textit{unrhythmical} (8), \textit{allegorical}, \textit{biochemical}, \textit{categorical}, \textit{cylindrical}, \textit{dialectical}, \textit{egotistical}, \textit{evangelical}, \textit{geometrical}, \textit{grammatical}, \textit{ideological}, \textit{monarchical}, \textit{mycological}, \textit{nonsensical}, \textit{obstetrical}, \textit{paradisical}, \textit{paradoxical}, \textit{pedagogical}, \textit{pedological}, \textit{puranitical}, \textit{purinatical}, \textit{puritanical}, \textit{serological}, \textit{statistical}, \textit{sub(-)tropical}, \textit{subtropical}, \textit{symmetrical}, \textit{synagogical}, \textit{theological}, \textit{theoretical}, \textit{unpractical} (7), \textit{a-political}, \textit{acoustical}, \textit{analytical}, \textit{anatomical}, \textit{biological}, \textit{diabolical}, \textit{economical}, \textit{ecumenical}, \textit{electrical}, \textit{elliptical}, \textit{geological}, \textit{historical}, \textit{hysterical}, \textit{liturgical}, \textit{mechanical}, \textit{methodical}, \textit{oratorical}, \textit{rhetorical}, \textit{symbolical}, \textit{theatrical}, \textit{unbiblical}, \textit{uncritical} (6), \textit{classical}, \textit{empirical}, \textit{fanatical}, \textit{graphical}, \textit{identical}, \textit{juridical}, \textit{numerical}, \textit{political}, \textit{satirical}, \textit{sceptical}, \textit{spherical}, \textit{technical}, \textit{unethical}, \textit{unmusical}, \textit{untypical}, \textit{whimsical} (5), \textit{atypical}, \textit{biblical}, \textit{cervical}, \textit{chemical}, \textit{clerical}, \textit{clinical}, \textit{critical}, \textit{cyclical}, \textit{inimical}, \textit{ironical}, \textit{metrical}, \textit{mystical}, \textit{mythical}, \textit{physical}, \textit{poetical}, \textit{surgical}, \textit{tactical}, \textit{tropical}, \textit{vertical} (4), \textit{comical}, \textit{conical}, \textit{cynical}, \textit{ethical}, \textit{lexical}, \textit{lyrical}, \textit{magical}, \textit{medical}, \textit{optical}, \textit{topical}, \textit{typical} (3)\\
+\end{longtable}}
 % layout: why is this table so narrow?
 
 We can test the hypothesis based on the mean \is{mean} length \is{length} of the two samples using a \textit{t}-test, \is{t-test} or by ranking them by length using the U test. As mentioned in Chapter \ref{ch:significancetesting}, word length (however we measure \is{measurement} it) rarely follows a normal distribution, \is{distribution, normal} so the U test would probably be the better choice in this case, but let us use the t\hyp{}test for the sake of practice (the data are there in full, if you want to calculate a U test).
@@ -8252,7 +8238,7 @@ But let us start more humbly by laying the empirical foundations for such discus
 
 First, though, let us see what we can find out by looking at the overall distribution \is{distribution, conditional} of types, \is{type (category)} using the four\hyp{}million\hyp{}word BNC Baby. \is{BNC Baby} Once we remove all prefixes \is{affix} and standardize the spelling, there are 846 types for the two suffixes. \is{affix} There is a clear overall preference for \textit{-ic} (659 types) over \textit{-ical} (187 types) (incidentally, there are only 54 stems \is{stem} that occur with both suffixes). \is{affix} For stems with \textit{-(o)log-}, the picture is drastically different: \is{affix combinations} there is an overwhelming preference for \textit{-ical} (55 types) \is{type (category)} over \textit{-ic} (3 types). We can evaluate this difference statistically, as shown in Table \ref{tab:ologicalchi}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Preference of stems with \textit{-olog-} for \textit{-ic} and \textit{-ical}}
 \label{tab:ologicalchi}
 \begin{tabular}[t]{llccr}
@@ -8287,7 +8273,7 @@ But there is a methodological issue that we have to address before we can really
 
 \citet{lindsay_rival_2011} and \citet{lindsay_natural_2013} focus on precisely these stems, checking for each one whether it occurs more frequently with \textit{-ic} or with \textit{-ical} and calculating the preference ratio mentioned above. \is{affix combinations} They then compare the ratio of all stems \is{stem} to that of stems with \textit{-olog-} (see Table \ref{tab:icicallindsay}).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Stems favoring \textit{-ic} or \textit{-ical} in the COCA \citep[194]{lindsay_rival_2011}}
 \label{tab:icicallindsay}
 \begin{tabular}[t]{l S[table-format=2.2] c S[table-format=2.2] c}
@@ -8318,7 +8304,7 @@ The ratios themselves are difficult to compare statistically, but they are clear
 
 The BNC Baby \is{BNC Baby} does not contain enough derived stems that occur with both suffix \is{affix} variants, so let us focus on two specific suffixes \is{affix} and extract \is{retrieval} the relevant data from the full BNC. \is{BNC} Since \textit{-ist} is roughly equal to \textit{-olog-} in terms of type \is{type (category)} frequency, \is{frequency, type} let us choose this suffix \is{affix} for comparison. \is{affix combinations} Table \ref{tab:istological} shows the 34 stems \is{stem} containing either of these suffixes, \is{affix} their frequency of occurrence with the variants \textit{-ic} and \textit{-ical}, the preference ratio for \textit{-ic}, and the rank.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Preferences of stems containing \textit{-ist} and \textit{-olog-} for the suffix variants \textit{-ic} and \textit{-ical} (BNC)}
 \label{tab:istological}
 %\resizebox*{!}{\textheight}{%
@@ -8387,19 +8373,10 @@ The suffix \is{affix} has a relatively high token \is{token (instance)} frequenc
 To get a first impression, consider Figure \ref{fig:genreshipfullttrhtr}, which shows the growth of the TTR (left) and HTR \is{hapax-token ratio} (right) in the full \textvv{fiction} and \textvv{newspaper} \is{newspaper language} sections of the \is{BNC} BNC.
 
 \begin{figure}
-\caption{Nouns with the suffix \textit{-ship} in the \textvv{Genre} categories \textvv{fiction} and \textvv{newspapers} (BNC)}
-\label{fig:genreshipfullttrhtr}
-\begin{minipage}{.5\textwidth}
- \centering
- \includegraphics[width=\textwidth]{figures/genreshipfullttr}
-\end{minipage}
-%
-\begin{minipage}{.5\textwidth}
- \centering
- \includegraphics[width=\textwidth]{figures/genreshipfullhtr}
-\end{minipage}
+\caption{Nouns with the suffix \textit{-ship} in the \textvv{Genre} categories \textvv{fiction} and \textvv{newspapers} (BNC)\label{fig:genreshipfullttrhtr}}
+\includegraphics[width=.5\linewidth]{figures/genreshipfullttr}%
+\includegraphics[width=.5\linewidth]{figures/genreshipfullhtr}%
 \end{figure}
-% layout: these figures could/should be next to each other
 
 Both the TTR \is{type-token ratio} and the HTR \is{hapax-token ratio} suggest that the suffix \is{affix} is more productive \is{productivity} in fiction: \is{literary language} the ratios rise faster in \textvv{fiction} than in \textvv{newspapers} \is{newspaper language} and remain consistently higher as we go through the two sub\hyp{}corpora. It is only when the tokens have been exhausted in the fiction subcorpus but not in the newspaper subcorpus, that the ratios in the latter slowly catch up. This broadly supports our hypothesis, but let us look at the genre \is{genre} differences more closely both qualitatively \is{qualitative research} and \is{quantitative research} quantitatively.
 
@@ -8409,7 +8386,7 @@ Let us begin by looking at the types. \is{type (category)} Overall, there are 96
 
 The TTR \is{type-token ratio} of the suffix \is{affix} in newspaper language is $\nicefrac{60}{2862} = 0.021$, and the HTR \is{hapax-token ratio} is $\nicefrac{20}{2862} = 0.007$. In contrast, the TTR in fiction is $\nicefrac{84}{2862} = 0.0294$, and the HTR is $\nicefrac{29}{2862} = 0.0101$. Although the suffix, \is{affix} as expected, \is{frequency, expected} is generally not very productive, \is{productivity} it is more productive in fiction \is{literary language} than in newspapers. \is{newspaper language} As Table \ref{tab:shipwords} shows, this difference is statistically significant in the sample ($\chi^2$ = 4.1, df = 1, p < 0.005). This corroborates our hypothesis, but note that it does not tell us whether the higher productivity \is{productivity} of \textit{-ship} is something unique about this particular morpheme, \is{morphology} or whether fiction \is{literary language} generally has more derived words due to a higher overall lexical richness. To determine this, we would have to look at more than one \is{affix} affix.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Types with \textit{-ship} in prose fiction and newspapers}
 \label{tab:shipwords}
 \begin{tabular}[t]{llccr}
@@ -8438,7 +8415,7 @@ The TTR \is{type-token ratio} of the suffix \is{affix} in newspaper language is 
 
 Let us now turn to the hapax \is{hapax legomenon} legomena. These are so rare in both genres \is{genre} that the difference in TTR \is{type-token ratio} is not statistically significant, as Table \ref{tab:shiphapaxes} shows ($\chi^2$ = 1.67, df = 1, p = 0.1966). \is{chi-square test} We would need a larger \is{corpus size} corpus to see whether the difference would at some point become significant.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Hapaxes with \textit{-ship} in prose fiction and newspapers}
 \label{tab:shiphapaxes}
 \begin{tabular}[t]{llccr}
@@ -8482,7 +8459,7 @@ The BNC \is{BNC} contains substantially more speech and writing \is{medium} by m
 
 Based on these subsamples, the type\hyp{}token \is{type-token ratio} ratios for \textit{-ity} are 0.0652 for men and 0.0777 for women; as Table \ref{tab:itysex} shows, this difference is not statistically significant ($\chi^2$ = 3.01, df = 1, p < 0.05, $\phi$ = \is{chi-square test} 0.0242).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Types with \textit{-ity} in male and female speech (BNC)}
 \label{tab:itysex}
 \begin{tabular}[t]{llccr}
@@ -8510,7 +8487,7 @@ Based on these subsamples, the type\hyp{}token \is{type-token ratio} ratios for 
 
 The type\hyp{}token \is{type-token ratio} ratios for \textit{-ness} are much higher, namely 0.1981 for women and 0.2597 for men. As Table \ref{tab:nesssex} shows, the difference is statistically significant, although the effect size \is{effect size} is weak ($\chi^2$ = 5.37, df = 1, p < 0.05, $\phi$ = 0.066).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Types with \textit{-ness} in male and female speech (BNC)}
 \label{tab:nesssex}
 \begin{tabular}[t]{llccr}
@@ -8541,7 +8518,7 @@ Note that S\"{a}ily investigates spoken \is{medium} and written language separat
 
 Let us turn to the HTR \is{hapax-token ratio} next. As before, we are defining what counts as a hapax \is{hapax legomenon} legomenon not with reference to the individual subsamples of male and female speech, but with respect to the combined sample. Table \ref{tab:ityhapaxsexlist} shows the hapaxes for \textit{-ity} in the male and female samples. The HTRs are very low, suggesting that \textit{-ity} is not a very productive \is{productivity} suffix: \is{affix} 0.0099 in female speech and 0.016 in male speech.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Hapaxes with \textit{-ity} in sampes of male and female speech (BNC)}
 \label{tab:ityhapaxsexlist}
 \resizebox{0.9\textwidth}{!}{%
@@ -8566,7 +8543,7 @@ Let us turn to the HTR \is{hapax-token ratio} next. As before, we are defining w
 
 Although the difference in HTR \is{hapax-token ratio} is relatively small, Table \ref{tab:ityhapaxfrequencies} shows that it is statistically significant, albeit again with a very weak effect size \is{effect size} ($\chi^2$ = 3.93, df = 1, p < 0.05, $\phi$ = 0.0277).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Hapax legomena with \textit{-ity} in male and female speech (BNC)}
 \label{tab:ityhapaxfrequencies}
 \begin{tabular}[t]{llccr}
@@ -8595,7 +8572,7 @@ Although the difference in HTR \is{hapax-token ratio} is relatively small, Table
 
 Table \ref{tab:nesssexlist} shows the hapaxes for \textit{-ness} in the male and female samples. The HTRs \is{hapax-token ratio} are low, but much higher than for \textit{-ity}, 0.0795 for women and 0.1023 for men.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Hapaxes with \textit{-ness} in samples of male and female speech (BNC)}
 \label{tab:nesssexlist}
 \resizebox*{0.9\textwidth}{!}{%
@@ -8620,7 +8597,7 @@ Table \ref{tab:nesssexlist} shows the hapaxes for \textit{-ness} in the male and
 
 As Table \ref{tab:nesssexfrequencies} shows, the difference in HTRs \is{hapax-token ratio} is not statistically significant, and the effect size \is{effect size} would be very weak anyway ($\chi^2$ = 1.93, df = 1, p > 0.05, $\phi$ = 0.0395).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Hapax legomena with \textit{-ness} in male and female speech (BNC)}
 \label{tab:nesssexfrequencies}
 \begin{tabular}[t]{llccr}
@@ -8665,7 +8642,7 @@ In the investigation of relationships between words (or other units of language 
 
 In other words, the corpus\hyp{}linguistic identification of keywords \is{keyword analysis} is analogous to the identification of differential collocates, \is{collocation} except that it analyses the association \is{association} of a word W to a particular text (or collection of texts) T in comparison to the language as a whole (as represented by the reference corpus, which is typically a large, \is{corpus size} balanced corpus). Table \ref{tab:keywordanalysis} shows this schematically.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{A generic 2\hyp{}by\hyp{}2 table for keyword analysis}
 \label{tab:keywordanalysis}
 \begin{tabular}[t]{llccc}
@@ -8697,7 +8674,7 @@ If keyword \is{keyword analysis} analysis is applied to a single text, the aim i
 
 As a first example of the kind of results that keyword \is{keyword analysis} analysis yields, consider Table \ref{tab:threetextsfreq}, which shows the 20 most frequent tokens \is{token (instance)} (including punctuation marks) in the LOB \is{LOB} corpus and two individual texts (all words were converted to lower case).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Most frequent words in three texts (relative frequencies)}
 \label{tab:threetextsfreq}
 \resizebox{.7\textwidth}{!}{%
@@ -8734,7 +8711,7 @@ As we can see, the differences are relatively small, as all lists are dominated 
 
 Applying keyword \is{keyword analysis} analysis to each text or collection of texts allows us to identify the words that differ most significantly in frequency from the reference corpus, telling us how the text in question differs lexically from the (written) \is{medium} language of its time as a whole. Table \ref{tab:fishreportkey} lists the keywords \is{keyword analysis} for Text A.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Keywords in a report on fish populations}
 \label{tab:fishreportkey}
 \resizebox{\textwidth}{!}{%
@@ -8773,7 +8750,7 @@ The text is clearly about fish in the two rivers. The occurrence of the words \t
 
 Next, consider Table \ref{tab:scifikey}, which lists the keywords \is{keyword analysis} for Text B. Three things are noticeable: the keyness \is{keyness} of a number of words that are most likely proper names (\textit{Hume}, \textit{Vye}, \textit{Rynch}, \textit{Wass}, \textit{Brodie} and \textit{Jumala}), pronouns \is{pronoun} (\textit{he}, \textit{his}) and punctuation marks indicative of direct speech (the quotation marks and the exclamation mark).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Keywords in a science fiction novel}
 \label{tab:scifikey}
 \resizebox{\textwidth}{!}{%
@@ -8823,7 +8800,7 @@ Keyword \is{keyword analysis} analysis has been applied to a wide range of langu
 
 There are a number of keyword\hyp{}based \is{keyword analysis} analyses of academic \is{academic language} writing (cf., for example, \citealt{scott_textual_2006} on literary \is{literary language} criticism, \citealt{romer_applying_2010} on academic student essays). Instead of replicating \is{replicability} one of these studies in detail, let us look more generally at the Learned \is{academic language} and Scientific Writing section of the LOB \is{LOB} (Section J), using the rest of the corpus (all sections except Section J) as a reference corpus. Table \ref{tab:learnedlobbkey} shows the keywords \is{keyword analysis} for this section.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Key words in the Learned and Scientific Writing section of LOB}
 \label{tab:learnedlobbkey}
 \resizebox{\textwidth}{!}{%
@@ -8867,7 +8844,7 @@ Of course, keyword \is{keyword analysis} analysis is not the only way to study l
 
 For example, \citet{marco_collocational_2000} investigates collocational \is{collocation} frameworks \is{collocational framework} (see Chapter \ref{ch:grammar}, Section \ref{sec:collocationalframeworksandgrammarpatterns}) in medical research papers. While this may not sound particularly interesting at first glance, it turns out that even highly frequent frameworks like [\textit{a \_\_ of}] are filled by completely different items from those found in the language as a whole, which is important for many applied purposes (such as language teaching or machine processing of language), but which also shows just how different language varieties \is{language variety} can actually be. Since Marco's corpus is not publicly available and the Learned \is{academic language} and Scientific Writing section of LOB \is{LOB} is too small for this kind of analysis, let us use the Written Academic subsection of the BNC Baby. \is{BNC Baby} Table \ref{tab:anoflearnedfreq} shows the 15 most strongly associated \is{association} collocates \is{collocation} in the framework \is{collocational framework} [\textit{a \_\_ of}], i.e. the words whose frequency \is{frequency} of occurrence inside this framework differs most significantly from their frequency of occurrence outside of this framework in the same corpus section.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Collocates of the framework [\textit{a} \_\_ \textit{of}] in the Written Academic subsection of BNC Baby}
 \label{tab:anoflearnedfreq}
 \resizebox{\textwidth}{!}{%
@@ -8907,7 +8884,7 @@ However, the two lists -- that in Table \ref{tab:axofcollframe} and that present
 
 Table \ref{tab:anoflearnedkey} shows the result of such an analysis in the BNC Baby, \is{BNC Baby} comparing words occurring in the framework \is{collocational framework} [\textit{a(n)} \_ \textit{of}] in the Written Academic \is{academic language} section to the words occurring in the same pattern in the rest of the corpus (all sections other than Written Academic).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Textually differential collexemes in the framework $[$\textit{a} + \_ + \textit{of}$]$ in the Written Academic section of BNC Baby compared to all other sections}
 \label{tab:anoflearnedkey}
 \resizebox{\textwidth}{!}{%
@@ -8962,7 +8939,7 @@ Comparing two (large) \is{corpus size} corpora representing two varieties \is{la
 
 Table \ref{tab:breamekeyone} shows the ten most strongly differential keywords \is{keyword analysis} for the LOB \is{LOB} and BROWN \is{BROWN} corpora. The analysis is based on the tagged versions of the two corpora as originally distributed by ICAME.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Key words of British and American English based on a comparison of LOB and BROWN}
 \label{tab:breamekeyone}
 \resizebox*{!}{\textheight}{%
@@ -9024,7 +9001,7 @@ For someone hoping to uncover dialectal differences between British \is{British 
 
 In other words, the two corpora have to be made comparable before they can be compared. Table \ref{tab:breamekeytwo} shows the 10 most strongly differential keywords \is{keyword analysis} for the LOB \is{LOB} and BROWN \is{BROWN} corpora respectively, after all words in both corpora have been put into lowercase, all clitics \is{clitic} in BROWN \is{BROWN} have been separated from their stems, \is{statistics} and all tokens \is{token (instance)} consisting exclusively of punctuation marks have been removed, as have periods at the end of abbreviations like \textit{mr.} and \textit{st}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Key words of British and American English based on a comparison of LOB and BROWN}
 \label{tab:breamekeytwo}
 \resizebox*{!}{\textheight}{%
@@ -9177,7 +9154,7 @@ The model seems somewhat stereotypical, to say the least, but a judgment of its 
 
 This procedure yields seemingly convincing word lists like that in Table \ref{tab:cameroonkey}, which the authors claim shows ``the salience of authority and respect and the figures that can be associated \is{association} with them'' \citet[420]{wolf_fixed_2007}.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Keywords relating to authority and respect in a corpus of Cameroon English (from \citealt[421]{wolf_fixed_2007}).}
 \label{tab:cameroonkey}
 \begin{tabular}[t]{l *{2}{S[table-format=4]} S S[table-format=1.4]}
@@ -9207,7 +9184,7 @@ However, it is very difficult to tell whether this is a real result or whether i
 
 With respect to the latter, note that it is also questionable whether one can simply combine a British and an American \is{American English} corpus to represent ``Western'' culture. \is{culture} First, it assumes that the two cultures individually belong to such a larger culture and can jointly represent it. Second, it assumes that these two cultures do not accord any specific importance to whatever domain we are looking at. However, especially if we choose our keywords \is{keyword analysis} selectively, we could easily show that \textit{Authority} has a central place in British \is{British English} or American \is{American English} culture. \is{culture} Table \ref{tab:breameauthority} lists ten significantly associated \is{association} keywords from each corpus, resulting from the direct comparison discussed in \ref{sec:comparingspeechcommunities}. By presenting just one or the other list, we could make any argument about Britain, the USA and authority that suits our purposes.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Key words from the domain \textvv{Authority} in British and American English}
 \label{tab:breameauthority}
 \resizebox{\textwidth}{!}{%
@@ -9262,7 +9239,7 @@ The semantic \is{semantics} domain \textvv{personal reference} is slightly more 
 
 Table \ref{tab:personalsexkey} shows the distribution \is{distribution, conditional} of these nouns \is{noun} across the parts of the BNC \is{BNC} annotated \is{annotation} for speaker sex, \is{sex differences} both written \is{medium} and spoken (I have added the missing plurals \textit{boys} and \textit{girls} and the words \textit{child} and \textit{children}).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Differential collocates for men and women in the domain \textvv{personal reference}}
 \label{tab:personalsexkey}
 \resizebox{\textwidth}{!}{%
@@ -9302,7 +9279,7 @@ Table \ref{tab:personalsexkey} shows the distribution \is{distribution, conditio
 
 Within the limitations just mentioned, it seems that a good case can be made that women's speech is characterized by a higher proportion of personal reference terms (at least if the corpus is well constructed, a point I will return to in the next subsection). \is{sex differences} The words selected to represent this domain form a well\hyp{}delineated set -- stylistically \is{style} neutral English nouns \is{noun} referring to people with no additional semantic \is{semantics} content other than sex (the pronouns \is{pronoun} are even a closed set). The only potential caveat is just that the words are stylistically neutral and that the results may thus reflect a tendency of women to use a more standard variety \is{language variety} of the language. Thus, we might want to look at synonyms \is{synonymy} for \textit{man}, \textit{woman}, \textit{boy}, \textit{girl} and \textit{child}. Table \ref{tab:personalsexkeyinformal} shows the results.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{More differential collocates for men and women in the domain \textvv{personal reference}}
 \label{tab:personalsexkeyinformal}
 \resizebox*{!}{\textheight}{%
@@ -9369,7 +9346,7 @@ We see the same general difference as before, so the result is not due to differ
 
 Many other fields that Schmid investigates make it much more difficult to come up with a plausibly representative \is{representativeness} sample of words. For example, for the domain \textvv{health and body}, Schmid looks at \textit{breast}, \textit{hair}, \textit{headache}, \textit{legs}, \textit{sore throat}, \textit{doctor}, \textit{sick}, \textit{ill}, \textit{leg}, \textit{eyes}, \textit{finger}, \textit{fingers}, \textit{eye}, \textit{body}, \textit{hands}, and \textit{hand} and finds that with the exception of \textit{hand} they are all more frequently used by women. \is{sex differences} The selection seems small and rather eclectic, however, so let us enlarge the set with the words \textit{ache}, \textit{aching}, \textit{flu}, \textit{health}, \textit{healthy}, \textit{influenza}, \textit{medicine}, \textit{nurse}, \textit{pain} and \textit{unwell} from the domain \textvv{health} and \textit{arms}, \textit{ear}, \textit{ears}, \textit{feet}, \textit{foot}, \textit{kidneys}, \textit{liver}, \textit{mouth}, \textit{muscles}, \textit{nose}, \textit{penis}, \textit{stomach}, \textit{teeth}, \textit{thumb}, \textit{thumbs}, \textit{tooth}, \textit{vagina} and \textit{vulva} from the domain \textvv{body}. Table \ref{tab:bodysexkey} shows the results.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Differential collocates for men and women in the domain \textvv{body and health}}
 \label{tab:bodysexkey}
 \resizebox*{!}{\textheight}{%
@@ -9445,7 +9422,7 @@ The larger sample supports Schmid's initial conclusion, but even the larger samp
 
 An inductive \is{induction} design \is{research design} will give us a more complete and less biased picture, but also one that is much less focused. For example, \citet{rayson_social_1997}, whose study inspired the one by Schmid discussed in the preceding section, apply inductive \is{induction} keyword \is{keyword analysis} analysis to the utterances with \textsc{female} vs. \textsc{male} speaker information in the spoken\hyp{}conversation \is{conversation}\is{medium} subcorpus of the BNC \is{BNC} (like Schmid, they simply follow the corpus creators' implicit definition of \textsc{Sex}). Table \ref{tab:bncconvsexkey} shows the 15 most significant keywords \is{keyword analysis} im women's speech and men's speech \is{sex differences} (the results differ minimally from those in \citet[136--137]{rayson_social_1997}, since they use the $\chi^2$ \is{chi-square test} statistic while we will use the \emph{G} statistic again.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Keywords im women's speech and men's speech in the BNC conversation subcorpus}
 \label{tab:bncconvsexkey}
 \resizebox*{!}{\textheight}{%
@@ -9522,7 +9499,7 @@ As an example, consider \citet{rayson_key_2008}, who compares the election manif
 
 Table \ref{tab:lablibkey} shows the result of this direct comparison, derived from an analysis of the two party manifestos, which can be found online and which were converted into corpora with comparable tokenization \is{tokenization} for this case study (the tokenized versions are available in the Supplementary Online Material, file TXQP). The results differ from Rayson's in a few details, due to slightly different decisions about tokenization, \is{tokenization} but they are identical with respect to all major observations.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Differential collocates for the Labour and Liberal Democrat manifestos (2001)}
 \label{tab:lablibkey}
 \resizebox{\textwidth}{!}{%
@@ -9579,7 +9556,7 @@ In order to test this hypothesis, we would have to look at a Labour election man
 
 Table \ref{tab:lablib2017key} shows the results of a comparison between the 2017 Labour and Liberal Democrat manifestos and Table \ref{tab:lab20102017key} shows the results of the comparison between the 2001 and 2017 Labour manifestos. In both cases, only the keywords \is{keyword analysis} for the Labour 2017 manifesto are shown, since these are what our hypothesis relates to.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Differential collocates for the 2017 Labour manifesto (comparison to Liberal Democrats)}
 \label{tab:lablib2017key}
 \resizebox{\textwidth}{!}{%
@@ -9608,7 +9585,7 @@ Table \ref{tab:lablib2017key} shows the results of a comparison between the 2017
 \end{table}
 % me: case insensitive, all tokens
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Differential collocates for the 2017 Labour manifesto (comparison to 2001)}
 \label{tab:lab20102017key}
 \resizebox{\textwidth}{!}{%
@@ -9652,7 +9629,7 @@ In perhaps the first study attempting this, \citet{kjellmer_lesser_1986} uses th
 
 First, Kjellmer notes that overall, men are referred to much more frequently than women: There are \num{18116} male pronouns in the LOB \is{LOB} corpus compared to only \num{8366} female ones (Kjellmer's figures differ very slightly from the ones given here and below, perhaps because he used an earlier version of the corpus). This difference between male and female pronouns \is{pronoun} is significant: using the single\hyp{}variable version of the $\chi^2$ \is{chi-square test} test introduced in Chapter \ref{ch:significancetesting}, and assuming that the population in 1961 consisted of 50 percent men and 50 percent women, \is{gender stereotypes} we get the expected \is{frequency, expected} frequencies shown in Table \ref{tab:sexpronlob} ($\chi^2$ = 3589.70, (df = 1), p < 0.001).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Observed and expected frequencies of male and female pronouns in the LOB corpus (based on the assumption of equal proportions)}
 \label{tab:sexpronlob}
 \begin{tabular}[t]{llccr}
@@ -9681,7 +9658,7 @@ In other words, women are drastically underrepresented among the people mentione
 
 Kjellmer's main question is whether, given this overall imbalance, there are differences in the individual text categories, and as Table \ref{tab:sexpronlobgenre} shows, this is indeed the case.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Male and female pronouns in the different text categories of the LOB corpus}
 \label{tab:sexpronlobgenre}
 \resizebox*{!}{\textheight}{%
@@ -9777,7 +9754,7 @@ Let us first compare the newly emerged \textit{going\hyp{}to} \is{going to (futu
 
 Table \ref{tab:goingwillperiod} shows the top ten differential collexemes \is{collostructional analysis}\is{collexeme, differential} for the \textit{going\hyp{}to} \is{going to (future)} future (some collexemes were removed since they were clearly mistagged nouns, \is{noun} namely \textit{bed} (5:0, \emph{G} = 34.38) in Period 1, \textit{bed} (12:0, \emph{G} = 80.00), \textit{sleep} (11:11, \emph{G} = 43.62), \textit{work} (10:32, \emph{G} = 22.86) and \textit{supper} (4:0, \emph{G} = 27.5) in Period 2, and \textit{sleep} (27:9, \emph{G} = 100.52) and \textit{bed} (15:0, \emph{G} = 77.31) in Period 3 (the raw data for the studies in this section are available in the Supplementary Online Material: Q8DT).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Differential collexemes of the \textit{going\hyp{}to} future compared to the \textit{will}-future in three time periods of English}
 \label{tab:goingwillperiod}
 \resizebox{\textwidth}{!}{%
@@ -9834,7 +9811,7 @@ Let us now turn to the direct comparison of diachronic \is{diachrony} periods pr
 
 Table \ref{tab:goingperiodonetwo} shows the result of the comparison of the first two periods. The top 15 texually differential collexemes \is{collostructional analysis}\is{collexeme, differential} are shown for both periods, because in both cases there are significant collexemes that share the same rank so that there is no natural cutoff point before rank 15 (again, two words were removed because they were mistagged nouns, \is{noun} namely \textit{ruin} (6:1, \emph{G} = 4.55) and \textit{decay} (3:0, \emph{G} = 4.5), both from Period 1).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Textually differential collexemes of the \textit{going\hyp{}to} future in 1710-1780 vs. 1780-1850}
 \label{tab:goingperiodonetwo}
 \resizebox{\textwidth}{!}{%
@@ -9886,7 +9863,7 @@ The results are less clear than for the individual differential collexeme \is{co
 
 Table \ref{tab:goingperiodtwothree} shows the results for a direct comparison of the second against the third period.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Textually differential collexemes of the \textit{going\hyp{}to} future in 1780-1850 vs. 1850-1920}
 \label{tab:goingperiodtwothree}
 \resizebox{\textwidth}{!}{%
@@ -9940,19 +9917,10 @@ The use of the Google Books archive may be criticized because it is not a balanc
 As a simple example, consider the search for the word \textit{God} in the English part of the Google Books archive, covering the 19th and 20th centuries. I used the 2012 version of the corpus, so the result differs very slightly from theirs. I also repeated the analysis using the Corpus of Historical American English (COHA), \is{COHA} which spans more or less the same period.
 
 \begin{figure}
-\caption{\textit{God} in English Books and in COHA}
-\label{fig:demiseofgod}
-\begin{minipage}{.5\textwidth}
- \centering
- \includegraphics[width=\textwidth]{figures/demiseofgodgoogle}
-\end{minipage}
-%
-\begin{minipage}{.5\textwidth}
- \centering
- \includegraphics[width=\textwidth]{figures/demiseofgodcoha}
-\end{minipage}
+\caption{\textit{God} in English Books and in COHA\label{fig:demiseofgod}}
+\includegraphics[width=.5\linewidth]{figures/demiseofgodgoogle}%
+\includegraphics[width=.5\linewidth]{figures/demiseofgodcoha}%
 \end{figure}
-%layout: why do these not render next to each other?
 
 Clearly, the word \textit{God} has decreased in frequency \is{frequency} -- dramatically so in the Google Books archive, slightly less dramatically so in COHA. \is{COHA} The question is what conclusions to draw from this. The authors present it as an example of the ``history of religion'', concluding from their result somewhat flippantly that ```God' is not dead but needs a new publicist''. This flippancy, incidentally, signals an unwillingness to engage with their own results in any depth that is not entirely untypical of researchers in \is{culturomics} ``culturomics''.
 
@@ -9960,7 +9928,7 @@ Broadly speaking the result certainly suggests a waning dominance of religion on
 
 While it is not implausible to analyze culture \is{culture} in general on the basis of a literary \is{literary language} corpus, any analysis that involves the area of publishing itself will be particularly convincing. One such example is the use of frequencies \is{frequency} to identify periods of censorship in \citet{michel_quantitative_2011}. For example, they search for the name of the Jewish artist \textit{Marc Chagall} in the German and the US\hyp{}English corpora. As Figure \ref{fig:marcchagall} shows, there is a first peak in the German corpus around 1920, but during the time of the Nazi government, the name drops to almost zero while it continues to rise in the US\hyp{}English corpus.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{The name \textit{Marc Chagall} in the US\hyp{}English and the German parts of the Google Books corpus}
 \label{fig:marcchagall}
 \includegraphics[width=.8\textwidth,keepaspectratio]{figures/chagallcensored}
@@ -9970,7 +9938,7 @@ The authors plausibly take this drastic drop in frequency \is{frequency} as evid
 
 Consider the following figure, which shows the development of the frequency \is{frequency} of the name \textit{Karl Marx} in the German and English Google Books archive (extracted from the bigram \is{bigram} files downloaded from the Google Books site, see Supplementary Online Material, file CUBF). Note the different frequency scales -- the name is generally much more frequent in German than in English, but what interests us are changes in frequency.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{The name \textit{Karl Marx} in the English and the German parts of the Google Books corpus}
 \label{fig:karlmarx}
 \includegraphics[width=.8\textwidth,keepaspectratio]{figures/karlmarx}
@@ -10301,7 +10269,7 @@ A cursory look at a few relatively randomly \is{chance} selected examples appear
 
 Deignan studies this potential difference systematically based on a sample of more than 1500 hits for \textit{flame/s} in the Bank of English (a proprietary, non\hyp{}accessible corpus owned by HarperCollins), from which she manually \is{manual analysis} extracts \is{retrieval} all 153 metaphorical uses. These are then categorized \is{categorization} according to their connotation. \is{connotation} Deignan's design \is{research design} thus has two nominal \is{nominal data} variables: \textsc{Word Form of Flame} (with the variables \textsc{singular} and \textsc{plural}) \is{number} and \textsc{Connotation of Metaphor} \is{figurative language}\is{metaphor} (with the values \textsc{positive} and \textsc{negative}. She does not provide an annotation \is{annotation} scheme for categorizing \is{categorization} the metaphorical expressions, but she provides a set of examples that are intuitively quite plausible. Table \ref{tab:flamemetposneg} shows her results ($\chi^2$ = 53.98, df = 1, p < \is{chi-square test} 0.001).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Positive and negative metaphors with singular and plural forms of \textit{flame} \citep[117]{stefanowitsch_grammar_2006}}
 \label{tab:flamemetposneg}
 \begin{tabular}[t]{llccr}
@@ -10332,7 +10300,7 @@ Clearly, metaphorical \is{figurative language}\is{metaphor} singular \textit{fla
 
 This explanation itself is of course a hypothesis about the literal \is{literalness} use of singular \is{number} and plural \textit{flame} that must be tested separately. Deignan does not provide such a test, so let us do it here. Let us select a sample of 20 hits each for literal uses the singular and plural of \textit{flame(s)} from the BNC \is{BNC} (as mentioned above, Deignan's corpus is not accessible, so we must hope that the BNC is roughly comparable). Figure \ref{fig:flameconc} shows the sample for singular \is{number} (lines 1--20) and plural (21--40).
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Concordance of \textit{flame(s)} (BNC, Sample)}
 \label{fig:flameconc}
 \hrulefill
@@ -10384,7 +10352,7 @@ This explanation itself is of course a hypothesis about the literal \is{literaln
 
 It is difficult to determine which hits should be categorized \is{categorization} as positive and which as negative. Let us assume that any unwanted and\slash or destructive fire should be characterized as negative, and, on this basis, categorize lines 1, 3, 4, 5, 11, 14, 17, 18, 21, 22, 23, 24, 25, 30, 31, 33, 34, 35, 36, 37, 38 and 40 as \textvv{negative} and the rest as \textvv{positive}. This would give us the result in Table \ref{tab:flamelitposneg} (if you disagree with the categorization, \is{categorization} come up with your own and do the corresponding calculations).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Positive and negative contexts for literal uses of singular and plural forms of \textit{flame/s}}
 \label{tab:flamelitposneg}
 \begin{tabular}[t]{llccr}
@@ -10441,7 +10409,7 @@ Concepts representing entities that have a simple shape and\slash or have a clea
 
 For each pair of expressions, the differential collexemes \is{collostructional analysis}\is{collexeme, differential} are identified and the resulting lists are compared against these axiomatic assumptions. Let us illustrate this using the pattern \textit{the dawn\slash beginning of NP}. A case insensitive query for the string \texttt{dawn} or \texttt{beginning}, followed by \textit{of}, followed by up to three words that are not a noun, \is{noun} followed by a noun yields the results shown in Table \ref{tab:dawnofdifferential} (they are very similar to those based on a more careful manual extraction \is{retrieval} in \citealt{stefanowitsch_function_2005}).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Differential collexemes of \textit{beginning of NP} and \textit{dawn of NP} (BNC)}
 \label{tab:dawnofdifferential}
 \resizebox{\textwidth}{!}{%
@@ -10486,7 +10454,7 @@ Since search engine frequency data are notoriously unreliable, let us replicate 
 
 Table \ref{tab:dawnofcentury} shows the percentage of \textit{dawn of} for the past ten centuries (spelling) variants of the respective centuries, such as \textit{19th century}, \textit{nineteenth century}, etc.) as well as spelling errors were normalized to the spelling shown in this table.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Differential collexemes of \textit{dawn\slash beginning of \_\_ century} (COCA)}
 \label{tab:dawnofcentury}
 \resizebox{\textwidth}{!}{%
@@ -10521,7 +10489,7 @@ There are clear differences between the centuries associated with \textvv{dawn} 
 
 If this is true, then we should be able to observe the same effect in the past: When the twentieth century was still the future, it, too, should have been associated \is{association} with the metaphorical \is{figurative language}\is{metaphor} \textit{dawn of}. Let us test this hypothesis using the Corpus of Historical American English, which includes language from the early nineteenth to the very early twenty\hyp{}first century -- in a large part of the corpus, the twentieth century was thus entirely or partly in the future. Table \ref{tab:dawnofdifferentialcoha} shows the differential collexemes \is{collostructional analysis}\is{collexeme, differential} of the two expressions in this corpus.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Differential collexemes of \textit{dawn\slash beginning of \_\_ century} (COHA)}
 \label{tab:dawnofdifferentialcoha}
 \resizebox{\textwidth}{!}{%
@@ -10548,7 +10516,7 @@ As predicted, the twentieth century is now associated \is{association} with the 
 
 Even if we agree with this conclusion in general, however, it does not preclude a more literary, \is{literary language} rhetorical function for metaphor in addition: while some of the expression pairs investigated in \citet{stefanowitsch_function_2005} are fairly neutral with respect to genre \is{genre} or register, \is{register} metaphorical \is{figurative language}\is{metaphor} \textit{dawn of} intuitively has a distinctly literary flavor. To conclude this section, let us check the distribution \is{distribution, conditional} of the hits for the query outlined above across the text categories defined in the BNC. \is{BNC} Table \ref{tab:dawnbeginninggenre} shows the results (note that the categories Spoken Conversation \is{conversation} and Spoken Other from the BNC have been collapsed into a single category here).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{The expressions \textit{dawn of} and \textit{beginning of} by text category (BNC)}
 \label{tab:dawnbeginninggenre}
 \resizebox{0.6\textwidth}{!}{%
@@ -10621,7 +10589,7 @@ A metaphorical \is{figurative language}\is{metaphor} pattern analysis \is{metaph
 
 Let us attempt to do this, focusing on the two metaphors \is{figurative language}\is{metaphor} just mentioned but discussing others in passing. In order to introduce the method of metaphorical pattern analysis, \is{metaphorical pattern analysis} let us limit the study to small samples of language, which will allow us to study the relevant concordances \is{concordance} in detail. This will make it less probable that we will find statistically significant differences, so let us treat the following as an exploratory pilot study. Given how frequently we have compared British \is{British English} and American \is{American English} English in this book, these two varieties \is{language variety} may seem an obvious place to start, but the two cultures \is{culture} may be too similar, and the word \textit{happiness} \is{emotions} happens to be too infrequent in the BROWN \is{BROWN} corpus anyway. Let us compare British English (the LOB \is{LOB} corpus) and Indian \is{Indian English} English (the Kolhapur \is{KOLHAPUR} corpus constructed along the same categories) instead. Figure \ref{fig:happinesslobconc} shows all hits of the query $\langle$ \texttt{[word="happiness"\%c]} $\rangle$.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Concordance of \textit{happiness} (LOB)}
 \label{fig:happinesslobconc}
 \hrulefill
@@ -10691,7 +10659,7 @@ Additional clear cases of metaphorical \is{figurative language}\is{metaphor} pat
 
 For now, let us turn to Indian \is{Indian English} English. Table \ref{fig:happinesskolhapur} \is{emotions} shows the hits for the query $\langle$ \texttt{[word="happiness"\%c]} $\rangle$ in the Kolhapur \is{KOLHAPUR} corpus. Here, 35 hits for the phrase \textit{harmonious happiness} have been removed, because they all came from one text extolling the virtues of the \textit{principle of harmonious happiness} (17 hits), \textit{(moral) standard of harmonious happiness} (15 hits), \textit{(moral) good of harmonious happiness)} (2 hits) or \textit{nor of harmonious happiness} \is{emotions} (1 hit). This text is obviously very much an outlier, as it contains almost as many hits as the entire rest of the corpus combined, and as the hits are extremely restricted in their linguistic behavior. To discard them might not seem ideal, but to include them would be even less so.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Concordance of \textit{happiness} (Kolhapur)}
 \label{fig:happinesskolhapur}
 \hrulefill
@@ -10747,7 +10715,7 @@ Again, there are other clear cases of metaphor, \is{figurative language}\is{meta
 
 Comparing the metaphors \is{figurative language}\is{metaphor} we set out to investigate, we see that the \textvv{pursuit} and \textvv{search} metaphors are fairly evenly distributed \is{distribution, conditional} across the two varieties, \is{language variety} with no significant difference even on the horizon. The \textvv{transfer} metaphor, in contrast, shows clear differences, and as Table \ref{tab:transferlobkolhapur} shows, this difference is almost significant even in our small sample ($\chi^2$ = 3.17, df = 1, p = 0.075). This would be an interesting difference to look at in a larger study, especially since the two varieties \is{language variety} differ not only in the token \is{token (instance)} frequency \is{frequency, token} of this metaphor, \is{figurative language}\is{metaphor} but also in the type \is{type (category)} frequency \is{frequency, type} -- the LOB \is{LOB} corpus contains only two different patterns instantiating this metaphor, the Kolhapur \is{KOLHAPUR} corpus contains four.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{\textvv{causing happiness is a transfer} in two corpora (LOB, Kolhapur)}
 \label{tab:transferlobkolhapur}
 \begin{tabular}[t]{llccr}
@@ -10850,7 +10818,7 @@ We are now searching for combinations of a target\hyp{}domain item with specific
 
 Let us apply both sets of queries to the basic emotion \is{emotions} nouns \is{noun} \textit{anger}, \textit{desire}, \textit{disgust}, \textit{fear}, \textit{happiness}, \textit{pride}, \textit{sadness}, \textit{shame}. Table \ref{tab:fillemotions} shows the tabulated results for the queries in (\ref{ex:emotionliquidquery}) compared against the overall frequency \is{frequency} of the respective nouns in the \is{BNC} BNC.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{The metaphor \textvv{emotions are a substance filling the experiencer} (BNC)}
 \label{tab:fillemotions}
 \resizebox{0.8\textwidth}{!}{%
@@ -10912,7 +10880,7 @@ There are two emotion \is{emotions} nouns \is{noun} whose frequency \is{frequenc
 
 Table \ref{tab:burstemotions} shows the tabulated results for the queries in (\ref{ex:emotionburstingquery}) compared against the overall frequency of the respective nouns \is{noun} in the \is{BNC} BNC.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{The metaphor \textvv{emotions are a substance bursting the experiencer} (BNC)}
 \label{tab:burstemotions}
 %\resizebox*{!}{\textheight}{%
@@ -10987,7 +10955,7 @@ If we are interested in questions relating to a particular source domain, as in 
 
 To demonstrate this method, let us define a subcorpus for the domain \textvv{economy} in the BNC Baby. \is{BNC Baby} This is easiest done by using the meta\hyp{}information supplied by the corpus makers, which includes the category ``commerce'' as a subcategory of ``newspaper'' \is{newspaper language} (cf. Table \ref{tab:bncbabycomposition} in Chapter \ref{ch:corpuslinguistics}). Let us determine the keywords \is{keyword analysis} in this subcorpus compared to the rest of the \textvv{newspaper} subcorpus (excluding the \textvv{spoken}, \is{medium} \textvv{fiction} \is{literary language} and \textvv{academic} \is{academic language} subcorpora, in order to reduce the number of keywords that are typical for newspaper language in general). Table \ref{tab:econkey} shows selected results of a keyword \is{keyword analysis} analysis of these files.
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Selected keywords from the newspaper subcategory \textvv{commerce} (BNC Baby)}
 \label{tab:econkey}
 \resizebox{.9\textwidth}{!}{%
@@ -11050,7 +11018,7 @@ As expected, most of the strongest keywords \is{keyword analysis} for the subcor
 
 This suggests that ``vertical motion'' is a central source domain in the domain of economics, which we can now study by querying the respective keywords \is{keyword analysis} as well as other words from this domain (which we could get from a thesaurus). As an example, consider the concordance \is{concordance} of the lemma \is{lemma} \textit{rise} in Figure \ref{fig:riseconc} (a random sample of 20 hits from the 221 hits in the \textvv{commerce} section in the BNC \is{BNC Baby} Baby).
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{A concordance of the wordform \textit{rise} in \textvv{commerce} texts (BNC Baby, sample)}
 \label{fig:riseconc}
 \hrulefill
@@ -11198,7 +11166,7 @@ Here, we would expect to find not just metaphors \is{figurative language}\is{met
 
 We can now compare the literal \is{literalness} and metaphorical \is{figurative language}\is{metaphor} contexts in which the expressions \textit{technically speaking} and \textit{metaphorically\slash figuraltively speaking} occur. If the latter are a metaphoricity \is{metaphoricity signal}\is{figurative language}\is{metaphor} signal, they should occur significantly more frequently in metaphorical contexts than the former. Table \ref{tab:literallytechnicallyspeaking} shows the tabulated results from the discussion above, subsuming metaphors \is{figurative language}\is{metaphor} and metonymies \is{figurative language}\is{metonymy} under \textvv{figurative}. The expected difference between contexts is clearly there, and statistically highly significant ($\chi^2$ = 21.66, df = 1 , p < 0.001, $\phi$ = \is{chi-square test} 0.7182).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{Literal and figurative utterances containing the sentence adverbials \textit{metaphorically\slash figuratively speaking} and \textit{technically speaking} (BNC)}
 \label{tab:literallytechnicallyspeaking}
 \begin{tabular}[t]{llccr}
@@ -11238,7 +11206,7 @@ For example, \citet{charteris-black_politicians_2005} investigates a corpus of `
 
 Charteris\hyp{}Black's findings are intriguing, but since he does not compare the findings from his corpus of right\hyp{}wing materials to a neutral or a corresponding left\hyp{}wing corpus, it remains an open question whether the use of these metaphors \is{figurative language}\is{metaphor} indicates a specifically right\hyp{}wing perspective on immigration. Let us therefore replicate \is{replicability} his analysis more systematically. The BNC \is{BNC} contains 1~232~966 words from the Daily Telegraph (all files whose names begin with AH, AJ and AK), which will serve as our right\hyp{}wing corpus, and 918~159 words from the Guardian (all files whose names begin with A8, A9 or AA, except file AAY), which will serve as our corresponding left\hyp{}wing (or at least left\hyp{}leaning) corpus. Since Charteris\hyp{}Black's examples all involve reference to target\hyp{}domain items such as \textit{refugee} and \textit{immigration}, a metaphorical \is{figurative language}\is{metaphor} pattern analysis (cf. Section \ref{sec:targetdomains} above) suggests itself. Figure \ref{fig:liquidrefugee} shows all concordance \is{concordance} lines for the words \textit{migrant(s)}, \textit{immigrant(s)} and \textit{refugee(s)} containing metaphorical patterns instantiating the metaphor ``immigration is a mass of water''.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \caption{Selected \textsc{Liquid} metaphors with \textit{migrant(s)}, \textit{immigrant(s)},\textit{refugee(s)}}
 \label{fig:liquidrefugee}
 \hrulefill \\
@@ -11274,7 +11242,7 @@ greed that the flow of economic [[migrants]] from Vietnam should be stoppe
 
 In terms of absolute frequencies, \is{frequency} there is no great difference between the two subcorpora (10 vs. 11), but the overall number of hits for the words in question differs drastically: there are 136 instances of these words in the Guardian subcorpus but only half as many (68) in the Telegraph subcorpus. This means that relatively speaking, in the domain of migration liquid metaphor \is{figurative language}\is{metaphor} are more frequent than expected \is{frequency, expected} in the Telegraph and less frequent than expected in the Guardian (see Table \ref{tab:liquidrefugeefreq}), which suggests that such metaphors are indeed typical of right\hyp{}wing discourse. The difference just misses statistical significance, however, so a larger \is{corpus size} corpus would be required to corroborate the result ($\chi^2$ = 3.822, df = 1, p = 0.0506, $\phi$ = 0.1369).
 
-\begin{table}[!htbp]
+\begin{table}
 \caption{\textsc{Liquid} patterns with the words \textit{migrant(s)}, \textit{immigrant(s)}, \textit{refugee(s)}}
 \label{tab:liquidrefugeefreq}
 \begin{tabular}[t]{llccr}
