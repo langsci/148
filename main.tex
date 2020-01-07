@@ -22,6 +22,7 @@
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localhyphenation.tex}
+\input{localcommands.tex} 
 \addbibresource{localbibliography.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -29,15 +30,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \begin{document} 
  
-\input{localcommands.tex} 
   
 \maketitle                
 \frontmatter 
 
 \currentpdfbookmark{Contents}{name} % adds a PDF bookmark
 {\sloppy\tableofcontents}
-% \include{chapters/preface}
-% \include{chapters/acknowledgments}
+\include{chapters/preface}
+\include{chapters/acknowledgments}
 % \include{chapters/abbreviations} 
 \mainmatter     
  
