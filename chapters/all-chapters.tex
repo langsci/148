@@ -955,7 +955,7 @@ Finally, frequency \is{frequency} lists provide useful information about the dis
 \begin{table}
 \caption{The forty most frequent strings in the BNC Baby}
 \label{tab:bncbabyfrequencies}
- \begin{tabular}{lS[table-format=6.0]|lS[table-format=6.0]|lS[table-format=6.0]|lS[table-format=6.0]}
+ \begin{tabular}{lS[table-format=6.0]@{\hspace*{1cm}}lS[table-format=5.0]@{\hspace*{1cm}}lS[table-format=5.0]@{\hspace*{1cm}}lS[table-format=5.0]}
  \lsptoprule
 . & 226990 & that & 51976 & on & 29258 & do & 20433 \\
 , & 212502 & you & 49346 & n't & 27672 & at & 20164 \\
@@ -4974,34 +4974,34 @@ In addition, I have selected them to represent different types of frequency \is{
 
 Table \ref{tab:equineadjectives} \is{adjective} shows the ranking of these twenty collocations \is{collocation} by the five association \is{association} measures \is{association measure} discussed above. Simplifying somewhat, a good association measure should rank the conventionalized \is{conventionality} combinations highest (\textit{rocking horse}, \textit{Trojan horse}, \textit{silly ass}, \textit{pompous ass}, \textit{prancing horse}, \textit{braying donkey}, \textit{galloping horse}), the distinctive sounding but non\hyp{}conventionalized \is{conventionality} combinations somewhere in the middle (\textit{jumped\hyp{}up jackass}, \textit{dumb\hyp{}fuck donkey}, \textit{old ass}, \textit{monocled ass}) and the compositional \is{compositionality} combinations lowest (\textit{common zebra}, \textit{jumped\hyp{}up jackass}, \textit{dumb\hyp{}fuck donkey}, \textit{old ass}, \textit{monocled ass}). \textit{Common zebra} is difficult to predict -- it is a conventionalized \is{conventionality} expression, but not in the general language.
 
-\begin{sidewaystable}[!htbp]
+\begin{sidewaystable}
 \caption{Comparison of selected association measures for collocates of the form [ADJ N\textsubscript{equine}] (BNC)}
 \label{tab:equineadjectives}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}[t]{lr|lr|lr|lr|lr}
+\begin{tabular}[t]{lS[table-format=5.2]lrlrlrlS[table-format=1.2e-3]}
 \lsptoprule
-Collocation & $\chi^2$ & Collocation & MI & Collocation & MS & Collocation & \textit{G} & Collocation & Exact Test \\
+Collocation & {$\chi^2$} & Collocation & MI & Collocation & MS & Collocation & \textit{G} & Collocation & {Exact test} \\
 \midrule
-\textit{jumped\hyp{}up jackass} & \num{558883.3} & \textit{jumped\hyp{}up jackass} & \num{19.09219} & \textit{jumped\hyp{}up jackass} & \num[round-mode=places,round-precision=6]{0.04545455} & \textit{Trojan horse} & \num{525.0568} & \textit{Trojan horse} & 7.78E-116 \\
-\textit{dumb\hyp{}fuck donkey} & \num{152264.9} & \textit{dumb\hyp{}fuck donkey} & \num{17.21623} & \textit{pompous ass} & \num[round-mode=places,round-precision=6]{0.01432665} & \textit{rocking horse} & \num{428.5052} & \textit{rocking horse} & 6.70E-95 \\
-\textit{Trojan horse} & \num{99994.3} & \textit{monocled ass} & \num{15.51958} & \textit{silly ass} & \num[round-mode=places,round-precision=6]{0.003410383} & \textit{galloping horse} & \num{205.7947} & \textit{galloping horse} & 2.13E-46 \\
-\textit{braying donkey} & \num{55365.79} & \textit{extinct quagga} & \num{15.48486} & \textit{caparisoned mule} & \num[round-mode=places,round-precision=6]{0.003134796} & \textit{silly ass} & \num{105.9103} & \textit{silly ass} & 1.34E-24 \\
-\textit{monocled ass} & \num{46972.28} & \textit{caparisoned mule} & \num{15.06429} & \textit{braying donkey} & \num[round-mode=places,round-precision=6]{0.003095975} & \textit{prancing horse} & \num{81.51033} & \textit{prancing horse} & 3.73E-19 \\
-\textit{rocking horse} & \num{45946.3} & \textit{braying donkey} & \num{14.7568} & \textit{Trojan horse} & \num[round-mode=places,round-precision=6]{0.003024111} & \textit{pompous ass} & \num{76.34527} & \textit{pompous ass} & 4.72E-18 \\
-\textit{extinct quagga} & \num{45855.44} & \textit{pompous ass} & \num{12.43212} & \textit{monocled ass} & \num[round-mode=places,round-precision=6]{0.00286533} & \textit{braying donkey} & \num{37.30879} & \textit{braying donkey} & 2.37E-09 \\
-\textit{caparisoned mule} & \num{34259.27} & \textit{Trojan horse} & \num{11.40099} & \textit{rocking horse} & \num[round-mode=places,round-precision=6]{0.002778913} & \textit{common zebra} & \num{27.28772} & \textit{common zebra} & 2.36E-07 \\
-\textit{pompous ass} & \num{27622} & \textit{prancing horse} & \num{11.0343} & \textit{extinct quagga} & \num[round-mode=places,round-precision=6]{0.002331002} & \textit{female hinny} & \num{25.64018} & \textit{female hinny} & 7.74E-07 \\
-\textit{galloping horse} & \num{18263.01} & \textit{female hinny} & \num{10.61065} & \textit{dumb\hyp{}fuck donkey} & \num[round-mode=places,round-precision=6]{0.001547988} & \textit{jumped\hyp{}up jackass} & \num{24.64412} & \textit{jumped\hyp{}up jackass} & 1.79E-06 \\
-\textit{prancing horse} & \num{12573.2} & \textit{rocking horse} & \num{10.40215} & \textit{galloping horse} & \num[round-mode=places,round-precision=6]{0.001389456} & \textit{dumb\hyp{}fuck donkey} & \num{23.8683} & \textit{dumb\hyp{}fuck donkey} & 6.57E-06 \\
-\textit{silly ass} & \num{8633.055} & \textit{galloping horse} & \num{10.07168} & \textit{prancing horse} & \num[round-mode=places,round-precision=6]{0.0004903964} & \textit{monocled ass} & \num{19.69439} & \textit{monocled ass} & 2.13E-05 \\
-\textit{female hinny} & \num{3123.389} & \textit{silly ass} & \num{9.90869} & \textit{female hinny} & \num[round-mode=places,round-precision=6]{0.0003020236} & \textit{extinct quagga} & \num{19.6838} & \textit{extinct quagga} & 2.18E-05 \\
-\textit{common zebra} & \num{314.9439} & \textit{common zebra} & \num{6.334643} & \textit{common zebra} & \num[round-mode=places,round-precision=6]{0.0002108704} & \textit{caparisoned mule} & \num{19.0022} & \textit{caparisoned mule} & 2.92E-05 \\
-\textit{old mule} & \num{47.11991} & \textit{young zebra} & \num{4.663165} & \textit{new horse} & \num[round-mode=places,round-precision=6]{0.0001849226} & \textit{old mule} & \num{11.58699} & \textit{old mule} & 7.16E-04 \\
-\textit{young zebra} & \num{46.76712} & \textit{old mule} & \num{4.140904} & \textit{young zebra} & \num[round-mode=places,round-precision=6]{0.00006619886} & \textit{young zebra} & \num{9.101435} & \textit{young zebra} & 2.95E-03 \\
-\textit{old donkey} & \num{20.49002} & \textit{old ass} & \num{3.426271} & \textit{old donkey} & \num[round-mode=places,round-precision=6]{0.0000572126} & \textit{old donkey} & \num{7.687699} & \textit{old donkey} & 5.25E-03 \\
-\textit{old ass} & \num{17.69563} & \textit{large mule} & \num{3.17128} & \textit{old mule} & \num[round-mode=places,round-precision=6]{0.0000572126} & \textit{old ass} & \num{5.881243} & \textit{old ass} & 1.53E-02 \\
-\textit{large mule} & \num{7.121964} & \textit{old donkey} & \num{3.122926} & \textit{old ass} & \num[round-mode=places,round-precision=6]{0.00003814173} & \textit{new horse} & \num{2.910183} & \textit{new horse} & 5.15E-02 \\
-\textit{new horse} & \num{3.350149} & \textit{new horse} & \num{0.5721069} & \textit{large mule} & \num[round-mode=places,round-precision=6]{0.00002921499} & \textit{large mule} & \num{2.620845} & \textit{large mule} & 1.05E-01 \\
+\textit{jumped\hyp{}up jackass} & 558883.3 & \textit{jumped\hyp{}up jackass} & \num{19.09219} & \textit{jumped\hyp{}up jackass} & \num[round-mode=places,round-precision=6]{0.04545455} & \textit{Trojan horse} & \num{525.0568} & \textit{Trojan horse} & 7.78e-116 \\
+\textit{dumb\hyp{}fuck donkey} & 152264.9 & \textit{dumb\hyp{}fuck donkey} & \num{17.21623} & \textit{pompous ass} & \num[round-mode=places,round-precision=6]{0.01432665} & \textit{rocking horse} & \num{428.5052} & \textit{rocking horse} & 6.70e-95 \\
+\textit{Trojan horse} & 99994.3 & \textit{monocled ass} & \num{15.51958} & \textit{silly ass} & \num[round-mode=places,round-precision=6]{0.003410383} & \textit{galloping horse} & \num{205.7947} & \textit{galloping horse} & 2.13e-46 \\
+\textit{braying donkey} & 55365.79 & \textit{extinct quagga} & \num{15.48486} & \textit{caparisoned mule} & \num[round-mode=places,round-precision=6]{0.003134796} & \textit{silly ass} & \num{105.9103} & \textit{silly ass} & 1.34e-24 \\
+\textit{monocled ass} & 46972.28 & \textit{caparisoned mule} & \num{15.06429} & \textit{braying donkey} & \num[round-mode=places,round-precision=6]{0.003095975} & \textit{prancing horse} & \num{81.51033} & \textit{prancing horse} & 3.73e-19 \\
+\textit{rocking horse} & 45946.3 & \textit{braying donkey} & \num{14.7568} & \textit{Trojan horse} & \num[round-mode=places,round-precision=6]{0.003024111} & \textit{pompous ass} & \num{76.34527} & \textit{pompous ass} & 4.72e-18 \\
+\textit{extinct quagga} & 45855.44 & \textit{pompous ass} & \num{12.43212} & \textit{monocled ass} & \num[round-mode=places,round-precision=6]{0.00286533} & \textit{braying donkey} & \num{37.30879} & \textit{braying donkey} & 2.37e-09 \\
+\textit{caparisoned mule} & 34259.27 & \textit{Trojan horse} & \num{11.40099} & \textit{rocking horse} & \num[round-mode=places,round-precision=6]{0.002778913} & \textit{common zebra} & \num{27.28772} & \textit{common zebra} & 2.36e-07 \\
+\textit{pompous ass} & 27622 & \textit{prancing horse} & \num{11.0343} & \textit{extinct quagga} & \num[round-mode=places,round-precision=6]{0.002331002} & \textit{female hinny} & \num{25.64018} & \textit{female hinny} & 7.74e-07 \\
+\textit{galloping horse} & 18263.01 & \textit{female hinny} & \num{10.61065} & \textit{dumb\hyp{}fuck donkey} & \num[round-mode=places,round-precision=6]{0.001547988} & \textit{jumped\hyp{}up jackass} & \num{24.64412} & \textit{jumped\hyp{}up jackass} & 1.79e-06 \\
+\textit{prancing horse} & 12573.2 & \textit{rocking horse} & \num{10.40215} & \textit{galloping horse} & \num[round-mode=places,round-precision=6]{0.001389456} & \textit{dumb\hyp{}fuck donkey} & \num{23.8683} & \textit{dumb\hyp{}fuck donkey} & 6.57e-06 \\
+\textit{silly ass} & 8633.055 & \textit{galloping horse} & \num{10.07168} & \textit{prancing horse} & \num[round-mode=places,round-precision=6]{0.0004903964} & \textit{monocled ass} & \num{19.69439} & \textit{monocled ass} & 2.13e-05 \\
+\textit{female hinny} & 3123.389 & \textit{silly ass} & \num{9.90869} & \textit{female hinny} & \num[round-mode=places,round-precision=6]{0.0003020236} & \textit{extinct quagga} & \num{19.6838} & \textit{extinct quagga} & 2.18e-05 \\
+\textit{common zebra} & 314.9439 & \textit{common zebra} & \num{6.334643} & \textit{common zebra} & \num[round-mode=places,round-precision=6]{0.0002108704} & \textit{caparisoned mule} & \num{19.0022} & \textit{caparisoned mule} & 2.92e-05 \\
+\textit{old mule} & 47.11991 & \textit{young zebra} & \num{4.663165} & \textit{new horse} & \num[round-mode=places,round-precision=6]{0.0001849226} & \textit{old mule} & \num{11.58699} & \textit{old mule} & 7.16e-04 \\
+\textit{young zebra} & 46.76712 & \textit{old mule} & \num{4.140904} & \textit{young zebra} & \num[round-mode=places,round-precision=6]{0.00006619886} & \textit{young zebra} & \num{9.101435} & \textit{young zebra} & 2.95e-03 \\
+\textit{old donkey} & 20.49002 & \textit{old ass} & \num{3.426271} & \textit{old donkey} & \num[round-mode=places,round-precision=6]{0.0000572126} & \textit{old donkey} & \num{7.687699} & \textit{old donkey} & 5.25e-03 \\
+\textit{old ass} & 17.69563 & \textit{large mule} & \num{3.17128} & \textit{old mule} & \num[round-mode=places,round-precision=6]{0.0000572126} & \textit{old ass} & \num{5.881243} & \textit{old ass} & 1.53e-02 \\
+\textit{large mule} & 7.121964 & \textit{old donkey} & \num{3.122926} & \textit{old ass} & \num[round-mode=places,round-precision=6]{0.00003814173} & \textit{new horse} & \num{2.910183} & \textit{new horse} & 5.15e-02 \\
+\textit{new horse} & 3.350149 & \textit{new horse} & \num{0.5721069} & \textit{large mule} & \num[round-mode=places,round-precision=6]{0.00002921499} & \textit{large mule} & \num{2.620845} & \textit{large mule} & 1.05e-01 \\
 \lspbottomrule
 \end{tabular}}
 \end{sidewaystable}
@@ -5066,30 +5066,28 @@ Thus, as is typical for this kind of study, Kennedy adopts an exploratory perspe
 
 Kennedy finds, first, that there are some degree adverbs \is{degree adverb}\is{adverb} that do not appear to have restrictions concerning the adjectives \is{adjective} they occur with (for example, \textit{very}, \textit{really} and \textit{particularly}). However, most degree adverbs \is{adverb} are clearly associated \is{association} with semantically \is{semantics} restricted sets of adjectives. \is{adjective} The restrictions are of three broad types. First, there are connotational \is{connotation} restrictions (some adverbs \is{adverb} are associated \is{association} primarily with positive words (e.g. \textit{perfectly}) or negative words (e.g. \textit{utterly}, \textit{totally}; on connotation \is{connotation} cf. also Section \ref{sec:semanticprosody}). Second, there are specific semantic restrictions (for example, \textit{incredibly}, which is associated \is{association} with subjective judgments), sometimes relating transparently to the meaning of the adverb \is{adverb} (for example, \textit{badly}, which is associated with words denoting damage or \textit{clearly}, which is associated \is{association} with words denoting sensory perception). Finally, there are morphological \is{morphology} restrictions (some adverbs \is{adverb} are used frequently with words derived by particular suffixes, \is{affix} for example, \textit{perfectly}, which is frequently found with words derived by \textit{-able}\slash \textit{-ible}, or \textit{totally}, whose collocates \is{collocation} often contain the prefix \is{affix} \textit{un-}). Table \ref{tab:degreeadverbs} illustrates these findings for 5 of the 24 degree adverbs \is{degree adverb}\is{adverb} and their top 15 collocates.
 
-\begin{sidewaystable}[!htbp]
-\caption{Selected degree adverbs and their collocates}
-\label{tab:degreeadverbs}
-\begin{tabular}[c]{lS|lS|lS|lS|lS}
+\begin{sidewaystable}
+\caption{Selected degree adverbs and their collocates\label{tab:degreeadverbs}}
+\begin{tabular}{*{5}{lS[table-format=3.2,table-figures-decimal=2]}}
 \lsptoprule
-Collocation & \emph{G} & Collocation & \emph{G} & Collocation & \emph{G} & Collocation & \emph{G} & Collocation & \emph{G} \\
+\multicolumn{2}{c}{\textvv{incredibly}} & \multicolumn{2}{c}{\textvv{perfectly}} & \multicolumn{2}{c}{\textvv{totally}} & \multicolumn{2}{c}{\textvv{completely}} & \multicolumn{2}{c}{\textvv{badly}}\\\cmidrule(lr){1-2}\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}
+Collocation & {\emph{G}} & Collocation & {\emph{G}} & Collocation & {\emph{G}} & Collocation & {\emph{G}} & Collocation & {\emph{G}} \\
 \midrule
-\multicolumn{2}{l}{\textvv{incredibly}} & \multicolumn{2}{l}{\textvv{perfectly}} & \multicolumn{2}{l}{\textvv{totally}} & \multicolumn{2}{l}{\textvv{completely}} & \multicolumn{2}{l}{\textvv{badly}} \\
-\midrule
-\textit{difficult} & \num{113.872861800138} & \textit{normal} & \num{989.485547963119} & \textit{different} & \num{3190.96570791974} & \textit{different} & \num{3965.1188966892} & \textit{bruised} & \num{573.271450001506} \\
-\textit{lucky} & \num{95.5763247955939} & \textit{acceptable} & \num{928.210393768077} & \textit{dependent} & \num{718.125672772732} & \textit{new} & \num{1242.61302084742} & \textit{wrong} & \num{410.491163236641} \\
-\textit{fast} & \num{87.9737668712714} & \textit{clear} & \num{880.931147360751} & \textit{unacceptable} & \num{706.934271824606} & \textit{free} & \num{404.433647888444} & \textit{damaged} & \num{217.62278293683} \\
-\textit{beautiful} & \num{80.5562844766918} & \textit{happy} & \num{822.97854693618} & \textit{inadequate} & \num{604.422886401554} & \textit{wrong} & \num{362.329522133357} & \textit{beaten} & \num{188.402979315352} \\
-\textit{dangerous} & \num{77.7511164152758} & \textit{possible} & \num{743.653818146009} & \textit{wrong} & \num{478.485800742744} & \textit{unaware} & \num{240.243896218361} & \textit{hurt} & \num{170.653100422616} \\
-\textit{strong} & \num{68.1258892209614} & \textit{reasonable} & \num{674.848652051085} & \textit{unexpected} & \num{459.523334869732} & \textit{mad} & \num{218.549144134622} & \textit{injured} & \num{141.800222260764} \\
-\textit{stupid} & \num{65.3227061806229} & \textit{capable} & \num{663.375289224065} & \textit{unsuitable} & \num{420.129793688147} & \textit{refurbished} & \num{184.584775476699} & \textit{wounded} & \num{138.48405828383} \\
-\textit{efficient} & \num{61.8432958507056} & \textit{good} & \num{545.893093065182} & \textit{unaware} & \num{345.902968972569} & \textit{irrelevant} & \num{178.245168428584} & \textit{swollen} & \num{113.920319799245} \\
-\textit{simple} & \num{61.8392263025402} & \textit{adequate} & \num{537.981619439492} & \textit{opposed} & \num{333.209590898584} & \textit{separate} & \num{172.599035870993} & \textit{fitting} & \num{106.127435223074} \\
-\textit{low} & \num{59.1441483498438} & \textit{safe} & \num{512.693407325478} & \textit{new} & \num{316.114527716569} & \textit{independent} & \num{149.808402576058} & \textit{affected} & \num{93.2369977859243} \\
-\textit{sexy} & \num{59.1201826544823} & \textit{natural} & \num{469.620771634736} & \textit{unnecessary} & \num{303.032405768825} & \textit{satisfied} & \num{142.597441817173} & \textit{broken} & \num{71.4932864323402} \\
-\textit{naive} & \num{57.3399543912635} & \textit{competitive} & \num{418.442965303102} & \textit{irrelevant} & \num{251.561403373731} & \textit{innocent} & \num{141.112463259029} & \textit{mutilated} & \num{70.7789896011335} \\
-\textit{expensive} & \num{56.6574234246096} & \textit{honest} & \num{405.995469433133} & \textit{alien} & \num{251.058311518604} & \textit{empty} & \num{138.698200500187} & \textit{burned} & \num{62.0680805030095} \\
-\textit{hard} & \num{55.0041421970401} & \textit{balanced} & \num{388.130323250728} & \textit{confused} & \num{249.154529517015} & \textit{unknown} & \num{137.749731202469} & \textit{unstuck} & \num{61.2988692595488} \\
-\textit{complicated} & \num{54.9780444183673} & \textit{well} & \num{370.558152061571} & \textit{blind} & \num{247.583829054925} & \textit{dry} & \num{136.609332557596} & \textit{lacerated} & \num{58.5625461063544} \\
+\textit{difficult} & 113.872861800138 & \textit{normal} & 989.485547963119 & \textit{different} & 3190.96570791974 & \textit{different} & 3965.1188966892 & \textit{bruised} & 573.271450001506 \\
+\textit{lucky} & 95.5763247955939 & \textit{acceptable} & 928.210393768077 & \textit{dependent} & 718.125672772732 & \textit{new} & 1242.61302084742 & \textit{wrong} & 410.491163236641 \\
+\textit{fast} & 87.9737668712714 & \textit{clear} & 880.931147360751 & \textit{unacceptable} & 706.934271824606 & \textit{free} & 404.433647888444 & \textit{damaged} & 217.62278293683 \\
+\textit{beautiful} & 80.5562844766918 & \textit{happy} & 822.97854693618 & \textit{inadequate} & 604.422886401554 & \textit{wrong} & 362.329522133357 & \textit{beaten} & 188.402979315352 \\
+\textit{dangerous} & 77.7511164152758 & \textit{possible} & 743.653818146009 & \textit{wrong} & 478.485800742744 & \textit{unaware} & 240.243896218361 & \textit{hurt} & 170.653100422616 \\
+\textit{strong} & 68.1258892209614 & \textit{reasonable} & 674.848652051085 & \textit{unexpected} & 459.523334869732 & \textit{mad} & 218.549144134622 & \textit{injured} & 141.800222260764 \\
+\textit{stupid} & 65.3227061806229 & \textit{capable} & 663.375289224065 & \textit{unsuitable} & 420.129793688147 & \textit{refurbished} & 184.584775476699 & \textit{wounded} & 138.48405828383 \\
+\textit{efficient} & 61.8432958507056 & \textit{good} & 545.893093065182 & \textit{unaware} & 345.902968972569 & \textit{irrelevant} & 178.245168428584 & \textit{swollen} & 113.920319799245 \\
+\textit{simple} & 61.8392263025402 & \textit{adequate} & 537.981619439492 & \textit{opposed} & 333.209590898584 & \textit{separate} & 172.599035870993 & \textit{fitting} & 106.127435223074 \\
+\textit{low} & 59.1441483498438 & \textit{safe} & 512.693407325478 & \textit{new} & 316.114527716569 & \textit{independent} & 149.808402576058 & \textit{affected} & 93.2369977859243 \\
+\textit{sexy} & 59.1201826544823 & \textit{natural} & 469.620771634736 & \textit{unnecessary} & 303.032405768825 & \textit{satisfied} & 142.597441817173 & \textit{broken} & 71.4932864323402 \\
+\textit{naive} & 57.3399543912635 & \textit{competitive} & 418.442965303102 & \textit{irrelevant} & 251.561403373731 & \textit{innocent} & 141.112463259029 & \textit{mutilated} & 70.7789896011335 \\
+\textit{expensive} & 56.6574234246096 & \textit{honest} & 405.995469433133 & \textit{alien} & 251.058311518604 & \textit{empty} & 138.698200500187 & \textit{burned} & 62.0680805030095 \\
+\textit{hard} & 55.0041421970401 & \textit{balanced} & 388.130323250728 & \textit{confused} & 249.154529517015 & \textit{unknown} & 137.749731202469 & \textit{unstuck} & 61.2988692595488 \\
+\textit{complicated} & 54.9780444183673 & \textit{well} & 370.558152061571 & \textit{blind} & 247.583829054925 & \textit{dry} & 136.609332557596 & \textit{lacerated} & 58.5625461063544 \\
 \lspbottomrule
 \multicolumn{10}{l}{\scriptsize{Supplementary Online Material: LKTH}} \\ %OSM
 \end{tabular}
@@ -5538,10 +5536,10 @@ We will not follow Stubbs' discussion in detail here -- his focus is on methodol
 Table \ref{tab:causecollocates} shows the result of an attempt to extract \is{retrieval} direct objects of the verb \is{verb} \textit{cause} from the BNC. \is{BNC} I searched for the lemma \is{lemma} \textit{cause} where it is tagged \is{POS tagging} as a verb, followed by zero to three words that are not nouns \is{noun} (to take into account the occurrence of determiners, adjectives, \is{adjective} etc.) and that are not the word \textit{by} (in order to exclude passives \is{passive voice} like \textit{caused by negligence, fire, exposure}, etc.), followed by a noun or sequence of nouns, not followed by \textit{to} (in order to exclude causative constructions of the form \textit{caused the glass to break}). This noun, or the last noun in this sequence, is assumed to be the direct object of \textit{cause}. The twenty most frequent nouns are shown in Table \ref{tab:causecollocates}, Column (a).
 
 \begin{table}
-\caption{Noun collocates of three expressions of causation}
-\label{tab:causecollocates}
-\begin{tabular}[t]{lr|lr|lr}
+\caption{Noun collocates of three expressions of causation\label{tab:causecollocates}}
+\begin{tabular}{lrlrlr}
 \lsptoprule
+\multicolumn{2}{c}{(a)} & \multicolumn{2}{c}{(b)} & \multicolumn{2}{c}{(c)}\\\cmidrule(lr){1-2}\cmidrule(lr){3-4}\cmidrule(lr){5-6}
 \textvv{[\textit{cause} NP]} & Freq. & \textvv{[\textit{bring about} NP]} & Freq. & \textvv{[\textit{lead to} NP]} & Freq.\\
 \midrule
 \textit{problem} & 836 & \textit{change} & 247 & \textit{increase} & 219 \\
@@ -5566,7 +5564,6 @@ Table \ref{tab:causecollocates} shows the result of an attempt to extract \is{re
 \textit{cancer} & 72 & \textit{event} & 9 & \textit{growth} & 60 \\
  & & \textit{situation} & 9 & & \\
 \lspbottomrule
-\multicolumn{2}{c}{(a)} & \multicolumn{2}{c}{(b)} & \multicolumn{2}{c}{(c)} \\
 \multicolumn{6}{l}{\scriptsize{Supplementary Online Material: BYHW}} \\ %OSM
 \end{tabular}
 \end{table}
@@ -6735,14 +6732,14 @@ Finally, we need to code \is{coding} the final consonants \is{consonant} of all 
 
 The result of all these steps is shown in Table \ref{tab:binomialsample}. The first column shows the binomial \is{binomial (coordinated nouns)}\is{coordination} in its most frequent order, the second column gives the frequency \is{frequency} of the phrase in this order, the third column gives the frequency of the less frequent order (the reversal of the one shown), the fourth column gives the degree of frozenness \is{frozenness} (i.e., the percentage of the more frequent order), and the fifth column records whether the final consonant \is{consonant} of the first or of the second noun \is{noun} is less \is{sonority} sonorant.
 
-\begin{sidewaystable}[!htbp]
+\begin{sidewaystable}
 \caption{Sample of monosyllabic binomials and their sonority}
 \label{tab:binomialsample}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}[t]{l *{2}{S[table-format=3]} S[round-mode=places,round-precision=4] l | l *{2}{S[table-format=3]} S[round-mode=places,round-precision=4] l | l *{2}{S[table-format=3]} S[round-mode=places,round-precision=4] l}
+\begin{tabular}[t]{l *{2}{S[table-format=3]} S[table-format=1.4] l  l *{2}{S[table-format=3]} S[table-format=1.4] l  l *{2}{S[table-format=3]} S[table-format=1.4] l}
 \lsptoprule
-\multicolumn{1}{l}{\makecell[tl]{Expression}} & \multicolumn{1}{l}{\makecell[tl]{Order A}} & \multicolumn{1}{l}{\makecell[tl]{Order B}} & \multicolumn{1}{l}{\makecell[tl]{Frozenness}} & \multicolumn{1}{l|}{\makecell[tl]{More \\ Sonor.}} & \multicolumn{1}{l}{\makecell[tl]{Expression}} & \multicolumn{1}{l}{\makecell[tl]{Order A}} & \multicolumn{1}{l}{\makecell[tl]{Order B}} & \multicolumn{1}{l}{\makecell[tl]{Frozenness}} & \multicolumn{1}{l|}{\makecell[tl]{More \\ Sonor.}} & \multicolumn{1}{l}{\makecell[tl]{Expression}} & \multicolumn{1}{l}{\makecell[tl]{Order A}} & \multicolumn{1}{l}{\makecell[tl]{Order B}} & \multicolumn{1}{l}{\makecell[tl]{Frozenness}} & \multicolumn{1}{l}{\makecell[tl]{More \\ Sonor.}} \\
-\midrule
+\multicolumn{1}{l}{\makecell[tl]{Expression}} & \multicolumn{1}{l}{\makecell[tl]{Order A}} & \multicolumn{1}{l}{\makecell[tl]{Order B}} & \multicolumn{1}{l}{\makecell[tl]{Frozenness}} & \multicolumn{1}{l}{\makecell[tl]{More \\ Sonor.}} & \multicolumn{1}{l}{\makecell[tl]{Expression}} & \multicolumn{1}{l}{\makecell[tl]{Order A}} & \multicolumn{1}{l}{\makecell[tl]{Order B}} & \multicolumn{1}{l}{\makecell[tl]{Frozenness}} & \multicolumn{1}{l}{\makecell[tl]{More \\ Sonor.}} & \multicolumn{1}{l}{\makecell[tl]{Expression}} & \multicolumn{1}{l}{\makecell[tl]{Order A}} & \multicolumn{1}{l}{\makecell[tl]{Order B}} & \multicolumn{1}{l}{\makecell[tl]{Frozenness}} & \multicolumn{1}{l}{\makecell[tl]{More \\ Sonor.}} \\
+\cmidrule(lr){1-5}\cmidrule(lr){6-10}\cmidrule(lr){11-15}
 \textit{beck and call} & 40 & 0 & 1.0000 & 2\textsuperscript{nd} & \multicolumn{5}{l}{(contd.)} & \multicolumn{5}{l}{(contd.)} \\
 \textit{bread and jam} & 30 & 0 & 1.0000 & 2\textsuperscript{nd} & \textit{iron and steel} & 127 & 3 & 0.9769 & 2\textsuperscript{nd} & \textit{love and care} & 33 & 6 & 0.8462 & 2\textsuperscript{nd} \\
 \textit{bride and groom} & 94 & 0 & 1.0000 & 2\textsuperscript{nd} & \textit{bread and wine} & 42 & 1 & 0.9767 & 2\textsuperscript{nd} & \textit{boy and girl} & 43 & 8 & 0.8431 & 1\textsuperscript{st} \\
@@ -9089,15 +9086,15 @@ For example, they note that there are obvious differences between the types of s
 
 The one case where they do present a table is the semantic \is{semantics} field \textsc{military}. Their results are shown in Table \ref{tab:militarykey} (I have recalculated them using the \emph{G} \is{log-likelihood ratio test} value we have used throughout this and the preceding section).
 
-\begin{sidewaystable}[!htbp]
+\begin{sidewaystable}
 \caption{Military keywords in BROWN and LOB \citep[cf.][49--50]{leech_computer_1992} }
 \label{tab:militarykey}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}[t]{l *{2}{S[table-format=4]} *{2}{S[table-format=8]} S|l *{2}{S[table-format=4]} *{2}{S[table-format=8]} S|l *{2}{S[table-format=2]} *{2}{S[table-format=8]} S}
+\begin{tabular}{l *{2}{S[table-format=4]} *{2}{S[table-format=8]} Sl *{2}{S[table-format=4]} *{2}{S[table-format=8]} Sl *{2}{S[table-format=2]} *{2}{S[table-format=8]} S}
 \lsptoprule
-\multicolumn{1}{c}{\makecell[tc]{Word}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{W}(\textsc{BROWN})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{W}(\textsc{LOB})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{OTH}(\textsc{BROWN})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{OTH}(\textsc{LOB})}} & \multicolumn{1}{c|}{\makecell[tc]{\emph{G}}} & \multicolumn{1}{c}{\makecell[tc]{Word}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{W}(\textsc{BROWN})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{W}(\textsc{LOB})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{OTH}(\textsc{BROWN})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{OTH}(\textsc{LOB})}} & \multicolumn{1}{c|}{\makecell[tc]{\emph{G}}} & \multicolumn{1}{c}{\makecell[tc]{Word}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{W}(\textsc{BROWN})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{W}(\textsc{LOB})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{OTH}(\textsc{BROWN})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{OTH}(\textsc{LOB})}} & \multicolumn{1}{c}{\makecell[tc]{\emph{G}}} \\
+\multicolumn{1}{c}{\makecell[tc]{Word}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{W}(\textsc{BROWN})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{W}(\textsc{LOB})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{OTH}(\textsc{BROWN})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{OTH}(\textsc{LOB})}} & \multicolumn{1}{c}{\makecell[tc]{\emph{G}}} & \multicolumn{1}{c}{\makecell[tc]{Word}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{W}(\textsc{BROWN})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{W}(\textsc{LOB})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{OTH}(\textsc{BROWN})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{OTH}(\textsc{LOB})}} & \multicolumn{1}{c}{\makecell[tc]{\emph{G}}} & \multicolumn{1}{c}{\makecell[tc]{Word}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{W}(\textsc{BROWN})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{W}(\textsc{LOB})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{OTH}(\textsc{BROWN})}} & \multicolumn{1}{c}{\makecell[tc]{f\textsubscript{OTH}(\textsc{LOB})}} & \multicolumn{1}{c}{\makecell[tc]{\emph{G}}} \\
 \midrule
-\multicolumn{6}{l|}{\makecell[tl]{Keywords for American English}} & \multicolumn{6}{l|}{\makecell[tl]{(AmE contd.)}} & \multicolumn{6}{l}{\makecell[tl]{(AmE contd.)}} \\
+\multicolumn{6}{c}{Keywords for American English} & \multicolumn{6}{c}{(AmE contd.)} & \multicolumn{6}{c}{(AmE contd.)}\\\cmidrule(lr){1-6}\cmidrule(lr){7-12}\cmidrule(lr){13-18}
 \textit{corps} & 110 & 10 & 1014202 & 1012975 & 97.3887507899771 & \textit{patrol} & 25 & 6 & 1014287 & 1012979 & 12.4881408477048 & \textit{strategic} & 23 & 9 & 1014289 & 1012976 & 6.31888035020153 \\
 \textit{missile} & 48 & 5 & 1014264 & 1012980 & 40.2969750901343 & \textit{fire} & 187 & 125 & 1014125 & 1012860 & 12.3237599101224 & \textit{battery} & 18 & 6 & 1014294 & 1012979 & 6.26334926387561 \\
 \textit{sherman} & 29 & 0 & 1014283 & 1012985 & 40.1649983565662 & \textit{code} & 39 & 14 & 1014273 & 1012971 & 12.2416737715448 & \textit{arms} & 121 & 85 & 1014191 & 1012900 & 6.2772765392176 \\
@@ -9120,14 +9117,14 @@ The one case where they do present a table is the semantic \is{semantics} field 
 \textit{mercenaries} & 12 & 0 & 1014300 & 1012985 & 16.6198988232524 & \textit{battle} & 87 & 54 & 1014225 & 1012931 & 7.75289875168799 & \textit{command} & 72 & 49 & 1014240 & 1012936 & 4.36881697048223 \\
 \textit{veterans} & 16 & 1 & 1014296 & 1012984 & 15.9410706708592 & \textit{fighters} & 16 & 4 & 1014296 & 1012981 & 7.69416013643875 & \textit{peace} & 198 & 159 & 1014114 & 1012826 & 4.21885740892963 \\
 \textit{warfare} & 43 & 14 & 1014269 & 1012971 & 15.4302225923914 & \textit{victor} & 23 & 8 & 1014289 & 1012977 & 7.55220409779217 & \textit{winchester} & 12 & 4 & 1014300 & 1012981 & 4.17555043234765 \\
-\textit{aircraft} & 70 & 31 & 1014242 & 1012954 & 15.4076614991871 & \textit{lieutenant} & 29 & 12 & 1014283 & 1012973 & 7.24398149238451 & & & & & & \\
-\textit{headquarters} & 65 & 28 & 1014247 & 1012957 & 15.0879425525847 & \textit{bombs} & 35 & 16 & 1014277 & 1012969 & 7.22732707781758 & \multicolumn{6}{l}{\makecell[tl]{Key words for British English}} \\
+\textit{aircraft} & 70 & 31 & 1014242 & 1012954 & 15.4076614991871 & \textit{lieutenant} & 29 & 12 & 1014283 & 1012973 & 7.24398149238451 & & & & & & \\\cline{13-18}
+\textit{headquarters} & 65 & 28 & 1014247 & 1012957 & 15.0879425525847 & \textit{bombs} & 35 & 16 & 1014277 & 1012969 & 7.22732707781758 & \multicolumn{6}{c}{Key words for British English}\\\cline{13-18}
 \textit{militia} & 11 & 0 & 1014301 & 1012985 & 15.234901835431 & \textit{destroy} & 48 & 25 & 1014264 & 1012960 & 7.3416793397821 & \textit{medal} & 7 & 37 & 1014305 & 1012948 & 22.4786693575981 \\
 \textit{squad} & 18 & 2 & 1014294 & 1012983 & 14.7017568072516 & \textit{veteran} & 27 & 11 & 1014285 & 1012974 & 6.93072039721751 & \textit{trench} & 2 & 15 & 1014310 & 1012970 & 11.2689547082191 \\
 \textit{patriot} & 10 & 0 & 1014302 & 1012985 & 13.8499058333803 & \textit{campaigns} & 17 & 5 & 1014295 & 1012980 & 6.90061151614388 & \textit{disarmament} & 11 & 27 & 1014301 & 1012958 & 6.97261342235072 \\
 \textit{strategy} & 22 & 4 & 1014290 & 1012981 & 13.6954625224129 & \textit{assault} & 15 & 4 & 1014297 & 1012981 & 6.76843980917162 & \textit{tanks} & 18 & 35 & 1014294 & 1012950 & 5.57282699273249 \\
 \textit{shot} & 113 & 65 & 1014199 & 1012920 & 13.0438134742559 & \textit{pentagon} & 13 & 3 & 1014299 & 1012982 & 6.72519244651086 & \textit{rank} & 24 & 43 & 1014288 & 1012942 & 5.48778612543783 \\
-\textit{bullets} & 21 & 4 & 1014291 & 1012981 & 12.6517627987165 & \textit{mission} & 78 & 49 & 1014234 & 1012936 & 6.64333214077693 & \textit{conquest} & 9 & 20 & 1014303 & 1012965 & 4.29318444231344 \\
+\textit{bullets} & 21 & 4 & 1014291 & 1012981 & 12.6517627987165 & \textit{mission} & 78 & 49 & 1014234 & 1012936 & 6.64333214077693 & \textit{conquest} & 9 & 20 & 1014303 & 1012965 & 4.29318444231344\\
 \lspbottomrule
 \multicolumn{18}{l}{\scriptsize{Supplementary Online Material: 847K}} \\ %OSM
 \end{tabular}}
