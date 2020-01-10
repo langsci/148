@@ -3256,8 +3256,8 @@ This kind of coin\hyp{}flip logic (also known as probability \is{probability} th
 \begin{table}
 \caption{Possible sets of ten coin flips}
 \label{tab:tencoinflips}
-\begin{tabular}[t]{rccc}
-\lsptoprule & Unordered Set & No. of Series & Probability \\
+\begin{tabular}[t]{rccS[table-format=1.6,round-precision=6]}
+\lsptoprule & Unordered Set & No. of Series & {Probability}\\
 \midrule
 1 & \{0 heads, 10 tails\} & 1 & 0.000977 \\
 2 & \{1 heads, 9 tails\} & 10 & 0.009766 \\
@@ -4176,14 +4176,14 @@ While this kind of visualization is quite useful in grasping the notion of a thr
 \begin{table}
 \caption{A two\hyp{}dimensional representation of a three\hyp{}dimensional contingency table}
 \label{tab:cfaschematictable}
-\resizebox{\textwidth}{!}{
-\begin{tabular}[t]{lccc|ccc|ccc}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}[t]{lccccccccc}
 \lsptoprule
  &
  	\multicolumn{3}{c}{\textvv{iv\textsubscript{B} 1}} &
  	\multicolumn{3}{c}{\textvv{iv\textsubscript{B} 2}} &
  	\multicolumn{3}{c}{\textvv{iv\textsubscript{B}} Total} \\
-\midrule
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
  &
  	\textvv{dv 1} &
  	\textvv{dv 2} &
@@ -4225,7 +4225,7 @@ While this kind of visualization is quite useful in grasping the notion of a thr
 	O\textsubscript{2T2} &
 	O\textsubscript{2TT} \\
 
-\midrule
+% % \midrule
 
 \textvv{iv\textsubscript{A}} Total &
 
@@ -4258,7 +4258,7 @@ Given this representation, the expected \is{frequency, expected} frequencies for
  	\multicolumn{3}{c}{\textvv{iv\textsubscript{B} 1}} &
  	\multicolumn{3}{c}{\textvv{iv\textsubscript{B} 2}} &
  	\multicolumn{3}{c}{\textvv{iv\textsubscript{B}} Total} \\
-\lsptoprule
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
  &
  	\textvv{dv 1} &
  	\textvv{dv 2} &
@@ -4284,7 +4284,7 @@ Given this representation, the expected \is{frequency, expected} frequencies for
 
 	 &
 	 &
-	 \\[2ex]
+	 \\\tablevspace
 	
 \textvv{iv\textsubscript{A}} 2 &
 
@@ -4334,10 +4334,10 @@ Let us apply this method to the question described in the previous sub\hyp{}sect
 \caption{Sex, Age and Possessives Multivariate (BNC Spoken)}
 \label{tab:possexagemulti}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}[t]{l|ccc|ccc|r}
+\begin{tabular}[t]{lccccccr}
 \lsptoprule
-& \multicolumn{3}{c|}{\textvv{female}} & \multicolumn{3}{c|}{\textvv{male}} & \\
-\textvv{Constr.} & \textvv{young} & \textvv{old} & \makecell[b]{Total \\ \textvv{female}} & \textvv{young} & \textvv{old} & \makecell[b]{Total \\ \textvv{male}} & Total \\
+& \multicolumn{3}{c}{\textvv{female}} & \multicolumn{3}{c}{\textvv{male}} & \\\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+\textvv{Constr.} & \textvv{young} & \textvv{old} & \makecell[b]{Total} & \textvv{young} & \textvv{old} & \makecell[b]{Total} & Total \\
 \midrule
 \textvv{\makecell[tl]{\textvv{pos}}}
 % me: female-young
@@ -6369,15 +6369,13 @@ Annotating \is{annotation} all 348 hits according to the annotation scheme sketc
 \caption{Aktionsart, matrix verb and complementation type (LOB)}
 \label{tab:beginstartcomplementation}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}[t]{l|ccc|ccc|r}
+\begin{tabular}[t]{lccccccr}
 \lsptoprule
 
-& \multicolumn{3}{c|}{\textvv{begin}} & \multicolumn{3}{c|}{\textvv{start}} & \\
+& \multicolumn{3}{c}{\textvv{begin}} & \multicolumn{3}{c}{\textvv{start}} & \\\cmidrule(lr){2-4}\cmidrule(lr){5-7}
 
-\textvv{Aktionsart} & \textvv{ing} & \textvv{to} & \makecell[b]{Total \\ \textvv{begin}} & \textvv{ing} & \textvv{to} & \makecell[b]{Total \\ \textvv{start}} & Total \\
-
+\textvv{Aktionsart} & \textvv{ing} & \textvv{to} & \makecell[b]{Total} & \textvv{ing} & \textvv{to} & \makecell[b]{Total} & Total \\
 \midrule
-
 \textvv{\makecell[tl]{activity}}
 
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 22 \\ \small{\textit{Exp.:}} & 29.859294 \\ \small{\textit{$\chi^2$:}} & 2.0686527 \end{tabular}}
@@ -6537,13 +6535,11 @@ By extracting \is{retrieval} just these cases, we can directly test the hypothes
 \caption{Adverbs of suddenness and gradualness, matrix verb and complementation type}
 \label{tab:complementationadverbs}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}[t]{l|ccc|ccc|r}
+\begin{tabular}[t]{lccccccr}
 \lsptoprule
 
-& \multicolumn{3}{c|}{\textvv{begin}} & \multicolumn{3}{c|}{\textvv{start}} & \\
-
-\textvv{Onset} & \textvv{ing} & \textvv{to} & \makecell[b]{Total \\ \textvv{begin}} & \textvv{ing} & \textvv{to} & \makecell[b]{Total \\ \textvv{start}} & Total \\
-
+& \multicolumn{3}{c}{\textvv{begin}} & \multicolumn{3}{c}{\textvv{start}} & \\\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+\textvv{Onset} & \textvv{ing} & \textvv{to} & \makecell[b]{Total} & \textvv{ing} & \textvv{to} & \makecell[b]{Total} & Total \\
 \midrule
 
 \textvv{\makecell[tl]{sudden}}
@@ -7077,12 +7073,12 @@ The basic design \is{research design} with which to test the convergence or dive
 \caption{\textit{Notwithstanding} as a preposition and postposition in British and American English}
 \label{tab:notwithstandingprepost}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}[t]{l|ccc|ccc|r}
+\begin{tabular}[t]{lccccccr}
 \lsptoprule
 
-& \multicolumn{3}{c|}{\textvv{1961}} & \multicolumn{3}{c|}{\textvv{1991}} & \\
+& \multicolumn{3}{c}{\textvv{1961}} & \multicolumn{3}{c}{\textvv{1991}} & \\\cmidrule(lr){2-4}\cmidrule(lr){5-7}
 
- & \textvv{BrE} & \textvv{AmE} & \makecell[b]{Total \\ 1961} & \textvv{BrE} & \textvv{AmE} & \makecell[b]{Total \\ 1991} & Total \\
+ & \textvv{BrE} & \textvv{AmE} & \makecell[b]{Total} & \textvv{BrE} & \textvv{AmE} & \makecell[b]{Total} & Total \\
 
 \midrule
 
