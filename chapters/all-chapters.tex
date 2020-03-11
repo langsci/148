@@ -957,7 +957,7 @@ Finally, frequency \is{frequency} lists provide useful information about the dis
 \begin{table}
 \caption{The forty most frequent strings in the BNC Baby}
 \label{tab:bncbabyfrequencies}
- \begin{tabular}{lS[table-format=6.0]@{\hspace*{1cm}}lS[table-format=5.0]@{\hspace*{1cm}}lS[table-format=5.0]@{\hspace*{1cm}}lS[table-format=5.0]}
+\resizebox{\textwidth}{!}{\begin{tabular}{lS[table-format=6.0]@{\hspace*{1cm}}lS[table-format=5.0]@{\hspace*{1cm}}lS[table-format=5.0]@{\hspace*{1cm}}lS[table-format=5.0]}
  \lsptoprule
 . & 226990 & that & 51976 & on & 29258 & do & 20433 \\
 , & 212502 & you & 49346 & n't & 27672 & at & 20164 \\
@@ -970,7 +970,7 @@ in & 69121 & he & 36217 & but & 21209 & there & 17585 \\
 it & 60647 & ' & 34994 & they & 21177 & his & 17447 \\
 i & 59827 & for & 31784 & she & 21121 & by & 17201 \\
  \lspbottomrule
- \end{tabular}
+ \end{tabular}}
 \end{table}
 
 Note, for example, that the collocate \is{collocation} frequency \is{frequency} lists on the right side of the word \textit{time} are more similar to the general frequency list than those on the left side, suggesting that the noun \is{noun} \textit{time} has a stronger influence on the words preceding it than on the words following it (see further Chapter \ref{ch:collocation}).
@@ -1079,7 +1079,7 @@ Broadly speaking, there are two ways in which we can state our research question
 
 The first way entails a relatively open\hyp{}minded approach to our data. We might have some general expectation of what we will find, but we would put them aside and simply start collecting observations \is{observational method} and look for patterns. If we find such patterns, we might use them to propose a provisional generalization, which we successively confirm, modify or replace on the basis of additional observations until we are satisfied that we have found the broadest generalization that our data will allow -- this will then be the answer to our research question.
 
-This so\hyp{}called \emph{inductive} \is{induction} approach was famously rejected by the Austrian\hyp{}British philosopher Karl Popper for reasons that will become clear below, but after a period of disrepute it has been making a strong comeback in many disciplines in recent years due to the increasing availability of massive amounts of data and of tools that can search for correlations \is{correlation} in these data within a reasonable time frame (think of the current buzz word ``big data''). Such massive amounts of data allow us to take an extremely inductive \is{induction} approach -- essentially just asking ``What relationships exist in my data?'' -- and still arrive at reliable \is{reliability} generalizations. Of course, matters are somewhat more complex, since, as discussed at the end of the previous chapter, theoretical constructs cannot directly be read off our data. But the fact remains that, used in the right way, inductive \is{induction} research designs \is{research design} have their applications. In corpus linguistics, large \is{corpus size} amounts of data have been available for some time (as mentioned in the previous chapter, the size even of corpora striving for some kind of balance is approaching half\hyp{}a-billion words), and inductive approaches are used routinely and with insightful consequences (\citealt{sinclair_corpus_1991} is an excellent example).
+This so\hyp{}called \emph{inductive} \is{induction} approach was famously rejected by the Austrian-Brit\-ish philosopher Karl Popper for reasons that will become clear below, but after a period of disrepute it has been making a strong comeback in many disciplines in recent years due to the increasing availability of massive amounts of data and of tools that can search for correlations \is{correlation} in these data within a reasonable time frame (think of the current buzz word ``big data''). Such massive amounts of data allow us to take an extremely inductive \is{induction} approach -- essentially just asking ``What relationships exist in my data?'' -- and still arrive at reliable \is{reliability} generalizations. Of course, matters are somewhat more complex, since, as discussed at the end of the previous chapter, theoretical constructs cannot directly be read off our data. But the fact remains that, used in the right way, inductive \is{induction} research designs \is{research design} have their applications. In corpus linguistics, large \is{corpus size} amounts of data have been available for some time (as mentioned in the previous chapter, the size even of corpora striving for some kind of balance is approaching half\hyp{}a-billion words), and inductive approaches are used routinely and with insightful consequences (\citealt{sinclair_corpus_1991} is an excellent example).
 
 The second way of stating research questions entails a more focused way of approaching our data. We state our hypothesis \is{hypothesis} before looking at any data, and then limit our observations \is{observational method} just to those that will help us determine the truth of this hypothesis (which is far from trivial, as we will see presently). This so\hyp{}called \emph{deductive} \is{deduction} approach is generally seen as the standard way of conducting research (at least ideally -- actual research by actual people tends to be a bit messier even conceptually).
 
@@ -2016,8 +2016,8 @@ We can now calculate precision \is{precision} and recall \is{recall} rate of our
 \ex
 \begin{xlist}
 \label{ex:precisionrecallrate}
-\ex $\displaystyle{\text{Precision} = \frac{13}{27} = 0.48}$\\
-\ex $\displaystyle{\text{Recall} = \frac{13}{36} = 0.36}$
+\ex $\text{Precision} = \frac{13}{27} = 0.48$\\
+\ex $\text{Recall} = \frac{13}{36} = 0.36$
 \end{xlist}
 \end{exe}
 
@@ -2254,11 +2254,11 @@ For example, the annotation scheme for \textvv{Animacy} \is{animacy} mentioned i
 The category \textvv{organization} is much more complex to apply consistently, since there is no intuitively \is{intuition} accessible and generally accepted understanding of what constitutes an organization. In particular, it needs to be specified what distinguishes an \textvv{organization} from other groups of human \is{animacy} beings (that are to be categorized \is{categorization} as \textvv{human} according to the annotation \is{annotation} scheme). The annotation \is{annotation} scheme defines an \textvv{organization} as a referent involving ``more than one human'' with ``some degree of group identity''. It then provides the following hierarchy of properties that a group of humans \is{animacy} may have (where each property implies the presence of all properties below its position in the hierarchy):
 
 \begin{exe}
-\ex +/- chartered/official\\
-+/- temporally stable\\
-+/- collective voice/purpose\\
-+/- collective action\\
-+/- collective
+\ex +/\textminus chartered/official\\
++/\textminus temporally stable\\
++/\textminus collective voice/purpose\\
++/\textminus collective action\\
++/\textminus collective
 \label{ex:animacyorg}
 \end{exe}
 
