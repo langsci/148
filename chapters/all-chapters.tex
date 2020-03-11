@@ -3827,13 +3827,13 @@ Note that this formula assumes that the measures with the subscript 1 are from t
 As should be familiar by now, we compare this \textit{t}-value against its distribution \is{distribution!conditional} to determine the probability \is{probability of error} of error (i.e., we look it up in the table in Section \ref{sec:ttestcriticalvalues} in the Statistical Tables at the end of this book. Before we can do so, however, we need to determine the degrees of freedom of our sample. This is done using the following formula:
 
 \begin{exe}
-\ex $\displaystyle{df \approx \frac{\left(\frac{s_1^2}{N_1} + \frac{s_2^2}{N_2}\right)^2}{\frac{s_1^4}{N_1^2 \df_1} + \frac{s_2^4}{N_2^2 \df_2}}}$
+\ex $\df \approx \frac{\left(\frac{s_1^2}{N_1} + \frac{s_2^2}{N_2}\right)^2}{\frac{s_1^4}{N_1^2 \df_1} + \frac{s_2^4}{N_2^2 \df_2}}$
 \label{ex:formulawelchdf}
 \end{exe}
 
 Again, the subscripts indicate the sub\hyp{}samples, \textit{s}\textsuperscript{2} is the sample variance, \is{variance} and N is the number of items the degrees of freedom for the two groups (df\textsubscript{1} and df\textsubscript{2}) are defined as N\hyp{}1. If we apply the formula to our data, we get the following:
 
-\[df \approx \frac{\left(\frac{6.6667}{24} + \frac{0.3053}{20}\right)^2}{\frac{6.6667^2}{24^2 \times (24-1)} + \frac{0.3053^2}{20^2 \times (20-1)}} = 25.5038\]
+\[\df \approx \frac{\left(\frac{6.6667}{24} + \frac{0.3053}{20}\right)^2}{\frac{6.6667^2}{24^2 \times (24-1)} + \frac{0.3053^2}{20^2 \times (20-1)}} = 25.5038\]
 
 As we can see in the table of critical values, the t\hyp{}value is smaller than 0.01. A \textit{t}-test \is{t-test@$t$-test} should be reported in the following format:
 
