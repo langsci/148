@@ -4856,7 +4856,7 @@ Mutual information \is{mutual information} is one of the oldest collocation \is{
 
 Applying the formula to our table, we get the following:
 
-\[\text{MI} = {\log_2 \left( {9} \over {0.2044} \right) = log_2 \left( 44.03 \right)} = 5.46\]
+\[\text{MI} = {\log_2 \left( {9} \over {0.2044} \right) = \log_2 \left( 44.03 \right)} = 5.46\]
 
 In our case, we are looking at cases where \textvv{word a} and \textvv{word b} occur directly next to each other, i.e., the span \is{span} size is 1. When looking at a larger span (which is often done in collocation \is{collocation} research), the probability \is{probability} of encountering a particular collocate increases, because there are more slots that it could potentially occur in. The MI statistic can be adjusted for larger span sizes as follows (where \textit{S} is the span size):
 
@@ -4891,11 +4891,13 @@ In order to calculate the \emph{G} \is{log-likelihood ratio test} measure, we ca
 
 Applying the formula in \ref{ex:loglik} to the data in Table \ref{tab:goodexample}, we get the following:
 
-\[\text{G} = 2 \times \left( 9 \times \log_e \left( \frac{9}{0.2044} \right) \right) +\ \left( 836 \times \log_e \left( \frac{836}{844.7956} \right) \right)\]
-
-\[+\ \left( 236 \times \log_e \left( \frac{236}{244.7956} \right) \right) +\ \left( 1011904 \times \log_e \left( \frac{1011904}{1011895.2044} \right) \right)\]
-
-\[= 2 \times \left( \left( 34.0641 \right) + \left( -8.7497 \right) + \left( -8.6357 \right) + \left( 8.7956 \right) \right) = 50.9489\]
+\begin{equation*}
+\begin{split}
+\text{G} & = 2 \times \left( 9 \times \log_e \left( \frac{9}{0.2044} \right) \right) +\ \left( 836 \times \log_e \left( \frac{836}{844.7956} \right) \right)\\
+& \quad +\ \left( 236 \times \log_e \left( \frac{236}{244.7956} \right) \right) +\ \left( 1011904 \times \log_e \left( \frac{1011904}{1011895.2044} \right) \right)\\
+& = 2 \times \left( \left( 34.0641 \right) + \left( -8.7497 \right) + \left( -8.6357 \right) + \left( 8.7956 \right) \right) = 50.9489
+\end{split}
+\end{equation*}
 
 The \emph{G} \is{log-likelihood ratio test} value has long been known to be more reliable than the $\chi^2$ \is{chi-square test} test when dealing with small samples and small expected \is{frequency, expected} frequencies \citep[134ff]{read_goodness--fit_1988}. This led \citet{dunning_accurate_1993} to propose it as an association \is{association} measure \is{association measure} specifically to avoid the overestimation of rare events that plagues the $\chi^2$ \is{chi-square test} test, mutual information \is{mutual information} and other measures.
 
@@ -7463,7 +7465,7 @@ This is not to say that the token \is{token (instance)} frequencies \is{frequenc
 \textit{b. Type frequency}. In contrast, the type \is{type (category)} frequency \is{frequency, type} of an affix \is{affix} is a fairly direct reflection of the importance of the affix \is{affix} for the lexicon \is{lexicon} of a language: obviously an affix \is{affix} that occurs in many different words is more important than one that occurs only in a few words. Note that in order to compare type frequencies, we have to correct for the size \is{corpus size} of the sample: all else being equal, a larger sample will contain more types than a smaller one simply because it offers more opportunities for different types \is{type (category)} to occur (a point we will return to in more detail in the next subsection). A simple way of doing this is to divide the number of types by the number of tokens; \is{token (instance)} the resulting measure is referred to very transparently as the \textit{type\slash token ratio} (or \is{type-token ratio} TTR):
 
 \begin{exe}
-\ex $\displaystyle{\text{TTR} = \frac{n \left( types \right) }{n \left( tokens \right)}}$
+\ex $\displaystyle{\text{TTR} = \frac{n \left( \text{types} \right) }{n \left( \text{tokens} \right)}}$
 \label{ex:ttrformula}
 \end{exe}
 
@@ -7605,7 +7607,7 @@ We will encounter the same problem when we compare the TTR \is{type-token ratio}
 
 As we can see, the TTR \is{type-token ratio} and HTR \is{hapax-token ratio} of both affixes \is{affix} behave roughly like that of Jane Austen's vocabulary as a whole as we increase sample size: \is{corpus size} both of them grow fairly quickly at first before their growth slows down; the latter happens more quickly in the case of the HTR than in the case of the TTR, and, again, we observe that the HTR sometimes decreases as types \is{type (category)} that were hapaxes \is{hapax legomenon} up to a particular point in the sample reoccur and cease to be hapaxes.
 
-Taking into account the entire sample, the TTR \is{type-token ratio} for \textit{-ise/-ize} is $\nicefrac{105}{834} = 0.1259$ and that for \textit{-ify} is $\nicefrac{49}{356} = 0.1376$; it seems that \textit{-ise/-ize} is slightly more important to the lexicon \is{lexicon} of English than \textit{-ify}. A $\chi^2$ \is{chi-square test} test suggests that the difference is not significant (cf. Table \ref{tab:izeifyttr}; $\chi^2$ = 0.3053, df = 1, p > 0.05).
+Taking into account the entire sample, the TTR \is{type-token ratio} for \textit{-ise/-ize} is $\nicefrac{105}{834} = 0.1259$ and that for \textit{-ify} is $\nicefrac{49}{356} = 0.1376$; it seems that \textit{-ise/-ize} is slightly more important to the lexicon \is{lexicon} of English than \textit{-ify}. A $\chi^2$ \is{chi-square test} test suggests that the difference is not significant (cf. Table \ref{tab:izeifyttr}; $\chi^2 = 0.3053, \text{df} = 1, p > 0.05$).
 
 \begin{table}
 \caption{Type/token ratios of \textit{-ise/-ize} and \textit{-ify} (LOB)}
