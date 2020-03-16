@@ -26,13 +26,6 @@ main.snd: main.bbl
 	sed -i 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' main.sdx # ordering of references to footnotes
 	sed -i 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' main.adx
 	sed -i 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' main.ldx
-	sed -i 's/.*Office.*/\1/' main.adx
-	sed -i 's/.*Team.*/\1/' main.adx
-	sed -i 's/.*Bureau.*/\1/' main.adx
-	sed -i 's/.*Organisation.*/\1/' main.adx
-	sed -i 's/.*Organization.*/\1/' main.adx
-	sed -i 's/.*Embassy.*/\1/' main.adx
-	sed -i 's/.*Association.*/\1/' main.adx
 	python3 fixindex.py
 	mv mainmod.adx main.adx
 	makeindex -o main.and main.adx
