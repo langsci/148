@@ -8,14 +8,14 @@ However, once we have extracted \is{retrieval} and -- if necessary -- manually \
 \section{Quantifying morphological phenomena}
 \label{sec:quantifyingmorphologicalphenomena}
 
-\subsection{Counting morphemes: types, tokens and hapax legomena}
+\subsection{Counting morphemes: Types, tokens and hapax legomena}
 \label{sec:countingmorphemes}
 
 Determining the frequency \is{frequency} of a linguistic phenomenon in a corpus or under a particular condition seems a straightforward task: we simply count the number of instances of this phenomenon in the corpus or under that condition. However, this sounds straightforward (in fact, tautological) only because we have made tacit assumptions about what it means to be an ``instance'' of a particular phenomenon.
 
 When we are interested in the frequency \is{frequency} of occurrence of a particular word, it seems obvious that every occurrence of the word counts as an instance. In other words, if we know how often the word occurs in our data, we know how many instances there are in our data. For example, in order to determine the number of instances of the definite article \is{determiner} in the BNC, \is{BNC} we construct a query that will retrieve \is{retrieval} the string \texttt{the} in all combinations of upper and lower case letters, i.e. at least \textit{the}, \textit{The}, and \textit{THE}, but perhaps also \textit{tHe}, \textit{ThE}, \textit{THe}, \textit{tHE} and \textit{thE}, just to be sure). We then count the hits (since this string corresponds uniquely to the word \textit{the}, we don't even have to clean up the results manually). \is{manual analysis} The query will yield \num{6041234} hits, so there are \num{6041234} instances of the word \textit{the} in the \is{BNC} BNC.
 
-When searching for grammatical \is{grammar} structures (for example in Chapters~\ref{ch:quantifyingresearch} and \ref{ch:significancetesting}), simply transferred this way of counting occurrences. For example, in order to determine the frequency \is{frequency} of the \textit{s}-possessive \is{possessive} in the BNC, \is{BNC} we would define a reasonable query or set of queries (which, as discussed in various places in this book, can be tricky) and again simply count the hits. \is{hit} Let us assume that the query $\langle$ \texttt{[pos="(POS|DPS)"] [pos=".*AJ.*"]? [pos=".*NN.*"]} $\rangle$ is a reasonable approximation: it retrieves \is{retrieval} all instances of the possessive clitic \is{clitic} (tagged \texttt{POS} in the BNC) \is{BNC} or a possessive determiner \is{determiner} (\texttt{DPS}), optionally followed by a word tagged \is{POS tagging} as an adjective \is{adjective} (\texttt{AJ0}, \texttt{AJC} or \texttt{AJS}, even if it is part of an ambiguity \is{ambiguity} tag), followed by a word tagged as a noun \is{noun} (\texttt{NN0}, \texttt{NN1} or \texttt{NN2}, even if it is part of an ambiguity tag). This query will retrieve \num{1651908} hits, so it seems that there are \num{1651908} instances of the \textit{s}-possessive \is{possessive} in the \is{BNC} BNC.
+When searching for grammatical \is{grammar} structures (for example in Chapters~\ref{ch:quantifyingresearch} and~\ref{ch:significancetesting}), simply transferred this way of counting occurrences. For example, in order to determine the frequency \is{frequency} of the \textit{s}-possessive \is{possessive} in the BNC, \is{BNC} we would define a reasonable query or set of queries (which, as discussed in various places in this book, can be tricky) and again simply count the hits. \is{hit} Let us assume that the query $\langle$ \texttt{[pos="(POS|DPS)"] [pos=".*AJ.*"]? [pos=".*NN.*"]} $\rangle$ is a reasonable approximation: it retrieves \is{retrieval} all instances of the possessive clitic \is{clitic} (tagged \texttt{POS} in the BNC) \is{BNC} or a possessive determiner \is{determiner} (\texttt{DPS}), optionally followed by a word tagged \is{POS tagging} as an adjective \is{adjective} (\texttt{AJ0}, \texttt{AJC} or \texttt{AJS}, even if it is part of an ambiguity \is{ambiguity} tag), followed by a word tagged as a noun \is{noun} (\texttt{NN0}, \texttt{NN1} or \texttt{NN2}, even if it is part of an ambiguity tag). This query will retrieve \num{1651908} hits, so it seems that there are \num{1651908} instances of the \textit{s}-possessive \is{possessive} in the \is{BNC} BNC.
 
 However, there is a crucial difference between the two situations: in the case of the word \textit{the}, every instance is identical to all others (if we ignore upper and lower case). This is not the case for the \textit{s}-possessive. Of course, here, too, many instances are identical to other instances: there are exact repetitions of proper names, like \textit{King's Cross} (322 hits) or \textit{People's revolutionary party} (47), of (parts of) idiomatic \is{idiomaticity} expressions, like \textit{arm's length} (216) or \textit{heaven's sake} (187) or non\hyp{}idiomatic but nevertheless fixed phrases like \textit{its present form} (107) or \textit{child's best interest} (26), and also of many free combinations of words that recur because they are simply communicatively useful in many situations, like \textit{her head} (5105), \textit{his younger brother} (112), \textit{people's lives} (224) and \textit{body's immune system} (29).
 
@@ -43,7 +43,8 @@ Let us count the occurrences of the adverbial \is{adverb} suffix \is{affix} \tex
 
 Again, whether type \is{type (category)} or token \is{token (instance)} frequency \is{frequency!token} is the more relevant or useful measure \is{measurement} depends on the research design, \is{research design} but the issue is more complicated than in the case of words and grammatical \is{grammar} structures. Let us begin to address this problem by looking at the diminutive affixes \is{affix} \textit{-icle} (as in \textit{cubicle}, \textit{icicle}) and \textit{mini-} (as in \textit{minivan}, \textit{mini\hyp{}cassette}).
 
-\textit{a. Token frequency}. First, let us count the tokens \is{token (instance)} of both affixes \is{affix} in the BNC. \is{BNC} This is relatively easy in the case of \textit{-icle}, since the string \texttt{icle} is relatively unique to this morpheme \is{morphology} (the name \textit{Pericles} is one of the few false hits that the query $\langle$ \texttt{[word=".+icles?"\%c]} $\rangle$ will retrieve). \is{retrieval} It is more difficult in the case of \textit{mini-}, since there are words like \textit{minimal}, \textit{minister}, \textit{ministry}, \textit{miniature} and others that start with the string \texttt{mini} but do not contain the prefix \is{affix} \textit{mini-}. Once we have cleaned up our concordances \is{concordance} (available in the Supplementary Online Material, file LMY7), we will find that \textit{-icle} has a token frequency \is{frequency!token} of \num{20772} -- more than ten times that of \textit{mini-}, which occurs only \num{1702} times. We might thus be tempted to conclude that \textit{-icle} is much more important in the English language than \textit{mini-}, and that, if we are interested in English diminutives, we should focus on \textit{-icle}. However, this conclusion would be misleading, or at least premature, for reasons related to the problems introduced above.
+\subsubsection{Token frequency} 
+First, let us count the tokens \is{token (instance)} of both affixes \is{affix} in the BNC. \is{BNC} This is relatively easy in the case of \textit{-icle}, since the string \texttt{icle} is relatively unique to this morpheme \is{morphology} (the name \textit{Pericles} is one of the few false hits that the query \mbox{$\langle$\texttt{[word=".+icles?"\%c]}$\rangle$} will retrieve). \is{retrieval} It is more difficult in the case of \textit{mini-}, since there are words like \textit{minimal}, \textit{minister}, \textit{ministry}, \textit{miniature} and others that start with the string \texttt{mini} but do not contain the prefix \is{affix} \textit{mini-}. Once we have cleaned up our concordances \is{concordance} (available in the Supplementary Online Material, file LMY7), we will find that \textit{-icle} has a token frequency \is{frequency!token} of \num{20772} -- more than ten times that of \textit{mini-}, which occurs only \num{1702} times. We might thus be tempted to conclude that \textit{-icle} is much more important in the English language than \mbox{\textit{mini-},} and that, if we are interested in English diminutives, we should focus on \textit{-icle}. However, this conclusion would be misleading, or at least premature, for reasons related to the problems introduced above.
 
 Recall that affixes \is{affix} do not occur by themselves, but always as parts of words (this is what makes them affixes \is{affix} in the first place). This means that their token frequency \is{frequency!token} can reflect situations that are both quantitatively and qualitatively very different. Specifically, a high token frequency of an affix \is{affix} may be due to the fact that it is used in a small number of very frequent words, or in a large number of very infrequent words (or something in between). The first case holds for \textit{-icle}: the three most frequent words it occurs in (\textit{article}, \textit{vehicle} and \textit{particle}) account for \num{19195} hits (i.e., 92.41 percent of all occurrences). In contrast, the three most frequent words with \textit{mini-} (\textit{mini\hyp{}bus}, \textit{mini\hyp{}bar} and \textit{mini\hyp{}computer}) account for only 557 hits, i.e. 32.73 percent of all occurrences. To get to 92.4 percent, we would have to include the 253 most frequent words (roughly two thirds of all \is{type (category)} types).
 
@@ -57,7 +58,7 @@ For example, the token frequency \is{frequency!token} of the suffix \is{affix} \
 \resizebox*{!}{\textheight}{%
 \begin{tabular}[t]{lccr}
 \lsptoprule
- & \multicolumn{2}{c}{\textvv{Corpus}} & \\
+ & \multicolumn{2}{c}{\textvv{Corpus}} & \\\cmidrule(lr){2-3}
 \textvv{Word} & \textvv{lob} & \textvv{brown} & Total \\
 \midrule
 \textit{\makecell[tl]{article}}
@@ -124,7 +125,8 @@ Even if all words containing a particular affix \is{affix} were more frequent un
 
 This is not to say that the token \is{token (instance)} frequencies \is{frequency!token} of affixes \is{affix} can never play a useful role; they may be of interest, for example, in cases of morphological \is{morphology} alternation \is{alternation} (i.e. two suffixes \is{affix} competing for the same stems, \is{statistics} such as \textit{-ic} and \textit{-ical} in words like \textit{electric}\slash \textit{al}); here, we may be interested in the quantitative association \is{association} between particular stems and one or the other of the affix \is{affix} variants, essentially giving us a collocation\hyp{}like \is{collocation} research design \is{research design} based on token frequencies. \is{frequency!token} But for most research questions, the distribution \is{distribution!conditional} of token frequencies under different conditions is meaningless.
 
-\textit{b. Type frequency}. In contrast, the type \is{type (category)} frequency \is{frequency!type} of an affix \is{affix} is a fairly direct reflection of the importance of the affix \is{affix} for the lexicon \is{lexicon} of a language: obviously an affix \is{affix} that occurs in many different words is more important than one that occurs only in a few words. Note that in order to compare type frequencies, we have to correct for the size \is{corpus size} of the sample: all else being equal, a larger sample will contain more types than a smaller one simply because it offers more opportunities for different types \is{type (category)} to occur (a point we will return to in more detail in the next subsection). A simple way of doing this is to divide the number of types by the number of tokens; \is{token (instance)} the resulting measure is referred to very transparently as the \textit{type\slash token ratio} (or \is{type-token ratio} TTR):
+\subsubsection{Type frequency}
+In contrast, the type \is{type (category)} frequency \is{frequency!type} of an affix \is{affix} is a fairly direct reflection of the importance of the affix \is{affix} for the lexicon \is{lexicon} of a language: obviously an affix \is{affix} that occurs in many different words is more important than one that occurs only in a few words. Note that in order to compare type frequencies, we have to correct for the size \is{corpus size} of the sample: all else being equal, a larger sample will contain more types than a smaller one simply because it offers more opportunities for different types \is{type (category)} to occur (a point we will return to in more detail in the next subsection). A simple way of doing this is to divide the number of types by the number of tokens; \is{token (instance)} the resulting measure is referred to very transparently as the \textit{type\slash token ratio} (or \is{type-token ratio} TTR):
 
 \begin{exe}
 \ex $\displaystyle{\text{TTR} = \frac{n \left( \text{types} \right) }{n \left( \text{tokens} \right)}}$
@@ -137,7 +139,8 @@ For example, the affix \is{affix} \textit{-icle} occurs in just 31 different wor
 
 Likewise, observing the type frequency \is{frequency!type} (i.e. the TTR) \is{type-token ratio} of an affix \is{affix} under different conditions provides information about the relationship between these conditions and the affix \is{affix} itself, albeit one that is mediated by the lexicon: \is{lexicon} it tells us how important the suffix \is{affix} in question is for the subparts of the lexicon that are relevant under those conditions. For example, there are 7 types \is{type (category)} and 9 tokens \is{token (instance)} for \textit{mini-} in the 1991 British \is{British English} FLOB \is{FLOB} corpus (two tokens each for \textit{mini\hyp{}bus} and \textit{mini\hyp{}series} and one each for \textit{mini\hyp{}charter}, \textit{mini\hyp{}disc}, \textit{mini\hyp{}maestro}, \textit{mini\hyp{}roll} and \textit{mini\hyp{}submarine}), so the TTR is $\nicefrac{7}{9} = 0.7779$. In contrast, in the 1991 US\hyp{}American \is{American English} FROWN \is{FROWN} corpus, there are 11 types and 12 tokens (two tokens for \textit{mini\hyp{}jack}, and one token each for \textit{mini\hyp{}cavalry}, \textit{mini\hyp{}cooper}, \textit{mini\hyp{}major}, \textit{mini\hyp{}retrospective}, \textit{mini\hyp{}version}, \textit{mini\hyp{}boom}, \textit{mini\hyp{}camp}, \textit{mini\hyp{}grinder}, \textit{mini\hyp{}series}, and \textit{mini\hyp{}skirt}), so the TTR \is{type-token ratio} is $\nicefrac{11}{12} = 0.9167$. This suggests that the prefix \is{affix} \textit{mini-} was more important to the US\hyp{}English lexicon \is{lexicon} than to the British \is{British English} English lexicon in the 1990s, although, of course, the samples and the difference between them are both rather small, so we would not want to draw that conclusion without consulting larger \is{corpus size} corpora and, possibly, testing for significance first (a point I will return to in the next subsection).
 
-\textit{c. Hapax legomena}. \is{hapax legomenon} While type frequency \is{frequency!type} is a useful way of measuring \is{measurement} the importance of affixes \is{affix} in general or under specific conditions, it has one drawback: it does not tell us whether the affix \is{affix} plays a productive \is{productivity} role in a language at the time from which we take our samples (i.e. whether speakers at that time made use of it when coining new words). An affix \is{affix} may have a high TTR \is{type-token ratio} because it was productively used at the time of the sample, or because it was productively used at some earlier period in the history of the language in question. In fact, an affix \is{affix} can have a high TTR even if it was never productively \is{productivity} used, for example, because speakers at some point borrowed a large number of words containing it; this is the case for a number of Romance affixes \is{affix} in English, occurring in words borrowed from Norman French but never (or very rarely) used to coin new words. An example is the \is{affix} suffix \textit{-ence}\slash \textit{-ance} occurring in many Latin and French loanwords (such as \textit{appearance}, \textit{difference}, \textit{existence}, \textit{influence}, \textit{nuisance}, \textit{providence}, \textit{resistance}, \textit{significance}, \textit{vigilance}, etc.), but only in a handful of words formed in English (e.g. \textit{abidance}, \textit{forbearance}, \textit{furtherance}, \textit{hinderance}, and \textit{riddance}).
+\subsubsection{Hapax legomena}\is{hapax legomenon|(}
+While type frequency \is{frequency!type} is a useful way of measuring \is{measurement} the importance of affixes \is{affix} in general or under specific conditions, it has one drawback: it does not tell us whether the affix \is{affix} plays a productive \is{productivity} role in a language at the time from which we take our samples (i.e. whether speakers at that time made use of it when coining new words). An affix \is{affix} may have a high TTR \is{type-token ratio} because it was productively used at the time of the sample, or because it was productively used at some earlier period in the history of the language in question. In fact, an affix \is{affix} can have a high TTR even if it was never productively \is{productivity} used, for example, because speakers at some point borrowed a large number of words containing it; this is the case for a number of Romance affixes \is{affix} in English, occurring in words borrowed from Norman French but never (or very rarely) used to coin new words. An example is the \is{affix} suffix \textit{-ence}\slash \textit{-ance} occurring in many Latin and French loanwords (such as \textit{appearance}, \textit{difference}, \textit{existence}, \textit{influence}, \textit{nuisance}, \textit{providence}, \textit{resistance}, \textit{significance}, \textit{vigilance}, etc.), but only in a handful of words formed in English (e.g. \textit{abidance}, \textit{forbearance}, \textit{furtherance}, \textit{hinderance}, and \textit{riddance}).
 
 In order to determine the productivity \is{productivity} (and thus the current importance) of affixes \is{affix} at a particular point in time, Harald Baayen (cf. e.g. \citealt{baayen_41._2009} for an overview) has suggested that we should focus on types \is{type (category)} that only occur once in the corpus, so\hyp{}called \textit{hapax legomena} \is{hapax legomenon} (Greek for `said once'). The assumption is that productive \is{productivity} uses of an affix \is{affix} (or other linguistic rule) should result in one\hyp{}off coinages (some of which may subsequently spread through the speech community while others will not).
 
@@ -155,7 +158,7 @@ Like the number of types, \is{type (category)} the number of hapax \is{hapax leg
 
 We will refer to this measure as the hapax\hyp{}token \is{hapax-token ratio} ratio (or HTR) by analogy with the term \textit{type-token ratio}. \is{type-token ratio} Note, however, that in the literature this measure is referred to as \textit{P} for ``Productivity'' \is{productivity} (following Baayen, who first suggested the measure); I depart from this nomenclature here to avoid confusion with \textit{p} for ``probability (of error)''.
 
-Let us apply this measure to our two diminutive affixes. \is{affix} The suffix \textit{-icle} has just five hapax legomena in the BNC \is{BNC} (\textit{auricle}, \textit{denticle}, \textit{pedicle}, \textit{pellicle} and \textit{tunicle}). This means that its HTR \is{hapax-token ratio} is $\nicefrac{5}{20772} = 0.0002$, so 0.02 percent of its tokens \is{token (instance)} are hapax \is{hapax legomenon} legomena. In contrast, there are 247 hapax legomena for \textit{mini-} in the BNC (including, for example, \textit{mini\hyp{}earthquake}, \textit{mini\hyp{}daffodil}, \textit{mini\hyp{}gasometer}, \textit{mini\hyp{}cow} and \textit{mini\hyp{}wurlitzer}). This means that its HTR \is{hapax-token ratio} is $\nicefrac{247}{1702} = 0.1451$, so 14.5 percent of its tokens are hapax legomena. Thus, we can assume that \textit{mini-} is much more productive \is{productivity} than \textit{-icle}, which presumably matches the intuition \is{intuition} of most speakers of English.
+Let us apply this measure to our two diminutive affixes. \is{affix} The suffix \textit{-icle} has just five hapax legomena in the BNC \is{BNC} (\textit{auricle}, \textit{denticle}, \textit{pedicle}, \textit{pellicle} and \textit{tunicle}). This means that its HTR \is{hapax-token ratio} is $\nicefrac{5}{20772} = 0.0002$, so 0.02 percent of its tokens \is{token (instance)} are hapax \is{hapax legomenon} legomena. In contrast, there are 247 hapax legomena for \textit{mini-} in the BNC (including, for example, \textit{mini\hyp{}earthquake}, \textit{mini\hyp{}daffodil}, \textit{mini\hyp{}gasometer}, \textit{mini\hyp{}cow} and \textit{mini\hyp{}wurlitzer}). This means that its HTR \is{hapax-token ratio} is $\nicefrac{247}{1702} = 0.1451$, so 14.5 percent of its tokens are hapax legomena. Thus, we can assume that \textit{mini-} is much more productive \is{productivity} than \textit{-icle}, which presumably matches the intuition \is{intuition} of most speakers of English.\is{hapax legomenon|)}
 
 \subsection{Statistical evaluation}
 \label{sec:statisticalevaluation}
@@ -167,7 +170,7 @@ As pointed out in connection with the comparison of the TTRs \is{type-token rati
 \label{tab:iclemini}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Affix}} & \\
+ & & \multicolumn{2}{c}{\textvv{Affix}} & \\\cmidrule(lr){3-4}
  & & \textvv{-icle} & \textvv{mini-} & Total \\
 \midrule
 \textvv{\makecell[lt]{Type}}
@@ -226,7 +229,7 @@ Now imagine we wanted to use the TTR \is{type-token ratio} and the HTR \is{hapax
 \label{tab:austenttr}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Type}} & \\
+ & & \multicolumn{2}{c}{\textvv{Type}} & \\\cmidrule(lr){3-4}
  & & \textvv{new} & \textvv{$\neg$new} & Total \\
 \midrule
 \textvv{\makecell[lt]{Text Sample}}
@@ -274,9 +277,9 @@ Taking into account the entire sample, the TTR \is{type-token ratio} for \textit
 \begin{table}
 \caption{Type/token ratios of \textit{-ise/-ize} and \textit{-ify} (LOB)}
 \label{tab:izeifyttr}
-\begin{tabular}[t]{llccr}
+\begin{tabularx}{.67\textwidth}{Qlccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Type}} & \\
+ & & \multicolumn{2}{c}{\textvv{Type}} & \\\cmidrule(lr){3-4}
  & & \textvv{new} & \textvv{seen before} & Total \\
 \midrule
 \textvv{\makecell[lt]{Affix}}
@@ -295,7 +298,7 @@ Taking into account the entire sample, the TTR \is{type-token ratio} for \textit
 		& \makecell[t]{\num{1190}} \\
 \lspbottomrule
 \multicolumn{5}{l}{\scriptsize{Supplementary Online Material: EWTN}} \\ %OSM
-\end{tabular}
+\end{tabularx}
 \end{table}
 % me: chisq.test(matrix(c(105,49,729,307),ncol=2),corr=FALSE)
 
@@ -304,9 +307,9 @@ Likewise, taking into account the entire sample, the HTR \is{hapax-token ratio} 
 \begin{table}
 \caption{Hapax/token ratios of \textit{-ise/-ize} and \textit{-ify} (LOB)}
 \label{tab:izeifyhtr}
-\begin{tabular}[t]{llccr}
+\begin{tabularx}{.67\textwidth}{Qlccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Type}} & \\
+ & & \multicolumn{2}{c}{\textvv{Type}} & \\\cmidrule(lr){3-4}
  & & \textvv{hapax} & \textvv{$\neg$hapax} & Total \\
 \midrule
 \textvv{\makecell[lt]{Affix}}
@@ -324,24 +327,22 @@ Likewise, taking into account the entire sample, the HTR \is{hapax-token ratio} 
 		& \makecell[t]{\num{1126}}
 		& \makecell[t]{\num{1190}} \\
 \lspbottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 % me: chisq.test(matrix(c(47,17,787,339),ncol=2),corr=FALSE)
 
-However, note that \textit{-ify} has a token \is{token (instance)} frequency \is{frequency!token} that is less than half of that of \textit{-ise/-ize}, so the sample is much smaller: as in the example of lexical richness in \textit{Pride and Prejudice}, this means that the TTR \is{type-token ratio} and the HTR \is{hapax-token ratio} of this smaller sample are exaggerated and our comparisons in \tabref{tab:izeifyttr} and \tabref{tab:izeifyhtr} as well as the accompanying statistics are, in fact, completely meaningless.
+However, note that \textit{-ify} has a token \is{token (instance)} frequency \is{frequency!token} that is less than half of that of \textit{-ise/-ize}, so the sample is much smaller: as in the example of lexical richness in \textit{Pride and Prejudice}, this means that the TTR \is{type-token ratio} and the HTR \is{hapax-token ratio} of this smaller sample are exaggerated and our comparisons in Tables~\ref{tab:izeifyttr} and~\ref{tab:izeifyhtr} as well as the accompanying statistics are, in fact, completely meaningless.
 
 The simplest way of solving the problem of different sample sizes \is{corpus size} is to create samples of equal size for the purposes of comparison. We simply take the size of the smaller of our two samples and draw a random sample of the same size from the larger of the two samples (if our data sets are large enough, it would be even better to draw random samples for both affixes). \is{affix} This means that we lose some data, but there is nothing we can do about this (note that we can still include the discarded data in a qualitative \is{qualitative research} description \is{description} of the affix \is{affix} in question).\footnote{In studies of lexical richness, a measure called \textit{Mean Segmental Type\hyp{}Token Ratio} (MSTTR) \is{type-token ratio!mean segmental} is sometimes used \citep[cf.][]{johnson_program_1944}. This measure is derived by dividing the texts under investigation into segments of equal size (often segments of 100 words), determining the TTR \is{type-token ratio} for each segment, and then calculating an average TTR. This allows us to compare the TTR of texts of different sizes without discarding any data. However, this method is not applicable to the investigation of morphological \is{morphology} productivity, \is{productivity} as most samples of 100 words (or even 1000 or \num{10000} words) will typically not contain enough cases of a given morpheme to determine a meaningful TTR.}
 
 Figures \ref{fig:izesamplettrhtr}a and \ref{fig:izesamplettrhtr}b show the growth rates of the TTR \is{type-token ratio} and the HTR \is{hapax-token ratio} of a sub\hyp{}sample of 356 tokens of \textit{-ise/-ize} in comparison with the total sample of the same size for \textit{-ify} (the sample was derived by first deleting every second hit, \is{hit} then every seventh hit and finally every ninetieth hit, making sure that the remaining hits are spread throughout the corpus).
 
 \begin{figure}
-\caption{TTRs and HTRs for \textit{-ise/-ize} and \textit{-ify} in the LOB corpus}
-\label{fig:izesamplettrhtr}
+\caption{TTRs and HTRs for \textit{-ise/-ize} and \textit{-ify} in the LOB corpus\label{fig:izesamplettrhtr}}
 \begin{minipage}{.5\textwidth}
  \centering
  \includegraphics[width=\textwidth]{figures/lobsampleiseifytypes}
-\end{minipage}
-%
+\end{minipage}%
 \begin{minipage}{.5\textwidth}
  \centering
  \includegraphics[width=\textwidth]{figures/lobsampleiseifyhapaxes}
@@ -353,9 +354,9 @@ The TTR \is{type-token ratio} of \textit{-ise/-ize} based on the random sub\hyp{
 \begin{table}
 \caption{Type/token ratios of \textit{-ise/-ize}/\textit{-ise/-ize} (sample) and \textit{-ify} (LOB)}
 \label{tab:izeifyttrsample}
-\begin{tabular}[t]{llccr}
+\begin{tabularx}{.67\textwidth}{Qlccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Type}} & \\
+ & & \multicolumn{2}{c}{\textvv{Type}} & \\\cmidrule(lr){3-4}
  & & \textvv{new} & \textvv{seen before} & Total \\
 \midrule
 \textvv{\makecell[lt]{Affix}}
@@ -373,7 +374,7 @@ The TTR \is{type-token ratio} of \textit{-ise/-ize} based on the random sub\hyp{
 		& \makecell[t]{\num{585}}
 		& \makecell[t]{\num{712}} \\
 \lspbottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 % me: chisq.test(matrix(c(78,49,278,307),ncol=2),corr=FALSE)
 
@@ -382,9 +383,9 @@ Likewise, the HTR \is{hapax-token ratio} of \textit{-ise/-ize} based on our sub\
 \begin{table}
 \caption{Hapax/token ratios of \textit{-ise/-ize} (sample) and \textit{-ify} (LOB)}
 \label{tab:izeifyhtrsample}
-\begin{tabular}[t]{llccr}
+\begin{tabularx}{.67\textwidth}{Qlccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Type}} & \\
+ & & \multicolumn{2}{c}{\textvv{Type}} & \\\cmidrule(lr){3-4}
  & & \textvv{hapax} & \textvv{$\neg$hapax} & Total \\
 \midrule
 \textvv{\makecell[lt]{Affix}}
@@ -402,7 +403,7 @@ Likewise, the HTR \is{hapax-token ratio} of \textit{-ise/-ize} based on our sub\
 		& \makecell[t]{\num{654}}
 		& \makecell[t]{\num{712}} \\
 \lspbottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 % me: chisq.test(matrix(c(41,17,315,339),ncol=2),corr=FALSE)
 
@@ -438,12 +439,12 @@ Excluding cases with prefixed \is{affix} stems, \is{statistics} the OED \is{OED}
 \label{tab:ifyneologisms}
 \begin{tabular}[t]{ll}
 \lsptoprule
-\multicolumn{2}{l}{First documented in the OED in the 20th century} \\
+\multicolumn{2}{l}{First documented in the OED in the 20th century} \\\midrule
 (i) & also occur in the BNC, but not as hapaxes: \\
  & \makecell[tl]{\textit{bourgeoisify}, \textit{esterify}, \textit{gentrify}, \textit{karstify}, \textit{massify}, \textit{Nazify}, \textit{syllabify}, \\ \textit{vinify}, \textit{yuppify}, \textit{zombify}} \\
 (ii) & do not occur in the BNC: \\
  & \makecell[tl]{\textit{ammonify}, \textit{aridify}, \textit{electronify}, \textit{glassify}, \textit{humify}, \textit{iconify}, \textit{jazzify}, \\ \textit{mattify}, \textit{metrify}, \textit{mucify}, \textit{nannify}, \textit{passivify}, \textit{plastify}, \textit{probabilify}, \\\textit{Prussify}, \textit{rancidify}, \textit{sinify}, \textit{trendify}, \textit{trustify}, \textit{tubify}, \textit{youthify}} \\
-\multicolumn{2}{l}{Not documented in the OED at all} \\
+\midrule\multicolumn{2}{l}{Not documented in the OED at all} \\\midrule
 (iii) & occur in the BNC as hapaxes: \\
  & \makecell[tl]{\textit{faintify}, \textit{fuzzify}, \textit{lewisify}, \textit{rawify}, \textit{rockify}, \textit{sickify}, \textit{sonify}, \textit{validify}, \\ \textit{yankify}, \textit{yukkify}} \\
 (iv) & occur in the BNC, but not as hapaxes: \\
@@ -452,7 +453,7 @@ Excluding cases with prefixed \is{affix} stems, \is{statistics} the OED \is{OED}
 \end{tabular}
 \end{table}
 
-Before we turn to the definition and sampling of established types, \is{type (category)} let us determine the precision \is{precision} and recall \is{recall} of the operational \is{operationalization} definition of neologism \is{neologism} as ``hapax \is{hapax legomenon} legomenon in the BNC'', \is{BNC} using the formulas introduced in \chapref{ch:retrievalannotation}. Precision is defined as the number of true positives (items that were found and that actually are what they are supposed to be) divided by the number of all positives (all items found); 10 of the 30 hapaxes in the BNC \is{BNC} are actually neologisms, so the precision is $\nicefrac{10}{30} = 0.3333$. Recall is defined as the number of true positives divided by the number of true positives and false negatives (i.e. all items that should have been found); 10 of the 45 neologisms \is{neologism} were actually found by using the hapax definition, so the recall is $\nicefrac{10}{45} = 0.2222$. In other words, neither precision \is{precision} nor recall of the method are very good, at least for moderately productive \is{productivity} affixes \is{affix} like \textit{-ify} (the method will presumably give better results with highly productive affixes). \is{affix} Let us also determine the recall of neologisms from the OED \is{OED} (using the definition ``first documented in the 20th century according to the OED''): the OED \is{OED} lists 31 of the 45 neologisms, \is{neologism} so the recall is $\nicefrac{31}{45} = 0.6889$; this is much better than the recall \is{recall} of the corpus\hyp{}based hapax \is{hapax legomenon} definition, but it also shows that if we combine corpus data and dictionary \is{dictionary} data, we can increase coverage substantially even for moderately productive \is{productivity} \is{affix} affixes.
+Before we turn to the definition and sampling of established types, \is{type (category)} let us determine the precision \is{precision} and recall \is{recall} of the operational \is{operationalization} definition of neologism \is{neologism} as ``hapax \is{hapax legomenon} legomenon in the BNC'', \is{BNC} using the formulas introduced in \chapref{ch:retrievalannotation}. Precision is defined as the number of true positives (items that were found and that actually are what they are supposed to be) divided by the number of all positives (all items found); 10 of the 30 hapaxes in the BNC \is{BNC} are actually neologisms, so the precision is $\nicefrac{10}{30} = 0.3333$. Recall is defined as the number of true positives divided by the number of true positives and false negatives (i.e. all items that should have been found); 10 of the 45 neologisms \is{neologism} were actually found by using the hapax definition, so the recall is $\nicefrac{10}{45} = 0.2222$. In other words, neither precision \is{precision} nor recall of the method are very good, at least for moderately productive \is{productivity} affixes \is{affix} like \textit{-ify} (the method will presumably give better results with highly productive affixes). \is{affix} Let us also determine the recall of neologisms from the OED \is{OED} (using the definition ``first documented in the 20th century according to the OED''): the OED \is{OED} lists 31 of the 45 neologisms, \is{neologism} so the recall is $\nicefrac{31}{45} = 0.6889$; this is much better than the recall \is{recall} of the corpus\hyp{}based hapax \is{hapax legomenon} definition, but it also shows that if we combine corpus data and dictionary \is{dictionary} data, we can increase coverage substantially even for moderately productive affixes.\is{productivity}\is{affix}
 
 Let us now turn to the definition of \textsc{established types}. \is{type (category)} Given our definition of \textsc{neologisms}, \is{neologism} established types would first have to be documented before the 20th century, so we could use the 420 types in the OED \is{OED} that meet this criterion (again, excluding prefixed \is{affix} forms). However, these 420 types contain many very rare or even obsolete forms, like \textit{duplify} `to make double', \textit{eaglify} `to make into an eagle' or \textit{naucify} `to hold in low esteem'. Clearly, these are not ``established'' in any meaningful sense, so let us add the requirement that a type must occur in the BNC \is{BNC} at least twice to count as established. Let us further limit the category to verbs \is{verb} first documented before the 19th century, in order to leave a clear diachronic \is{diachrony} gap between the established types \is{type (category)} and the productive \is{productivity} types. This leaves the words in \tabref{tab:ifycontrol}.\footnote{Interestingly, leaving out words coined in the 19th century does not make much of a difference: although the 19th century saw a large number of coinages (with 138 new types \is{type (category)} it was the most productive \is{productivity} century in the history of the suffix), \is{affix} few of these are frequent enough today to occur in the BNC; \is{BNC} if anything, we should actually extend our definition of neologisms \is{neologism} to include the 19th century.}
 
@@ -474,7 +475,7 @@ Let us now evaluate the hypotheses. \tabref{tab:ifysyllabicity} shows the type \
 \label{tab:ifysyllabicity}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Number of Syllables}} & \\
+ & & \multicolumn{2}{c}{\textvv{Number of Syllables}} & \\\cmidrule(lr){3-4}
  & & \textvv{monosyllabic} & \textvv{polysyllabic} & Total \\
 \midrule
 \textvv{\makecell[lt]{Status}}
@@ -505,7 +506,7 @@ Given the fact that there is a significantly higher number of neologisms \is{neo
 \label{tab:ifystressshift}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Shift}} & \\
+ & & \multicolumn{2}{c}{\textvv{Shift}} & \\\cmidrule(lr){3-4}
  & & \textvv{not required} & \textvv{required} & Total \\
 \midrule
 \textvv{\makecell[lt]{Status}}
@@ -551,9 +552,7 @@ Kaunisto uses a mixture of dictionaries \is{dictionary} and existing literature 
 \ex needing electricity to work, produced by electricity, or used for carrying electricity (LDCE)
 \ex work$[$ing$]$ by means of electricity; produced by electricity; designed to carry electricity; refer$[$ring$]$ to the supply of electricity (Cobuild)
 \end{xlist}
-\end{exe}
 
-\begin{exe}
 \ex \textit{electrical}
 \begin{xlist}
 \label{ex:definitionelectrical}
@@ -565,7 +564,7 @@ Kaunisto uses a mixture of dictionaries \is{dictionary} and existing literature 
 \end{xlist}
 \end{exe}
 
-MW treats the two words as largely synonymous \is{synonymy} and OALD distinguishes them only insofar as mentioning for \textit{electric}, but not \textit{electrical}, that it may refer to phenomena `produced by electricity' (this is meant to cover cases like \textit{electric current\slash charge}); however, since both words are also defined as referring to anything `connected with electricity', this is not much of a differentiation (the entry for \textit{electrical} also mentions \textit{electrical power\slash energy}). Macmillan's Dictionary \is{dictionary} also treats them as largely synonymous, \is{synonymy} although it is pointed out specifically that \textit{electric} refers to entities `carrying electricity' (citing \textit{electric outlet\slash plug\slash cord}). CALD and LDCE present \textit{electrical} as a more general word for anything `related to electricity', whereas they mention specifically that \textit{electric} is used for things `worked by electricity' (e.g. \textit{electric light\slash appliance}) or `carrying electricity' (presumably \textit{cords}, \textit{outlets}, etc.) and phenomena produced by electricity (presumably \textit{current}, \textit{charge}, etc.). Collins presents both words as referring to electric(al) appliances, with \textit{electric} additionally referring to things `produced by electricity', `designed to carry electricity' or being related to the `supply of electricity' and \textit{electrical} additionally referring to `energy' or entities `involved in the production and supply of electricity' (presumably energy companies, engineers, etc.).
+MW treats the two words as largely synonymous \is{synonymy} and OALD distinguishes them only insofar as mentioning for \textit{electric}, but not \textit{electrical}, that it may refer to phenomena `produced by electricity' (this is meant to cover cases like \textit{electric current\slash charge}); however, since both words are also defined as referring to anything `connected with electricity', this is not much of a differentiation (the entry for \textit{electrical} also mentions \textit{electrical power\slash energy}). Macmillan's dictionary \is{dictionary} also treats them as largely synonymous, \is{synonymy} although it is pointed out specifically that \textit{electric} refers to entities `carrying electricity' (citing \textit{electric outlet\slash plug\slash cord}). CALD and LDCE present \textit{electrical} as a more general word for anything `related to electricity', whereas they mention specifically that \textit{electric} is used for things `worked by electricity' (e.g. \textit{electric light\slash appliance}) or `carrying electricity' (presumably \textit{cords}, \textit{outlets}, etc.) and phenomena produced by electricity (presumably \textit{current}, \textit{charge}, etc.). Collins presents both words as referring to electric(al) appliances, with \textit{electric} additionally referring to things `produced by electricity', `designed to carry electricity' or being related to the `supply of electricity' and \textit{electrical} additionally referring to `energy' or entities `involved in the production and supply of electricity' (presumably energy companies, engineers, etc.).
 
 Summarizing, we can posit the following four broad values for our variable \textsc{Semantic Category}, with definitions that are hopefully specific enough to serve as an annotation \is{annotation} scheme:
 
@@ -591,7 +590,7 @@ The definitions are too heterogeneous to base a specific hypothesis on them, but
 \resizebox{0.9\textwidth}{!}{%
 \begin{tabular}[t]{lccr}
 \lsptoprule
- & \multicolumn{2}{c}{\textvv{Adjective}} & \\
+ & \multicolumn{2}{c}{\textvv{Adjective}} & \\\cmidrule(lr){2-3}
 \textvv{Noun} & \textvv{electric} & \textvv{electrical} & Total \\
 \midrule
 \textvv{\makecell[tl]{device}}
@@ -685,7 +684,7 @@ Total
 \end{table}
 % me: query: LOB_LEGACY; [word="electric(al)?"%c][pos="N.*"]
 
-The difference between \textit{electric} and \textit{electrical} is significant overall ($\chi^2 = 12.68, \df = 3, p < 0.01, \phi = 0.2869$), suggesting that the two words somehow differ with respect to their preferences for these categories. Since we are interested in the nature of this difference, it is much more insightful to look at the $\chi^2$ \is{chi-square test} components individually. This gives us a better idea where the overall significant difference comes from. In this case, it comes almost exclusively from the fact that \textit{electrical} is indeed associated \is{association} with the research and supply of electricity (\textvv{industry}), although there is a slight preference for \textit{electric} with nouns referring to devices. Generally, the two words seem to be relatively synonymous, \is{synonymy} at least in 1960s British \is{British English} English.
+The difference between \textit{electric} and \textit{electrical} is significant overall ($\chi^2 = 12.68$, $\df = 3, p < 0.01, \phi = 0.2869$), suggesting that the two words somehow differ with respect to their preferences for these categories. Since we are interested in the nature of this difference, it is much more insightful to look at the $\chi^2$ \is{chi-square test} components individually. This gives us a better idea where the overall significant difference comes from. In this case, it comes almost exclusively from the fact that \textit{electrical} is indeed associated \is{association} with the research and supply of electricity (\textvv{industry}), although there is a slight preference for \textit{electric} with nouns referring to devices. Generally, the two words seem to be relatively synonymous, \is{synonymy} at least in 1960s British \is{British English} English.
 
 Let us repeat the study with the BROWN \is{BROWN} corpus. \tabref{tab:electricalentitiesbrown} lists the token frequencies \is{frequency!token} for the individual categories and, again, all types \is{type (category)} found for each category.
 
@@ -695,7 +694,7 @@ Let us repeat the study with the BROWN \is{BROWN} corpus. \tabref{tab:electrical
 \resizebox{0.9\textwidth}{!}{%
 \begin{tabular}[t]{lccr}
 \lsptoprule
- & \multicolumn{2}{c}{\textvv{Adjective}} & \\
+ & \multicolumn{2}{c}{\textvv{Adjective}} & \\\cmidrule(lr){2-3}
 \textvv{Noun} & \textvv{electric} & \textvv{electrical} & Total \\
 \midrule
 \textvv{\makecell[tl]{device}}
@@ -799,7 +798,7 @@ Of course, this kind of investigation can also be designed \is{research design} 
 \caption{Differential nominal collocates of \textit{electric} and \textit{electrical} in the BNC}
 \label{tab:electricalcollocates}
 \resizebox{.9\textwidth}{!}{%
-\begin{tabular}[t]{l *{2}{S[table-format=4]} *{2}{S[table-format=8]} S}
+\begin{tabular}[t]{l S[table-format=3] S[table-format=3] S[table-format=4] S[table-format=4] S[table-format=3.2]}
 \lsptoprule
 \multicolumn{1}{c}{\makecell[tc]{\textvv{Collocate}}} & \multicolumn{1}{c}{\makecell[tc]{Frequency with \\ \textit{electric}}} & \multicolumn{1}{c}{\makecell[tc]{Frequency with \\ \textit{electrical}}} & \multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textit{electric}}} & \multicolumn{1}{c}{\makecell[tc]{Other words \\ with \textit{electrical}}} & \multicolumn{1}{c}{\makecell[tc]{\emph{G}}} \\
 \midrule
@@ -890,7 +889,7 @@ Let us test this hypothesis using the LOB \is{LOB} corpus. Since this is a writt
 
 We can test the hypothesis based on the mean \is{mean} length \is{length} of the two samples using a \textit{t}-test, \is{t-test@$t$-test} or by ranking them by length using the \textit{U} test. As mentioned in \chapref{ch:significancetesting}, word length (however we measure \is{measurement} it) rarely follows a normal distribution, \is{distribution!normal} so the \textit{U} test would probably be the better choice in this case, but let us use the $t$\hyp{}test for the sake of practice (the data are there in full, if you want to calculate a \textit{U} test).
 
-There are 373 stem types \is{type (category)} occurring with \textit{-ic} in the LOB \is{LOB} corpus, with a mean \is{mean} length \is{length} of 7.32 and a sample variance \is{variance} of 5.72; there are 153 stem types occurring with \textit{-ical}, with a mean length of 6.60 and a sample variance of 4.57. Applying the formula in (\ref{ex:formulawelchst}) from \chapref{ch:significancetesting}, we get a t\hyp{}value of 2.97. There are 314.31 degrees of freedom in our sample (as calculated using the formula in (\ref{ex:formulawelchdf})), which means that $p < 0.001$. In other words, length \is{length} (as measured \is{measurement} in letters) seems to have an influence on the choice between the two affixes, \is{affix} with longer stems \is{stem} favoring \textit{-ic}.
+There are 373 stem types \is{type (category)} occurring with \textit{-ic} in the LOB \is{LOB} corpus, with a mean \is{mean} length \is{length} of 7.32 and a sample variance \is{variance} of 5.72; there are 153 stem types occurring with \textit{-ical}, with a mean length of 6.60 and a sample variance of 4.57. Applying the formula in (\ref{ex:formulawelchst}) from \chapref{ch:significancetesting}, we get a $t$-value of 2.97. There are 314.31 degrees of freedom in our sample (as calculated using the formula in \ref{ex:formulawelchdf}), which means that $p < 0.001$. In other words, length \is{length} (as measured \is{measurement} in letters) seems to have an influence on the choice between the two affixes, \is{affix} with longer stems \is{stem} favoring \textit{-ic}.
 
 This case study has demonstrated the use of a relatively simple operationalization \is{operationalization} to test a hypothesis about phonological length. \is{length} We have used samples of types \is{type (category)} rather than samples of tokens, \is{token (instance)} as we wanted to determine the influence of stem \is{stem} length on affix \is{affix} choice -- in this context, the crucial question is how many stems of a given length \is{length} occur with a particular affix \is{affix} variant, but it does not matter how \textit{often} a particular stem \is{stem} does so. However, if there was more variation \is{variation} between the two suffixes, \is{affix} the frequency with which a particular stem is used with a particular affix might be interesting, as it would allow us to approach the question by ranking stems \is{stem} in terms of their preference and then correlating \is{correlation} this ranking with their \is{length} length.
 
@@ -910,7 +909,7 @@ First, though, let us see what we can find out by looking at the overall distrib
 \label{tab:ologicalchi}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Suffix Variant}} & \\
+ & & \multicolumn{2}{c}{\textvv{Suffix Variant}} & \\\cmidrule(lr){3-4}
  & & \textvv{-ic} & \textvv{-ical} & Total \\
 \midrule
 \textvv{\makecell[lt]{Stem Type}}
@@ -967,7 +966,7 @@ Total
 \end{tabular}
 \end{table}
 
-The ratios themselves are difficult to compare statistically, but they are clearly the right way of measuring \is{measurement} the preference of stems \is{stem} for a particular suffix. \is{affix} So let us take Lindsay and Aronoff's approach one step further: Instead of calculating the overall preference of a particular type \is{type (category)} of stem and comparing it to the overall preference of all stems, \is{statistics} let us calculate the preference for each stem individually. This will give us a preference measure for each stem that is, at the very least, ordinal. \is{ordinal data} \footnote{In fact, measures derived in this way are cardinal \is{cardinal data} data, as the value can range from 0 to 1 with every possible value in between; it is safer to treat them as ordinal \is{ordinal data} data, however, because we don't know whether such preference values are normally distributed. \is{distribution!normal} In fact, since they are based on word frequency \is{frequency} data, which we know \textit{not} to be normally distributed, it is a fair guess that the preference data are not normally distributed.} We can then rank stems \is{stem} containing a particular affix \is{affix} and stems not containing that affix \is{affix} (or containing a specific different affix) \is{affix} by their preference for one or the other of the suffix \is{affix} variants \is{affix combinations} and use the Mann\hyp{}Whitney \is{Mann-Whitney U test@Mann-Whitney \textit{U} test} \textit{U}\hyp{}test to determine whether the stems with \textit{-olog-} tend to occur towards the \textit{-ical} end of the ranking. That way we can treat preference as the matter of degree that it actually is, rather than as an absolute property of stems.
+The ratios themselves are difficult to compare statistically, but they are clearly the right way of measuring \is{measurement} the preference of stems \is{stem} for a particular suffix. \is{affix} So let us take Lindsay and Aronoff's approach one step further: Instead of calculating the overall preference of a particular type \is{type (category)} of stem and comparing it to the overall preference of all stems, \is{statistics} let us calculate the preference for each stem individually. This will give us a preference measure for each stem that is, at the very least, ordinal.\is{ordinal data}\footnote{In fact, measures derived in this way are cardinal \is{cardinal data} data, as the value can range from 0 to 1 with every possible value in between; it is safer to treat them as ordinal \is{ordinal data} data, however, because we don't know whether such preference values are normally distributed. \is{distribution!normal} In fact, since they are based on word frequency \is{frequency} data, which we know \textit{not} to be normally distributed, it is a fair guess that the preference data are not normally distributed.} We can then rank stems \is{stem} containing a particular affix \is{affix} and stems not containing that affix \is{affix} (or containing a specific different affix) \is{affix} by their preference for one or the other of the suffix \is{affix} variants \is{affix combinations} and use the Mann\hyp{}Whitney \is{Mann-Whitney U test@Mann-Whitney \textit{U} test} \textit{U}\hyp{}test to determine whether the stems with \textit{-olog-} tend to occur towards the \textit{-ical} end of the ranking. That way we can treat preference as the matter of degree that it actually is, rather than as an absolute property of stems.
 
 The BNC Baby \is{BNC Baby} does not contain enough derived stems that occur with both suffix \is{affix} variants, so let us focus on two specific suffixes \is{affix} and extract \is{retrieval} the relevant data from the full BNC. \is{BNC} Since \textit{-ist} is roughly equal to \textit{-olog-} in terms of type \is{type (category)} frequency, \is{frequency!type} let us choose this suffix \is{affix} for comparison. \is{affix combinations} \tabref{tab:istological} shows the 34 stems \is{stem} containing either of these suffixes, \is{affix} their frequency of occurrence with the variants \textit{-ic} and \textit{-ical}, the preference ratio for \textit{-ic}, and the rank.
 
@@ -975,9 +974,9 @@ The BNC Baby \is{BNC Baby} does not contain enough derived stems that occur with
 \caption{Preferences of stems containing \textit{-ist} and \textit{-olog-} for the suffix variants \textit{-ic} and \textit{-ical} (BNC)}
 \label{tab:istological}
 %\resizebox*{!}{\textheight}{%
-\begin{tabular}[t]{lc *{2}S S[round-mode=places,round-precision=4] S}
+\begin{tabular}[t]{lc *{2}{S[table-format=4]} S[round-mode=places,round-precision=4,table-format=1.4] S[table-format=2]}
 \lsptoprule
-\multicolumn{1}{l}{Stem} & \multicolumn{1}{c}{Suffix} & \multicolumn{1}{c}{n(-ic)} & \multicolumn{1}{c}{n(-ical)} & \multicolumn{1}{c}{p(-ic)} & \multicolumn{1}{c}{Rank} \\
+\multicolumn{1}{l}{Stem} & \multicolumn{1}{c}{Suffix} & \multicolumn{1}{c}{$n$(-ic)} & \multicolumn{1}{c}{$n$(-ical)} & \multicolumn{1}{c}{$p$(-ic)} & \multicolumn{1}{c}{Rank} \\
 \midrule
 \textit{realist-} & \textit{-ist} & 2435 & 1 & 0.9996 & 1 \\
 \textit{atomist-} & \textit{-ist} & 54 & 1 & 0.9818 & 2 \\
@@ -1058,7 +1057,7 @@ The TTR \is{type-token ratio} of the suffix \is{affix} in newspaper language is 
 \label{tab:shipwords}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Type}} & \\
+ & & \multicolumn{2}{c}{\textvv{Type}} & \\\cmidrule(lr){3-4}
  & & \textvv{new} & \textvv{$\neg$new} & Total \\
 \midrule
 \textvv{\makecell[lt]{Genre}}
@@ -1087,7 +1086,7 @@ Let us now turn to the hapax \is{hapax legomenon} legomena. These are so rare in
 \label{tab:shiphapaxes}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Type}} & \\
+ & & \multicolumn{2}{c}{\textvv{Type}} & \\\cmidrule(lr){3-4}
  & & \textvv{hapax} & \textvv{$\neg$hapax} & Total \\
 \midrule
 \textvv{\makecell[lt]{Genre}}
@@ -1131,7 +1130,7 @@ Based on these subsamples, the type\hyp{}token \is{type-token ratio} ratios for 
 \label{tab:itysex}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Type}} & \\
+ & & \multicolumn{2}{c}{\textvv{Type}} & \\\cmidrule(lr){3-4}
  & & \textvv{new} & \textvv{seen before} & Total \\
 \midrule
 \textvv{\makecell[lt]{Speaker Sex}}
@@ -1159,7 +1158,7 @@ The type\hyp{}token \is{type-token ratio} ratios for \textit{-ness} are much hig
 \label{tab:nesssex}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Type}} & \\
+ & & \multicolumn{2}{c}{\textvv{Type}} & \\\cmidrule(lr){3-4}
  & & \textvv{new} & \textvv{seen before} & Total \\
 \midrule
 \textvv{\makecell[lt]{Speaker Sex}}
@@ -1215,7 +1214,7 @@ Although the difference in HTR \is{hapax-token ratio} is relatively small, \tabr
 \label{tab:ityhapaxfrequencies}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Type}} & \\
+ & & \multicolumn{2}{c}{\textvv{Type}} & \\\cmidrule(lr){3-4}
  & & \textvv{hapax} & \textvv{$\neg$hapax} & Total \\
 \midrule
 \textvv{\makecell[lt]{Speaker Sex}}
@@ -1269,7 +1268,7 @@ As \tabref{tab:nesssexfrequencies} shows, the difference in HTRs \is{hapax-token
 \label{tab:nesssexfrequencies}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Type}} & \\
+ & & \multicolumn{2}{c}{\textvv{Type}} & \\\cmidrule(lr){3-4}
  & & \textvv{hapax} & \textvv{$\neg$hapax} & Total \\
 \midrule
 \textvv{\makecell[lt]{Speaker Sex}}
