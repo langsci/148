@@ -1,0 +1,74 @@
+% \chapter{New tables}
+
+\begin{table}
+\caption{The collocational framework [\textit{a} \_\_ \textit{of}] in two corpora}
+\label{tab:axoftwocorpora}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}[t]{lS|lS||lS|lS}
+\lsptoprule
+\multicolumn{4}{c||}{\makecell[tc]{Birmingham Collection of English Text}} & \multicolumn{4}{c}{\makecell[tc]{British National Corpus}} \\
+\midrule
+\multicolumn{2}{c}{\makecell[tc]{(a)}} & \multicolumn{2}{c||}{\makecell[tc]{(b)}} & \multicolumn{2}{c}{\makecell[tc]{(a)}} & \multicolumn{2}{c}{\makecell[tc]{(b)}} \\
+{Collocate} & {Frequency} & {Collocate} & \multicolumn{1}{l||}{\makecell[tl]{Percent}} & {Collocate} & {Frequency} & {Collocate} & \multicolumn{1}{l}{\makecell[tl]{Percent}} \\
+\midrule
+\textit{lot} & 1322 & \textit{couple} & 62 & \textit{number} & 13766 & \textit{couple} & 55.72 \\
+\textit{kind} & 864 & \textit{series} & 57 & \textit{lot} & 13649 & \textit{lot} & 48.81 \\
+\textit{number} & 762 & \textit{pair} & 54 & \textit{couple} & 6620 & \textit{variety} & 47.54 \\
+\textit{couple} & 685 & \textit{lot} & 53 & \textit{series} & 5655 & \textit{series} & 39.76 \\
+\textit{matter} & 550 & \textit{piece} & 36 & \textit{result} & 5596 & \textit{pair} & 36.63 \\
+\textit{sort} & 451 & \textit{quarter} & 36 & \textit{bit} & 4879 & \textit{number} & 28.21 \\
+\textit{series} & 438 & \textit{variety} & 35 & \textit{matter} & 4561 & \textit{piece} & 26.96 \\
+\textit{piece} & 414 & \textit{member} & 34 & \textit{variety} & 4113 & \textit{result} & 25.54 \\
+\textit{bit} & 379 & \textit{number} & 30 & \textit{member} & 3650 & \textit{member} & 21.00 \\
+\textit{sense} & 356 & \textit{kind} & 21 & \textit{range} & 3193 & \textit{matter} & 20.97 \\
+\textit{pair} & 320 & \textit{sort} & 21 & \textit{group} & 3081 & \textit{bit} & 18.43 \\
+\lspbottomrule
+\end{tabular}}
+\end{table}
+
+\sisetup{group-digits=false}
+\begin{table}
+\caption{The collocational framework [\textit{a} \_\_ \textit{of}] in two corpora\label{tab:axoftwocorpora}}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lS[table-format=2.0]lS[table-format=2.0]lS[table-format=4.0]lS}
+\lsptoprule
+\multicolumn{4}{c}{Birmingham Collection of English Text} & \multicolumn{4}{c}{British National Corpus}\\\cmidrule(lr){1-4}\cmidrule(lr){5-8}
+\multicolumn{2}{c}{(a)} & \multicolumn{2}{c}{(b)} & \multicolumn{2}{c}{(a)} & \multicolumn{2}{c}{(b)} \\\cmidrule(lr){1-2}\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+{Collocate} & {Frequency} & {Collocate} & {Percent} & {Collocate} & {Frequency} & {Collocate} & {Percent} \\
+\midrule
+\textit{lot} & 1322 & \textit{couple} & 62 & \textit{number} & 13766 & \textit{couple} & 55.72 \\
+\textit{kind} & 864 & \textit{series} & 57 & \textit{lot} & 13649 & \textit{lot} & 48.81 \\
+\textit{number} & 762 & \textit{pair} & 54 & \textit{couple} & 6620 & \textit{variety} & 47.54 \\
+\textit{couple} & 685 & \textit{lot} & 53 & \textit{series} & 5655 & \textit{series} & 39.76 \\
+\textit{matter} & 550 & \textit{piece} & 36 & \textit{result} & 5596 & \textit{pair} & 36.63 \\
+\textit{sort} & 451 & \textit{quarter} & 36 & \textit{bit} & 4879 & \textit{number} & 28.21 \\
+\textit{series} & 438 & \textit{variety} & 35 & \textit{matter} & 4561 & \textit{piece} & 26.96 \\
+\textit{piece} & 414 & \textit{member} & 34 & \textit{variety} & 4113 & \textit{result} & 25.54 \\
+\textit{bit} & 379 & \textit{number} & 30 & \textit{member} & 3650 & \textit{member} & 21.00 \\
+\textit{sense} & 356 & \textit{kind} & 21 & \textit{range} & 3193 & \textit{matter} & 20.97 \\
+\textit{pair} & 320 & \textit{sort} & 21 & \textit{group} & 3081 & \textit{bit} & 18.43 \\
+\lspbottomrule
+\end{tabular}}
+\end{table}
+
+
+\begin{table}
+\caption{Possible sets of ten coin flips}
+\label{tab:tencoinflips}
+\begin{tabular}[t]{rccS[table-format=1.6,round-precision=6]}
+\lsptoprule & Unordered Set & No. of Series & {Probability}\\
+\midrule
+1 & \{0 heads, 10 tails\} & 1 & 0.000977 \\
+2 & \{1 heads, 9 tails\} & 10 & 0.009766 \\
+3 & \{2 heads, 8 tails\} & 45 & 0.043945 \\
+4 & \{3 heads, 7 tails\} & 120 & 0.117188 \\
+5 & \{4 heads, 6 tails\} & 210 & 0.205078 \\
+6 & \{5 heads, 5 tails\} & 252 & 0.246094 \\
+7 & \{6 heads, 4 tails\} & 210 & 0.205078 \\
+8 & \{7 heads, 3 tails\} & 120 & 0.117188 \\
+9 & \{8 heads, 2 tails\} & 45 & 0.043945 \\
+10 & \{9 heads, 1 tails\} & 10 & 0.009766 \\
+11 & \{10 heads, 0 tails\} & 1 & 0.000977 \\
+\lspbottomrule
+\end{tabular}
+\end{table}
