@@ -1,7 +1,7 @@
 \chapter{Morphology}
 \label{ch:morphology}
 
-We saw in \chapref{ch:grammar} \is{grammar} that the wordform\hyp{}centeredness of most corpora and corpus\hyp{}access tools requires a certain degree of ingenuity when studying structures larger than the word. It does not pose particular problems for corpus\hyp{}based morphology, \is{morphology} which studies structures smaller than the word. Corpus morphology is mostly concerned with the distribution \is{distribution!conditional} of affixes, \is{affix} and retrieving \is{retrieval} all occurrences of an affix \is{affix} plausibly starts with the retrieval of all strings potentially containing this affix. \is{affix}\is{affix} We could retrieve all occurrences of \textit{-ness}, for example, with a query like $\langle$ \texttt{[word=".+ness(es)?"\%c]} $\rangle$. The recall \is{recall} of this query will be close to 100 percent, as all words containing the suffix \textit{-ness} end in the string \texttt{ness}, optionally followed by the string \texttt{es} in the case of plurals. \is{number} Depending on the tokenization \is{tokenization} of the corpus, this query might miss cases where the word containing the suffix \textit{-ness} is the first part of a hyphenated compound, such as \textit{usefulness-rating} or \textit{consciousness-altering}; we could alter the query to something like $\langle$ \texttt{[word=".+ness(es)?(--.+=)?"\%c]} $\rangle$ if we believe that including these cases in our sample is crucial. The precision \is{precision} of such a query will not usually be 100 percent, as it will also retrieve words that accidentally happen to end with the string specified in our query -- in the case of \textit{-ness}, these would be words like \textit{witness}, \textit{governess} or place names like \textit{Inverness}. The degree of precision will depend on how unique the string in our query is for the affix \is{affix} in question; for \textit{-ness} and \textit{-ity} it is fairly high, as there are only a few words that share the same string accidentally (examples like those just mentioned for \textit{-ness} and words like \textit{city} and \textit{pity} for \textit{-ity}), for a suffix \is{affix} like \textit{-ess} (`female animate entity') it is quite low, as a query like $\langle$ \texttt{[word=".+ess(es)?"\%c]} $\rangle$ will also retrieve \is{retrieval} all words with the suffixes \is{affix} \textit{-ness} and \textit{-less}, as well as many words whose stem \is{stem} ends in \textit{ess}, like \textit{process}, \textit{success}, \textit{press}, \textit{access}, \textit{address}, \textit{dress}, \textit{guess} and many more.
+We saw in \chapref{ch:grammar} \is{grammar} that the wordform\hyp{}centeredness of most corpora and corpus\hyp{}access tools requires a certain degree of ingenuity when studying structures larger than the word. It does not pose particular problems for corpus\hyp{}based morphology, \is{morphology} which studies structures smaller than the word. Corpus morphology is mostly concerned with the distribution \is{distribution!conditional} of affixes, \is{affix} and retrieving \is{retrieval} all occurrences of an affix \is{affix} plausibly starts with the retrieval of all strings potentially containing this affix. \is{affix}\is{affix} We could retrieve all occurrences of \textit{-ness}, for example, with a query like $\langle$\texttt{[word=".+ness(es)?"\%c]}$\rangle$. The recall \is{recall} of this query will be close to 100 percent, as all words containing the suffix \textit{-ness} end in the string \texttt{ness}, optionally followed by the string \texttt{es} in the case of plurals. \is{number} Depending on the tokenization \is{tokenization} of the corpus, this query might miss cases where the word containing the suffix \textit{-ness} is the first part of a hyphenated compound, such as \textit{usefulness-rating} or \textit{consciousness-altering}; we could alter the query to something like $\langle$\texttt{[word=".+ness(es)?(--.+=)?"\%c]}$\rangle$ if we believe that including these cases in our sample is crucial. The precision \is{precision} of such a query will not usually be 100 percent, as it will also retrieve words that accidentally happen to end with the string specified in our query -- in the case of \textit{-ness}, these would be words like \textit{witness}, \textit{governess} or place names like \textit{Inverness}. The degree of precision will depend on how unique the string in our query is for the affix \is{affix} in question; for \textit{-ness} and \textit{-ity} it is fairly high, as there are only a few words that share the same string accidentally (examples like those just mentioned for \textit{-ness} and words like \textit{city} and \textit{pity} for \textit{-ity}), for a suffix \is{affix} like \textit{-ess} (`female animate entity') it is quite low, as a query like $\langle$\texttt{[word=".+ess(es)?"\%c]}$\rangle$ will also retrieve \is{retrieval} all words with the suffixes \is{affix} \textit{-ness} and \textit{-less}, as well as many words whose stem \is{stem} ends in \textit{ess}, like \textit{process}, \textit{success}, \textit{press}, \textit{access}, \textit{address}, \textit{dress}, \textit{guess} and many more.
 
 However, once we have extracted \is{retrieval} and -- if necessary -- manually \is{manual analysis} cleaned up our data set, we are faced with a problem that does not present itself when studying lexis or grammar: \is{grammar} the very fact that affixes \is{affix} do not occur independently but always as parts of words, some of which (like \textit{wordform-centeredness} in the first sentence of this chapter) have been created productively \is{productivity} on the fly for a specific purpose, while others (like \textit{ingenuity} in the same sentence) are conventionalized \is{conventionality} lexical items that are listed in dictionaries, \is{dictionary} even though they are theoretically the result of attaching an affix \is{affix} to a known stem \is{stem} (like \textit{ingen-}, also found in \textit{ingenious} and, confusingly, its almost\hyp{}antonym \is{antonymy} \textit{ingenuous}). We have to keep the difference between these two kinds of words in mind when constructing morphological \is{morphology} research designs; \is{research design} since the two kinds are not always clearly distinguishable, this is more difficult than it sounds. Also, the fact that affixes \is{affix} always occur as parts of words has consequences for the way we can, and should, count them; in quantitative \is{quantitative research} corpus\hyp{}linguistics, this is a crucial point, so I will discuss it in quite some detail before we turn to our case studies.
 
@@ -15,7 +15,7 @@ Determining the frequency \is{frequency} of a linguistic phenomenon in a corpus 
 
 When we are interested in the frequency \is{frequency} of occurrence of a particular word, it seems obvious that every occurrence of the word counts as an instance. In other words, if we know how often the word occurs in our data, we know how many instances there are in our data. For example, in order to determine the number of instances of the definite article \is{determiner} in the BNC, \is{BNC} we construct a query that will retrieve \is{retrieval} the string \texttt{the} in all combinations of upper and lower case letters, i.e. at least \textit{the}, \textit{The}, and \textit{THE}, but perhaps also \textit{tHe}, \textit{ThE}, \textit{THe}, \textit{tHE} and \textit{thE}, just to be sure). We then count the hits (since this string corresponds uniquely to the word \textit{the}, we don't even have to clean up the results manually). \is{manual analysis} The query will yield \num{6041234} hits, so there are \num{6041234} instances of the word \textit{the} in the \is{BNC} BNC.
 
-When searching for grammatical \is{grammar} structures (for example in Chapters~\ref{ch:quantifyingresearch} and~\ref{ch:significancetesting}), simply transferred this way of counting occurrences. For example, in order to determine the frequency \is{frequency} of the \textit{s}-possessive \is{possessive} in the BNC, \is{BNC} we would define a reasonable query or set of queries (which, as discussed in various places in this book, can be tricky) and again simply count the hits. \is{hit} Let us assume that the query $\langle$ \texttt{[pos="(POS|DPS)"] [pos=".*AJ.*"]? [pos=".*NN.*"]} $\rangle$ is a reasonable approximation: it retrieves \is{retrieval} all instances of the possessive clitic \is{clitic} (tagged \texttt{POS} in the BNC) \is{BNC} or a possessive determiner \is{determiner} (\texttt{DPS}), optionally followed by a word tagged \is{POS tagging} as an adjective \is{adjective} (\texttt{AJ0}, \texttt{AJC} or \texttt{AJS}, even if it is part of an ambiguity \is{ambiguity} tag), followed by a word tagged as a noun \is{noun} (\texttt{NN0}, \texttt{NN1} or \texttt{NN2}, even if it is part of an ambiguity tag). This query will retrieve \num{1651908} hits, so it seems that there are \num{1651908} instances of the \textit{s}-possessive \is{possessive} in the \is{BNC} BNC.
+When searching for grammatical \is{grammar} structures (for example in Chapters~\ref{ch:quantifyingresearch} and~\ref{ch:significancetesting}), simply transferred this way of counting occurrences. For example, in order to determine the frequency \is{frequency} of the \textit{s}-possessive \is{possessive} in the BNC, \is{BNC} we would define a reasonable query or set of queries (which, as discussed in various places in this book, can be tricky) and again simply count the hits. \is{hit} Let us assume that the query $\langle$\texttt{[pos="(POS|DPS)"] [pos=".*AJ.*"]? [pos=".*NN.*"]}$\rangle$ is a reasonable approximation: it retrieves \is{retrieval} all instances of the possessive clitic \is{clitic} (tagged \texttt{POS} in the BNC) \is{BNC} or a possessive determiner \is{determiner} (\texttt{DPS}), optionally followed by a word tagged \is{POS tagging} as an adjective \is{adjective} (\texttt{AJ0}, \texttt{AJC} or \texttt{AJS}, even if it is part of an ambiguity \is{ambiguity} tag), followed by a word tagged as a noun \is{noun} (\texttt{NN0}, \texttt{NN1} or \texttt{NN2}, even if it is part of an ambiguity tag). This query will retrieve \num{1651908} hits, so it seems that there are \num{1651908} instances of the \textit{s}-possessive \is{possessive} in the \is{BNC} BNC.
 
 However, there is a crucial difference between the two situations: in the case of the word \textit{the}, every instance is identical to all others (if we ignore upper and lower case). This is not the case for the \textit{s}-possessive. Of course, here, too, many instances are identical to other instances: there are exact repetitions of proper names, like \textit{King's Cross} (322 hits) or \textit{People's revolutionary party} (47), of (parts of) idiomatic \is{idiomaticity} expressions, like \textit{arm's length} (216) or \textit{heaven's sake} (187) or non\hyp{}idiomatic but nevertheless fixed phrases like \textit{its present form} (107) or \textit{child's best interest} (26), and also of many free combinations of words that recur because they are simply communicatively useful in many situations, like \textit{her head} (5105), \textit{his younger brother} (112), \textit{people's lives} (224) and \textit{body's immune system} (29).
 
@@ -64,51 +64,51 @@ For example, the token frequency \is{frequency!token} of the suffix \is{affix} \
 \textit{\makecell[tl]{article}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 126 \\ \small{\textit{Exp.:}} & 102.48 \\ \small{\textit{$\chi^2$:}} & 5.40 \end{tabular}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 99 \\ \small{\textit{Exp.:}} & 122.52 \\ \small{\textit{$\chi^2$:}} & 4.52 \end{tabular}}
-	& 225 \\[1.1cm]
+	& 225 \\\tablevspace
 \textit{\makecell[tl]{particle}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 38 \\ \small{\textit{Exp.:}} & 46.46 \\ \small{\textit{$\chi^2$:}} & 1.54 \end{tabular}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 64 \\ \small{\textit{Exp.:}} & 55.54 \\ \small{\textit{$\chi^2$:}} & 1.29 \end{tabular}}
-	& 102 \\[1.1cm]
+	& 102 \\\tablevspace
 \textit{\makecell[tl]{vehicle}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 39 \\ \small{\textit{Exp.:}} & 57.84 \\ \small{\textit{$\chi^2$:}} & 6.14 \end{tabular}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 88 \\ \small{\textit{Exp.:}} & 69.16 \\ \small{\textit{$\chi^2$:}} & 5.13 \end{tabular}}
-	& 127 \\[1.1cm]
+	& 127 \\\tablevspace
 \textit{\makecell[tl]{chronicle}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 7 \\ \small{\textit{Exp.:}} & 6.38 \\ \small{\textit{$\chi^2$:}} & 0.06 \end{tabular}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 7 \\ \small{\textit{Exp.:}} & 7.62 \\ \small{\textit{$\chi^2$:}} & 0.05 \end{tabular}}
-	& 14 \\[1.1cm]
+	& 14 \\\tablevspace
 \textit{\makecell[tl]{ventricle}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 8 \\ \small{\textit{Exp.:}} & 5.47 \\ \small{\textit{$\chi^2$:}} & 1.18 \end{tabular}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 4 \\ \small{\textit{Exp.:}} & 6.53 \\ \small{\textit{$\chi^2$:}} & 0.98 \end{tabular}}
-	& 12 \\[1.1cm]
+	& 12 \\\tablevspace
 \textit{\makecell[tl]{auricle}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 5 \\ \small{\textit{Exp.:}} & 2.28 \\ \small{\textit{$\chi^2$:}} & 3.26 \end{tabular}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 0 \\ \small{\textit{Exp.:}} & 2.72 \\ \small{\textit{$\chi^2$:}} & 2.72 \end{tabular}}
-	& 5 \\[1.1cm]
+	& 5 \\\tablevspace
 \textit{\makecell[tl]{fascicle}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 0 \\ \small{\textit{Exp.:}} & 1.37 \\ \small{\textit{$\chi^2$:}} & 1.37 \end{tabular}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 3 \\ \small{\textit{Exp.:}} & 1.63 \\ \small{\textit{$\chi^2$:}} & 1.14 \end{tabular}}
-	& 3 \\[1.1cm]
+	& 3 \\\tablevspace
 \textit{\makecell[tl]{testicle}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 0 \\ \small{\textit{Exp.:}} & 0.91 \\ \small{\textit{$\chi^2$:}} & 0.91 \end{tabular}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 2 \\ \small{\textit{Exp.:}} & 1.09 \\ \small{\textit{$\chi^2$:}} & 0.76 \end{tabular}}
-	& 2 \\[1.1cm]
+	& 2 \\\tablevspace
 \textit{\makecell[tl]{conventicle}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 1 \\ \small{\textit{Exp.:}} & 0.46 \\ \small{\textit{$\chi^2$:}} & 0.65 \end{tabular}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 0 \\ \small{\textit{Exp.:}} & 0.54 \\ \small{\textit{$\chi^2$:}} & 0.54 \end{tabular}}
-	& 1 \\[1.1cm]
+	& 1 \\\tablevspace
 \textit{\makecell[tl]{cuticle}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 1 \\ \small{\textit{Exp.:}} & 0.46 \\ \small{\textit{$\chi^2$:}} & 0.65 \end{tabular}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 0 \\ \small{\textit{Exp.:}} & 0.54 \\ \small{\textit{$\chi^2$:}} & 0.54 \end{tabular}}
-	& 1 \\[1.1cm]
+	& 1 \\\tablevspace
 \textit{\makecell[tl]{canticle}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 0 \\ \small{\textit{Exp.:}} & 0.46 \\ \small{\textit{$\chi^2$:}} & 0.46 \end{tabular}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 1 \\ \small{\textit{Exp.:}} & 0.54 \\ \small{\textit{$\chi^2$:}} & 0.38 \end{tabular}}
-	& 1 \\[1.1cm]
+	& 1 \\\tablevspace
 \textit{\makecell[tl]{icicle}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 0 \\ \small{\textit{Exp.:}} & 0.46 \\ \small{\textit{$\chi^2$:}} & 0.46 \end{tabular}}
 	& \makecell[t]{\begin{tabular}[t]{lS[table-format=2.2]} \small{\textit{Obs.:}} & 1 \\ \small{\textit{Exp.:}} & 0.54 \\ \small{\textit{$\chi^2$:}} & 0.38 \end{tabular}}
-	& 1 \\[1.1cm]
+	& 1 \\
 \midrule
 Total
 	& \makecell[t]{225}
@@ -144,9 +144,9 @@ While type frequency \is{frequency!type} is a useful way of measuring \is{measur
 
 In order to determine the productivity \is{productivity} (and thus the current importance) of affixes \is{affix} at a particular point in time, Harald Baayen (cf. e.g. \citealt{baayen_41._2009} for an overview) has suggested that we should focus on types \is{type (category)} that only occur once in the corpus, so\hyp{}called \textit{hapax legomena} \is{hapax legomenon} (Greek for `said once'). The assumption is that productive \is{productivity} uses of an affix \is{affix} (or other linguistic rule) should result in one\hyp{}off coinages (some of which may subsequently spread through the speech community while others will not).
 
-Of course, not all hapax \is{hapax legomenon} legomena are the result of productive rule\hyp{}application: the words \textit{wordform\hyp{}centeredness} and \textit{ingenuity} that I used in the first sentence of this chapter are both hapax legomena in this book (or would be, if I did not keep mentioning them). However, \textit{wordform\hyp{}centeredness} is a word I coined productively \is{productivity} and which is (at the time of writing) not documented anywhere outside of this book; in fact, the sole reason I coined it was in order to use it as an example of a hapax \is{hapax legomenon} legomenon later). In contrast, \textit{ingenuity} has been part of the English language for more than four\hyp{}hundred years (the OED \is{OED} first records it in 1598); it occurs only once in this book for the simple reason that I only needed it once (or pretended to need it, to have another example of a hapax legomenon). So a word may be a hapax \is{hapax legomenon} legomenon because it is a productive \is{productivity} coinage, or because it is infrequently needed (in larger \is{corpus size} corpora, the category of hapaxes typically also contains misspelled or incorrectly tokenized \is{tokenization} words which will have to be cleaned up manualy \is{manual analysis} -- for example, the token \textit{manualy} is a hapax legomenon in this book because I just misspelled it intentionally, but the word \textit{manually} occurs dozens of times in this book).
+Of course, not all hapax \is{hapax legomenon} legomena are the result of productive rule\hyp{}application: the words \textit{wordform\hyp{}centeredness} and \textit{ingenuity} that I used in the first sentence of this chapter are both hapax legomena in this book (or would be, if I did not keep mentioning them). However, \textit{wordform\hyp{}centeredness} is a word I coined productively \is{productivity} and which is (at the time of writing) not documented anywhere outside of this book; in fact, the sole reason I coined it was in order to use it as an example of a hapax \is{hapax legomenon} legomenon later). In contrast, \textit{ingenuity} has been part of the English language for more than four\hyp{}hundred years (the OED \is{OED} first records it in 1598); it occurs only once in this book for the simple reason that I only needed it once (or pretended to need it, to have another example of a hapax legomenon). So a word may be a hapax \is{hapax legomenon} legomenon because it is a productive \is{productivity} coinage, or because it is infrequently needed (in larger \is{corpus size} corpora, the category of hapaxes typically also contains misspelled or incorrectly tokenized \is{tokenization} words which will have to be cleaned up manualy \is{manual analysis} -- for example, the token \textit{manualy} is a hapax legomenon in this book because I just misspelled it intentionally, but the word \textit{manually} occurs dozens of times in this book).\largerpage
 
-Baayen's idea is quite straightforwardly to use the phenomenon of \textit{hapax \is{hapax legomenon} legomenon} as an operationalization \is{operationalization} of the construct ``productive \is{productivity} application of a rule'' in the hope that the correlation between the two notions (in a large \is{corpus size} enough corpus) will be substantial enough for this operationalization to make sense.\footnote{Note also that the productive application of a suffix \is{affix} does not necessarily result in a hapax \is{hapax legomenon} legomenon: two or more speakers may arrive at the same coinage, or a single speaker may like their own coinage so much that they use it again; some researchers therefore suggest that we should also pay attention to ``dis legomena'' (words occurring twice) or even ``tris legomena'' (words occurring three times). We will stick with the mainstream here and use only hapax legomena.}
+Baayen's idea is quite straightforwardly to use the phenomenon of \textit{hapax \is{hapax legomenon} legomenon} as an operationalization \is{operationalization} of the construct ``productive \is{productivity} application of a rule'' in the hope that the correlation between the two notions (in a large \is{corpus size} enough corpus) will be substantial enough for this operationalization to make sense.{\interfootnotelinepenalty=10000\footnote{Note also that the productive application of a suffix \is{affix} does not necessarily result in a hapax \is{hapax legomenon} legomenon: two or more speakers may arrive at the same coinage, or a single speaker may like their own coinage so much that they use it again; some researchers therefore suggest that we should also pay attention to ``dis legomena'' (words occurring twice) or even ``tris legomena'' (words occurring three times). We will stick with the mainstream here and use only hapax legomena.}}
 
 Like the number of types, \is{type (category)} the number of hapax \is{hapax legomenon} legomena is dependent on sample size \is{corpus size} (although the relationship is not as straightforward as in the case of types, see next subsection); it is useful, therefore, to divide the number of hapax legomena by the number of tokens \is{token (instance)} to correct for sample size:
 
@@ -262,15 +262,15 @@ We will encounter the same problem when we compare the TTR \is{type-token ratio}
 \label{fig:izettrhtr}
 \begin{minipage}{.5\textwidth}
  \centering
- \includegraphics[width=\textwidth]{figures/lobiseifytypes}
+ \includegraphics[width=\textwidth,trim=0 20 0 55]{figures/lobiseifytypes}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
  \centering
- \includegraphics[width=\textwidth]{figures/lobiseifyhapaxes}
+ \includegraphics[width=\textwidth,trim=0 20 0 55]{figures/lobiseifyhapaxes}
 \end{minipage}
 \end{figure}
 
-As we can see, the TTR \is{type-token ratio} and HTR \is{hapax-token ratio} of both affixes \is{affix} behave roughly like that of Jane Austen's vocabulary as a whole as we increase sample size: \is{corpus size} both of them grow fairly quickly at first before their growth slows down; the latter happens more quickly in the case of the HTR than in the case of the TTR, and, again, we observe that the HTR sometimes decreases as types \is{type (category)} that were hapaxes \is{hapax legomenon} up to a particular point in the sample reoccur and cease to be hapaxes.
+As we can see, the TTR \is{type-token ratio} and HTR \is{hapax-token ratio} of both affixes \is{affix} behave roughly like that of Jane Austen's vocabulary as a whole as we increase sample size: \is{corpus size} both of them grow fairly quickly at first before their growth slows down; the latter happens more quickly in the case of the HTR than in the case of the TTR, and, again, we observe that the HTR sometimes decreases as types \is{type (category)} that were hapaxes \is{hapax legomenon} up to a particular point in the sample reoccur and cease to be hapaxes.\largerpage
 
 Taking into account the entire sample, the TTR \is{type-token ratio} for \textit{-ise/-ize} is $\nicefrac{105}{834} = 0.1259$ and that for \textit{-ify} is $\nicefrac{49}{356} = 0.1376$; it seems that \textit{-ise/-ize} is slightly more important to the lexicon \is{lexicon} of English than \textit{-ify}. A $\chi^2$ \is{chi-square test} test suggests that the difference is not significant (cf. \tabref{tab:izeifyttr}; $\chi^2 = 0.3053, \df = 1, p > 0.05$).
 
@@ -335,23 +335,23 @@ However, note that \textit{-ify} has a token \is{token (instance)} frequency \is
 
 The simplest way of solving the problem of different sample sizes \is{corpus size} is to create samples of equal size for the purposes of comparison. We simply take the size of the smaller of our two samples and draw a random sample of the same size from the larger of the two samples (if our data sets are large enough, it would be even better to draw random samples for both affixes). \is{affix} This means that we lose some data, but there is nothing we can do about this (note that we can still include the discarded data in a qualitative \is{qualitative research} description \is{description} of the affix \is{affix} in question).\footnote{In studies of lexical richness, a measure called \textit{Mean Segmental Type\hyp{}Token Ratio} (MSTTR) \is{type-token ratio!mean segmental} is sometimes used \citep[cf.][]{johnson_program_1944}. This measure is derived by dividing the texts under investigation into segments of equal size (often segments of 100 words), determining the TTR \is{type-token ratio} for each segment, and then calculating an average TTR. This allows us to compare the TTR of texts of different sizes without discarding any data. However, this method is not applicable to the investigation of morphological \is{morphology} productivity, \is{productivity} as most samples of 100 words (or even 1000 or \num{10000} words) will typically not contain enough cases of a given morpheme to determine a meaningful TTR.}
 
-Figures \ref{fig:izesamplettrhtr}a and \ref{fig:izesamplettrhtr}b show the growth rates of the TTR \is{type-token ratio} and the HTR \is{hapax-token ratio} of a sub\hyp{}sample of 356 tokens of \textit{-ise/-ize} in comparison with the total sample of the same size for \textit{-ify} (the sample was derived by first deleting every second hit, \is{hit} then every seventh hit and finally every ninetieth hit, making sure that the remaining hits are spread throughout the corpus).
+Figures \ref{fig:izesamplettrhtr}a and \ref{fig:izesamplettrhtr}b show the growth rates of the TTR \is{type-token ratio} and the HTR \is{hapax-token ratio} of a sub\hyp{}sample of 356 tokens of \textit{-ise/-ize} in comparison with the total sample of the same size for \textit{-ify} (the sample was derived by first deleting every second hit, \is{hit} then every seventh hit and finally every ninetieth hit, making sure that the remaining hits are spread throughout the corpus).\largerpage[2]
 
-\begin{figure}
+The TTR \is{type-token ratio} of \textit{-ise/-ize} based on the random sub\hyp{}sample is $\nicefrac{78}{356} = 0.2191$, that of \textit{-ify} is still $\nicefrac{49}{356} = 0.1376$; the difference between the two suffixes \is{affix} is much clearer now, and a $\chi^2$ test shows that it is very significant, although the effect size \is{effect size} is weak (cf. \tabref{tab:izeifyttrsample}; $\chi^2 = 8.06, \df = 1, p < 0.01, \phi = 0.1064$).\pagebreak
+
+\begin{figure}[p]
 \caption{TTRs and HTRs for \textit{-ise/-ize} and \textit{-ify} in the LOB corpus\label{fig:izesamplettrhtr}}
 \begin{minipage}{.5\textwidth}
  \centering
- \includegraphics[width=\textwidth]{figures/lobsampleiseifytypes}
+ \includegraphics[width=\textwidth,trim=0 0 0 55]{figures/lobsampleiseifytypes}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
  \centering
- \includegraphics[width=\textwidth]{figures/lobsampleiseifyhapaxes}
+ \includegraphics[width=\textwidth,trim=0 0 0 55]{figures/lobsampleiseifyhapaxes}
 \end{minipage}
 \end{figure}
 
-The TTR \is{type-token ratio} of \textit{-ise/-ize} based on the random sub\hyp{}sample is $\nicefrac{78}{356} = 0.2191$, that of \textit{-ify} is still $\nicefrac{49}{356} = 0.1376$; the difference between the two suffixes \is{affix} is much clearer now, and a $\chi^2$ test shows that it is very significant, although the effect size \is{effect size} is weak (cf. \tabref{tab:izeifyttrsample}; $\chi^2 = 8.06, \df = 1, p < 0.01, \phi = 0.1064$).
-
-\begin{table}
+\begin{table}[p]
 \caption{Type/token ratios of \textit{-ise/-ize}/\textit{-ise/-ize} (sample) and \textit{-ify} (LOB)}
 \label{tab:izeifyttrsample}
 \begin{tabularx}{.67\textwidth}{Qlccr}
@@ -378,9 +378,7 @@ The TTR \is{type-token ratio} of \textit{-ise/-ize} based on the random sub\hyp{
 \end{table}
 % me: chisq.test(matrix(c(78,49,278,307),ncol=2),corr=FALSE)
 
-Likewise, the HTR \is{hapax-token ratio} of \textit{-ise/-ize} based on our sub\hyp{}sample is $\nicefrac{41}{356} = 0.1152$, the HTR of \textit{-ify} remains $\nicefrac{17}{365} = 0.0477$. Again, the difference is much clearer, and it, too, is now very significant, again with a weak effect size \is{effect size} (cf. \tabref{tab:izeifyhtrsample}; $\chi^2 = 10.81, \df = 1, p < 0.01, \phi =  0.1232$).\is{chi-square test}
-
-\begin{table}
+\begin{table}[p]
 \caption{Hapax/token ratios of \textit{-ise/-ize} (sample) and \textit{-ify} (LOB)}
 \label{tab:izeifyhtrsample}
 \begin{tabularx}{.67\textwidth}{Qlccr}
@@ -406,6 +404,9 @@ Likewise, the HTR \is{hapax-token ratio} of \textit{-ise/-ize} based on our sub\
 \end{tabularx}
 \end{table}
 % me: chisq.test(matrix(c(41,17,315,339),ncol=2),corr=FALSE)
+\clearpage
+
+Likewise, the HTR \is{hapax-token ratio} of \textit{-ise/-ize} based on our sub\hyp{}sample is $\nicefrac{41}{356} = 0.1152$, the HTR of \textit{-ify} remains $\nicefrac{17}{365} = 0.0477$. Again, the difference is much clearer, and it, too, is now very significant, again with a weak effect size \is{effect size} (cf. \tabref{tab:izeifyhtrsample}; $\chi^2 = 10.81, \df = 1, p < 0.01, \phi =  0.1232$).\is{chi-square test}
 
 In the case of the HTR, \is{hapax-token ratio} decreasing the sample size \is{corpus size} is slightly more problematic than in the case of the TTR. \is{type-token ratio} The proportion of hapax \is{hapax legomenon} legomena actually resulting from productive \is{productivity} rule application becomes smaller as sample size decreases. Take example (\ref{ex:shakspearecinna}) from Shakespeare's \textit{Julius Caesar} above: the words \textit{directly}, \textit{briefly} and \textit{truly} are all hapaxes \is{hapax legomenon} in the passage cited, but they are clearly not the result of a productively \is{productivity} applied rule\hyp{}application (all of them have their own entries in the OALD, for example). As we increase the sample, they cease to be hapaxes (\textit{directly} occurs 9 times in the entire play, \textit{briefly} occurs 4 times and \textit{truly} 8 times). This means that while we must draw random samples of equal size \is{corpus size} in order to compare HTRs, \is{hapax-token ratio} we should make sure that these samples are as large as possible.
 
@@ -457,7 +458,9 @@ Before we turn to the definition and sampling of established types, \is{type (ca
 
 Let us now turn to the definition of \textsc{established types}. \is{type (category)} Given our definition of \textsc{neologisms}, \is{neologism} established types would first have to be documented before the 20th century, so we could use the 420 types in the OED \is{OED} that meet this criterion (again, excluding prefixed \is{affix} forms). However, these 420 types contain many very rare or even obsolete forms, like \textit{duplify} `to make double', \textit{eaglify} `to make into an eagle' or \textit{naucify} `to hold in low esteem'. Clearly, these are not ``established'' in any meaningful sense, so let us add the requirement that a type must occur in the BNC \is{BNC} at least twice to count as established. Let us further limit the category to verbs \is{verb} first documented before the 19th century, in order to leave a clear diachronic \is{diachrony} gap between the established types \is{type (category)} and the productive \is{productivity} types. This leaves the words in \tabref{tab:ifycontrol}.\footnote{Interestingly, leaving out words coined in the 19th century does not make much of a difference: although the 19th century saw a large number of coinages (with 138 new types \is{type (category)} it was the most productive \is{productivity} century in the history of the suffix), \is{affix} few of these are frequent enough today to occur in the BNC; \is{BNC} if anything, we should actually extend our definition of neologisms \is{neologism} to include the 19th century.}
 
-\begin{table}
+Let us now evaluate the hypotheses. \tabref{tab:ifysyllabicity} shows the type \is{type (category)} frequencies \is{frequency!type} for monosyllabic \is{syllable} and polysyllabic stems \is{stem} in the two samples. In both cases, there is a preference for monosyllabic stems (as expected), \is{frequency!expected} but interestingly, this preference is less strong among the neologisms \is{neologism} than among the established types and this difference is very significant ($\chi^2 = 7.37, \df = 1, p < 0.01, \phi = 0.2577$).
+
+\begin{table}[H]
 \caption{Control sample of established types with the suffix \textit{-ify}.}
 \label{tab:ifycontrol}
 \begin{tabular}[t]{l}
@@ -468,9 +471,7 @@ Let us now turn to the definition of \textsc{established types}. \is{type (categ
 \end{tabular}
 \end{table}
 
-Let us now evaluate the hypotheses. \tabref{tab:ifysyllabicity} shows the type \is{type (category)} frequencies \is{frequency!type} for monosyllabic \is{syllable} and polysyllabic stems \is{stem} in the two samples. In both cases, there is a preference for monosyllabic stems (as expected), \is{frequency!expected} but interestingly, this preference is less strong among the neologisms \is{neologism} than among the established types and this difference is very significant ($\chi^2 = 7.37, \df = 1, p < 0.01, \phi = 0.2577$).
-
-\begin{table}
+\begin{table}[H]
 \caption{Monosyllabic and bisyllabic stems with \textit{-ify}}
 \label{tab:ifysyllabicity}
 \begin{tabular}[t]{llccr}
@@ -530,8 +531,7 @@ Given the fact that there is a significantly higher number of neologisms \is{neo
 
 This case study demonstrates some of the problems and advantages of using corpora to identify neologisms \is{neologism} in addition to existing dictionaries. \is{dictionary} It also constitutes an example of a purely type\hyp{}based \is{type (category)} research design; \is{research design} note, again, that such a design is possible here because we are not interested in the type frequency \is{frequency!type} of a particular affix \is{affix} under different conditions (in which case we would have to calculate a TTR \is{type-token ratio} to adjust for different sample sizes), \is{corpus size} but in the distribution \is{distribution!conditional} of the variables \textsc{Syllable Length} \is{syllable}\is{length} and \textsc{Stress Shift} in two qualitatively different categories of types. \is{type (category)} Finally, note that the study comes to different conclusions than the impressionistic analysis in \citet{plag_morphological_1999}, so it demonstrates the advantages of strictly quantified designs.
 
-\subsubsection{Case study: Semantic differences between \textit{-ic} and \textit{-ical}}
-\label{sec:semanticdifferencesbetweenicandical}
+\subsubsection{Case study: Semantic differences between \textit{-ic} and \textit{-ical}}\label{sec:semanticdifferencesbetweenicandical}\largerpage
 
 Affixes, like words, can be related to other affixes \is{affix} by lexical relations like synonymy, \is{synonymy} antonymy, \is{antonymy} etc. In the case of (roughly) synonymous affixes, \is{affix} an obvious research question is what determines the choice between them -- for example, whether there are more fine\hyp{}grained semantic \is{semantics} differences that are not immediately apparent.
 
@@ -860,9 +860,8 @@ There is an additional pattern that would warrant further investigation: there a
 The case study demonstrates, then, that a differential\hyp{}collocate \is{collocation} analysis is a good alternative to the manual \is{manual analysis} categorization \is{categorization} and category\hyp{}wise comparison of all collocates: it allows us to process very large \is{corpus size} data sets very quickly and then focus on the semantic \is{semantics} properties of those collocates that are shown by the statistical analysis to differentiate between the variants.
 
 We must keep in mind, however, that this kind of study does not primarily uncover differences between affixes, \is{affix} but differences between specific word pairs containing these affixes. \is{affix} They are, as pointed out above, essentially lexical studies of near\hyp{}synonymy. \is{synonymy} Of course, it is possible that by performing such analyses for a large number of word pairs containing a particular affix \is{affix} pair, general semantic \is{semantics} differences may emerge, but since we are frequently dealing with highly lexicalized \is{lexicalization} forms, there is no guarantee for this. \citet{gries_corpus-linguistic_2001, gries_testing_2003} has shown that \textit{-ic}\slash \textit{-ical} pairs differ substantially in the extent to which they are synonymous; \is{synonymy} for example, he finds substantial difference in meaning for \textit{politic}\slash \textit{political} or \textit{poetic}\slash \textit{poetical}, but much smaller differences, for example, for \textit{bibliographic}\slash \textit{bibliographical}, with \textit{electric}\slash \textit{electrical} somewhere in the middle. Obviously, the two variants have lexicalized \is{lexicalization} independently in many cases, and the specific differences in meaning \is{semantics} resulting from this lexicalization process are unlikely to fall into clear general categories.
-
-\subsubsection{Case study: Phonological differences between \textit{-ic} and \textit{-ical}}\largerpage[2]
-\label{sec:phonologicaldifferencesbetweenicandical}
+\pagebreak
+\subsubsection{Case study: Phonological differences between \textit{-ic} and \textit{-ical}}\label{sec:phonologicaldifferencesbetweenicandical}\largerpage
 
 In an interesting but rarely\hyp{}cited paper, \citet{or_corpus-based_1994} collects a number of hypotheses about semantic \is{semantics} and, in particular, phonological factors influencing the distribution \is{distribution!conditional} of \textit{-ic} and \textit{-ical} that she provides impressionistic corpus evidence for but does not investigate systematically. A simple example is the factor \textsc{Length}: \is{length} Or hypothesizes that speakers will tend to avoid long words and choose the shorter variant \textit{-ic} for long stems \is{stem} (in terms of number of syllables). \is{syllable} She reports that ``a survey of a general vocabulary list'' corroborates this hypothesis but does not present any systematic data.
 
@@ -893,8 +892,7 @@ There are 373 stem types \is{type (category)} occurring with \textit{-ic} in the
 
 This case study has demonstrated the use of a relatively simple operationalization \is{operationalization} to test a hypothesis about phonological length. \is{length} We have used samples of types \is{type (category)} rather than samples of tokens, \is{token (instance)} as we wanted to determine the influence of stem \is{stem} length on affix \is{affix} choice -- in this context, the crucial question is how many stems of a given length \is{length} occur with a particular affix \is{affix} variant, but it does not matter how \textit{often} a particular stem \is{stem} does so. However, if there was more variation \is{variation} between the two suffixes, \is{affix} the frequency with which a particular stem is used with a particular affix might be interesting, as it would allow us to approach the question by ranking stems \is{stem} in terms of their preference and then correlating \is{correlation} this ranking with their \is{length} length.
 
-\subsubsection{Case study: Affix combinations}
-\label{sec:affixcombinations}
+\subsubsection{Case study: Affix combinations}\label{sec:affixcombinations}\largerpage
 
 It has sometimes been observed that certain derivational affixes \is{affix} show a preference for stems that are already derived by a particular affix. \is{affix combinations}\is{affix} For example, \citet{lindsay_rival_2011} and \citet{lindsay_natural_2013} show that while \textit{-ic} is more productive \is{productivity} in general than \textit{-ical}, \textit{-ical} is more productive with stems that contain the affix \is{affix} \textit{-olog-} (for example, \textit{morphological} or \textit{methodological}). Such observations are interesting from a descriptive viewpoint, as such preferences need to be taken into account, for example, in dictionaries, \is{dictionary} in teaching word\hyp{}formation to non\hyp{}native speakers or when making or assessing stylistic \is{style} choices. They are also interesting from a theoretical perspective, first, because they need to be modeled and explained \is{explanation} within any morphological \is{morphology} theory, and second, because they may interact with other factors in a number of different ways.
 
@@ -1040,8 +1038,8 @@ To get a first impression, consider \figref{fig:genreshipfullttrhtr}, which show
 
 \begin{figure}
 \caption{Nouns with the suffix \textit{-ship} in the \textvv{Genre} categories \textvv{fiction} and \textvv{newspapers} (BNC)\label{fig:genreshipfullttrhtr}}
-\includegraphics[width=.5\linewidth]{figures/genreshipfullttr}%
-\includegraphics[width=.5\linewidth]{figures/genreshipfullhtr}%
+\includegraphics[width=.5\linewidth,trim=0 0 0 50]{figures/genreshipfullttr}%
+\includegraphics[width=.5\linewidth,trim=0 0 0 50]{figures/genreshipfullhtr}%
 \end{figure}
 
 Both the TTR \is{type-token ratio} and the HTR \is{hapax-token ratio} suggest that the suffix \is{affix} is more productive \is{productivity} in fiction: \is{literary language} the ratios rise faster in \textvv{fiction} than in \textvv{newspapers} \is{newspaper language} and remain consistently higher as we go through the two sub\hyp{}corpora. It is only when the tokens have been exhausted in the fiction subcorpus but not in the newspaper subcorpus, that the ratios in the latter slowly catch up. This broadly supports our hypothesis, but let us look at the genre \is{genre} differences more closely both qualitatively \is{qualitative research} and \is{quantitative research} quantitatively.
