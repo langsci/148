@@ -26,9 +26,9 @@ In a first step, this involves turning the null hypothesis \is{null hypothesis} 
 \ex
 \begin{xlist}
 \label{ex:schematicnullalternative}
-\ex Null hypothesis \is{null hypothesis} (H\textsubscript{0}): There is no relationship between Variable A and Variable B. \\[1.5ex]
+\ex Null hypothesis \is{null hypothesis} (H\textsubscript{0}): There is no relationship between Variable A and Variable B. \smallskip\\
 Prediction: The data should be distributed \is{distribution!conditional} randomly \is{chance} across the intersections of A and B; i.e., the frequency\slash medians\slash means \is{median}\is{mean}\is{frequency} of the intersections should not differ from those expected \is{frequency!expected} by \is{chance} chance.
-\ex Alternative hypothesis (H\textsubscript{1}): There is a relationship between Variable A and Variable B such that some value(s) of A tend to co\hyp{}occur with some value(s) of B. \\[1.5ex]
+\ex Alternative hypothesis (H\textsubscript{1}): There is a relationship between Variable A and Variable B such that some value(s) of A tend to co\hyp{}occur with some value(s) of B. \smallskip\\
 Prediction: The data should be distributed \is{distribution!conditional} non\hyp{}randomly \is{chance} across the intersections of A and B; i.e., the frequency\slash medians\slash means \is{median}\is{mean}\is{frequency} of some the intersections should be higher and\slash or lower than those expected \is{frequency!expected} by \is{chance} chance.
 \end{xlist}
 \end{exe}
@@ -97,21 +97,21 @@ If we observed one heads and nine tails, we would know that the likelihood \is{p
 It must be mentioned at this point that some researchers (especially opponents of null\hyp{}hypothesis statistical significance \is{significance} testing) disagree that \textit{p} can be interpreted as the probability \is{probability of error} that we are wrong in rejecting the null hypothesis, \is{null hypothesis} raising enough of a controversy to force the American Statistical Association to take an official stand on the meaning of \is{p-value@$p$-value} \textit{p}:
 
 \begin{quote}
-Informally, a p\hyp{}value \is{p-value@$p$-value} is the probability under a specified statistical model that a statistical summary of the data (e.g., the sample mean difference between two compared groups) would be equal to or more extreme than its observed value. \citep[131]{wasserstein_asas_2016}
+Informally, a $p$\hyp{}value \is{p-value@$p$-value} is the probability under a specified statistical model that a statistical summary of the data (e.g., the sample mean difference between two compared groups) would be equal to or more extreme than its observed value. \citep[131]{wasserstein_asas_2016}
 \end{quote}
 
-Although this is the informal version of their definition, it may be completely incomprehensible at first glance, but it is actually just a summary of the discussion above: the ``specified statistical model'' in our case is the null hypothesis, \is{null hypothesis} i.e., the hypothesis that our data have come about purely by chance. \is{chance} The p\hyp{}value \is{p-value@$p$-value} thus tells us how probable it is under this hypothesis that we would observe the result we have observed, or an even more extreme result.
+Although this is the informal version of their definition, it may be completely incomprehensible at first glance, but it is actually just a summary of the discussion above: the ``specified statistical model'' in our case is the null hypothesis, \is{null hypothesis} i.e., the hypothesis that our data have come about purely by chance. \is{chance} The $p$\hyp{}value \is{p-value@$p$-value} thus tells us how probable it is under this hypothesis that we would observe the result we have observed, or an even more extreme result.
 
-It also tells us how likely we are wrong if we reject this null hypothesis: \is{null hypothesis} If our model (i.e. the null hypothesis) will occasionally produce our observed result (or a more extreme one), then we will be wrong in rejecting it at those occasions. The p\hyp{}value \is{p-value@$p$-value} tells us, how likely it is that we are dealing with such an occasion. Of course, it does \textit{not} tell us how likely it is that the null hypothesis is actually true or false -- we do not know this likelihood and we can never know it. Statistical hypotheses are no different in this respect from universal hypotheses. Even if we observe a result with a probability \is{probability} of one in a million, the null hypothesis \is{null hypothesis} could be true (as we might be dealing with this one\hyp{}in\hyp{}a\hyp{}million event), \is{animacy} and even if we observe a result with a probability of \num{999999} in a million, the null hypothesis could be false (as our result could nevertheless have come about by chance). \is{chance} The p\hyp{}value \is{p-value@$p$-value} simply tells us how likely it is that our study -- with all its potential faults, confounding variables, etc. -- would produce the result we observe and thus how likely we are wrong \textit{on the basis of this study} to reject the null hypothesis. \is{null hypothesis} This simply means that we should not start believing in our hypothesis until additional studies have rejected the null hypothesis -- an individual study may lead us to wrongly reject the null hypothesis, but the more studies we conduct that allow us to reject the null hypothesis, the more justified we are in treating them as corroborating \is{corroboration} our research hypothesis.
+It also tells us how likely we are wrong if we reject this null hypothesis: \is{null hypothesis} If our model (i.e. the null hypothesis) will occasionally produce our observed result (or a more extreme one), then we will be wrong in rejecting it at those occasions. The $p$\hyp{}value \is{p-value@$p$-value} tells us, how likely it is that we are dealing with such an occasion. Of course, it does \textit{not} tell us how likely it is that the null hypothesis is actually true or false -- we do not know this likelihood and we can never know it. Statistical hypotheses are no different in this respect from universal hypotheses. Even if we observe a result with a probability \is{probability} of one in a million, the null hypothesis \is{null hypothesis} could be true (as we might be dealing with this one\hyp{}in\hyp{}a\hyp{}million event), \is{animacy} and even if we observe a result with a probability of \num{999999} in a million, the null hypothesis could be false (as our result could nevertheless have come about by chance). \is{chance} The $p$\hyp{}value \is{p-value@$p$-value} simply tells us how likely it is that our study -- with all its potential faults, confounding variables, etc. -- would produce the result we observe and thus how likely we are wrong \textit{on the basis of this study} to reject the null hypothesis. \is{null hypothesis} This simply means that we should not start believing in our hypothesis until additional studies have rejected the null hypothesis -- an individual study may lead us to wrongly reject the null hypothesis, but the more studies we conduct that allow us to reject the null hypothesis, the more justified we are in treating them as corroborating \is{corroboration} our research hypothesis.
 
 By convention, probability \is{probability of error} of error of 0.05 (five percent) is considered to be the limit as far as acceptable risks are concerned in statistics \is{statistics} -- if $p < 0.05$ (i.e., if \textit{p} is smaller than five percent), the result is said to be \textit{statistically significant} \is{significance} (i.e., not due to chance), \is{chance} if it is larger, the result is said to be non\hyp{}significant (i.e., likely due to chance). \is{chance} \tabref{tab:plevels} \is{p-value@$p$-value} shows additional levels of significance that are conventionally recognized.
 
 \begin{table}
-\caption{Interpretation of p\hyp{}values}
+\caption{Interpretation of $p$\hyp{}values}
 \label{tab:plevels}
 \begin{tabular}[t]{lc}
 \lsptoprule
-p\hyp{}value & Level of significance \\
+$p$\hyp{}value & Level of significance \\
 \midrule
 $\geq 0.05$ & not significant \\
 $< 0.05$ & significant \\
@@ -121,13 +121,13 @@ $< 0.001$ & highly significant \\
 \end{tabular}
 \end{table}
 
-Obviously, these cut\hyp{}off points are largely arbitrary (a point that is often criticized by opponents of null\hyp{}hypothesis significance \is{significance} testing): it is strange to be confident in rejecting a null hypothesis \is{null hypothesis} if the probability \is{probability of error} of being wrong in doing so is five percent, but to refuse to reject it if the probability of being wrong is six percent (or, as two psychologists \is{psychology} put it: ``Surely, God loves the .06 nearly as much as the .05'' \citep[1277]{rosnow_statistical_1989}).
+Obviously, these cut\hyp{}off points are largely arbitrary (a point that is often criticized by opponents of null\hyp{}hypothesis significance \is{significance} testing): it is strange to be confident in rejecting a null hypothesis \is{null hypothesis} if the probability \is{probability of error} of being wrong in doing so is five percent, but to refuse to reject it if the probability of being wrong is six percent (or, as two psychologists \is{psychology} put it: ``Surely, God loves the .06 nearly as much as the .05'' \citep[1277]{rosnow_statistical_1989}).\largerpage
 
-In real life, of course, researchers do not treat these cut\hyp{}off points as absolute. Nobody would simply throw away a set of carefully collected data as soon as their calculations yielded a p\hyp{}value \is{p-value@$p$-value} of 0.06 or even 0.1. Some researchers actually report such results, calling p\hyp{}values between 0.05 and 0.10 ``marginally significant'', \is{significance} and although this is often frowned upon, there is nothing logically wrong with it. Even the majority of researchers who are unwilling to report such results would take them as an indicator that additional research might be in order (especially if there is a reasonable effect size, \is{effect size} see further below).
+In real life, of course, researchers do not treat these cut\hyp{}off points as absolute. Nobody would simply throw away a set of carefully collected data as soon as their calculations yielded a $p$\hyp{}value \is{p-value@$p$-value} of 0.06 or even 0.1. Some researchers actually report such results, calling $p$\hyp{}values between 0.05 and 0.10 ``marginally significant'', \is{significance} and although this is often frowned upon, there is nothing logically wrong with it. Even the majority of researchers who are unwilling to report such results would take them as an indicator that additional research might be in order (especially if there is a reasonable effect size, \is{effect size} see further below).
 
 They might re\hyp{}check their operational \is{operationalization} definitions and the way they were applied, they might collect additional data in order to see whether a larger data set yields a lower probability \is{probability of error} of error, or they might replicate \is{replicability} the study with a different data set. Note that this is perfectly legitimate, and completely in line with the research cycle sketched out in Section~\ref{sec:researchcycle} -- provided we retain all of our data. What we must not do, of course, is test different data sets until we find one that gives us a significant \is{significance} result, and then report just that result, ignoring all attempts that did not yield significant results. What we must also not do is collect an extremely large \is{corpus size} data set and then keep drawing samples \is{sampling} from it until we happen to draw one that gives us a significant result. These practices are sometimes referred to as \textit{p\hyp{}hacking}, and they constitute a scientific fraud (imagine a a researcher who wants to corroborate \is{corroboration} their hypothesis that all swans are white and does so by simply ignoring all black swans they find).
 
-Clearly, what probability \is{probability of error} of error one is willing to accept for any given study also depends on the nature of the study, the nature of the research design, \is{research design} and a general disposition to take or avoid risk. If mistakenly rejecting the null hypothesis \is{null hypothesis} were to endanger lives (for example, in a study of potential side\hyp{}effects of a medical treatment), we might not be willing to accept a p\hyp{}value \is{p-value@$p$-value} of 0.05 or even 0.01.
+Clearly, what probability \is{probability of error} of error one is willing to accept for any given study also depends on the nature of the study, the nature of the research design, \is{research design} and a general disposition to take or avoid risk. If mistakenly rejecting the null hypothesis \is{null hypothesis} were to endanger lives (for example, in a study of potential side\hyp{}effects of a medical treatment), we might not be willing to accept a $p$\hyp{}value \is{p-value@$p$-value} of 0.05 or even 0.01.
 
 Why would collecting additional data be a useful strategy, or, more generally speaking, why are corpus\hyp{}linguists (and other scientists) often intent on making their samples as large as possible and\slash or feasible? Note that the probability \is{probability of error} of error depends not just on the proportion of the deviation, but also on the overall size \is{corpus size} of the sample. For example, if we observe a series of two heads and eight tails (i.e., twenty percent heads), the probability of error in rejecting the null hypothesis \is{null hypothesis} is $0.000977 + 0.009766 + 0.043945 = 0.054688$. However, if we observe a series of four heads and sixteen tails (again, twenty percent heads), the probability \is{probability of error} of error would be roughly ten times lower, namely 0.005909. The reason is the following: There are \num{1048576} possible series of twenty coin flips. There is still only one way of getting one head and nineteen tails, so the probability of getting one head and nineteen tails is $\nicefrac{1}{1048576} = 0.0000009536743$; however, there are already 20 ways of getting one tail and nineteen heads (so the probability is $\nicefrac{20}{1048576} = 0.000019$), 190 ways of getting two heads and eighteen tails ($p = \nicefrac{190}{1048576} = 0.000181$), 1140 ways of getting three heads and seventeen tails ($p = \nicefrac{1140}{1048576} = 0.001087$) and 4845 ways of getting four heads and sixteen tails ($p = \nicefrac{4845}{1048576} = 0.004621$). And adding up these probabilities gives us 0.005909.
 
@@ -158,15 +158,15 @@ Despite its flexibility, there are two requirements that must be met in order fo
 Let us begin with a two\hyp{}by\hyp{}two design \is{research design} and return to the case of discourse\hyp{}old and discourse\hyp{}new modifiers in the two English possessive \is{possessive} constructions. Here is the research hypothesis again, paraphrased from (\ref{ex:givennesshypothesis}) and (\ref{ex:givennessprediction}) in \chapref{ch:quantifyingresearch}:
 
 \begin{exe}
-\ex H\textsubscript{1}: There is a relationship between \textvv{Discourse Status} and \textvv{Type of Possessive} such that the \textvv{\textit{s}-possessive} is preferred when the modifier is \textvv{discourse\hyp{}old}, the \textvv{\textit{of}-possessive} \is{possessive} is preferred when the modifier is \textvv{discouse\hyp{}new}.\\[2ex]
-Prediction: There will be more cases of the \textvv{\textit{s}-possessive} with \textvv{discourse\hyp{}old} modifiers than with \textvv{discourse\hyp{}new} modifiers, and more cases of the \textvv{\textit{of}-possessive} with discourse\hyp{}new modifiers than with \textvv{discourse\hyp{}old} modifiers.
+\ex H\textsubscript{1}: There is a relationship between \textvv{Discourse Status} and \textvv{Type of Possessive} such that the \textvv{\textit{s}-possessive} is preferred when the modifier is \textvv{discourse\hyp{}old}, the \textvv{\textit{of}-possessive} \is{possessive} is preferred when the modifier is \textvv{dis-\linebreak course-new}.\\
+Prediction: There will be more cases of the \textvv{\textit{s}-possessive} with \textvv{discourse\hyp{}old} modifiers than with \textvv{discourse\hyp{}new} modifiers, and more cases of the \textvv{\textit{of}-possessive} with discourse\hyp{}new modifiers than with \textvv{discourse\hyp{}old}\linebreak modifiers.
 \label{ex:givennessalternative}
 \end{exe}
 
 The corresponding null hypothesis \is{null hypothesis} is stated in \is{givenness} (\ref{ex:givennessnull}):
 
 \begin{exe}
-\ex H\textsubscript{0}: There is no relationship between \textvv{Discourse Status} and \textvv{Type of Possessive}.\\[2ex]
+\ex H\textsubscript{0}: There is no relationship between \textvv{Discourse Status} and \textvv{Type of Possessive}.\smallskip\\
 Prediction: Discourse\hyp{}old and discourse\hyp{}new modifiers will be distributed \is{distribution!conditional} randomly \is{chance} across the two Possessive \is{possessive} constructions.
 \label{ex:givennessnull}
 \end{exe}
@@ -179,7 +179,7 @@ We already reported the observed and expected \is{frequency!expected} frequencie
 \label{tab:obsexpfreqpossrepeat}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Possessive}} & \\
+ & & \multicolumn{2}{c}{\textvv{Possessive}} & \\\cmidrule(lr){3-4}
  & & \textvv{\textit{s}-possessive} & \textvv{\textit{of}-possessive} & Total \\
 \midrule
 \textvv{\makecell[lt]{Discourse \\Status}} & \textvv{old} & \makecell[t]{180\\(102.81)} & \makecell[t]{3\\(80.19)} & \makecell[t]{183\\} \\
@@ -240,7 +240,7 @@ If we apply this procedure to \tabref{tab:obsexpfreqpossrepeat}, we get the comp
 \end{tabular}
 \end{table}
 
-The degree of deviance from the expected \is{frequency!expected} frequencies for the entire table can then be calculated by adding up the $\chi^2$ \is{chi-square test} components. For Table 7.3, the $\chi^2$ value ($\chi^2$) is 272.16. This value can now be used to determine the probability \is{probability of error} of error by checking it against a table like that in Section~\ref{sec:chisquarecriticalvalues} in the Statistical Tables at the end of this book.
+The degree of deviance from the expected \is{frequency!expected} frequencies for the entire table can then be calculated by adding up the $\chi^2$ \is{chi-square test} components. For Table 7.3, the $\chi^2$ value ($\chi^2$) is 272.16. This value can now be used to determine the probability \is{probability of error} of error by checking it against a table like that in Section~\ref{sec:chisquarecriticalvalues} in the Statistical Tables at the end of this book.\largerpage
 
 Before we can do so, there is a final technical point to make. Note that the degree of variation \is{variation} in a given table that is expected \is{frequency!expected} to occur by chance \is{chance} depends quite heavily on the size of the table. The bigger the table, the higher the number of cells that can vary independently of other cells without changing the marginal sums (i.e., without changing the overall distribution). \is{distribution!conditional} The number of such cells that a table contains is referred to as the number of \textit{degrees of freedom} of the table. In the case of a two\hyp{}by\hyp{}two table, there is just one such cell: if we change any single cell, we must automatically adjust the other three cells in order to keep the marginal sums constant. Thus, a two\hyp{}by\hyp{}two table has one degree of freedom.
 
@@ -251,12 +251,12 @@ The general formula for determining the degrees of freedom of a table is the fol
 \label{ex:formuladf}
 \end{exe}
 
-Significance levels of $\chi^2$ \is{chi-square test} values differ depending on how many degrees of freedom a table has, so we always need to determine the degrees of freedom before we can determine the p\hyp{}value. Turning to the table of $\chi^2$ values in Section~\ref{sec:chisquarecriticalvalues}, \is{chi-square test} we first find the row for one degree of freedom (this is the first row); we then check whether our $\chi^2$-value is larger than that required for the level of significance \is{significance} that we are after. In our case, the value of 272.16 is much higher than the $\chi^2$ value required for a significance level of 0.001 at one degree of freedom, which is 10.83. Thus, we can say that the differences in \tabref{tab:obsexpfreqpossrepeat} are \textit{statistically highly significant}. The results of a $\chi^2$ \is{chi-square test} test are conventionally reported in the following format:
+Significance levels of $\chi^2$ \is{chi-square test} values differ depending on how many degrees of freedom a table has, so we always need to determine the degrees of freedom before we can determine the $p$\hyp{}value. Turning to the table of $\chi^2$ values in Section~\ref{sec:chisquarecriticalvalues}, \is{chi-square test} we first find the row for one degree of freedom (this is the first row); we then check whether our $\chi^2$-value is larger than that required for the level of significance \is{significance} that we are after. In our case, the value of 272.16 is much higher than the $\chi^2$ value required for a significance level of 0.001 at one degree of freedom, which is 10.83. Thus, we can say that the differences in \tabref{tab:obsexpfreqpossrepeat} are \textit{statistically highly significant}. The results of a $\chi^2$ \is{chi-square test} test are conventionally reported in the following format:
 
-\todo[inline]{Why allcaps?}
+% % % \todo[inline]{Why allcaps?}
 \begin{exe}
 \ex Format for reporting the results of a $\chi^2$ \is{chi-square test} test\\
-($\chi^2 = \text{[CHI\hyp{}SQUARE VALUE]}, \df = \text{[DEG. OF FREEDOM]}, p < (\text{or} >) \text{[SIG. LEVEL]}$)
+($\chi^2 = \text{[chi\hyp{}square value]}, \df = \text{[deg. of freedom]}, p < (\text{or} >) \text{ [sig. level]}$)
 \label{ex:reportingchisquare}
 \end{exe}
 
@@ -270,7 +270,7 @@ Second, statistical significance \is{significance} has nothing to do with theore
 
 Third, and perhaps least obviously but most importantly, statistical significance \is{significance} does not actually tell us anything about the importance of the relationship we have observed. A relationship may be highly significant (i.e., generalizable with a high degree of certainty) and still be extremely weak. Put differently, statistical significance is not typically an indicator of the strength of the \is{association} association.\footnote{This statement must be qualified to a certain degree: given the right research design, \is{research design} statistical significance \is{significance} may actually be a very reasonable indicator of association \is{association} strength (cf. e.g. \citealt{stefanowitsch_collostructions:_2003}, \citealt{gries_extending_2004} for discussion). However, in most contexts we are well advised to keep statistical significance and association strength conceptually separate.}
 
-To solve the last problem, we can calculate a so\hyp{}called measure of \textit{effect size}, \is{effect size} which, as its name suggests, indicates the size of the effect that our independent variable has on the dependent variable. For two\hyp{}by\hyp{}two contingency \is{contingency table} tables with categorical \is{categorization} data, there is a widely\hyp{}used measure referred to as $\phi$ (\textit{phi}) that is calculated as follows:
+To solve the last problem, we can calculate a so\hyp{}called measure of \textit{effect size}, \is{effect size} which, as its name suggests, indicates the size of the effect that our independent variable has on the dependent variable. For two\hyp{}by\hyp{}two contingency \is{contingency table} tables with categorical \is{categorization} data, there is a widely\hyp{}used measure referred to as $\phi$ (\textit{phi}) that is calculated as follows:\largerpage[1]
 
 \begin{exe}
 \ex \attop{$\displaystyle{\phi = \sqrt{\frac{\chi^2}{O_{TT}}}}$
@@ -278,7 +278,6 @@ To solve the last problem, we can calculate a so\hyp{}called measure of \textit{
 \end{exe}
 
 In our example, this formula gives us
-
 \[\phi = \sqrt{\frac{272.16}{356}} = 0.8744\]
 
 The $\phi$-value is a so\hyp{}called correlation \is{correlation} coefficient, whose interpretation can be very subtle (especially when it comes to comparing two or more of them), but we will content ourselves with two relatively simple ways of interpreting them.
@@ -302,14 +301,13 @@ Absolute Value & Interpretation \\
 \end{tabular}
 \end{table}
 
-Our $\phi$-value of 0.8744 falls into the \textit{very} \textit{strong} category, which is unusual in uncontrolled observational \is{observational method} research, and which suggests that \textvv{Discourse Status} is indeed a very important factor in the choice of \textvv{Possessive} \is{possessive} constructions in English.
+Our $\phi$-value of 0.8744 falls into the \textit{very} \textit{strong} category, which is unusual in uncontrolled observational \is{observational method} research, and which suggests that \textvv{Discourse Status} is indeed a very important factor in the choice of \textvv{Possessive} \is{possessive} constructions in English.\largerpage
 
 Exactly how much of the variance \is{variance} in the use of the two possessives \is{possessive} is accounted for by the discourse status of the modifier can be determined by looking at the square of the $\phi$ coefficient: \is{correlation} the square of a correlation coefficient generally tells us what proportion of the distribution \is{distribution!conditional} of the dependent variable we can account for on the basis of the independent variable (or, more generally, what proportion of the variance \is{variance} our design \is{research design} has captured). In our case, $\phi^2 = (0.8744 \times 0.8744 ) = 0.7645$. In other words, the variable \textvv{Discourse Status} explains roughly three quarters of the variance \is{variance} in the use of the \textvv{Possessive} constructions -- if, that is, our operational \is{operationalization} definition actually captures the discourse status of the modifier, and nothing else. A more precise way of reporting the results from our study would be something like the following ``This study has shown a strong and statistically highly significant \is{significance} influence of Discourse Status on the choice of possessive \is{possessive} construction: \textit{s}-possessives are preferred when the modifier is discourse\hyp{}old (defined in this study as being realized by a pronoun) \is{pronoun} while \textit{of}-possessives are preferred when the modifier is discourse\hyp{}new (defined in this study as being realized by a lexical NP) \is{chi-square test} ($\chi^2 = 272.16, \df = 1, p < 0.001, \phi^2 = 0.7645$)''.
 
 Unfortunately, studies in corpus linguistics (and in the social sciences in general) often fail to report effect sizes, \is{effect size} but we can usually calculate them from the data provided, and one should make a habit of doing so. Many effects reported in the literature are actually somewhat weaker than the significance \is{significance} levels might lead us to believe.
 
-\subsection{One\hyp{}by\hyp{}n designs}
-\label{sec:chisquareonebyn}
+\subsection{One\hyp{}by\hyp{}$n$ designs}\label{sec:chisquareonebyn}\largerpage
 
 In the vast majority of corpus linguistic research issues, we will be dealing with designs \is{research design} that are at least bivariate \is{bivariate analysis} (i.e., that involve the intersection of at least \textit{two} variables), like the one discussed in the preceding section. However, once in a while we may need to test a \textit{univariate} distribution \is{distribution!conditional} for significance \is{significance} (i.e., a distribution of values of a single variable regardless of any specific condition). We may, for instance, have annotated \is{annotation} an entire corpus for a particular speaker variable (such as sex), and we may now want to know whether the corpus is actually balanced with respect to this variable.
 
@@ -367,7 +365,7 @@ In the case of speaker sex it does not make much of a difference how we derive t
 \caption{Observed and expected frequencies of Speaker Age in the BNC}
 \label{tab:speakerageobsex}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}[t]{l S[table-format=3.0] S[round-mode=places,round-precision=4] c S c S}
+\begin{tabular}[t]{l S[table-format=3.0] S[round-mode=places,round-precision=4,table-format=1.4] c S[table-format=2.2] c S[table-format=2.2]}
 \lsptoprule
  & & & \multicolumn{2}{c}{Equal Proportions} & \multicolumn{2}{c}{Population Proportions} \\\cmidrule(lr){4-5}\cmidrule(){6-7}
 \multicolumn{1}{l}{Age} & \multicolumn{1}{c}{Obs.} & \multicolumn{1}{c}{$p(\text{Pop.})$} & \multicolumn{1}{c}{Expected} & \multicolumn{1}{c}{$\chi^2$} & \multicolumn{1}{c}{Expected} & \multicolumn{1}{c}{$\chi^2$} \\
@@ -396,7 +394,7 @@ Where one variable is nominal \is{nominal data} (more precisely, nominal with tw
 Let us return to the case study of the animacy \is{animacy} of modifiers in the two English possessive \is{possessive} constructions. Here is the research hypothesis again, from (\ref{ex:animacyhypothesis}) and (\ref{ex:animacyprediction}) in \chapref{ch:quantifyingresearch}:
 
 \begin{exe}
-\ex H\textsubscript{1}: The \textvv{\textit{s}-possessive} will be used when the modifier is high in \textvv{Animacy}, \is{animacy} the \textvv{\textit{of}-possessive} will be used when the modifier is low in \textvv{Animacy}. \\[1.5ex]
+\ex H\textsubscript{1}: The \textvv{\textit{s}-possessive} will be used when the modifier is high in \textvv{Animacy}, \is{animacy} the \textvv{\textit{of}-possessive} will be used when the modifier is low in \textvv{Animacy}.\smallskip\\
 Prediction: The modifiers of the \textvv{\textit{s}-possessive} \is{possessive} will have a higher median \is{median} on the \textvv{Animacy} scale than the the modifiers of the \textvv{\textit{of}-possessive}.
 \label{ex:animacyalternative}
 \end{exe}
@@ -404,7 +402,7 @@ Prediction: The modifiers of the \textvv{\textit{s}-possessive} \is{possessive} 
 The corresponding null hypothesis \is{null hypothesis} is stated in \is{animacy} (\ref{ex:animacynull}):
 
 \begin{exe}
-\ex H\textsubscript{0}: There is no relationship between \textvv{Animacy} and \textvv{Type of Possessive}. \is{possessive} \\[1.5ex]
+\ex H\textsubscript{0}: There is no relationship between \textvv{Animacy} and \textvv{Type of Possessive}.\is{possessive}\smallskip\\
 Prediction: There will be no difference between the medians \is{median} of the modifiers of the \textvv{\textit{s}-possessive} and the \textvv{\textit{of}-possessive} on the \textvv{Animacy} scale.
 \label{ex:animacynull}
 \end{exe}
@@ -412,8 +410,7 @@ Prediction: There will be no difference between the medians \is{median} of the m
 The median \is{median} animacy \is{animacy} of all modifiers in our sample taken together is 2,\footnote{There are 41 data points in our sample, whose ranks are the following: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 4, 5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 8, 9, 10, 10, 10, 10. The twenty\hyp{}first item on the list is a 2, so this is the median.} so the H\textsubscript{0} predicts that the medians \is{median} of \textit{s}-possessive \is{possessive} and the \textit{of}-possessive should also be 2. Recall that the observed median animacy in our sample was 1 for the \textit{s}-possessive and 5 for the \textit{of}-possessive, which deviates from the prediction of the H\textsubscript{0} in the direction of our H\textsubscript{1}. However, as in the case of nominal \is{nominal data} data, a certain amount of deviation from the null hypothesis \is{null hypothesis} will occur due to chance, \is{chance} so we need a test statistic that will tell us how likely our observed result is. For ordinal \is{ordinal data} data, this test statistic is the \textit{U} value, which is calculated as follows.
 
 In a first step, we have to determine the rank order of the data points in our sample. For expository reasons, let us distinguish between the rank value and the rank position of a data point: the rank value is the ordinal \is{ordinal data} value it received during annotation \is{annotation} (in our case, its value on the \textvv{Animacy} scale), its rank position is the position it occupies in an ordered list of all data points. If every rank value occurred only once in our sample, rank value and rank position would be the same. However, there are 41 data points in our sample, so the rank positions will range from 1 to 41, and there are only 10 rank values in our annotation \is{annotation} scheme for \textvv{Animacy}. \is{animacy} This means that at least some rank values will occur more than once, which is a typical situation for corpus\hyp{}linguistic research involving ordinal \is{ordinal data} data.
-
-\tabref{tab:speakerageobsex} shows all data points in our sample together with their rank position.
+\tabref{tab:animrankpossgenofc} shows all data points in our sample together with their rank position.
 
 \begin{table}
 \caption{Annotated sample from \tabref{tab:sampleanimacysgenofc} with animacy rank and position (cf. \tabref{tab:sampleanimranksgenofc})}
@@ -452,11 +449,9 @@ Anim. & Pos. & Type & No. & & Anim. & Pos. & Type & No. \\
 \end{table}
 
 Every rank value except 4, 8 and 9 occurs more than once; for example, there are sixteen cases that have an \textvv{Animacy} \is{animacy} rank value of 1 and six cases that have a rank value of 2, two cases that have a rank value of 3, and so on. This means we cannot simply assign rank positions from 1 to 41 to our examples, as there is no way of deciding which of the sixteen examples with the rank value 1 should receive the rank position 1, 2, 3, etc. Instead, these 16 examples as a group share the range of ranks from 1 to 16, so each example gets the mean \is{mean} rank position of this range. There are sixteen cases with rank value 1, to their mean rank is
-
 \[\frac{1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16}{16} = \frac{136}{16} = 8.5\]
 
 The first example with the rank value 2 occurs in line 17 of the table, so it would receive the rank position 17. However, there are five more examples with the same rank value, so again we calculate the mean \is{mean} rank position of the range from rank 17 to 22, which is
-
 \[\frac{17+18+19+20+21+22}{6} = \frac{117}{16} = 19.5\]
 
 Repeating this process for all examples yields the rank positions shown in the third column in \tabref{tab:speakerageobsex} above.
@@ -466,37 +461,37 @@ Once we have determined the rank position of each data point, we separate them i
 \begin{table}
 \caption{Animacy ranks and positions and rank sums for the sample of possessives}
 \label{tab:possranksums}
-\begin{tabular}[t]{rrcccrrcc}
+\begin{tabular}{rrccrrcc}
 \lsptoprule
-\multicolumn{4}{c}{\textvv{\textit{s}-possessive}} & & \multicolumn{4}{c}{\textvv{\textit{of}-possessive}}\\\cmidrule(lr){1-4}\cmidrule(lr){5-8}
-Anim. & Pos. & Type & Example & & Anim. & Pos. & Type & Example \\
+\multicolumn{4}{c}{\textvv{\textit{s}-possessive}}  &  \multicolumn{4}{c}{\textvv{\textit{of}-possessive}}\\\cmidrule(lr){1-4}\cmidrule(lr){5-8}
+Anim. & Pos. & Type & Example  &  Anim. & Pos. & Type & Example \\
 \midrule
-2 & 19.5 & \textvv{\textit{s}} & (a 1) & & 8 & 36.0 & \textvv{\textit{of}} & (b 1) \\
-1 & 8.5 & \textvv{\textit{s}} & (a 2) & & 2 & 19.5 & \textvv{\textit{of}} & (b 2) \\
-1 & 8.5 & \textvv{\textit{s}} & (a 3) & & 7 & 34.5 & \textvv{\textit{of}} & (b 3) \\
-6 & 32.5 & \textvv{\textit{s}} & (a 4) & & 1 & 8.5 & \textvv{\textit{of}} & (b 4) \\
-2 & 19.5 & \textvv{\textit{s}} & (a 5) & & 5 & 28.5 & \textvv{\textit{of}} & (b 5) \\
-2 & 19.5 & \textvv{\textit{s}} & (a 6) & & 10 & 39.5 & \textvv{\textit{of}} & (b 6) \\
-1 & 8.5 & \textvv{\textit{s}} & (a 7) & & 1 & 8.5 & \textvv{\textit{of}} & (b 7) \\
-1 & 8.5 & \textvv{\textit{s}} & (a 8) & & 10 & 39.5 & \textvv{\textit{of}} & (b 8) \\
-1 & 8.5 & \textvv{\textit{s}} & (a 9) & & 6 & 32.5 & \textvv{\textit{of}} & (b 9) \\
-1 & 8.5 & \textvv{\textit{s}} & (a 10) & & 10 & 39.5 & \textvv{\textit{of}} & (b 10) \\
-5 & 28.5 & \textvv{\textit{s}} & (a 11) & & 5 & 28.5 & \textvv{\textit{of}} & (b 11) \\
-1 & 8.5 & \textvv{\textit{s}} & (a 12) & & 9 & 37.0 & \textvv{\textit{of}} & (b 12) \\
-2 & 19.5 & \textvv{\textit{s}} & (a 13) & & 4 & 25.0 & \textvv{\textit{of}} & (b 13) \\
-2 & 19.5 & \textvv{\textit{s}} & (a 14) & & 7 & 34.5 & \textvv{\textit{of}} & (b 14) \\
-1 & 8.5 & \textvv{\textit{s}} & (a 15) & & 10 & 39.5 & \textvv{\textit{of}} & (b 15) \\
-3 & 23.5 & \textvv{\textit{s}} & (a 16) & & 5 & 28.5 & \textvv{\textit{of}} & (b 16) \\
-1 & 8.5 & \textvv{\textit{s}} & (a 17) & & 5 & 28.5 & \textvv{\textit{of}} & (b 17) \\
-1 & 8.5 & \textvv{\textit{s}} & (a 18) & & 5 & 28.5 & \textvv{\textit{of}} & (b 18) \\
-1 & 8.5 & \textvv{\textit{s}} & (a 19) & & & & & \\
-1 & 8.5 & \textvv{\textit{s}} & (a 20) & & & & & \\
-1 & 8.5 & \textvv{\textit{s}} & (a 21) & & & & & \\
-3 & 23.5 & \textvv{\textit{s}} & (a 22) & & & & & \\
-1 & 8.5 & \textvv{\textit{s}} & (a 23) & & & & & \\
+2 & 19.5 & \textvv{\textit{s}} & (a 1)  &  8 & 36.0 & \textvv{\textit{of}} & (b 1) \\
+1 & 8.5 & \textvv{\textit{s}} & (a 2)  &  2 & 19.5 & \textvv{\textit{of}} & (b 2) \\
+1 & 8.5 & \textvv{\textit{s}} & (a 3)  &  7 & 34.5 & \textvv{\textit{of}} & (b 3) \\
+6 & 32.5 & \textvv{\textit{s}} & (a 4)  &  1 & 8.5 & \textvv{\textit{of}} & (b 4) \\
+2 & 19.5 & \textvv{\textit{s}} & (a 5)  &  5 & 28.5 & \textvv{\textit{of}} & (b 5) \\
+2 & 19.5 & \textvv{\textit{s}} & (a 6)  &  10 & 39.5 & \textvv{\textit{of}} & (b 6) \\
+1 & 8.5 & \textvv{\textit{s}} & (a 7)  &  1 & 8.5 & \textvv{\textit{of}} & (b 7) \\
+1 & 8.5 & \textvv{\textit{s}} & (a 8)  &  10 & 39.5 & \textvv{\textit{of}} & (b 8) \\
+1 & 8.5 & \textvv{\textit{s}} & (a 9)  &  6 & 32.5 & \textvv{\textit{of}} & (b 9) \\
+1 & 8.5 & \textvv{\textit{s}} & (a 10)  &  10 & 39.5 & \textvv{\textit{of}} & (b 10) \\
+5 & 28.5 & \textvv{\textit{s}} & (a 11)  &  5 & 28.5 & \textvv{\textit{of}} & (b 11) \\
+1 & 8.5 & \textvv{\textit{s}} & (a 12)  &  9 & 37.0 & \textvv{\textit{of}} & (b 12) \\
+2 & 19.5 & \textvv{\textit{s}} & (a 13)  &  4 & 25.0 & \textvv{\textit{of}} & (b 13) \\
+2 & 19.5 & \textvv{\textit{s}} & (a 14)  &  7 & 34.5 & \textvv{\textit{of}} & (b 14) \\
+1 & 8.5 & \textvv{\textit{s}} & (a 15)  &  10 & 39.5 & \textvv{\textit{of}} & (b 15) \\
+3 & 23.5 & \textvv{\textit{s}} & (a 16)  &  5 & 28.5 & \textvv{\textit{of}} & (b 16) \\
+1 & 8.5 & \textvv{\textit{s}} & (a 17)  &  5 & 28.5 & \textvv{\textit{of}} & (b 17) \\
+1 & 8.5 & \textvv{\textit{s}} & (a 18)  &  5 & 28.5 & \textvv{\textit{of}} & (b 18) \\
+1 & 8.5 & \textvv{\textit{s}} & (a 19)  &   &  & \\
+1 & 8.5 & \textvv{\textit{s}} & (a 20)  &   &  & \\
+1 & 8.5 & \textvv{\textit{s}} & (a 21)  &   &  & \\
+3 & 23.5 & \textvv{\textit{s}} & (a 22)  &   &  & \\
+1 & 8.5 & \textvv{\textit{s}} & (a 23)  &   &  & \\
 \midrule
-R & 324.5 & & & & R & 536.5 & & \\
-N & 23 & & & & N & 18 & & \\
+R & 324.5  &   & &  R & 536.5  &  \\
+N & 23  &   & &  N & 18  &  \\
 \lspbottomrule
 \end{tabular}
 \end{table}
@@ -513,19 +508,17 @@ The rank sum and the number of data points for each sample allow us to calculate
 \end{exe}
 
 Applying these formulas to the measures for the \textit{s}-possessive \is{possessive} (\ref{ex:formulamannwhitneyu}a) and \textit{of}-possessive (\ref{ex:formulamannwhitneyu}b) respectively, we get the \textit{U} values
-
 \[U_1 = (23 \times 18) + \frac{23 \times (23 + 1)} 2 - 324.5 = 365.5\]
 
 and
-
 \[U_2 = (23 \times 18) + \frac{18 \times (18 + 1)} 2 - 536.5 = 48.5\]
 
-The \textit{U} value for the entire data set is always the smaller of the two \textit{U} values. In our case this is U\textsubscript{2}, so our \textit{U} value is 48.5. This value can now be compared against its known distribution \is{distribution!conditional} in the same way as the $\chi^2$ \is{chi-square test} value for nominal \is{nominal data} data. In our case, this means looking it up in the table in Section~\ref{sec:mannwhitneycriticalvalues} in the Statistical Tables at the end of this book, which tells us that the p\hyp{}value for this \textit{U} value is smaller than 0.001 -- the difference between the s- and the \textit{of}-possessive \is{possessive} is, again, highly significant. \is{significance} The Mann\hyp{}Whitney \is{Mann-Whitney U test@Mann-Whitney \textit{U} test} \textit{U} test may be reported as follows:
+The \textit{U} value for the entire data set is always the smaller of the two \textit{U} values. In our case this is $U_2$, so our \textit{U} value is 48.5. This value can now be compared against its known distribution \is{distribution!conditional} in the same way as the $\chi^2$ \is{chi-square test} value for nominal \is{nominal data} data. In our case, this means looking it up in the table in Section~\ref{sec:mannwhitneycriticalvalues} in the Statistical Tables at the end of this book, which tells us that the $p$-value for this \textit{U} value is smaller than 0.001 -- the difference between the \textit{s}- and the \textit{of}-possessive \is{possessive} is, again, highly significant. \is{significance} The Mann\hyp{}Whitney \is{Mann-Whitney U test@Mann-Whitney \textit{U} test} \textit{U} test may be reported as follows:
 
-\todo[inline]{why allcaps?}
+% % % \todo[inline]{why allcaps?}
 \begin{exe}
 \ex \textit{Format for reporting the results of a Mann\hyp{}Whitney test} \\
-($U = [\text{U VALUE}], N_1 = [N_1], N_2 = [N_2] p < (\text{or} >) [\text{SIG. LEVEL}]$).
+($U = [U\text{ value}], N_1 = [N_1], N_2 = [N_2], p < (\text{or} >)~[\text{sig. level}]$).
 \label{ex:reportingmannwhitney}
 \end{exe}
 
@@ -544,7 +537,7 @@ Where one variable is nominal \is{nominal data} (more precisely, nominal with tw
 Let us return to the case study of the length \is{length} of modifiers in the two English possessive constructions. Here is the research hypothesis again, paraphrased slightly from (\ref{ex:lengthhypothesis}) and (\ref{ex:lengthprediction}) in \chapref{ch:quantifyingresearch}:
 
 \begin{exe}
-\ex H\textsubscript{1}: The \textvv{\textit{s}-possessive} will be used with short modifiers, the \textvv{\textit{of}-possessive} will be used with long modifiers. \\[1.5ex]
+\ex H\textsubscript{1}: The \textvv{\textit{s}-possessive} will be used with short modifiers, the \textvv{\textit{of}-possessive} will be used with long modifiers.\smallskip\\
 Prediction: The mean \is{mean} \textvv{Length} \is{length} (in ``number of words'') of modifiers of the \textvv{\textit{s}-possessive} \is{possessive} should be smaller than that of the modifiers of the \textvv{\textit{of}\hyp{}possessive}.
 \label{ex:lengthalternative}
 \end{exe}
@@ -552,17 +545,17 @@ Prediction: The mean \is{mean} \textvv{Length} \is{length} (in ``number of words
 The corresponding null hypothesis \is{null hypothesis} is stated in (\ref{ex:lengthnull}):
 
 \begin{exe}
-\ex H\textsubscript{0}: There is no relationship between \textvv{Length} \is{length} and \textvv{Type of Possessive}. \is{possessive} \\[1.5ex]
+\ex H\textsubscript{0}: There is no relationship between \textvv{Length} \is{length} and \textvv{Type of Possessive}. \is{possessive}\smallskip\\
 Prediction: There will be no difference between the mean \is{mean} length of the modifiers of the \textvv{\textit{s}-possessive} and the \textvv{\textit{of}-possessive}.
 \label{ex:lengthnull}
 \end{exe}
 
-Table 7.13 shows the length \is{length} in number of words for the modifiers of the \textit{s}- and \textit{of}-possessives \is{possessive} (as already reported in \tabref{tab:samplelengthsgenofc}), together with a number of additional pieces of information that we will turn to next.
+\tabref{tab:posslengthwelch} shows the length \is{length} in number of words for the modifiers of the \textit{s}- and \textit{of}-possessives \is{possessive} (as already reported in \tabref{tab:samplelengthsgenofc}), together with a number of additional pieces of information that we will turn to next.
 
 \begin{table}
 \caption{Length of the modifier in the sample of \textit{s}- and \textit{of}-possessives from \tabref{tab:samplelengthsgenofc}}
 \label{tab:posslengthwelch}
-\begin{tabular}[t]{rrS[table-format=-1.1]c@{\hspace{4\tabcolsep}}rrS[table-format=-1.4]S[table-format=2.4]}
+\begin{tabular}[t]{rrS[table-format=-1.1]crrS[table-format=-1.4]S[table-format=2.4]}
 \lsptoprule
 \multicolumn{4}{c}{\textvv{\textit{s}-possessive}} &  \multicolumn{4}{c}{\textvv{\textit{of}-possessive}} \\\cmidrule(lr){1-4}\cmidrule(lr){5-8}
       {No.}
@@ -614,7 +607,7 @@ In order to calculate Welch's \textit{t}-test, \is{t-test@$t$-test} we determine
 
 The question is, again, how likely it is that this difference is due to chance. \is{chance} When comparing group means, the crucial question we must ask in order to determine this is how large the variation \is{variation} is within each group of measurements: \is{measurement} put simply, the more widely the measurements within each group vary, the more likely it is that the differences across groups have come about by \is{chance} chance.
 
-The first step in assessing the variation \is{variation} consists in determining for each measurement, \is{measurement} how far away it is from its group mean. \is{mean} Thus, we simply subtract each measurement for the \textvv{\textit{s}-possessive} \is{possessive} from the group mean of 1.9, and each measurement for the \textvv{\textit{of}-possessive} from the group mean of 3.83. The results are shown in the third column of each sub\hyp{}table in Table 7.13. However, we do not want to know how much each single measurement deviates from the mean, but how far the group \textvv{\textit{s}-possessive} or \textvv{\textit{of}-possessive} as a whole varies around the mean. \is{mean} Obviously, adding up all individual values is not going to be helpful: as in the case of observed and expected \is{frequency!expected} frequencies of nominal \is{nominal data} data, the result would always be zero. So we use the same trick we used there, and calculate the square of each value -- making them all positive and weighting larger deviations more heavily. The results of this are shown in the fourth column of each sub\hyp{}table. We then calculate the mean \is{mean} of these values for each group, but instead of adding up all values and dividing them by the number of cases, we add them up and divide them by the total number of cases minus one. This is referred to as the sample \is{variance} variance:
+The first step in assessing the variation \is{variation} consists in determining for each measurement, \is{measurement} how far away it is from its group mean. \is{mean} Thus, we simply subtract each measurement for the \textvv{\textit{s}-possessive} \is{possessive} from the group mean of 1.9, and each measurement for the \textvv{\textit{of}-possessive} from the group mean of 3.83. The results are shown in the third column of each sub\hyp{}table in \tabref{tab:posslengthwelch}. However, we do not want to know how much each single measurement deviates from the mean, but how far the group \textvv{\textit{s}-possessive} or \textvv{\textit{of}-possessive} as a whole varies around the mean. \is{mean} Obviously, adding up all individual values is not going to be helpful: as in the case of observed and expected \is{frequency!expected} frequencies of nominal \is{nominal data} data, the result would always be zero. So we use the same trick we used there, and calculate the square of each value -- making them all positive and weighting larger deviations more heavily. The results of this are shown in the fourth column of each sub\hyp{}table. We then calculate the mean \is{mean} of these values for each group, but instead of adding up all values and dividing them by the number of cases, we add them up and divide them by the total number of cases minus one. This is referred to as the sample \is{variance} variance:
 
 \begin{exe}
 \ex $\displaystyle{s^2=\frac{\sum _{i=1}^n(x_i-\overline{x})^2}{n-1}}$
@@ -635,24 +628,23 @@ Note that this formula assumes that the measures with the subscript 1 are from t
 As should be familiar by now, we compare this \textit{t}-value against its distribution \is{distribution!conditional} to determine the probability \is{probability of error} of error (i.e., we look it up in the table in Section~\ref{sec:ttestcriticalvalues} in the Statistical Tables at the end of this book. Before we can do so, however, we need to determine the degrees of freedom of our sample. This is done using the following formula:
 
 \begin{exe}
-\ex $\df \approx \frac{\left(\frac{s_1^2}{N_1} + \frac{s_2^2}{N_2}\right)^2}{\frac{s_1^4}{N_1^2 \df_1} + \frac{s_2^4}{N_2^2 \df_2}}$
-\label{ex:formulawelchdf}
+\ex \label{ex:formulawelchdf}\attop{$\displaystyle{\df \approx \frac{\left(\frac{s_1^2}{N_1} + \frac{s_2^2}{N_2}\right)^2}{\frac{s_1^4}{N_1^2 \df_1} + \frac{s_2^4}{N_2^2 \df_2}}}$}
 \end{exe}
 
-Again, the subscripts indicate the sub\hyp{}samples, \textit{s}\textsuperscript{2} is the sample variance, \is{variance} and N is the number of items the degrees of freedom for the two groups (df\textsubscript{1} and df\textsubscript{2}) are defined as N\hyp{}1. If we apply the formula to our data, we get the following:
+Again, the subscripts indicate the sub\hyp{}samples, \textit{s}\textsuperscript{2} is the sample variance, \is{variance} and $N$ is the number of items the degrees of freedom for the two groups (df\textsubscript{1} and df\textsubscript{2}) are defined as $N-1$. If we apply the formula to our data, we get the following:
 
 \[\df \approx \frac{\left(\frac{6.6667}{24} + \frac{0.3053}{20}\right)^2}{\frac{6.6667^2}{24^2 \times (24-1)} + \frac{0.3053^2}{20^2 \times (20-1)}} = 25.5038\]
 
 As we can see in the table of critical values, the $t$-value is smaller than 0.01. A \textit{t}-test \is{t-test@$t$-test} should be reported in the following format:
 
-\todo[inline]{Why allcaps?}
+% % \todo[inline]{Why allcaps?}
 \begin{exe}
 \ex \textit{Format for reporting the results of a t test} \\
-($t (\text{[DEG. FREEDOM]}) = [t \text{VALUE}], p < (\text{or} >) [\text{SIG. LEVEL}]$).
+$(t (\text{[deg. freedom]}) = [t \text{ value}], p < (\text{or} >)~[\text{sig. level}])$.
 \label{ex:reportingwelchst}
 \end{exe}
 
-Thus, a straightforward way of reporting our results would be something like this: ``This study has shown that for modifiers that are realized by lexical NPs, \textit{s}-possessives \is{possessive} are preferred when the modifier is short, while \textit{of}-possessives are preferred when the modifier is long. The difference between the constructions is very significant \is{significance} ($t(25.50) = 3.5714, p < 0.01$)''.
+Thus, a straightforward way of reporting our results would be something like this: ``This study has shown that for modifiers that are realized by lexical NPs, \textit{s}-possessives \is{possessive} are preferred when the modifier is short, while \textit{of}-possessives are preferred when the modifier is long. The difference between the constructions is very significant \is{significance} $(t(25.50) = 3.5714, p < 0.01)$''.
 
 As pointed out above, the value for the sample variance \is{variance} does not, in itself, tell us very much. We can convert it into something called the \textit{sample standard deviation}, however, by taking its square root. The standard deviation is an indicator of the amount of variation \is{variation} in a sample (or sub\hyp{}sample) that is frequently reported; it is good practice to report standard deviations whenever we report means.
 
@@ -662,7 +654,6 @@ Finally, note that, again, the significance \is{significance} level does not tel
 \ex $\displaystyle{d = \frac{\overline{x_1} - \overline{x_2}}{\sigma}}$
 \label{ex:formulastmeandiff}
 \end{exe}
-
 For our case study, this gives us
 
 \[d =\frac{3.8333 - 1.9}{2.1562} = 0.8966\]
@@ -673,12 +664,11 @@ This standardized mean \is{mean} difference can be converted to a correlation \i
 \ex $\displaystyle{r = \frac d{\sqrt{d^2 + \frac{(N_1 + N_2)^2}{N_1 \times N_2}}}}$
 \label{ex:formulastmeandiffcorr}
 \end{exe}
-
 For our case study, this gives us
 
 \[r = \frac{0.8966}{\sqrt{0.8966^2 + \frac{(24 + 20)^2}{24 \times 20}}} = 0.4077\]
 
-Since this is a correlation \is{correlation} coefficient, it can be interpreted as described in \tabref{tab:correlationlevels} above. It falls into the \textit{moderate} range, so a more comprehensive way of summarizing the results of this case study would be the following: ``This study has shown that length \is{length} has a moderate, statistically significant \is{significance} influence on the choice of possessive \is{possessive} constructions with lexical NPs in modifier position: \textit{s}-pos\-ses\-sives are preferred when the modifier is short, while \textit{of}-possessives are preferred when the modifier is long. ($t(25.50) = 3.5714, p < 0.01, r = 0.41$)''.
+Since this is a correlation \is{correlation} coefficient, it can be interpreted as described in \tabref{tab:correlationlevels} above. It falls into the \textit{moderate} range, so a more comprehensive way of summarizing the results of this case study would be the following: ``This study has shown that length \is{length} has a moderate, statistically significant \is{significance} influence on the choice of possessive \is{possessive} constructions with lexical NPs in modifier position: \textit{s}-pos\-ses\-sives are preferred when the modifier is short, while \textit{of}-possessives are preferred when the modifier is long. $(t(25.50) = 3.5714, p < 0.01, r = 0.41)$''.
 
 \subsection{Normal distribution requirement}
 \label{sec:normaldistribution}
@@ -708,7 +698,7 @@ Another way of avoiding the \textit{t}-test \is{t-test@$t$-test} is to find an o
 \label{tab:posslengthnominal}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Possessive}} & \\
+ & & \multicolumn{2}{c}{\textvv{Possessive}} & \\\cmidrule(lr){3-4}
  & & \textvv{\textit{s}-possessive} & \textvv{\textit{of}-possessive} & Total \\
 \midrule
 \textvv{\makecell[lt]{Longer \\ Constituent}}
@@ -738,8 +728,7 @@ The normal\hyp{}distribution \is{distribution!normal} requirement is only one of
 
 In \chapref{ch:quantifyingresearch} and in this chapter so far, we have restricted our discussion to the simplest possible research designs \is{research design} -- cases where we are dealing with two variables with two values each. To conclude our discussion of statistical hypothesis testing, we will look at two cases of more complex designs -- one with two variables that each have more than two values, and one with more than two variables.
 
-\subsection{Variables with more than two values}
-\label{sec:morethantwovalues}
+\subsection{Variables with more than two values}\label{sec:morethantwovalues}\largerpage
 
 In our case studies involving the English possessive constructions, the dependent variable \textvv{(Type of) Possessive} was treated as binary -- we assumed that it had two values, \textvv{\textit{s}-possessive} and \textvv{\textit{of}-possessive}. \is{possessive} The dependent variables were more complex: the cardinal \is{cardinal data} variable \textvv{Length} \is{length} obviously has a potentially infinite number of values and the ordinal \is{ordinal data} variable \textvv{Animacy} \is{animacy} was treated as having ten values in our annotation \is{annotation} scheme. The nominal \is{nominal data} value \textvv{Discourse Status}, was treated like a binary variable (although potentially it has an infinite number of values, too).
 
@@ -760,13 +749,13 @@ Searching the BNC Baby \is{BNC Baby} for words tagged \is{POS tagging} as posses
 \midrule
 \textvv{Variety} & \textvv{spoken} & \footnotesize{\textit{Obs.}} & 9593 & 768 & 604 & 10965 \\
 & & \footnotesize{\textit{Exp.}} & 8378.38 & 1361.04 & 1225.58 & \\
-& & \footnotesize{\textit{$\chi^2$\textit{-Comp.}}} & 176.08 & 258.40 & 315.25 & \\[2ex]
+& & \footnotesize{\textit{$\chi^2$\textit{-Comp.}}} & 176.08 & 258.40 & 315.25 & \\\tablevspace
 & \textvv{fiction} & \footnotesize{\textit{Obs.}} & 23755 & 2681 & 1998 & 28434 \\
 & & \footnotesize{\textit{Exp.}} & \num{21726.49} & 3529.39 & 3178.12 & \\
-& & \footnotesize{\textit{$\chi^2$\textit{-Comp.}}} & 189.39 & 203.94 & 438.21 & \\[2ex]
+& & \footnotesize{\textit{$\chi^2$\textit{-Comp.}}} & 189.39 & 203.94 & 438.21 & \\\tablevspace
 & \textvv{news} & \footnotesize{\textit{Obs.}} & 12857 & 4070 & 3585 & 20512 \\
 & & \footnotesize{\textit{Exp.}} & \num{15673.27} & 2546.07 & 2292.66 & \\
-& & \footnotesize{\textit{$\chi^2$\textit{-Comp.}}} & 506.04 & 912.14 & 728.47 & \\[2ex]
+& & \footnotesize{\textit{$\chi^2$\textit{-Comp.}}} & 506.04 & 912.14 & 728.47 & \\\tablevspace
 & \textvv{academic} & \footnotesize{\textit{Obs.}} & 8533 & 1373 & 1820 & 11726 \\
 & & \footnotesize{\textit{Exp.}} & 8959.86 & 1455.50 & 1310.64 & \\
 & & \footnotesize{\textit{$\chi^2$\textit{-Comp.}}} & 20.34 & 4.68 & 197.96 & \\
@@ -777,25 +766,23 @@ Searching the BNC Baby \is{BNC Baby} for words tagged \is{POS tagging} as posses
 \end{table}
 
 The expected \is{frequency!expected} frequencies and the $\chi^2$ \is{chi-square test} components are arrived at in the same way as for the two\hyp{}by\hyp{}two tables in the preceding chapter. First, for each cell, the sum of the column in which the cell is located is multiplied by the sum of the row in which it is located, and the result is divided by the table sum. For example, for the top left cell, we get the expected frequency
-
 \[\frac{54738 \times 10965}{71637} = 8378.38,\]
 
 the expected \is{frequency!expected} frequencies are shown in the second line of each cell. Next, for each cell, we calculate the $\chi^2$ \is{chi-square test} component. For example, for the top left cell, we get
-
 \[\frac{(9593 - 8378.38)^2}{8378.38} = 176.08,\]
 
 the corresponding values are shown in the third line of each cell. Adding up the individual $\chi^2$ \is{chi-square test} components gives us a $\chi^2$ value of 3950.89.
 
-Using the formula given in \ref{ex:formuladf} above, \tabref{tab:texttypesposs} has $(4 - 1) \times (3 - 1) = 6$ degrees of freedom. As the $\chi^2$ \is{chi-square test} table in Section~\ref{sec:chisquarecriticalvalues}, the required value for a significance \is{significance} level of 0.001 at 6 degrees of freedom is 22.46; the $\chi^2$ \is{chi-square test} value for \tabref{tab:texttypesposs} is much higher than this, thus, our results are highly significant. We could summarize our findings as follows: ``The frequency \is{frequency} of pronouns, \is{pronoun} proper names and nouns \is{noun} as modifiers of the \textit{s}-possessive \is{possessive} differs highly significantly across text categories ($\chi^2 = 473.73, \df = 12, p < 0.001$)''.
+Using the formula given in \REF{ex:formuladf} above, \tabref{tab:texttypesposs} has $(4 - 1) \times (3 - 1) = 6$ degrees of freedom. As the $\chi^2$ \is{chi-square test} table in Section~\ref{sec:chisquarecriticalvalues}, the required value for a significance \is{significance} level of 0.001 at 6 degrees of freedom is 22.46; the $\chi^2$ \is{chi-square test} value for \tabref{tab:texttypesposs} is much higher than this, thus, our results are highly significant. We could summarize our findings as follows: ``The frequency \is{frequency} of pronouns, \is{pronoun} proper names and nouns \is{noun} as modifiers of the \textit{s}-possessive \is{possessive} differs highly significantly across text categories ($\chi^2 = 473.73, \df = 12, p < 0.001$)''.
 
-Recall that the mere fact of a significant \is{significance} association does not tell us anything about the strength of that association -- we need a measure of effect size. \is{effect size} In the preceding chapter, $\phi$ was introduced as an effect size for two\hyp{}by\hyp{}two tables (see (\ref{ex:formulaphi})). For larger tables, there is a generalized version of $\phi$, referred to as \textit{Cramer's V} (or, occasionally, as \textit{Cramer's $\phi$} or $\phi'$), which is calculated as follows (\textit{N} is the table sum, \textit{k} is the number of rows or columns, whichever is smaller):
+Recall that the mere fact of a significant \is{significance} association does not tell us anything about the strength of that association -- we need a measure of effect size. \is{effect size} In the preceding chapter, $\phi$ was introduced as an effect size for two\hyp{}by\hyp{}two tables (see \ref{ex:formulaphi}). For larger tables, there is a generalized version of $\phi$, referred to as \textit{Cramer's V} (or, occasionally, as \textit{Cramer's $\phi$} or $\phi'$), which is calculated as follows (\textit{N} is the table sum, \textit{k} is the number of rows or columns, whichever is smaller):
 
 \begin{exe}
 \ex \attop{$\displaystyle{\text{Cramer's V} = \sqrt{\frac{\chi^2}{N \times (k - 1)}}}$
 \label{ex:cramersv}}
-\end{exe}
+\end{exe}\pagebreak
 
-For our table, this gives us
+For our table, this gives us:
 
 \[\sqrt{\frac{3950.89}{71637 \times (3-1)}} = 0.1661\] % 0.166059607636466
 
@@ -825,13 +812,13 @@ There is no standard way of representing the way in, and degree to, which each c
 \midrule
 \textvv{Variety} & \textvv{spoken} & $+$ & $-$ & $-$ \\
 & & 176.08 & 258.40 & 315.25 \\
-& & ***** & ***** & ***** \\[2ex]
+& & ***** & ***** & ***** \\\tablevspace
 & \textvv{fiction} & $+$ & $-$ & $-$ \\
 & & 189.39 & 203.94 & 438.21 \\
-& & ***** & ***** & ***** \\[2ex]
+& & ***** & ***** & ***** \\\tablevspace
 & \textvv{news} & $-$ & $+$ & $+$ \\
 & & 506.04 & 912.14 & 728.47 \\
-& & ***** & ***** & ***** \\[2ex]
+& & ***** & ***** & ***** \\\tablevspace
 & \textvv{academic} & $-$ & $-$ & $+$ \\
 & & 20.34 & 4.68 & 197.96 \\
 & & **** & n.s. & ***** \\
@@ -874,7 +861,7 @@ So, let us query all tokens tagged \is{POS tagging} as possessives \is{possessiv
 \label{tab:posssexindiv}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Construction}} & \\
+ & & \multicolumn{2}{c}{\textvv{Construction}} & \\\cmidrule(lr){3-4}
  & & \textvv{pos} & \textvv{of} & Total \\
 \midrule
 \textvv{\makecell[lt]{Sex}}
@@ -905,7 +892,7 @@ Next, let us look at the intersections of \textvv{Construction} and \textvv{Sex}
 \label{tab:possageindiv}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Construction}} & \\
+ & & \multicolumn{2}{c}{\textvv{Construction}} & \\\cmidrule(lr){3-4}
  & & \textvv{pos} & \textvv{of} & Total \\
 \midrule
 \textvv{\makecell[lt]{Age}}
@@ -936,7 +923,7 @@ We might now be satisfied that both speaker age \is{age} and speaker sex have an
 \label{tab:sexagebnc}
 \begin{tabular}[t]{llccr}
 \lsptoprule
- & & \multicolumn{2}{c}{\textvv{Age}} & \\
+ & & \multicolumn{2}{c}{\textvv{Age}} & \\\cmidrule(lr){3-4}
  & & \textvv{old} & \textvv{young} & Total \\
 \midrule
 \textvv{\makecell[lt]{Sex}}
@@ -1112,7 +1099,7 @@ Given this representation, the expected \is{frequency!expected} frequencies for 
 	
 	 &
 	 &
-	 \\[2ex]
+	 \\\tablevspace
 
 \textvv{iv\textsubscript{A}} Total &
 
@@ -1233,13 +1220,13 @@ Let us apply this method to the question described in the previous sub\hyp{}sect
 	& \makecell[t]{61754} \\[1.1cm]
 \midrule
 Total
-	& \makecell[t]{\begin{tabular}[t]{lS[table-format=4.2]} & 17343 \end{tabular}}
-	& \makecell[t]{\begin{tabular}[t]{lS[table-format=4.2]} & 6559 \end{tabular}}
-	& \makecell[t]{\begin{tabular}[t]{lS[table-format=4.2]} & 23902 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=5.0]} & 17343 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=5.0]} & 6559 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=5.0]} & 23902 \end{tabular}}
 %
-	& \makecell[t]{\begin{tabular}[t]{lS[table-format=4.2]} & 24424 \end{tabular}}
-	& \makecell[t]{\begin{tabular}[t]{lS[table-format=4.2]} & 20426 \end{tabular}}
-	& \makecell[t]{\begin{tabular}[t]{lS[table-format=4.2]} & 44850 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=5.0]} & 24424 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=5.0]} & 20426 \end{tabular}}
+	& \makecell[t]{\begin{tabular}[t]{lS[table-format=5.0]} & 44850 \end{tabular}}
 %
 	& \makecell[t]{68752} \\
 \lspbottomrule
@@ -1252,14 +1239,12 @@ The result is very interesting. A careful inspection of the individual cells sho
 
 In other words, young women and old men use more of both constructions than young men and old women. A closer look at the contributions to $\chi^2$ \is{chi-square test} tells us that \textvv{Sex}, however, does still have an influence on the choice between the two constructions even when \textvv{Age} is taken into account: for young women, the overuse of the \textit{s}-possessive \is{possessive} is more pronounced than that of the \textit{of}-construction, while for old women, underuse of the \textit{s}-possessive is less pronounced than underuse of the \textit{of}-construction. In other words, taking into account that old women are underrepresented \is{representativeness} in the corpus compared to young women, there is a clear preference of all women for the \textit{s}-possessive. Conversely, young men's underuse of the \textit{s}-possessive is less pronounced than that of the \textit{of}-construction, while old men's overuse of the \textit{s}-possessive \is{possessive} is less pronounced than their overuse of the \textit{of}-construction. In other words, taking into account than young men are underrepresented in the corpus compared to old men, there is a clear preference of all men for the \textit{of}-construction.
 
-Armed with this new insight from our multivariate \is{multivariate analysis} analysis, let us return to bivariate \is{bivariate analysis} analyses, looking at each of the two variables while keeping the other constant. \tabref{tab:possagesexindiv} shows the results of the four bivariate analyses this yields. Since we are performing four tests on the same set of data within the same research question, we have to correct for multiple testing by dividing the usual critical p\hyp{}values \is{p-value@$p$-value} by four, giving us $p < 0.0125$ for ``significant'',\is{significance} $p < 0.0025$ for ``very significant'' and $p < 0.00025$ for ``highly significant''. The exact p\hyp{}values for each table are shown below, as is the effect \is{effect size} size.
+Armed with this new insight from our multivariate \is{multivariate analysis} analysis, let us return to bivariate \is{bivariate analysis} analyses, looking at each of the two variables while keeping the other constant. \tabref{tab:possagesexindiv} shows the results of the four bivariate analyses this yields. Since we are performing four tests on the same set of data within the same research question, we have to correct for multiple testing by dividing the usual critical $p$\hyp{}values \is{p-value@$p$-value} by four, giving us $p < 0.0125$ for ``significant'',\is{significance} $p < 0.0025$ for ``very significant'' and $p < 0.00025$ for ``highly significant''. The exact $p$\hyp{}values for each table are shown below, as is the effect \is{effect size} size.
 
 \begin{table}
-\caption{Possessives, age and sex (BNC Spoken)}
-\label{tab:possagesexindiv}
-\begin{minipage}{.45\textwidth}
- \centering
-\resizebox{.95\textwidth}{!}{%
+\caption{Possessives, age and sex (BNC Spoken)}\label{tab:possagesexindiv}
+\begin{minipage}{.475\textwidth}\centering%
+\resizebox{\textwidth}{!}{%
 \begin{tabular}[t]{llccr}
 \lsptoprule
  & & \multicolumn{2}{c}{\textvv{Construction}} & \\
@@ -1282,15 +1267,12 @@ Armed with this new insight from our multivariate \is{multivariate analysis} ana
 \lspbottomrule
 \end{tabular}}
 % me: chisq.test(matrix(c(935,1515,5624,18911),ncol=2),corr=FALSE)
-
 \footnotesize{(a) \textvv{possessive} by \textvv{sex}} \\
 \footnotesize{\textvv{old} speakers only} \\
-\tiny{($\chi^2 = 281.24, \df = 1, p < \num[round-precision=2,round-mode=figures,scientific-notation=true]{2.2e-16}, \phi = 0.1021$)}
-\end{minipage}
-%
-\begin{minipage}{.45\textwidth}
- \centering
-\resizebox{.95\textwidth}{!}{%
+\scriptsize{($\chi^2 = 281.24, \df = 1, p < \num[round-precision=2,round-mode=figures,scientific-notation=true]{2.2e-16}, \phi = 0.1021$)}
+\end{minipage}\hspace{.025\textwidth}%
+\begin{minipage}{.475\textwidth}\centering
+\resizebox{\textwidth}{!}{%
 \begin{tabular}[t]{llccr}
 \lsptoprule
  & & \multicolumn{2}{c}{\textvv{Construction}} & \\
@@ -1309,20 +1291,17 @@ Armed with this new insight from our multivariate \is{multivariate analysis} ana
 	& Total
 		& \makecell[t]{\num{4548}}
 		& \makecell[t]{\num{37219}}
-		& \makecell[t]{\num{41767}} \\
+		& \makecell[t]{\num{41767}}\\
 \lspbottomrule
-\end{tabular}}
+\end{tabular}}\\%
 % me: chisq.test(matrix(c(2548,2000,14795,22424),ncol=2),corr=FALSE)
-
 \footnotesize{(b) \textvv{possessive} by \textvv{sex}} \\
 \footnotesize{\textvv{young} speakers only} \\
-\tiny{($\chi^2x = 442.01, \df = 1, p < \num[round-precision=2,round-mode=figures,scientific-notation=true]{2.2e-16}, \phi = 0.1029$)}
-\end{minipage}
-\\[12pt]
+\scriptsize{($\chi^2x = 442.01, \df = 1, p < \num[round-precision=2,round-mode=figures,scientific-notation=true]{2.2e-16}, \phi = 0.1029$)}
+\end{minipage}\\[\baselineskip]
 %
-\begin{minipage}{.45\textwidth}
- \centering
-\resizebox{.95\textwidth}{!}{%
+\begin{minipage}{.475\textwidth}\centering%
+\resizebox{\textwidth}{!}{%
 \begin{tabular}[t]{llccr}
 \lsptoprule
  & & \multicolumn{2}{c}{\textvv{Construction}} & \\
@@ -1343,17 +1322,15 @@ Armed with this new insight from our multivariate \is{multivariate analysis} ana
 		& \makecell[t]{\num{20419}}
 		& \makecell[t]{\num{23902}} \\
 \lspbottomrule
-\end{tabular}}
+\end{tabular}}\\%
 % me: chisq.test(matrix(c(935,2548,5624,14795),ncol=2),corr=FALSE)
-
 \footnotesize{(c) \textvv{possessive} by \textvv{age}} \\
 \footnotesize{\textvv{female} speakers only} \\
-\tiny{($\chi^2 = 0.72869, \df = 1, p = 0.3933, \phi = 0.0055$)}
-\end{minipage}
-%
-\begin{minipage}{.45\textwidth}
+\scriptsize{($\chi^2 = 0.72869, \df = 1, p = 0.3933, \phi = 0.0055$)}
+\end{minipage}\hspace{.025\textwidth}%
+\begin{minipage}{.475\textwidth}
  \centering
-\resizebox{.95\textwidth}{!}{%
+\resizebox{\textwidth}{!}{%
 \begin{tabular}[t]{llccr}
 \lsptoprule
  & & \multicolumn{2}{c}{\textvv{Construction}} & \\
@@ -1374,18 +1351,17 @@ Armed with this new insight from our multivariate \is{multivariate analysis} ana
 		& \makecell[t]{\num{41335}}
 		& \makecell[t]{\num{44850}} \\
 \lspbottomrule
-\end{tabular}}
+\end{tabular}}\\%
 % me: chisq.test(matrix(c(1515,2000,18911,22424),ncol=2),corr=FALSE)
-
 \footnotesize{(d) \textvv{possessive} by \textvv{age}} \\
 \footnotesize{\textvv{male} speakers only} \\
-\tiny{($\chi^2 = 9.1698, \df = 1, p = 0.00246, \phi = 0.0143$)}
+\scriptsize{($\chi^2 = 9.1698, \df = 1, p = 0.00246, \phi = 0.0143$)}
 \end{minipage}
 \end{table}
 
 Tables~\ref{tab:possagesexindiv}a and~\ref{tab:possagesexindiv}b show that the effect of \textvv{Sex} on the choice between the two constructions is highly significant \is{significance} both in the group of \textvv{old} speakers and in the group of \textvv{young} speakers, with effect sizes \is{effect size} similar to those we found for the bivariate \is{bivariate analysis} analysis for \textvv{Speaker Sex} in \tabref{tab:posssexindiv} in the preceding section. This effect seems to be genuine, or at least, it is not influenced by the hidden variable \textvv{Age} (it may be influenced by \textvv{Class} or some other variable we have not included in our \is{research design} design).
 
-In contrast, Tables~\ref{tab:possagesexindiv}a and \ref{tab:possagesexindiv}b show that the effect of \textvv{Age} that we saw in \tabref{tab:possageindiv} in the preceding section disappears completely for women, with a p\hyp{}value not even significant \is{significance} at uncorrected levels of significance. For men, it is still discernible, but only barely, with a p\hyp{}value that indicates a very significant relationship at corrected levels of significance, but with an effect size \is{effect size} that is close to zero. In other words, it may not be a genuine effect at all, but simply a consequence of the fact that the intersections of \textvv{Age} and \textvv{Sex} are unevenly distributed \is{distribution!conditional} in the corpus.
+In contrast, Tables~\ref{tab:possagesexindiv}a and \ref{tab:possagesexindiv}b show that the effect of \textvv{Age} that we saw in \tabref{tab:possageindiv} in the preceding section disappears completely for women, with a $p$\hyp{}value not even significant \is{significance} at uncorrected levels of significance. For men, it is still discernible, but only barely, with a $p$\hyp{}value that indicates a very significant relationship at corrected levels of significance, but with an effect size \is{effect size} that is close to zero. In other words, it may not be a genuine effect at all, but simply a consequence of the fact that the intersections of \textvv{Age} and \textvv{Sex} are unevenly distributed \is{distribution!conditional} in the corpus.
 
 This section is intended to impress on the reader one thing: that looking at one potential variable influencing some phenomenon that we are interested in may not be enough. Multivariate \is{multivariate analysis} research designs \is{research design} are becoming the norm rather than the exception, and rightly so. Excluding the danger of hidden variables is just one advantage of such designs -- in many cases, it is sensible to include several independent variables simply because all of them potentially have an interesting influence on the phenomenon under investigation, or because there is just one particular combination of values of our variables that has an effect. In the second part of this volume, there are several case studies that use CFA \is{configural frequency analysis} and that illustrate these possibilities. One word of warning, however: the ability to include a large number of variables in our research designs \is{research design} should not lead us to do so for the sake of it. We should be able to justify, for each dependent variable we include, why we are including it and in what way we expect it to influence our independent variable.
 
