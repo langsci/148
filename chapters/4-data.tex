@@ -44,7 +44,7 @@ Regular expressions allow us to formulate the kind of complex and abstract queri
 The benefits of being able to define complex queries \is{query} become even more obvious if our corpus contains annotations \is{annotation} in addition to the original text, as discussed in Section~\ref{sec:annotations} of \chapref{ch:corpuslinguistics}. If the corpus contains part\hyp{}of\hyp{}speech tags, for example, this will allow us to search (within limits) for grammatical structures. For example, assume that there is a part\hyp{}of\hyp{}speech tag \is{POS tagging} attached to the end of every word by an underscore (as in the BROWN \is{BROWN} corpus, see example (\ref{fig:brownstructfeatures}) in \chapref{ch:corpuslinguistics}) and that the tags are as shown in (\ref{ex:browntags}) (following the sometimes rather nontransparent BROWN \is{BROWN} naming conventions). We could then search for prepositional \is{adposition} phrases using a pattern like the one in \is{query} (\ref{ex:npqueryregex}):
 
 \begin{exe}
-\ex
+\ex\label{ex:browntags}
 \begin{tabular}[t]{ll}
 preposition & \texttt{\_IN}\\
 articles & \texttt{\_AT}\\
@@ -57,16 +57,12 @@ nouns & \texttt{\_NN} (common singular nouns)\\
  & \texttt{\_NP} (proper names)\\
  & \texttt{\_NP\$} (proper nouns with possessive \is{clitic} clitic)
 \end{tabular}
-\label{ex:browntags}
-\end{exe}
 
-\begin{exe}
-\ex
+\ex\label{ex:npqueryregex}
 \begin{tabular}[t]{cccc}
 \texttt{\textbackslash{}S+\_IN} & \texttt{(\textbackslash{}S+\_AT)?} & \texttt{(\textbackslash{}S+\_JJ[RT]?)*} & \texttt{(\textbackslash{}S+\_N[PN][S\$]?)+}\\
 1 & 2 & 3 & 4
 \end{tabular}
-\label{ex:npqueryregex}
 \end{exe}
 
 An asterisk means ``zero or more'', a plus means ``one or more'', and \textbackslash{}S means ``any non\hyp{}whitespace character'', the meaning of the other symbols is as before. The pattern in (\ref{ex:npqueryregex}) \is{query} matches the following sequence:
@@ -145,9 +141,9 @@ In arriving at the definition of corpus linguistics adopted in this book, we str
 \item fail to include strings that are not instances of our phenomenon (this is referred to as a \textit{true negative}).
 \end{enumerate}
 
-\tabref{tab:queryoutcomes} summarizes these outcomes ($\lnot$ stands for ``not'').
+\noindent \tabref{tab:queryoutcomes} summarizes these outcomes ($\lnot$ stands for ``not'').
 
-\begin{table}
+\begin{table}[H]
 \caption{Four possible outcomes of a corpus query for a given phenomenon X}
 \label{tab:queryoutcomes}
 \begin{tabular}[t]{lrcc}
@@ -190,9 +186,9 @@ Let us look at a specific example, the English ditransitive \is{ditransitivity} 
 
 Let us apply this query \is{query} (which is actually used in \citealt{colleman_constructional_2011}) to a freely available sample from the British Component of the International Corpus of English mentioned in \chapref{ch:corpuslinguistics} above (see the Study Notes to the current chapter for details). This corpus has been manually annotated, \is{annotation} amongst other things, for argument structure, so that we can check the results of our query \is{query} against this \is{annotation} annotation.
 
-There are 36 ditransitive \is{ditransitivity} clauses in the sample, thirteen of which are returned by our query. \is{query} There are also 2838 clauses that are not ditransitive, 14 of which are also returned by our query. \tabref{tab:queryoutcomesexample} shows the results of the query in terms of true and false positives and negatives:
+There are 36 ditransitive \is{ditransitivity} clauses in the sample, thirteen of which are returned by our query. \is{query} There are also 2838 clauses that are not ditransitive, 14 of which are also returned by our query. \tabref{tab:queryoutcomesexample} shows the results of the query in terms of true and false positives and negatives.
 
-\begin{table}
+\begin{table}[H]
 \caption{Comparison of the search results}
 \label{tab:queryoutcomesexample}
 \begin{tabular}[t]{lrccr}
@@ -214,8 +210,8 @@ We can now calculate precision \is{precision} and recall \is{recall} rate of our
 \ex
 \begin{xlist}
 \label{ex:precisionrecallrate}
-\ex $\text{Precision} = \frac{13}{27} = 0.48$
-\ex $\text{Recall} = \frac{13}{36} = 0.36$
+\ex $\displaystyle{\text{Precision} = \frac{13}{27} = 0.48}$
+\ex $\displaystyle{\text{Recall} = \frac{13}{36} = 0.36}$
 \end{xlist}
 \end{exe}
 
@@ -280,7 +276,7 @@ In the case of many other phenomena, however, automatic annotation \is{annotatio
 \end{xlist}
 \end{exe}
 
-The first problem is that while the expressions in (\ref{ex:angerheatnonpattern}a-c) may refer to feelings \is{emotions} of anger or rage, they can also occur in their literal \is{literalness} meaning, as the corresponding authentic \is{authenticity} examples in (\ref{ex:literalheatnopattern}a--c) show:
+The first problem is that while the expressions in (\ref{ex:angerheatnonpattern}a--c) may refer to feelings \is{emotions} of anger or rage, they can also occur in their literal \is{literalness} meaning, as the corresponding authentic \is{authenticity} examples in (\ref{ex:literalheatnopattern}a--c) show:
 
 \begin{exe}
 \ex
@@ -452,11 +448,11 @@ For example, the annotation scheme for \textvv{Animacy} \is{animacy} mentioned i
 The category \textvv{organization} is much more complex to apply consistently, since there is no intuitively \is{intuition} accessible and generally accepted understanding of what constitutes an organization. In particular, it needs to be specified what distinguishes an \textvv{organization} from other groups of human \is{animacy} beings (that are to be categorized \is{categorization} as \textvv{human} according to the annotation \is{annotation} scheme). The annotation \is{annotation} scheme defines an \textvv{organization} as a referent involving ``more than one human'' with ``some degree of group identity''. It then provides the following hierarchy of properties that a group of humans \is{animacy} may have (where each property implies the presence of all properties below its position in the hierarchy):
 
 \begin{exe}
-\ex +/\textminus\ chartered/official\\
+\ex \noindent\parbox[t]{\linewidth}{+/\textminus\ chartered/official\\
 +/\textminus\ temporally stable\\
 +/\textminus\ collective voice/purpose\\
 +/\textminus\ collective action\\
-+/\textminus\ collective
++/\textminus\ collective  }
 \label{ex:animacyorg}
 \end{exe}
 
@@ -679,7 +675,7 @@ Matters become even more difficult if our data or other resources are not access
 
 In such a case, our research will not be reproducible \is{reproducibility} (retraceable \is{retraceability} or reconstructible), \is{reconstructibility} which is why we should avoid this situation. If it cannot be avoided, however, our research should still meet a requirement that we might call \textit{transferability}: the description of our materials, resources and procedures must be detailed enough for other researchers to transfer it to similar materials and resources and arrive at a similar result. This is broadly what \textit{replicability} \is{replicability} refers to, but the term may also be used in an extended sense to situations where a researcher attempts to replicate our results and conclusions rather than our entire research design. \is{research design} Obviously, research designs that meet the criterion of reproducibility \is{reproducibility} are also transferable, but not vice versa.
 
-In the context of the scientific research cycle, reproducibility \is{reproducibility} and replicability \is{replicability} are crucial: a researcher building on previous research must be able to reconstruct this research in order to determine its quality and thus the extent to which our results can be taken to corroborate our hypotheses. They must also be able to reconstruct the research in order to build on it in a meaningful way, for example by adapting our methods to other kinds of data, new hypotheses or other linguistic phenomena.
+In the context of the scientific research cycle, reproducibility \is{reproducibility} and replicability \is{replicability} are crucial: a researcher building on previous research must be able to reconstruct this research in order to determine its quality and thus the extent to which our results can be taken to corroborate our hypotheses. They must also be able to reconstruct the research in order to build on it in a meaningful way, for example by adapting our methods to other kinds of data, new hypotheses or other linguistic phenomena.\largerpage
 
 Say, for example, a researcher wanted to extend the analysis of the words \textit{windscreen} and \textit{windshield} presented in \chapref{ch:scientificmethod}, Section~\ref{sec:scientifichypothesis} to other varieties \is{language variety} of English. The first step would be to reconstruct our analysis (if they had access to the LOB, \is{LOB} BROWN, \is{BROWN} FLOB \is{FLOB} and FROWN \is{FROWN} corpora), or to adapt it (for example, to the BNC \is{BNC} and COCA, briefly mentioned at the end of our analysis). However, with the information provided in \chapref{ch:scientificmethod}, this would be very difficult. First, there was no mention of which version of the LOB, \is{LOB} BROWN, \is{BROWN} FLOB \is{FLOB} and FROWN \is{FROWN} was used (there are at least two official releases, one that was commercially available from an organization called ICAME and a different one that is available via the CLARIN network, and each of those releases contains different versions of each corpus). Second, there was no mention of the exact queries \is{query} used -- obviously, the words can be spelled in a range of ways, including at least \textit{WINDSCREEN}, \textit{WIND SCREEN}, \textit{WIND-SCREEN}, \textit{Windscreen}, \textit{Wind screen}, \textit{Wind Screen}, \textit{Wind-screen}, \textit{Wind-Screen}, \textit{windscreen}, \textit{wind screen} and \textit{wind-screen} for \textvv{windscreen}, and the corresponding variants for \textvv{windshield}. This range of graphemic variants can be searched for in different ways depending what annotation \is{annotation} the respective version of the corpus contains, what software was used to access it and how we want to formulate our query. \is{query} None of this information was provided in \chapref{ch:scientificmethod}. Finally, nothing was said about how the total number of hits \is{hit} was calculated, which is not a problem in the case of a simple mathematical operation like addition, but which can quickly become relevant in the case of procedures and software used to evaluate the results statistically (as discussed in the next chapter).
 
@@ -726,8 +722,7 @@ As mentioned above, however, the format of storage \is{data storage} is not simp
 Since quantitative \is{quantitative research} analysis always requires a raw data table, we might conclude that it is the only useful way of recording our annotation decisions. However, there are cases where it may be more useful to record them in the form of annotations \is{annotation} in (a copy of) the original corpus instead, i.e., analogously to automatically added annotations. For example, the information in \figref{fig:storingdataright} could be recorded in the corpus itself in the same way that part\hyp{}of\hyp{}speech tags are, i.e., we could add an \textvv{Animacy} \is{animacy} label to every nominal \is{noun} element in our corpus in the format used for POS tags by the original version of the BROWN \is{BROWN} corpus, as shown in (\ref{ex:storingdatainline}):
 
 \begin{exe}
-\ex \begin{minipage}[t]{\textwidth} \raggedright \texttt{the\_AT} \texttt{fact\_NN\_\textbf{abstract}} \texttt{that\_CS} \texttt{Jess's\_NP\$\_\textbf{human}} \texttt{horse\_NN\_\textbf{animate}} \texttt{had\_HVD} \texttt{not\_*} \texttt{been\_BEN} \texttt{returned\_VBN} \texttt{to\_IN} \texttt{its\_PP\$\_\textbf{animate}} \texttt{stall\_NN\_\textbf{inanimate}} \texttt{could\_MD} \texttt{indicate\_VB} \texttt{that\_CS} \texttt{Diane's\_NP\$\_\textbf{human}} \texttt{information\_NN\_\textbf{abstract}} \texttt{had\_HVD} \texttt{been\_BEN} \texttt{wrong\_JJ} \texttt{,\_,} \texttt{but\_CC} \texttt{Curt\_NP\_\textbf{human}} \texttt{didn't\_DOD*} \texttt{interpret\_VB} \texttt{it\_PPO\_\textbf{inanimate}} \texttt{this\_DT} \texttt{way\_NN\_\textbf{inanimate}} \texttt{.\_.} \end{minipage}
-\label{ex:storingdatainline}
+\ex\label{ex:storingdatainline}\begin{minipage}[t]{\linewidth} \raggedright \texttt{the\_AT} \texttt{fact\_NN\_\textbf{abstract}} \texttt{that\_CS} \texttt{Jess's\_NP\$\_\textbf{human}} \texttt{horse\_NN\_\textbf{animate}} \texttt{had\_HVD} \texttt{not\_*} \texttt{been\_BEN} \texttt{returned\_VBN} \texttt{to\_IN} \texttt{its\_PP\$\_\textbf{animate}} \texttt{stall\_NN\_\textbf{inanimate}} \texttt{could\_MD} \texttt{indicate\_VB} \texttt{that\_CS} \texttt{Diane's\_NP\$\_\textbf{human}} \texttt{information\_NN\_\textbf{abstract}} \texttt{had\_HVD} \texttt{been\_BEN} \texttt{wrong\_JJ} \texttt{,\_,} \texttt{but\_CC} \texttt{Curt\_NP\_\textbf{human}} \texttt{didn't\_DOD*} \texttt{interpret\_VB} \texttt{it\_PPO\_\textbf{inanimate}} \texttt{this\_DT} \texttt{way\_NN\_\textbf{inanimate}} \texttt{.\_.}\end{minipage}%
 \end{exe}
 
 From a corpus annotated in \is{annotation} this way, we can always create a raw data list like that in \figref{fig:storingdataright} by searching for possessives \is{possessive} and then separating the hits \is{hit} into the word itself, the \textvv{Part\hyp{}of\hyp{}Speech} label and the \textvv{Animacy} \is{animacy} annotation \is{annotation} (this can be done manually, or with the help of regular expressions in a text editor or with a few lines of code in a scripting language like Perl or Python).
