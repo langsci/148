@@ -7,17 +7,12 @@
 \addcontentsline{toc}{chapter}{\lsIndexTitle} 
 \addcontentsline{toc}{section}{\lsNameIndexTitle}
 \ohead{\lsNameIndexTitle} 
-\printindex 
+{\sloppy\printindex}
 \cleardoublepage
   
-\phantomsection 
-\addcontentsline{toc}{section}{\lsLanguageIndexTitle}
-\ohead{\lsLanguageIndexTitle} 
-\printindex[lan] 
-\cleardoublepage
-  
+
 \phantomsection 
 \addcontentsline{toc}{section}{\lsSubjectIndexTitle}
 \ohead{\lsSubjectIndexTitle} 
-\printindex[sbj]
-\ohead{} 
+{\sloppy\printindex[sbj]}
+\ohead{}
