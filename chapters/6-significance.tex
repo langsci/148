@@ -358,7 +358,7 @@ Clearly, the empirical distribution \is{distribution!conditional} in this case c
 
 Incidentally, the BNC \is{BNC} not only contains speech by more male speakers than female speakers, it also includes more speech by male than by female speakers: men contribute \num{5654348} words, women contribute \num{3825804}. I will leave it as an exercise to the reader to determine whether and in what direction these frequencies differ from what would be expected \is{frequency!expected} either under an assumption of equal proportions or given the proportion of female and male speakers in the corpus.
 
-In the case of speaker sex it does not make much of a difference how we derive the expected \is{frequency!expected} frequencies, as men and women make up roughly half of the population each. For variables where such an even distribution \is{distribution!conditional} of values does not exist, the differences between these two procedures can be quite drastic. As an example, consider \tabref{tab:speakerageobsex}, which lists the observed distribution of the speakers in the spoken \is{medium} part of the BNC \is{BNC} across age \is{age} groups (excluding speakers whose age \is{age} is not recorded), together with the expected \is{frequency!expected} frequencies on the assumption of equal proportions, and the expected frequencies based on the distribution \is{distribution!conditional} of speakers across age \is{age} groups in the real world. The distribution of age \is{age} groups in the population of the UK between 1991 and 1994 is taken from the website of the Office for National Statistics, averaged across the four years and cumulated to correspond to the age \is{age} groups recorded in the \is{BNC} BNC.
+In the case of speaker sex it does not make much of a difference how we derive the expected \is{frequency!expected} frequencies, as men and women make up roughly half of the population each. For variables where such an even distribution \is{distribution!conditional} of values does not exist, the differences between these two procedures can be quite drastic. As an example, consider \tabref{tab:speakerageobsex}, which lists the observed distribution of the speakers in the spoken \is{medium} part of the BNC \is{BNC} across age \is{age} groups (excluding speakers whose age \is{age} is not recorded), together with the expected \is{frequency!expected} frequencies on the assumption of equal proportions, and the expected frequencies based on the distribution \is{distribution!conditional} of speakers across age \is{age} groups in the real world. The distribution of age \is{age} groups in the population of the UK between 1991 and 1994 is taken from the website of the Office for National Statistics, averaged across the four years and cumulated to correspond to the age \is{age} groups recorded in the \is{BNC} BNC.\largerpage
 % me: https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2015/ukandregionalpopulationestimates18382015.zip
 
 \begin{table}
@@ -386,8 +386,7 @@ Adding up the $\chi^2$ \is{chi-square test} components gives us an overall $\chi
 
 The exact alternative to the univariate $\chi^2$ \is{chi-square test} test with a two\hyp{}level variable is the \textit{binomial} \is{binomial test} test, which we used (without calling it that), in our coin\hyp{}flip example in Section~\ref{sec:probabilitysignificance} above and which is included as a predefined function in many major spreadsheet applications and in R; for one\hyp{}by\hyp{}n tables, there is a multinomial test also available in R and other statistics packages.
 
-\section{Ordinal data: The Mann\hyp{}Whitney \textit{U}\hyp{}test}
-\label{sec:mannwhitneytest}
+\section{Ordinal data: The Mann\hyp{}Whitney \textit{U}\hyp{}test}\label{sec:mannwhitneytest}\largerpage
 
 Where one variable is nominal \is{nominal data} (more precisely, nominal with two values) and one is ordinal, \is{ordinal data} the most widely used test statistic is the Mann\hyp{}Whitney \is{Mann-Whitney U test@Mann-Whitney \textit{U} test} \textit{U}-test (also called Wilcoxon rank sum test).
 
@@ -454,7 +453,7 @@ Every rank value except 4, 8 and 9 occurs more than once; for example, there are
 The first example with the rank value 2 occurs in line 17 of the table, so it would receive the rank position 17. However, there are five more examples with the same rank value, so again we calculate the mean \is{mean} rank position of the range from rank 17 to 22, which is
 \[\frac{17+18+19+20+21+22}{6} = \frac{117}{16} = 19.5\]
 
-Repeating this process for all examples yields the rank positions shown in the second column in \tabref{tab:animrankpossgenofc} above.
+Repeating this process for all examples yields the rank positions shown in the second column in \tabref{tab:animrankpossgenofc}.\pagebreak
 
 Once we have determined the rank position of each data point, we separate them into two subsamples corresponding to the values of the nominal \is{nominal data} variable \textvv{Type of Possessive} \is{possessive} again, as in \tabref{tab:possranksums}. We then calculate rank sum \emph{R} for each group, which is simply the sum of their rank positions, and we count the number of data points \emph{N} in each group.
 
@@ -603,7 +602,7 @@ $s^2$ & & & 0.3053  & $s^2$ & & & 6.6667 \\
 
 First, note that one case that was still included in \tabref{tab:samplelengthsgenofc} is missing: Example (b 19) from that Table, which had a modifier of length \is{length} 20. This is treated here as a so\hyp{}called \emph{outlier}, i.e., a value that is so far away from the mean that it can be considered an exception. There are different opinions on if and when outliers should be removed that we will not discuss here, but for expository reasons alone it is reasonable here to remove it (and for our results, it would not have made a difference if we had kept it).
 
-In order to calculate Welch's \textit{t}-test, \is{t-test@$t$-test} we determine three values on the basis of our measurements \is{measurement} of \textvv{Length}: \is{length} the number of measurements \textit{N}, the mean \is{mean} length for each group ($\overline{x}$), and a value called ``sample variance'' \is{variance} ($s^2$). The number of measurements is easy to determine -- we just count the cases in each group: 20 \textit{s}-possessives \is{possessive} and 24 \textit{of}-possessives. We already calculated the mean \is{mean} lengths in \chapref{ch:quantifyingresearch}: for the \textit{s}-possessive, the mean length \is{length} is 1.9 words, for the \textit{of}-possessive it is 3.83 words. As we already discussed in \chapref{ch:quantifyingresearch}, this difference conforms to our hypothesis: \textit{s}-possessives are, on average, shorter than \is{possessive} \textit{of}-possessives.
+In order to calculate Welch's \textit{t}-test, \is{t-test@$t$-test} we determine three values on the basis of our measurements \is{measurement} of \textvv{Length}: \is{length} the number of measurements \textit{N}, the mean \is{mean} length for each group ($\overline{x}$), and a value called ``sample variance'' \is{variance} ($s^2$). The number of measurements is easy to determine -- we just count the cases in each group: 20 \textit{s}-possessives \is{possessive} and 24 \textit{of}-possessives. We already calculated the mean \is{mean} lengths in \chapref{ch:quantifyingresearch}: for the \textit{s}-possessive, the mean length \is{length} is 1.9 words, for the \textit{of}-possessive it is 3.83 words. As we already discussed in \chapref{ch:quantifyingresearch}, this difference conforms to our hypothesis: \textit{s}-possessives are, on average, shorter than \is{possessive} \textit{of}-possessives.\largerpage
 
 The question is, again, how likely it is that this difference is due to chance. \is{chance} When comparing group means, the crucial question we must ask in order to determine this is how large the variation \is{variation} is within each group of measurements: \is{measurement} put simply, the more widely the measurements within each group vary, the more likely it is that the differences across groups have come about by \is{chance} chance.
 
@@ -766,6 +765,7 @@ Searching the BNC Baby \is{BNC Baby} for words tagged \is{POS tagging} as posses
 \end{table}
 
 The expected \is{frequency!expected} frequencies and the $\chi^2$ \is{chi-square test} components are arrived at in the same way as for the two\hyp{}by\hyp{}two tables in the preceding chapter. First, for each cell, the sum of the column in which the cell is located is multiplied by the sum of the row in which it is located, and the result is divided by the table sum. For example, for the top left cell, we get the expected frequency
+
 \[\frac{54738 \times 10965}{71637} = 8378.38,\]
 
 the expected \is{frequency!expected} frequencies are shown in the second line of each cell. Next, for each cell, we calculate the $\chi^2$ \is{chi-square test} component. For example, for the top left cell, we get
@@ -780,7 +780,7 @@ Recall that the mere fact of a significant \is{significance} association does no
 \begin{exe}
 \ex \attop{$\displaystyle{\text{Cramer's V} = \sqrt{\frac{\chi^2}{N \times (k - 1)}}}$
 \label{ex:cramersv}}
-\end{exe}\pagebreak
+\end{exe}
 
 For our table, this gives us:
 
@@ -914,9 +914,9 @@ Next, let us look at the intersections of \textvv{Construction} and \textvv{Sex}
 \end{table}
 % me: chisq.test(matrix(c(2450,4548,24535,37219),ncol=2),corr=FALSE)
 
-Like previous studies, we find a significant \is{significance} effect of age, \is{age} with younger speakers preferring the \textit{s}-possessive \is{possessive} and older speakers preferring the \textit{of}-construction(s). Again, the difference is highly significant, but the effect is extremely weak ($\chi^2 = 58.73, \df = 1, p < 0.001, \phi = 0.02922$).
+Like previous studies, we find a significant \is{significance} effect of age, \is{age} with younger speakers preferring the \textit{s}-possessive \is{possessive} and older speakers preferring the \textit{of}-construction(s). Again, the difference is highly significant, but the effect is extremely weak ($\chi^2 = 58.73, \df = 1, p < 0.001, \phi = 0.02922$).\largerpage
 
-We might now be satisfied that both speaker age \is{age} and speaker sex have an influence on the choice between the two constructions. However, there is a potential problem that we need to take into account: the values of the variables \textvv{Sex} and \textvv{Age} and their intersections are not necessarily distributed \is{distribution!conditional} evenly in the subpart of the BNC \is{BNC} used here; although the makers of the corpus were careful to include a broad range of speakers of all ages, sexes (and class memberships, ignored in our study), they did not attempt to balance all these demographic \is{demography} variables, let alone their intersections. So let us look at the intersection of \textvv{Sex} and \textvv{Age} in the results of our query. These are shown in \tabref{tab:sexagebnc}.
+We might now be satisfied that both speaker age \is{age} and speaker sex have an influence on the choice between the two constructions. However, there is a potential problem that we need to take into account: the values of the variables \textvv{Sex} and \textvv{Age} and their intersections are not necessarily distributed \is{distribution!conditional} evenly in the subpart of the BNC \is{BNC} used here; although the makers of the corpus were careful to include a broad range of speakers of all ages, sexes (and class memberships, ignored in our study), they did not attempt to balance all these demographic \is{demography} variables, let alone their intersections. So let us look at the intersection of \textvv{Sex} and \textvv{Age} in the results of our query. These are shown in \tabref{tab:sexagebnc}.\largerpage
 
 \begin{table}
 \caption{\textvv{Sex} and \textvv{Age} in the BNC}
@@ -952,7 +952,7 @@ This correlation \is{correlation} in the corpus of \textvv{old} and \textvv{male
 
 Therefore, we need a way of including multiple independent variables in our research designs \is{research design} even if we are just interested in a single independent variable, but all the more so if we are interested in the influence of several independent variables. It may be the case, for example, that both \textvv{Sex} and \textvv{Age} influence the choice between \textit{'s} and \textit{of}, either in that the two effects add up, or in that they interact in more complex ways.
 
-\subsubsection{Configural frequency analysis}
+\subsubsection{Configural frequency analysis}\largerpage
 
 There is a range of multivariate \is{multivariate analysis} statistical methods that are routinely used in corpus linguistics, such as the ANOVA mentioned at the end of the previous chapter for situations where the dependent variable is measured \is{measurement} in terms of cardinal \is{cardinal data} numbers, and various versions of logistic regression for situations where the dependent variable is ordinal \is{ordinal data} or \is{nominal data} nominal.
 
@@ -964,17 +964,17 @@ This does not mean that CFA \is{configural frequency analysis} is useful \textit
 
 As hinted at above, in its simplest variant, configural \is{configural frequency analysis} frequency analysis is simply a $\chi^2$ \is{chi-square test} test on a contingency \is{contingency table} table with more than two dimensions. There is no logical limit to the number of dimensions, but if we insist on calculating this statistic manually (rather than, more realistically, letting a specialized software package do it for us), then a three\hyp{}dimensional table is already quite complex to deal with. Thus, we will not go beyond three dimensions here or in the case studies in the second part of this book.
 
-A three\hyp{}dimensional contingency \is{contingency table} table would have the form of a cube, as shown in \figref{fig:cfaschematic}. The smaller cube represents the cells on the far side of the big cube seen from the same perspective and the smallest cube represents the cell in the middle of the whole cube). As before, cells are labeled by subscripts: the first subscript stands for the values and totals of the dependent variable, the second for those of the first independent variable, and the third for those of the second independent variable.
+A three\hyp{}dimensional contingency \is{contingency table} table would have the form of a cube, as shown in \figref{fig:cfaschematic}. The smaller cube represents the cells on the far side of the big cube seen from the same perspective and the smallest cube represents the cell in the middle of the whole cube). As before, cells are labeled by subscripts: the first subscript stands for the values and totals of the dependent variable, the second for those of the first independent variable, and the third for those of the second independent variable.\largerpage
 
-\begin{figure}
+While this kind of visualization is quite useful in grasping the notion of a three\hyp{}dimensional contingency \is{contingency table} table, it would be awkward to use it as a basis for recording observed frequencies \is{frequency!observed} or calculating the expected \is{frequency!expected} frequencies. Thus, a possible two\hyp{}dimensional representation is shown in \tabref{tab:cfaschematictable}. \is{configural frequency analysis} In this table, the first independent variable is shown in the rows, and the second independent variable is shown in the three blocks of three columns (these may be thought of as three ``slices'' of the cube in \figref{fig:cfaschematic}), and the dependent variable is shown in the columns themselves.
+
+\begin{figure}[p]
 \caption{A three\hyp{}dimensional contingency table}
 \label{fig:cfaschematic}
 \includegraphics[width=\textwidth,keepaspectratio]{figures/cfaschematic}
 \end{figure}
 
-While this kind of visualization is quite useful in grasping the notion of a three\hyp{}dimensional contingency \is{contingency table} table, it would be awkward to use it as a basis for recording observed frequencies \is{frequency!observed} or calculating the expected \is{frequency!expected} frequencies. Thus, a possible two\hyp{}dimensional representation is shown in \tabref{tab:cfaschematictable}. \is{configural frequency analysis} In this table, the first independent variable is shown in the rows, and the second independent variable is shown in the three blocks of three columns (these may be thought of as three ``slices'' of the cube in \figref{fig:cfaschematic}), and the dependent variable is shown in the columns themselves.
-
-\begin{table}
+\begin{table}[p]
 \caption{A two\hyp{}dimensional representation of a three\hyp{}dimensional contingency table}
 \label{tab:cfaschematictable}
 \resizebox{\textwidth}{!}{%
@@ -1241,6 +1241,7 @@ In other words, young women and old men use more of both constructions than youn
 
 Armed with this new insight from our multivariate \is{multivariate analysis} analysis, let us return to bivariate \is{bivariate analysis} analyses, looking at each of the two variables while keeping the other constant. \tabref{tab:possagesexindiv} shows the results of the four bivariate analyses this yields. Since we are performing four tests on the same set of data within the same research question, we have to correct for multiple testing by dividing the usual critical $p$\hyp{}values \is{p-value@$p$-value} by four, giving us $p < 0.0125$ for ``significant'',\is{significance} $p < 0.0025$ for ``very significant'' and $p < 0.00025$ for ``highly significant''. The exact $p$\hyp{}values for each table are shown below, as is the effect \is{effect size} size.
 
+\vfill
 \begin{table}
 \caption{Possessives, age and sex (BNC Spoken)}\label{tab:possagesexindiv}
 \begin{minipage}{.475\textwidth}\centering%
@@ -1358,6 +1359,7 @@ Armed with this new insight from our multivariate \is{multivariate analysis} ana
 \scriptsize{($\chi^2 = 9.1698, \df = 1, p = 0.00246, \phi = 0.0143$)}
 \end{minipage}
 \end{table}
+\vfill\pagebreak
 
 Tables~\ref{tab:possagesexindiv}a and~\ref{tab:possagesexindiv}b show that the effect of \textvv{Sex} on the choice between the two constructions is highly significant \is{significance} both in the group of \textvv{old} speakers and in the group of \textvv{young} speakers, with effect sizes \is{effect size} similar to those we found for the bivariate \is{bivariate analysis} analysis for \textvv{Speaker Sex} in \tabref{tab:posssexindiv} in the preceding section. This effect seems to be genuine, or at least, it is not influenced by the hidden variable \textvv{Age} (it may be influenced by \textvv{Class} or some other variable we have not included in our \is{research design} design).
 
