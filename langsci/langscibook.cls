@@ -48,7 +48,7 @@
 %   \_ Miscellaneous
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{langscibook}[2019/06/05 Language Science Press]
+\ProvidesClass{langscibook}[2020/02/12 Language Science Press]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %    Early load packages
@@ -81,6 +81,8 @@
 \newcommand{\lsp}{Language Science Press\xspace}
 \newcommand{\lsSeriesNumber}{??}
 \newcommand{\lsISSN}{??}
+\newcommand{\lsISSNprint}{??}
+\newcommand{\lsISSNelectronic}{??}
 \newcommand{\lsISBNdigital}{000-0-000000-00-0}
 \newcommand{\lsISBNhardcover}{000-0-000000-00-0}
 \newcommand{\lsISBNsoftcover}{000-0-000000-00-0}
@@ -91,8 +93,8 @@
 \newcommand{\lsURL}{http://langsci-press.org/catalog/book/\lsID}
 \newcommand{\lsSeries}{eotms}
 % \newcommand{\lsSpineBreadth}{20mm}
-\newcommand{\lsOutput}{book}  
-\newcommand{\lsBookLanguage}{english} 
+\newcommand{\lsOutput}{book}
+\newcommand{\lsBookLanguage}{english}
 \newcommand{\lsFontsize}{11pt}
 \newcommand{\lsChapterFooterSize}{\small} %footers in editedvolumes
 \newcommand{\lsCopyright}{CC-BY}
@@ -115,6 +117,11 @@
 \newcommand{\SpineTitle}[1]{\renewcommand{\lsSpineTitle}{#1}}
 \newcommand{\SpineAuthor}[1]{\renewcommand{\lsSpineAuthor}{#1}}
 
+% Default commands for loaded graphics
+\newcommand{\includespinelogo}{\includegraphics{\logopath langsci_spinelogo_nocolor}}
+\newcommand{\includestoragelogo}{\includegraphics[width=5cm]{\logopath storagelogo.pdf}}
+\newcommand{\includepublisherlogo}{\includegraphics{\logopath langsci_logo_nocolor.pdf}}
+\newcommand{\includechapterfooterlogo}{\includegraphics{\logopath langsci_spinelogo_nocolor.pdf}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -123,13 +130,14 @@
 
 \newif\iflsDraft \lsDraftfalse
 \newif\iflsOpenReview \lsOpenReviewfalse
-\newif\iflsUndecapitalize \lsUndecapitalizefalse
+\newif\iflsResetCapitals \lsResetCapitalsfalse
 \newif\iflsShowIndex \lsShowIndexfalse
 \newif\iflsBiblatex \lsBiblatextrue
 \newif\iflsCollection \lsCollectionfalse
 \newif\iflsCollectionChapter \lsCollectionChapterfalse
 \newif\iflsCollectionTOCLong \lsCollectionTOCLongfalse
 \newif\iflsNewtxmath \lsNewtxmathfalse
+\newif\iflsMinimal \lsMinimalfalse
 \newif\iflsCover \lsCoverfalse %output format is cover
 % \newif\iflsUscover \lsUscoverfalse
 \newif\iflsModfonts \lsModfontsfalse
@@ -165,8 +173,8 @@
 		\renewcommand{\lsSpinewidth}{#1}}
 \DeclareVoidOption{smallfont}{
 	\renewcommand{\lsFontsize}{10pt}}
-\DeclareVoidOption{undecapitalize}{
-	\lsUndecapitalizetrue }
+\DeclareVoidOption{decapbib}{
+	\lsResetCapitalstrue }
 \DeclareVoidOption{draftmode}{	% 'draftmode' instead of 'draft' due to undesirable side efects
 	 \lsDrafttrue
 	 \overfullrule=5pt	}	% to indicate overfull hboxes
@@ -187,8 +195,6 @@
   \lsNoBabeltrue}
 \DeclareVoidOption{babelshorthands}{
   \lsBabelShorthandstrue}
-\DeclareVoidOption{modfonts}{
-    \lsModfontstrue}
 \DeclareVoidOption{multiauthors}{
     \lsMultiauthorstrue}
 \DeclareVoidOption{showindex}{
@@ -202,6 +208,8 @@
 	\lsNewtxmathfalse}
 \DeclareVoidOption{newtxmath}{
 	\lsNewtxmathtrue}
+\DeclareVoidOption{minimal}{
+	\lsMinimaltrue}
 \DeclareVoidOption{collection}{
 	\lsCollectiontrue}
 \DeclareVoidOption{collectionchapter}{
@@ -215,14 +223,14 @@
 \DeclareVoidOption{chinesefont}{
 	\newfontfamily\cn[Mapping=tex-text,Ligatures=Common,Scale=MatchUppercase]{AR PL UMing CN}
 % 	\newcommand{\zh}[1]{{\cn #1}}
-	\XeTeXlinebreaklocale 'zh'  
+	\XeTeXlinebreaklocale 'zh'
 	\XeTeXlinebreakskip = 0pt plus 1pt
 	\AdditionalFontImprint{UMing}
 }
 \DeclareVoidOption{japanesefont}{
 	  \newfontfamily\jpn[Mapping=tex-text,Ligatures=Common,Scale=MatchUppercase]{TakaoPGothic} %Japanese
 % 	  \newcommand{\jp}[1]{{{\jpn #1}}}
-	  \XeTeXlinebreaklocale 'ja'  
+	  \XeTeXlinebreaklocale 'ja'
 	  \AdditionalFontImprint{TakaoPGothic}
 }
 % \DeclareVoidOption{koreanfont}{
@@ -294,7 +302,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %      Print on demand macros
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\iflsMinimal\else % The minimal mode skips cover generation
 % Basic cover commands, including PGF layers
 \newcommand{\podsetup}{
   \lsCovertrue
@@ -306,14 +314,13 @@
   \renewcommand{\lastand}{ \& }%
   \renewcommand{\affiliation}[1]{}
 }
- 
 
 % Content creation for the spine. Including Logo, author, title, and volume number on spine.
 \newcommand{\podspine}{
   \renewcommand{\newlineCover}{}
   \renewcommand{\and}{, }
   \renewcommand{\lastand}{ \& }
-  \node [above = 0mm of CoverSpine.south, anchor=base] (lspcls_spinelogo) {\color{\lsSeriesColor}\includegraphics{\logopath langsci_spinelogo_nocolor.pdf}};
+  \node [above = 0mm of CoverSpine.south, anchor=base] (lspcls_spinelogo) {\color{\lsSeriesColor}\includespinelogo};
 \node [below = 0mm of CoverSpine.north, anchor=north] (lspcls_splinenumber)  {\color{\lsSeriesColor}
   {\parbox{.47cm}{
    \centering
@@ -400,7 +407,7 @@
   \else % If yes, create a node for subtitle and author
   \node [ font=\fontsize{25pt}{10mm}\selectfont,
           below = 8mm of lspcls_covertitle.south,
-          text width=#2, 
+          text width=#2,
           align=left
         ] (lspcls_coversubtitle) {\color{#1}\lsCoverSubTitleFont{\raggedright\@subtitle\par}};
   \node [
@@ -418,7 +425,7 @@
           rectangle,
           fill=white,
           minimum size=17pt] (lspcls_square) {}; % This is the white square at the bottom left of the front cover
-  \node [ above left = 10mm and 7.5mm of CoverColouredRectangleFront.south east] {\color{#1}\includegraphics{\logopath langsci_logo_nocolor.pdf}}; % Print the Language Science press Logo
+  \node [ above left = 10mm and 7.5mm of CoverColouredRectangleFront.south east] {\color{#1}\includepublisherlogo}; % Print the Language Science press Logo
   \path let \p1 = (lspcls_square.north east), % Calculate the exact coordinates for the Series Title to print.
             \p2 = (lspcls_covertitle.west)
             in node at (\x2,\y1) (lspcls_seriesinfo) [
@@ -428,14 +435,13 @@
                   anchor=north west]
             {\color{#1}\lsCoverSeriesFont{\lsSeriesTitle~\lsSeriesNumber\par}};
 }
-
+\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %      Output types
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \newcommand{\lsOutputLong}{long}
 \newcommand{\lsOutputBook}{book}             % standard book
-\newcommand{\lsOutputInprep}{inprep}          % marks manuscript as in preparation
 \newcommand{\lsOutputPaper}{paper}            % paper in edited volume
 \newcommand{\lsOutputGuidelines}{guidelines}  % guidelines
 \newcommand{\lsOutputCoverBODsc}{coverbodsc}      % cover with BoD measurements
@@ -446,6 +452,7 @@
 %% Output types are defined with \newcommand above so they can be used with geometry.
 
 \AtBeginDocument{
+\iflsMinimal\renewcommand{\maketitle}{You are using the minimal mode.}\else % The minimal mode skips cover generation
 \ifx\lsOutput\lsOutputPaper       % only if output==paper
   \usepackage{chngcntr}
   \counterwithout{figure}{chapter}
@@ -482,12 +489,6 @@
   }
 \fi
 
-\ifx\lsOutput\lsOutputInprep          % only if output==inprep
-  {\renewcommand{\lsCoverBlockColor}{white}
-   \renewcommand{\lsCoverFontColor}{black}
-   \lsCoverBlock
-   \lsCoverTitleAuthor}
-\fi
 
 \ifx\lsOutput\lsOutputGuidelines        % only if output==guidelines
   {\setcounter{page}{-1}
@@ -553,11 +554,8 @@
 \lsInsideFont
 
 %% Imprint:
-\ifx\lsOutput\lsOutputInprep{}
-\else{
-  \ifx\lsOutput\lsOutputGuidelines{}
-  \else{\lsImpressum}
-  \fi}
+\ifx\lsOutput\lsOutputGuidelines{}
+\else{\lsImpressum}
 \fi
 %%%%%%%%%%%%%
 
@@ -572,7 +570,7 @@
 
 } %% \maketitle
 \fi
-
+\fi
 %% for those who like the example in numbered example sentences to be typeset in italics
 %% this is possible for a complete series only.
 \ifx\lsSeries\sidl
@@ -601,7 +599,7 @@
 %   Geometry
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% For output type cover 
+% For output type cover
 % \newlength{\csspine}   % CS spine width algorithm, when page count is known:  Total Page Number (excluding cover), usually (Total Page - 3) * 0.0572008 mm
 % \newlength{\bodspine}  % BoD spine width algorithm located at http://www.bod.de/hilfe/coverberechnung.html (German only, please contact LangSci for help)
 \newlength{\bleed}
@@ -670,14 +668,6 @@
   ]{geometry}
 \fi
 
-\usepackage[
-	absolute 		% for absolute positioning in titlepage
-	%,showboxes
-	]{textpos}
-\setlength{\TPHorizModule}{1mm}
-\setlength{\TPVertModule}{\TPHorizModule}
-\textblockorigin{0mm}{0mm}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %    Fonts
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -689,6 +679,7 @@
 \usepackage{amssymb} % has to be loaded before other stuff
 \usepackage{amsmath} % has to be loaded before mathspec/unicode-math
 
+\iflsMinimal\else % The minimal mode skips font loading
 \iflsNewtxmath\else
 %% There is a known problem in the interplay between \binom, unicode-math, and OTF
 %% https://tex.stackexchange.com/questions/269980/wrong-parentheses-size-in-binom-with-xelatex-and-unicode-math-in-displaystyle
@@ -698,11 +689,11 @@
   \def\@tempa{#1#2}%
   \edef\@tempb{\@nx\@genfrac\@mathstyle{#4}%
     % just \over or \above never withdelims versions
-    \ifx @#3@\@@over\else\@@above\fi 
+    \ifx @#3@\@@over\else\@@above\fi
   }%
   \ifx\@tempa\@empty \else
   \bgroup % so mathord not mathinner
-  \left\ifx\relax#1\relax.\else#1\fi % assumes . is null delimiter 
+  \left\ifx\relax#1\relax.\else#1\fi % assumes . is null delimiter
   % otherwise add specified delimiter
   \kern-\nulldelimiterspace % fractions add extra nulldelimiter space
   \fi
@@ -724,8 +715,6 @@
 \fi
 
 \usepackage{metalogo}\newcommand{\xelatex}{\XeLaTeX\xspace}
-\usepackage{dejavu}
-\usepackage{libertine}
 
 \setmonofont[
 %   Ligatures={TeX},% not supported by ttf
@@ -772,7 +761,6 @@
 %% Deprecated:
 \iflsNewtxmath		% some users have problems when installing newtxmath
 	\usepackage[libertine]{newtxmath}
-
 	%% following http://tex.stackexchange.com/questions/297328/xelatex-does-not-load-newtxmath-with-linuxlibertine-sometimes
 	%% due to a bug in XeTeX. This also seems to fix an issue with \url in footnotes.
   %% Unfortunately, this is NOT extensively tested!
@@ -804,6 +792,7 @@
 \newcommand{\lsBackBodyFont}{\lsInsideFont}
 \newcommand{\lsSpineAuthorFont}{\bfseries\fontsize{16pt}{14pt}\selectfont}
 \newcommand{\lsSpineTitleFont}{\sffamily\bfseries\fontsize{18pt}{14pt}\selectfont}
+\fi % end minimal mode
 
 \setkomafont{sectioning}{\normalcolor\bfseries}
 \setkomafont{descriptionlabel}{\normalfont\itshape}
@@ -839,94 +828,13 @@
 \else
 \fi
 
-\newcommand{\lsCoverBlock}{
-  \begin{textblock}{155}(7.6,7.5)
-  \color{\lsCoverBlockColor}
-  \raggedright\rule{155mm}{225mm}
-  \end{textblock}
-  \iflsDraft
-     \begin{textblock}{155}(30,80)
-     \color{lsLightGray}
-     \rotatebox{40}{
-      \begin{tabular}{c}
-      \scalebox{10}{DRAFT}\\
-      of \today, \currenttime
-      \end{tabular}}
-     \end{textblock}
-  \fi
-  \iflsOpenReview
-    \iflsDraft
-      \ClassError{langsci/langscibook}{Open review mode not compatible with draft mode. Please disable one of them}{}
-    \fi
-    \begin{textblock}{170}(-20,75)
-      \rotatebox{30}{
-      \colorbox{red}{
-      \parbox[c][15ex][c]{220mm}{\centering\lsCoverTitleFont\color{white}Open Review\\[-0.1ex]} 
-      }
-      }
-     \end{textblock}
-  \fi
-%   \iflsUndecapitalize
-%     \begin{textblock}{170}(-20,75)
-%       \rotatebox{30}{
-%       \colorbox{red}{
-%       \parbox[c][15ex][c]{220mm}{\centering\lsCoverTitleFont\color{white}Undecapitalized\\[-0.1ex]}
-%       % \begin{tabular}{c}
-%       %   ~\\
-%       %   \scalebox{6}{\color{red}Open Review}\\[-0.5ex]
-%       %   ~%version of \today, \currenttime
-%       % \end{tabular}
-%       }
-%       }
-%      \end{textblock}
-%   \fi
-
-  }
-
-\newcommand{\lsCoverTitleAuthor}{
-  \renewcommand{\and}{\\}
-  \renewcommand{\lastand}{\\}
-  \renewcommand{\newlineCover}{\\}
-  \renewcommand{\newlineSpine}{}
-  \lsCoverBlock
-
-  \begin{textblock}{140}(15,17.5)
-  \color{\lsCoverFontColor}
-  \raggedright
-  {\lsCoverTitleFont{\@title\\}}
-
-  \ifx\@subtitle\empty
-  \else \vspace{8mm} {\lsCoverSubTitleFont \@subtitle\\}
-  \fi
-
-  \vspace{11.2mm} % 20mm - 25pt
-
-  \raggedright
-  {\lsCoverAuthorFont
-    \lsEditorPrefix\@author\\}
-  \end{textblock}}
-
-\newcommand{\lsCoverSeries}{
-  \begin{textblock}{95}(7.4,209)
-  \color{white}
-  \raggedright\rule{3.6mm}{3.5mm}
-  \color{\lsCoverFontColor}
-  \hspace{3mm}\parbox[t]{85mm}{\raggedright\lsCoverSeriesFont
-    \lsSeriesTitle\\}
-  \end{textblock}}
-
-\newcommand{\lsCoverLogo}{
-  \begin{textblock}{33}(124.6,205)
-    \raggedright\IfFileExists{\logopath langsci_logo_nocolor.pdf}{\includegraphics{\logopath langsci_logo_nocolor.pdf}}{langsci logo}
-  \end{textblock}}
-
-   \pgfdeclarelayer{lspcls_bg}    % Create a background layer that serves as the canvas for the coloured rectangles.
-   \pgfsetlayers{lspcls_bg,main}  % Order the background layer behind the main layer of TikZ.
+\pgfdeclarelayer{lspcls_bg}    % Create a background layer that serves as the canvas for the coloured rectangles.
+\pgfsetlayers{lspcls_bg,main}  % Order the background layer behind the main layer of TikZ.
 
 \newcommand{\lsFrontPage}{% Front page
   \ifcsname tikz@library@external@loaded\endcsname\tikzexternaldisable\fi
   \pgfdeclarelayer{lspcls_bg}    % Create a background layer that serves as the canvas for the coloured rectangles.
-  \pgfsetlayers{lspcls_bg,main}  % Order the background layer behind the main layer of TikZ. 
+  \pgfsetlayers{lspcls_bg,main}  % Order the background layer behind the main layer of TikZ.
   \thispagestyle{empty}
   \renewcommand{\and}{, }%
   \renewcommand{\lastand}{ \& }%
@@ -944,7 +852,7 @@
   \podcoverbottomtext
   \iflsDraft \node [rotate=45,align=center,scale=3,color=white,text opacity=.75] at (current page.center) {\lsCoverTitleFont Draft\\of \today, \currenttime}; \fi
   \iflsOpenReview \node [rotate=45,align=center,scale=1.5,color=white,text opacity=.75] at (current page.center) {\lsCoverTitleFont Open Review\\Version of \today, \currenttime}; \fi
-%   \iflsUndecapitalize \node [rotate=45,scale=1.5,color=white,text opacity=.75] at (current page.center) {\lsCoverTitleFont Undecapitalized}; \fi  
+%   \iflsUndecapitalize \node [rotate=45,scale=1.5,color=white,text opacity=.75] at (current page.center) {\lsCoverTitleFont Undecapitalized}; \fi
 \end{tikzpicture}
 \ifcsname tikz@library@external@loaded\endcsname\tikzexternalenable\fi
 }
@@ -952,7 +860,7 @@
 \newcommand{\lsSchmutztitel}{% Schmutztitel
   \ifcsname tikz@library@external@loaded\endcsname\tikzexternaldisable\fi
   \pgfdeclarelayer{lspcls_bg}    % Create a background layer that serves as the canvas for the coloured rectangles.
-  \pgfsetlayers{lspcls_bg,main}  % Order the background layer behind the main layer of TikZ. 
+  \pgfsetlayers{lspcls_bg,main}  % Order the background layer behind the main layer of TikZ.
   \thispagestyle{empty}
   \renewcommand{\and}{, }%
   \renewcommand{\lastand}{ \& }%
@@ -967,7 +875,7 @@
 	    ] (CoverColouredRectangleFront) {};
   \end{pgfonlayer}
   \podfrontcovertoptext[\lsSeriesColor]{140mm}{51pt}
-  \node [ above left = 10mm and 7.5mm of CoverColouredRectangleFront.south east] {\color{\lsSeriesColor}\includegraphics{\logopath langsci_logo_nocolor.pdf}}; % Print the Language Science press Logo
+  \node [ above left = 10mm and 7.5mm of CoverColouredRectangleFront.south east] {\color{\lsSeriesColor}\includepublisherlogo}; % Print the Language Science press Logo
 \end{tikzpicture}
 \ifcsname tikz@library@external@loaded\endcsname\tikzexternalenable\fi
 }
@@ -1012,10 +920,14 @@
 \IfFileExists{\seriesinfopath \lsSeries-info.tex}{\input{\seriesinfopath\lsSeries-info}}{
   Series information: \seriesinfopath \lsSeries-info.tex not found!}
 
+\IfStrEq{\lsISSNprint}{??}   % \IfStrEq from xstring
+  {}
+  {\vfill\hfill ISSN (print): \lsISSNprint\\
+         \hfill ISSN (electronic): \lsISSNelectronic\\}
 \IfStrEq{\lsISSN}{??}   % \IfStrEq from xstring
   {}
-  {\vfill\hfill ISSN: \lsISSN} 
-} 
+  {\vfill\hfill ISSN: \lsISSN}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %    Imprint
@@ -1055,7 +967,7 @@
 \newcommand{\BookDOI}[1]{\renewcommand{\lsBookDOI}{#1}}
 
 
-%invert names of first author for citation on impressum page 
+%invert names of first author for citation on impressum page
 
 \newcommand{\lsFirstAuthorFullName}{}%temporary, will be overwritten
 \newcommand{\lsFirstAuthorFirstName}{}%temporary, will be overwritten
@@ -1067,7 +979,7 @@
 
 \AtBeginDocument{
 \makeatletter
-\let\theauthor\@author 
+\let\theauthor\@author
 \makeatother
 \ifdefempty{\lsFirstAuthorFirstName}{% Check if the \lsFirstAuthorFirstName is given in localmetadata.tex (or somewhere else).
 \renewcommand{\and}{NONLASTAND} %expand for easier checking. Might need to be undone later on
@@ -1075,15 +987,15 @@
 
 \IfSubStr{\theauthor}{NONLASTAND}{%2+authors
   \renewcommand{\lsFirstAuthorFullName}{\StrBefore{\theauthor}{\and }}
-  \renewcommand{\lsFirstAuthorFirstName}{\StrBefore{\theauthor}{ }} 
+  \renewcommand{\lsFirstAuthorFirstName}{\StrBefore{\theauthor}{ }}
   \renewcommand{\lsFirstAuthorLastName}{\StrBetween{\theauthor}{ }{\and }}
-  \renewcommand{\lsNonFirstAuthorsString}{\and\StrBehind{\theauthor}{\and }} 
+  \renewcommand{\lsNonFirstAuthorsString}{\and\StrBehind{\theauthor}{\and }}
   }{%else
     \IfSubStr{\theauthor}{LASTAND}{%less than two authors, more than one
     \renewcommand{\lsFirstAuthorFullName}{\StrBefore{\theauthor}{\lastand }}
     \renewcommand{\lsFirstAuthorFirstName}{\StrBefore{\theauthor}{ }}
     \renewcommand{\lsFirstAuthorLastName}{\StrBetween{\theauthor}{ }{\lastand }}
-    \renewcommand{\lsNonFirstAuthorsString}{\lastand\StrBehind{\theauthor}{\lastand }} 
+    \renewcommand{\lsNonFirstAuthorsString}{\lastand\StrBehind{\theauthor}{\lastand }}
     }{%else exactly one author
       \renewcommand{\lsFirstAuthorFirstName}{\StrBefore{\theauthor}{ }}
       \renewcommand{\lsFirstAuthorLastName}{\StrBehind{\theauthor}{ }}
@@ -1091,11 +1003,11 @@
     }
   }{}
 }
- 
 
-\newcommand{\lsImpressionCitationAuthor}{ 
+
+\newcommand{\lsImpressionCitationAuthor}{
 \lsFirstAuthorLastName, \lsFirstAuthorFirstName \lsNonFirstAuthorsString}
-  
+
 \newcommand{\lsImpressumCitationText}{
   \onlyAuthor
   \renewcommand{\newlineCover}{}
@@ -1107,6 +1019,18 @@
   Berlin: Language Science Press.
 }
 \newcommand{\lsImpressumExtra}{}%for legal notes required for revised theses ("... in fulfillment of ... ")
+
+\newcommand{\publisherstreetaddress}{%
+Language Science Press\\
+Xhain\\
+Grünberger Str. 16\\
+10243 Berlin, Germany}
+\newcommand{\publisherurl}{\href{http://langsci-press.org}{langsci-press.org}}
+\newcommand{\storageinstitution}{FU Berlin}
+\newcommand{\githubtext}{Source code available from \href{https://www.github.com/langsci/\lsID}{www.github.com/langsci/\lsID}}
+\newcommand{\paperhivetext}{Collaborative~reading:~\href{https://paperhive.org/documents/remote?type=langsci&id=\lsID}{paperhive.org/documents/remote?type=langsci\&id=\lsID}}
+
+
 \newcommand{\lsImpressum}{
 \thispagestyle{empty}
 \raggedright
@@ -1121,17 +1045,23 @@ This title can be downloaded at:\\
 © \lsYear, \iflsCollection the authors\else\@author\fi
 
 \newcommand{\ccby}{CC-BY}
+\newcommand{\ccbynd}{CC-BY-ND}
 \ifx\lsCopyright\ccby
 Published under the Creative Commons Attribution 4.0 Licence (CC BY 4.0):
-http://creativecommons.org/licenses/by/4.0/ \includegraphics[height=.75em]{\logopath/ccby.eps}
+http://creativecommons.org/licenses/by/4.0/ \includegraphics[height=.75em]{\logopath/ccby.pdf}
 \else
+\ifx\lsCopyright\ccbynd
 Published under the Creative Commons Attribution-NoDerivatives 4.0 Licence (CC BY-ND 4.0):
-http://creativecommons.org/licenses/by-nd/4.0/ \includegraphics[height=.75em]{\logopath/ccbynd.eps}
+http://creativecommons.org/licenses/by-nd/4.0/ \includegraphics[height=.75em]{\logopath/ccbynd.pdf}
+\else
+Published under the Creative Commons Attribution-ShareAlike 4.0 Licence (CC BY-SA 4.0):
+http://creativecommons.org/licenses/by-sa/4.0/ \includegraphics[height=.75em]{\logopath/ccbysa.pdf}
+\fi
 \fi
 
 {\lsImpressumExtra}
 
-\ifx\lsSeries\sidl 
+\ifx\lsSeries\sidl
 Indexed in EBSCO\smallskip
 \fi
 
@@ -1160,16 +1090,21 @@ ISBN: &
 }
 \end{tabular}
 
-\IfStrEq{\lsISSN}{??}   % \IfStrEq from xstring
+\IfStrEq{\lsISSNprint}{??}   % \IfStrEq from xstring
+  {}
+  {ISSN (print): \lsISSNprint\\
+   ISSN (electronic): \lsISSNelectronic\\}
+\IfStrEq{\lsISSN}{??}
   {}
   {ISSN: \lsISSN}
 
-\IfStrEq{\lsBookDOI}{??}    % \IfStrEq from xstring
+
+\IfStrEq{\lsBookDOI}{??}
   {{\color{red} no DOI}}
   {\doi{\lsBookDOI}}\\
-\IfStrEq{\lsID}{000}{\color{red} ID not assigned!}{%  
-Source code available from \href{https://www.github.com/langsci/\lsID}{www.github.com/langsci/\lsID}  \\
-Collaborative~reading:~\href{https://paperhive.org/documents/remote?type=langsci&id=\lsID}{paperhive.org/documents/remote?type=langsci\&id=\lsID}
+\IfStrEq{\lsID}{000}{\color{red} ID not assigned!}{%
+\githubtext\\
+\paperhivetext
 }%
 \bigskip
 
@@ -1200,16 +1135,14 @@ Typesetting software: \XeLaTeX
 
 \bigskip
 
-Language Science Press\\
-Unter den Linden 6\\
-10099 Berlin, Germany\\
-\href{http://langsci-press.org}{langsci-press.org}
+\publisherstreetaddress\\
+\publisherurl
 
 \vfill
 
-Storage and cataloguing done by FU Berlin \\[3ex]
+Storage and cataloguing done by \storageinstitution\\[3ex]
 
-\IfFileExists{\logopath storagelogo.pdf}{\includegraphics[width=5cm]{\logopath storagelogo.pdf}}{\logotext} \\[3ex]
+\includestoragelogo\\[3ex]
 
 
 % \vfill
@@ -1306,11 +1239,11 @@ Storage and cataloguing done by FU Berlin \\[3ex]
 %    Footnotes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifxetex
+\ifxetex\iflsMinimal\else
 \addtokomafont{footnote}{\addfontfeatures{Numbers=Lining}}      % numbers in footnotes
 %\addtokomafont{footnotelabel}{\addfontfeatures{Numbers=Lining}}  % numbers in footnote labels
 %\addtokomafont{footnotereference}{\addfontfeatures{Numbers=Lining}}  % numbers in footnote references
-\fi
+\fi\fi
 
 \raggedbottom
 \deffootnote[1.5em]{1.5em}{\normalparindent}{\textsuperscript{\thefootnotemark}} % putting a space after footnotemark has undesirable side effects with footnotes that start with an empty line; instead use \xspace in the footnote definition below
@@ -1349,11 +1282,11 @@ Storage and cataloguing done by FU Berlin \\[3ex]
 {\endlist}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 %    Language-specific settings
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Must apear before biblatex and hyperref.
 
@@ -1393,9 +1326,10 @@ Storage and cataloguing done by FU Berlin \\[3ex]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[
-	natbib=true, 
+	natbib=true,
 	style=\bibstylepath langsci-unified,
 	citestyle=\bibstylepath langsci-unified,
+	datamodel=\bibstylepath langsci   % add authauthor and autheditor as possible fields to bibtex entries
 	useprefix = true, %sort von, van, de where they should appear
 	%refsection=chapter,
 	maxbibnames=99,
@@ -1406,14 +1340,15 @@ Storage and cataloguing done by FU Berlin \\[3ex]
 	doi=false,
 	url=false,
 	eprint=false,
-        autolang=hyphen,
-        useprefix=true,
+	autolang=hyphen,
+	\iflsResetCapitals
+        language=english,
+    \fi
 	backend=\lsBiblatexBackend,
 	indexing=cite,
 	\iflsCollection\else
-		toc=bib, 		% make bibliography appear in toc
-  \fi
-  datamodel=\bibstylepath langsci   % add authauthor and autheditor as possible fields to bibtex entries
+		toc=bib, % make bibliography appear in toc
+	\fi
 ]{biblatex}
 
 % If the user provided a shortauthor in the bibtex entry, we use the authentic author (as with the
@@ -1491,7 +1426,7 @@ Storage and cataloguing done by FU Berlin \\[3ex]
 \widowpenalty\@M
 }
 {}{}
- 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %    Floats
@@ -1812,7 +1747,7 @@ width=.8\textwidth
 	\edef\lsCollectionTitle{\@title\ifx\@subtitle\empty\else{: \@subtitle}\fi}		% \edef immediately expands \@title
 	\edef\lsCollectionEditor{\@author}
 	\addbibresource{collection_tmp.bib}
-	\if@partsw\AfterEndDocument{\typeout{langscibook Warning: You are in includeonly mode.}\typeout{The bibliographical information for the chapters in this volume have not been updated}}\else% Check for \includeonly mode	
+	\if@partsw\AfterEndDocument{\typeout{langscibook Warning: You are in includeonly mode.}\typeout{The bibliographical information for the chapters in this volume have not been updated}}\else% Check for \includeonly mode
 	\newwrite\tempfile						% open temporary bib file
 	\immediate\openout\tempfile=collection_tmp.bib
 	\fi
@@ -1918,7 +1853,7 @@ width=.8\textwidth
     \protect\numberline{\thechapter}\fi
     \@title\ \newline{\normalfont\@author}}} % space between \@title and \newline is needed for bookmarks
 
-\newcommand{\localizedchaptestring}{Chapter}    
+\newcommand{\localizedchaptestring}{Chapter}
 \newcommand{\lsCollectionPaperTitle}{{%
   \renewcommand{\newlineTOC}{}
   \renewcommand{\newlineCover}{\\}
@@ -1964,11 +1899,11 @@ width=.8\textwidth
   \renewcommand{\newlineCover}{\\[0.5ex]}
   \AuthorAffiliation\Large\@author}}
 
-\newcommand{\lsCollectionPaperCitation}{\scalebox{1.2}{
-  \includegraphics{\logopath langsci_spinelogo_nocolor.pdf}}%
+\newcommand{\lsCollectionPaperCitation}{\scalebox{1.2}{%
+  \includechapterfooterlogo}%
   % \hspace{0.8em}%
   \hfill%
-  \parbox[b]{.87\textwidth}{\linespread{0.8}\lsChapterFooterSize\normalfont\lsCollectionPaperCitationText \includegraphics[height=.75em]{\logopath/ccby.eps}}}
+  \parbox[b]{.87\textwidth}{\linespread{0.8}\lsChapterFooterSize\normalfont\lsCollectionPaperCitationText \includegraphics[height=.75em]{\logopath/ccby.pdf}}}
 \ifx\lsOutput\lsOutputPaper       % only if output==paper
 	\renewcommand{\lsCollectionPaperCitation}{Change with \string\papernote}
 \fi
