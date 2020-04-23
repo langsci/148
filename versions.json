@@ -1,10 +1,1 @@
-{"versions": [{"versiontype": "openreview",
-	      "title": "Corpus linguistics: a guide to the methodology",
-	      "authors": [{"name": "Anatol Stefanowitsch"}],
-	      "publishedAt": "2018-12-05T10:35:11.000Z"},
-	      {"versiontype": "proofreading",
-	      "title": "Corpus linguistics: a guide to the methodology",
-	      "authors": [{"name": "Anatol Stefanowitsch"}],
-	      "publishedAt": "2019-01-09T10:35:11.000Z"}
-	      ]
-}
+{"versions": [{"authors": [{"name": "Anatol Stefanowitsch"}], "title": "Corpus linguistics: a guide to the methodology", "publishedAt": "2018-12-05T10:35:11.000Z", "versiontype": "openreview"}, {"authors": [{"name": "Anatol Stefanowitsch"}], "title": "Corpus linguistics: a guide to the methodology", "publishedAt": "2019-01-09T10:35:11.000Z", "versiontype": "proofreading"}, {"title": "Corpus linguistics: a guide to the methodology", "versiontype": "first_edition", "publishedAt": "2020-04-23T10:10:24.488747", "authors": [{"name": "Anatol Stefanowitsch"}]}]}
